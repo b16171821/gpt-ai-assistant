@@ -31,4 +31,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Update four lights scan data"
-          file_pattern: data/history.csv data/latest.json data/latest.csv
+          file_pattern: data/history.csv data/latest.json data/latest.csv data/latest_report.md
