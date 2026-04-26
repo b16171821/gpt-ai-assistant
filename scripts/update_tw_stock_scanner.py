@@ -14,6 +14,7 @@ DATA_DIR = ROOT / "data"
 LATEST_JSON = DATA_DIR / "latest.json"
 LATEST_CSV = DATA_DIR / "latest.csv"
 HISTORY_CSV = DATA_DIR / "history.csv"
+REPORT_MD = DATA_DIR / "latest_report.md"
 THEME_PATH = DATA_DIR / "theme_keywords.json"
 TAIPEI_TZ = timezone(timedelta(hours=8))
 
@@ -146,7 +147,7 @@ def pattern_plan(df):
     else:
         win_rate = "中"
         plan_status = "預備單，等待確認條件"
-    confirm = f"收盤站上頸線{sr(neckline)}至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+    confirm = f"收盤站上頸線 {sr(neckline)} 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
     return {
         "pattern": pattern,
         "neckline": sr(neckline),
@@ -265,11 +266,83 @@ def scan_market():
     return results, errors, len(stock_master)
 
 
+def card(row, idx):
+    action = "可研究進場" if row.get("strictOk") else "先觀察，等確認"
+    if row.get("forbiddenChase"):
+        action = "禁止追高"
+    return f"""
+## {idx}. {row.get('name')}（{row.get('code')}）｜{row.get('score')}/4燈｜{row.get('winRate')}勝率
+
+**一句話策略：** {action}。{row.get('planStatus')}
+
+**現在位置**
+- 現價：{row.get('close')}（資料日：{row.get('date')}）
+- 型態：{row.get('pattern')}｜階段：{row.get('stage')}
+- 原因：{row.get('reason')}
+- 題材：{row.get('theme') or '尚未標註題材'}
+
+**關鍵價位**
+- 頸線 / 壓力：{row.get('neckline')}
+- 支撐：{row.get('support')}
+- 滿足點：{row.get('target')}
+- 停損：{row.get('stopLoss')}（跌破頸線直接出）
+
+**進場計畫**
+- 突破進場：{row.get('entryBreakout')}
+- 回踩進場：{row.get('entryPullback')}
+- 合理追價範圍：{row.get('chaseRangeLow')} ～ {row.get('chaseRangeHigh')}
+- 距離頸線：{row.get('distanceFromNecklinePct')}%｜風險：約 {row.get('riskPct')}%
+
+**確認條件**
+{row.get('confirmConditions')}
+"""
+
+
+def write_report(rows, meta):
+    strict = [r for r in rows if r.get("strictOk")]
+    watch = [r for r in rows if r.get("score", 0) >= 3 and not r.get("strictOk")]
+    top = (strict + watch)[:10]
+    if strict:
+        conclusion = "有符合嚴格條件的候選股，但仍要等隔日不跌破頸線確認。"
+    elif watch:
+        conclusion = "目前沒有完美進場股，優先列預備單，等突破或回踩確認。"
+    else:
+        conclusion = "目前無符合條件標的，不硬選。"
+    lines = [
+        "# 台股四燈型態學策略報告",
+        "",
+        f"更新時間：{meta.get('updatedAt')}",
+        "",
+        f"## 結論：{conclusion}",
+        "",
+        f"- 掃描檔數：{meta.get('totalAnalyzed')}",
+        f"- 3燈以上：{meta.get('qualified3Plus')}",
+        f"- 4燈：{meta.get('qualified4')}",
+        f"- 嚴格進場候選：{meta.get('strictCandidates')}",
+        "",
+        "## 先看這裡",
+        "- strictOk = True：才是比較接近可操作的候選。",
+        "- forbiddenChase = True：禁止追高，只能等回踩。",
+        "- planStatus：直接看它告訴你要做什麼。",
+        "- 合理追價範圍：確認後才可用，不是現在直接追。",
+        "",
+        "---",
+    ]
+    if not top:
+        lines.append("目前無符合條件標的。")
+    else:
+        for i, r in enumerate(top, 1):
+            lines.append(card(r, i))
+            lines.append("---")
+    REPORT_MD.write_text("\n".join(lines), encoding="utf-8")
+
+
 def write_outputs(rows, errors, total_master):
     DATA_DIR.mkdir(exist_ok=True)
     qualified = [r for r in rows if r["score"] >= 3]
     strict = [r for r in rows if r.get("strictOk")]
-    payload = {"meta": {"updatedAt": now_tw(), "mode": "pattern-four-lights-scan", "totalMaster": total_master, "totalAnalyzed": len(rows), "qualified3Plus": len(qualified), "qualified4": sum(1 for r in rows if r["score"] >= 4), "strictCandidates": len(strict), "errors": errors[:50], "note": "四燈＋型態學＋確認條件＋追價範圍＋風控；僅供觀察，不構成買賣建議。"}, "stocks": rows}
+    meta = {"updatedAt": now_tw(), "mode": "pattern-four-lights-scan", "totalMaster": total_master, "totalAnalyzed": len(rows), "qualified3Plus": len(qualified), "qualified4": sum(1 for r in rows if r["score"] >= 4), "strictCandidates": len(strict), "errors": errors[:50], "note": "四燈＋型態學＋確認條件＋追價範圍＋風控；僅供觀察，不構成買賣建議。"}
+    payload = {"meta": meta, "stocks": rows}
     LATEST_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     fieldnames = list(rows[0].keys()) if rows else ["date", "code", "name", "score", "status", "reason"]
     with LATEST_CSV.open("w", newline="", encoding="utf-8-sig") as f:
@@ -280,6 +353,7 @@ def write_outputs(rows, errors, total_master):
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(rows)
+    write_report(rows, meta)
 
 
 def write_failure(e):
@@ -288,6 +362,7 @@ def write_failure(e):
     LATEST_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     LATEST_CSV.write_text("date,code,name,score,status,reason\n", encoding="utf-8-sig")
     HISTORY_CSV.write_text("date,code,name,score,status,reason\n", encoding="utf-8-sig")
+    REPORT_MD.write_text(f"# 台股四燈型態學策略報告\n\n流程失敗：{e}\n", encoding="utf-8")
     print(f"FAILED-SAFE: {e}")
 
 
