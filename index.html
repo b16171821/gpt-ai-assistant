@@ -1,127 +1,44 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>股票策略儀表板｜台股＋美股</title>
-  <style>
-    body{margin:0;font-family:Arial,'Noto Sans TC',sans-serif;background:#0f172a;color:#e5e7eb;line-height:1.6}
-    .wrap{max-width:1180px;margin:auto;padding:22px}
-    h1{font-size:28px;margin:0 0 6px} h2{margin:0 0 12px;font-size:20px} h3{margin:0 0 8px;font-size:17px}
-    .muted{color:#94a3b8}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-    .card{background:#111827;border:1px solid #334155;border-radius:16px;padding:16px;margin:14px 0;box-shadow:0 10px 20px rgba(0,0,0,.15)}
-    .stat{display:flex;gap:10px;flex-wrap:wrap}.pill{border-radius:999px;padding:5px 10px;font-size:13px;background:#334155}.ok{background:#166534}.warn{background:#854d0e}.bad{background:#7f1d1d}.blue{background:#1d4ed8}
-    table{width:100%;border-collapse:collapse;margin-top:10px}th,td{border-bottom:1px solid #334155;padding:9px;text-align:left;font-size:14px;vertical-align:top}th{color:#cbd5e1;background:#1e293b}.mono{font-family:ui-monospace,Menlo,Consolas,monospace}
-    a{color:#93c5fd;text-decoration:none}a:hover{text-decoration:underline}button{border:0;border-radius:10px;background:#2563eb;color:white;padding:10px 12px;font-weight:700;cursor:pointer}button.secondary{background:#374151}
-    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.small{font-size:13px}.section-title{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.empty{padding:14px;background:#020617;border:1px dashed #475569;border-radius:12px;color:#94a3b8}.signal{font-weight:700}.green{color:#86efac}.yellow{color:#fde68a}.red{color:#fca5a5}
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>四燈型態學觀察工具｜公開展示版</title>
+<style>
+body{margin:0;font-family:Arial,'Noto Sans TC',sans-serif;background:#0f172a;color:#e5e7eb;line-height:1.7}.wrap{max-width:1080px;margin:auto;padding:24px}h1{font-size:30px;margin:0 0 8px}h2{font-size:21px;margin:0 0 12px}.muted{color:#94a3b8}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}.card{background:#111827;border:1px solid #334155;border-radius:16px;padding:18px;margin:14px 0}.pill{display:inline-block;border-radius:999px;padding:5px 10px;font-size:13px;background:#334155;margin:3px}.blue{background:#1d4ed8}.warn{background:#854d0e}.ok{background:#166534}.small{font-size:13px}.notice{background:#172554;border:1px solid #1d4ed8;border-radius:14px;padding:14px;color:#bfdbfe}.table{width:100%;border-collapse:collapse;margin-top:10px}.table th,.table td{border-bottom:1px solid #334155;padding:10px;text-align:left;font-size:14px}.table th{background:#1e293b;color:#cbd5e1}.red{color:#fca5a5}.yellow{color:#fde68a}.green{color:#86efac}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>股票策略儀表板</h1>
-    <div class="muted">台股＋美股｜四燈＋型態＋頸線＋進場＋停損｜只做觀察，不構成買賣建議</div>
+<div class="wrap">
+<h1>四燈型態學觀察工具｜公開展示版</h1>
+<div class="muted">台股＋美股｜型態＋量價＋趨勢｜公開版只展示工具邏輯與摘要。</div>
+<div style="margin-top:14px"><span class="pill blue">趨勢燈</span><span class="pill blue">量能燈</span><span class="pill blue">題材燈</span><span class="pill blue">價量燈</span></div>
 
-    <div class="card">
-      <div class="section-title">
-        <h2>今日總覽</h2>
-        <div class="actions">
-          <button onclick="loadAll()">重新讀取</button>
-          <button class="secondary" onclick="location.href='data/latest_report.md'">台股報告</button>
-          <button class="secondary" onclick="location.href='data/us_latest_report.md'">美股報告</button>
-        </div>
-      </div>
-      <div class="grid">
-        <div class="card"><h3>台股</h3><div id="twMeta" class="muted">讀取中...</div></div>
-        <div class="card"><h3>美股</h3><div id="usMeta" class="muted">讀取中...</div></div>
-      </div>
-    </div>
+<div class="notice"><b>公開版說明：</b>這頁可分享給朋友看工具概念。完整策略表與每日細節請使用私密完整版。</div>
 
-    <div class="grid">
-      <div class="card">
-        <div class="section-title"><h2>台股嚴格候選</h2><span id="twStrictBadge" class="pill">-</span></div>
-        <div id="twStrict"></div>
-      </div>
-      <div class="card">
-        <div class="section-title"><h2>美股嚴格候選</h2><span id="usStrictBadge" class="pill">-</span></div>
-        <div id="usStrict"></div>
-      </div>
-    </div>
+<div class="grid">
+<div class="card"><h2>台股摘要</h2><div id="twSummary" class="muted">讀取中...</div></div>
+<div class="card"><h2>美股摘要</h2><div id="usSummary" class="muted">讀取中...</div></div>
+</div>
 
-    <div class="grid">
-      <div class="card">
-        <div class="section-title"><h2>台股預備單</h2><span class="pill warn">接近成形</span></div>
-        <div id="twWatch"></div>
-      </div>
-      <div class="card">
-        <div class="section-title"><h2>美股預備單</h2><span class="pill warn">接近成形</span></div>
-        <div id="usWatch"></div>
-      </div>
-    </div>
+<div class="card">
+<h2>公開展示：候選摘要</h2>
+<div class="muted small">公開版只顯示市場、股票、分數與狀態，不顯示完整操作細節。</div>
+<div id="demoList"></div>
+</div>
 
-    <div class="card">
-      <h2>怎麼看這一頁</h2>
-      <div class="small muted">
-        先看「嚴格候選」。沒有嚴格候選，就只看預備單，不要追。<br>
-        strictOk = true 才代表條件比較完整；forbiddenChase = true 就禁止追高，只能等回踩。<br>
-        進場前仍要確認：收盤站上頸線至少 2%、成交量大於 20 日均量 2 倍、不可長上影、隔日不跌破頸線。
-      </div>
-    </div>
-  </div>
+<div class="grid">
+<div class="card"><h2>工具用途</h2><p>把股票分成：嚴格候選、預備觀察、禁止追高、只觀察。</p><p class="muted">核心：只做「突破＋量＋位置低＋大盤強」。</p></div>
+<div class="card"><h2>私密完整版內容</h2><ul><li>每日台股與美股策略報告</li><li>嚴格候選與預備單</li><li>關鍵位置與風險控管</li><li>確認條件與追高提醒</li></ul></div>
+</div>
 
+<div class="card"><h2>聲明</h2><p class="muted">本工具僅供學習、研究與紀律觀察，不構成任何投資建議、買賣建議或獲利保證。</p></div>
+</div>
 <script>
-function clsByStatus(row){
-  if(row.strictOk) return 'ok';
-  if(row.forbiddenChase) return 'bad';
-  return 'warn';
-}
-function signalText(row){
-  if(row.strictOk) return '<span class="signal green">可研究進場</span>';
-  if(row.forbiddenChase) return '<span class="signal red">禁止追高</span>';
-  return '<span class="signal yellow">等確認</span>';
-}
-function table(rows, market){
-  if(!rows || rows.length===0) return '<div class="empty">目前沒有符合條件標的。</div>';
-  const head = '<tr><th>股票</th><th>訊號</th><th>現價</th><th>型態</th><th>進場/停損</th><th>策略</th></tr>';
-  const body = rows.map(r=>`<tr>
-    <td><b>${r.name||''}</b><br><span class="mono">${r.code||r.ticker||''}</span><br><span class="muted small">${r.score||0}/4｜${r.winRate||'-'}勝率</span></td>
-    <td>${signalText(r)}<br><span class="pill ${clsByStatus(r)}">${r.status||''}</span></td>
-    <td>${r.close||'-'} ${market==='us'?'USD':''}<br><span class="muted small">${r.date||''}</span></td>
-    <td>${r.pattern||'-'}<br><span class="muted small">${r.stage||'-'}</span><br><span class="muted small">頸線 ${r.neckline||'-'}｜目標 ${r.target||'-'}</span></td>
-    <td>突破：${r.entryBreakout||'-'}<br>回踩：${r.entryPullback||'-'}<br>停損：${r.stopLoss||'-'}<br><span class="muted small">追價 ${r.chaseRangeLow||'-'}～${r.chaseRangeHigh||'-'}</span></td>
-    <td>${r.planStatus||''}<br><span class="muted small">${r.reason||''}</span></td>
-  </tr>`).join('');
-  return `<div style="overflow:auto"><table>${head}${body}</table></div>`;
-}
-function topRows(stocks, strictOnly, limit=5){
-  const arr=(stocks||[]).filter(r=> strictOnly ? r.strictOk : (r.score>=3 && !r.strictOk));
-  return arr.slice(0, limit);
-}
-async function loadJson(path){
-  const res = await fetch(path+'?ts='+Date.now());
-  if(!res.ok) throw new Error(path+' not found');
-  return res.json();
-}
-function renderTw(payload){
-  const m=payload.meta||{}; const s=payload.stocks||[];
-  document.getElementById('twMeta').innerHTML = `更新：${m.updatedAt||'-'}<br>掃描：${m.totalAnalyzed||0} 檔｜3燈以上：${m.qualified3Plus||0}｜4燈：${m.qualified4||0}｜嚴格候選：${m.strictCandidates||0}`;
-  document.getElementById('twStrictBadge').textContent = `${m.strictCandidates||0} 檔`;
-  document.getElementById('twStrict').innerHTML = table(topRows(s,true,5),'tw');
-  document.getElementById('twWatch').innerHTML = table(topRows(s,false,5),'tw');
-}
-function renderUs(payload){
-  const m=payload.meta||{}; const s=payload.stocks||[]; const market=payload.market||{};
-  document.getElementById('usMeta').innerHTML = `美東：${m.updatedAtET||'-'}<br>台灣：${m.updatedAtTW||'-'}<br>市場：${m.sessionStatus||'-'}｜${market.marketState||'-'}｜${market.suggestion||'-'}<br>掃描：${m.totalAnalyzed||0} 檔｜3分以上：${m.qualified3Plus||0}｜嚴格候選：${m.strictCandidates||0}`;
-  document.getElementById('usStrictBadge').textContent = `${m.strictCandidates||0} 檔`;
-  document.getElementById('usStrict').innerHTML = table(topRows(s,true,5),'us');
-  document.getElementById('usWatch').innerHTML = table(topRows(s,false,5),'us');
-}
-async function loadAll(){
-  document.getElementById('twMeta').textContent='讀取中...';
-  document.getElementById('usMeta').textContent='讀取中...';
-  try{ renderTw(await loadJson('data/latest.json')); }catch(e){ document.getElementById('twMeta').innerHTML='<span class="red">台股資料尚未產生，請先跑 Update Four Lights Scanner。</span>'; }
-  try{ renderUs(await loadJson('data/us_latest.json')); }catch(e){ document.getElementById('usMeta').innerHTML='<span class="red">美股資料尚未產生，請先跑 Update US Four Lights Scanner。</span>'; }
-}
-loadAll();
+async function loadJson(path){const r=await fetch(path+'?ts='+Date.now());if(!r.ok)throw new Error(path);return r.json()}
+function rowsHtml(rows, market){const arr=(rows||[]).filter(r=>r.score>=3).slice(0,5);if(!arr.length)return '<p class="muted">目前無公開展示候選。</p>';return `<table class="table"><tr><th>市場</th><th>股票</th><th>分數</th><th>狀態</th></tr>${arr.map(r=>`<tr><td>${market}</td><td><b>${r.name||''}</b><br>${r.code||r.ticker||''}</td><td>${r.score||0}/4</td><td>${r.strictOk?'嚴格候選':'預備觀察'}</td></tr>`).join('')}</table>`}
+async function init(){let html='';try{const tw=await loadJson('data/latest.json');const m=tw.meta||{};document.getElementById('twSummary').innerHTML=`掃描 ${m.totalAnalyzed||0} 檔｜3燈以上 ${m.qualified3Plus||0}｜4燈 ${m.qualified4||0}｜嚴格候選 ${m.strictCandidates||0}<br><span class="small">更新：${m.updatedAt||'-'}</span>`;html+=rowsHtml(tw.stocks,'台股')}catch(e){document.getElementById('twSummary').innerHTML='<span class="red">台股資料尚未產生</span>'}try{const us=await loadJson('data/us_latest.json');const m=us.meta||{};const market=us.market||{};document.getElementById('usSummary').innerHTML=`市場：${market.marketState||'-'}｜建議：${market.suggestion||'-'}<br>掃描 ${m.totalAnalyzed||0} 檔｜3分以上 ${m.qualified3Plus||0}｜嚴格候選 ${m.strictCandidates||0}<br><span class="small">美東：${m.updatedAtET||'-'}</span>`;html+=rowsHtml(us.stocks,'美股')}catch(e){document.getElementById('usSummary').innerHTML='<span class="red">美股資料尚未產生</span>'}document.getElementById('demoList').innerHTML=html||'<p class="muted">資料尚未產生。</p>'}
+init();
 </script>
 </body>
 </html>
