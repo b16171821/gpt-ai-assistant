@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>台股四燈掃描器 v1</title>
+  <style>
+    body{font-family:Arial,'Noto Sans TC',sans-serif;margin:0;background:#0f172a;color:#e5e7eb}.wrap{max-width:1180px;margin:auto;padding:24px}.card{background:#111827;border:1px solid #334155;border-radius:16px;padding:18px;margin:14px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}button,input,textarea{border-radius:10px;border:1px solid #475569;background:#020617;color:#e5e7eb;padding:10px;font-size:14px}button{cursor:pointer;background:#2563eb;border:0;font-weight:700}button.secondary{background:#374151}.muted{color:#94a3b8}.lights{display:flex;gap:6px;flex-wrap:wrap}.light{padding:4px 8px;border-radius:999px;font-size:12px;background:#334155}.on{background:#16a34a}.off{background:#475569}table{width:100%;border-collapse:collapse;margin-top:12px}th,td{border-bottom:1px solid #334155;padding:10px;text-align:left;font-size:14px}th{color:#cbd5e1;background:#1e293b}.pill{border-radius:999px;padding:3px 8px;font-size:12px}.ok{background:#166534}.wait{background:#854d0e}.avoid{background:#7f1d1d}.mono{font-family:ui-monospace,Menlo,Consolas,monospace}.note{line-height:1.7}</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>台股四燈掃描器 v1</h1>
+  <p class="muted">掃描台股候選股，輸出觀察名單。不構成買賣建議。</p>
+  <div class="card">
+    <h2>掃描設定</h2>
+    <div class="grid">
+      <label>近60日漲幅 ≥ %<input id="minRise" type="number" value="30"></label>
+      <label>量能倍數 ≥ <input id="minVolRatio" type="number" value="2" step="0.1"></label>
+      <label>ADX ≥ <input id="minAdx" type="number" value="25"></label>
+      <label>最多輸出檔數<input id="limit" type="number" value="30"></label>
+    </div><br>
+    <button onclick="loadDemo()">填入示範資料</button>
+    <button onclick="scanMarket()">掃描</button>
+    <button class="secondary" onclick="exportCSV()">匯出結果 CSV</button>
+  </div>
+  <div class="card">
+    <h2>CSV 匯入</h2>
+    <p class="muted">欄位：code,name,close,ma5,ma20,ma60,ma240,rise60,volume,avgVolume20,adx,kline,theme</p>
+    <textarea id="csvInput" rows="8" style="width:100%" placeholder="貼上 CSV 資料..."></textarea><br><br>
+    <button onclick="loadCSV()">讀取 CSV</button>
+  </div>
+  <div class="card">
+    <h2>掃描結果</h2>
+    <div id="summary" class="muted">尚未掃描</div>
+    <div style="overflow:auto"><table id="resultTable"><thead><tr><th>代號</th><th>名稱</th><th>收盤</th><th>分數</th><th>四燈</th><th>判斷</th><th>原因</th></tr></thead><tbody></tbody></table></div>
+  </div>
+  <div class="card note"><h2>下一版</h2><p>這版先支援 CSV 全市場掃描。下一版需要加後端排程，每天收盤後自動抓 TWSE/TPEx 日資料，計算均線、漲幅、量能與題材燈。</p></div>
+</div>
+<script>
+let stocks=[];let lastResults=[];
+function num(v){const n=parseFloat(String(v).replace(/,/g,''));return isNaN(n)?0:n}
+function evalStock(s){const minRise=num(document.getElementById('minRise').value),minVolRatio=num(document.getElementById('minVolRatio').value),minAdx=num(document.getElementById('minAdx').value);const close=num(s.close),ma20=num(s.ma20),ma60=num(s.ma60),ma240=num(s.ma240),rise60=num(s.rise60),volume=num(s.volume),avgVolume20=num(s.avgVolume20),adx=num(s.adx);const trend=close>ma20&&close>ma60&&close>ma240&&ma20>=ma60;const fund=avgVolume20>0&&volume/avgVolume20>=minVolRatio;const priceVol=rise60>=minRise&&adx>=minAdx&&!String(s.kline||'').includes('長黑');const theme=/(AI|機器人|軍工|電力|散熱|半導體|先進封裝|PCB|CPO|伺服器|低軌|重電|能源|航太|車用|ASIC)/i.test(s.theme||'');const score=[trend,fund,priceVol,theme].filter(Boolean).length;let status='只觀察',cls='wait';if(score>=4){status='符合觀察：等回踩或確認，不追高';cls='ok'}else if(score===3){status='可列觀察：缺一燈，等補強';cls='wait'}else if(score<=1){status='避開：條件不足';cls='avoid'}const reasons=[];if(trend)reasons.push('趨勢多頭');if(fund)reasons.push('量能放大');if(priceVol)reasons.push('價量條件足');if(theme)reasons.push('題材命中');return {...s,trend,fund,priceVol,theme,score,status,cls,reason:reasons.join('、')||'條件不足'};}
+function render(results){lastResults=results;const tb=document.querySelector('#resultTable tbody');tb.innerHTML='';results.forEach(r=>{const lights=`<div class="lights"><span class="light ${r.trend?'on':'off'}">趨勢</span><span class="light ${r.fund?'on':'off'}">資金</span><span class="light ${r.theme?'on':'off'}">題材</span><span class="light ${r.priceVol?'on':'off'}">價量</span></div>`;tb.insertAdjacentHTML('beforeend',`<tr><td class="mono">${r.code||''}</td><td>${r.name||''}</td><td>${r.close||''}</td><td>${r.score}/4</td><td>${lights}</td><td><span class="pill ${r.cls}">${r.status}</span></td><td>${r.reason}</td></tr>`)});document.getElementById('summary').textContent=`共掃描 ${stocks.length} 檔，輸出 ${results.length} 檔。`;}
+function scanMarket(){const limit=num(document.getElementById('limit').value)||30;const results=stocks.map(evalStock).filter(r=>r.score>=3).sort((a,b)=>b.score-a.score||num(b.rise60)-num(a.rise60)).slice(0,limit);render(results)}
+function loadDemo(){stocks=[{code:'2330',name:'台積電',close:1000,ma20:950,ma60:900,ma240:780,rise60:35,volume:80000,avgVolume20:30000,adx:32,kline:'紅K突破',theme:'AI 半導體 先進封裝'},{code:'2303',name:'聯電',close:52,ma20:51,ma60:50,ma240:48,rise60:12,volume:30000,avgVolume20:25000,adx:18,kline:'盤整',theme:'半導體'},{code:'4977',name:'眾達-KY',close:98,ma20:91,ma60:83,ma240:70,rise60:42,volume:12000,avgVolume20:5000,adx:28,kline:'紅K突破',theme:'CPO AI 伺服器'}];scanMarket()}
+function loadCSV(){const text=document.getElementById('csvInput').value.trim();if(!text){alert('請先貼上 CSV');return}const lines=text.split(/\r?\n/).filter(Boolean);const headers=lines.shift().split(',').map(h=>h.trim());stocks=lines.map(line=>{const cols=line.split(',');const obj={};headers.forEach((h,i)=>obj[h]=cols[i]);return obj});scanMarket()}
+function exportCSV(){if(!lastResults.length){alert('沒有結果可匯出');return}const headers=['code','name','close','score','status','reason'];const rows=[headers.join(',')].concat(lastResults.map(r=>headers.map(h=>`"${String(r[h]||'').replace(/"/g,'""')}"`).join(',')));const blob=new Blob([rows.join('\n')],{type:'text/csv;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='four_lights_results.csv';a.click()}
+loadDemo();
+</script>
+</body>
+</html>
