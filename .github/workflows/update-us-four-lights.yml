@@ -1,0 +1,35 @@
+name: Update US Four Lights Scanner
+
+on:
+  workflow_dispatch:
+  schedule:
+    # UTC 21:40 = US market close period during standard/daylight variations enough for daily close data.
+    # Taiwan early morning. Use after US regular session.
+    - cron: "40 21 * * 1-5"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run US scanner
+        run: python scripts/update_us_stock_scanner.py
+
+      - name: Commit updated US data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update US four lights scan data"
+          file_pattern: data/us_latest.json data/us_latest.csv data/us_latest_report.md
