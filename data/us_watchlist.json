@@ -1,0 +1,13 @@
+{
+  "note": "美股型態學掃描清單。先以高流動性大型股、AI、半導體、軟體、動能股為主。可自行增減。",
+  "tickers": [
+    "AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "TSLA", "AVGO", "AMD", "MU",
+    "SMCI", "ARM", "PLTR", "COIN", "MSTR", "CRWD", "NET", "SNOW", "DDOG", "MDB",
+    "PANW", "ZS", "NOW", "SHOP", "UBER", "ABNB", "NFLX", "ROKU", "HOOD", "SOFI",
+    "APP", "RBLX", "IONQ", "SOUN", "BBAI", "AI", "TSM", "ASML", "QCOM", "MRVL",
+    "LRCX", "AMAT", "KLAC", "TER", "DELL", "HPE", "ORCL", "CRM", "INTC", "WDC",
+    "STX", "ANET", "VRT", "CEG", "GEV", "ETN", "FIX", "EME", "URI", "CAT",
+    "LLY", "NVO", "UNH", "VRTX", "REGN", "ISRG", "TXN", "MPWR", "MELI", "SE",
+    "SPY", "QQQ", "DIA", "IWM"
+  ]
+}
