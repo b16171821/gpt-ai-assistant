@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>股票策略儀表板｜台股＋美股</title>
+  <style>
+    body{margin:0;font-family:Arial,'Noto Sans TC',sans-serif;background:#0f172a;color:#e5e7eb;line-height:1.6}
+    .wrap{max-width:1180px;margin:auto;padding:22px}
+    h1{font-size:28px;margin:0 0 6px} h2{margin:0 0 12px;font-size:20px} h3{margin:0 0 8px;font-size:17px}
+    .muted{color:#94a3b8}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+    .card{background:#111827;border:1px solid #334155;border-radius:16px;padding:16px;margin:14px 0;box-shadow:0 10px 20px rgba(0,0,0,.15)}
+    .stat{display:flex;gap:10px;flex-wrap:wrap}.pill{border-radius:999px;padding:5px 10px;font-size:13px;background:#334155}.ok{background:#166534}.warn{background:#854d0e}.bad{background:#7f1d1d}.blue{background:#1d4ed8}
+    table{width:100%;border-collapse:collapse;margin-top:10px}th,td{border-bottom:1px solid #334155;padding:9px;text-align:left;font-size:14px;vertical-align:top}th{color:#cbd5e1;background:#1e293b}.mono{font-family:ui-monospace,Menlo,Consolas,monospace}
+    a{color:#93c5fd;text-decoration:none}a:hover{text-decoration:underline}button{border:0;border-radius:10px;background:#2563eb;color:white;padding:10px 12px;font-weight:700;cursor:pointer}button.secondary{background:#374151}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.small{font-size:13px}.section-title{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.empty{padding:14px;background:#020617;border:1px dashed #475569;border-radius:12px;color:#94a3b8}.signal{font-weight:700}.green{color:#86efac}.yellow{color:#fde68a}.red{color:#fca5a5}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>股票策略儀表板</h1>
+    <div class="muted">台股＋美股｜四燈＋型態＋頸線＋進場＋停損｜只做觀察，不構成買賣建議</div>
+
+    <div class="card">
+      <div class="section-title">
+        <h2>今日總覽</h2>
+        <div class="actions">
+          <button onclick="loadAll()">重新讀取</button>
+          <button class="secondary" onclick="location.href='data/latest_report.md'">台股報告</button>
+          <button class="secondary" onclick="location.href='data/us_latest_report.md'">美股報告</button>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="card"><h3>台股</h3><div id="twMeta" class="muted">讀取中...</div></div>
+        <div class="card"><h3>美股</h3><div id="usMeta" class="muted">讀取中...</div></div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="section-title"><h2>台股嚴格候選</h2><span id="twStrictBadge" class="pill">-</span></div>
+        <div id="twStrict"></div>
+      </div>
+      <div class="card">
+        <div class="section-title"><h2>美股嚴格候選</h2><span id="usStrictBadge" class="pill">-</span></div>
+        <div id="usStrict"></div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="section-title"><h2>台股預備單</h2><span class="pill warn">接近成形</span></div>
+        <div id="twWatch"></div>
+      </div>
+      <div class="card">
+        <div class="section-title"><h2>美股預備單</h2><span class="pill warn">接近成形</span></div>
+        <div id="usWatch"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>怎麼看這一頁</h2>
+      <div class="small muted">
+        先看「嚴格候選」。沒有嚴格候選，就只看預備單，不要追。<br>
+        strictOk = true 才代表條件比較完整；forbiddenChase = true 就禁止追高，只能等回踩。<br>
+        進場前仍要確認：收盤站上頸線至少 2%、成交量大於 20 日均量 2 倍、不可長上影、隔日不跌破頸線。
+      </div>
+    </div>
+  </div>
+
+<script>
+function clsByStatus(row){
+  if(row.strictOk) return 'ok';
+  if(row.forbiddenChase) return 'bad';
+  return 'warn';
+}
+function signalText(row){
+  if(row.strictOk) return '<span class="signal green">可研究進場</span>';
+  if(row.forbiddenChase) return '<span class="signal red">禁止追高</span>';
+  return '<span class="signal yellow">等確認</span>';
+}
+function table(rows, market){
+  if(!rows || rows.length===0) return '<div class="empty">目前沒有符合條件標的。</div>';
+  const head = '<tr><th>股票</th><th>訊號</th><th>現價</th><th>型態</th><th>進場/停損</th><th>策略</th></tr>';
+  const body = rows.map(r=>`<tr>
+    <td><b>${r.name||''}</b><br><span class="mono">${r.code||r.ticker||''}</span><br><span class="muted small">${r.score||0}/4｜${r.winRate||'-'}勝率</span></td>
+    <td>${signalText(r)}<br><span class="pill ${clsByStatus(r)}">${r.status||''}</span></td>
+    <td>${r.close||'-'} ${market==='us'?'USD':''}<br><span class="muted small">${r.date||''}</span></td>
+    <td>${r.pattern||'-'}<br><span class="muted small">${r.stage||'-'}</span><br><span class="muted small">頸線 ${r.neckline||'-'}｜目標 ${r.target||'-'}</span></td>
+    <td>突破：${r.entryBreakout||'-'}<br>回踩：${r.entryPullback||'-'}<br>停損：${r.stopLoss||'-'}<br><span class="muted small">追價 ${r.chaseRangeLow||'-'}～${r.chaseRangeHigh||'-'}</span></td>
+    <td>${r.planStatus||''}<br><span class="muted small">${r.reason||''}</span></td>
+  </tr>`).join('');
+  return `<div style="overflow:auto"><table>${head}${body}</table></div>`;
+}
+function topRows(stocks, strictOnly, limit=5){
+  const arr=(stocks||[]).filter(r=> strictOnly ? r.strictOk : (r.score>=3 && !r.strictOk));
+  return arr.slice(0, limit);
+}
+async function loadJson(path){
+  const res = await fetch(path+'?ts='+Date.now());
+  if(!res.ok) throw new Error(path+' not found');
+  return res.json();
+}
+function renderTw(payload){
+  const m=payload.meta||{}; const s=payload.stocks||[];
+  document.getElementById('twMeta').innerHTML = `更新：${m.updatedAt||'-'}<br>掃描：${m.totalAnalyzed||0} 檔｜3燈以上：${m.qualified3Plus||0}｜4燈：${m.qualified4||0}｜嚴格候選：${m.strictCandidates||0}`;
+  document.getElementById('twStrictBadge').textContent = `${m.strictCandidates||0} 檔`;
+  document.getElementById('twStrict').innerHTML = table(topRows(s,true,5),'tw');
+  document.getElementById('twWatch').innerHTML = table(topRows(s,false,5),'tw');
+}
+function renderUs(payload){
+  const m=payload.meta||{}; const s=payload.stocks||[]; const market=payload.market||{};
+  document.getElementById('usMeta').innerHTML = `美東：${m.updatedAtET||'-'}<br>台灣：${m.updatedAtTW||'-'}<br>市場：${m.sessionStatus||'-'}｜${market.marketState||'-'}｜${market.suggestion||'-'}<br>掃描：${m.totalAnalyzed||0} 檔｜3分以上：${m.qualified3Plus||0}｜嚴格候選：${m.strictCandidates||0}`;
+  document.getElementById('usStrictBadge').textContent = `${m.strictCandidates||0} 檔`;
+  document.getElementById('usStrict').innerHTML = table(topRows(s,true,5),'us');
+  document.getElementById('usWatch').innerHTML = table(topRows(s,false,5),'us');
+}
+async function loadAll(){
+  document.getElementById('twMeta').textContent='讀取中...';
+  document.getElementById('usMeta').textContent='讀取中...';
+  try{ renderTw(await loadJson('data/latest.json')); }catch(e){ document.getElementById('twMeta').innerHTML='<span class="red">台股資料尚未產生，請先跑 Update Four Lights Scanner。</span>'; }
+  try{ renderUs(await loadJson('data/us_latest.json')); }catch(e){ document.getElementById('usMeta').innerHTML='<span class="red">美股資料尚未產生，請先跑 Update US Four Lights Scanner。</span>'; }
+}
+loadAll();
+</script>
+</body>
+</html>
