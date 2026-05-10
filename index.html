@@ -6,7 +6,7 @@
   <title>股票策略儀表板｜台股＋美股</title>
   <style>
     *{box-sizing:border-box}
-    :root{color-scheme:dark;--bg:#0f172a;--panel:#111827;--panel-2:#020617;--line:#334155;--line-soft:#1f2937;--text:#e5e7eb;--muted:#94a3b8;--head:#1e293b;--blue:#2563eb;--button:#374151}
+    :root{color-scheme:dark;--bg:#0f172a;--panel:#111827;--panel-2:#020617;--line:#334155;--line-soft:#1f2937;--text:#e5e7eb;--muted:#94a3b8;--head:#1e293b;--blue:#2563eb;--button:#374151;--amber:#f59e0b;--amber-bg:#451a03}
     body{margin:0;font-family:Arial,'Noto Sans TC',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-text-size-adjust:100%}
     .wrap{width:min(100%,1224px);margin:auto;padding:22px}
     .hero{padding:6px 0 4px}
@@ -20,18 +20,35 @@
     .pill{display:inline-flex;align-items:center;border-radius:999px;padding:5px 10px;font-size:13px;line-height:1.2;background:#334155;white-space:nowrap}
     .ok{background:#166534}.warn{background:#854d0e}.bad{background:#7f1d1d}.blue{background:#1d4ed8}
     .table-scroll{width:100%;overflow:auto;-webkit-overflow-scrolling:touch}
-    table{width:100%;border-collapse:collapse;margin-top:10px;min-width:780px}
+    table{width:100%;border-collapse:collapse;margin-top:10px;min-width:860px}
     th,td{border-bottom:1px solid var(--line);padding:9px;text-align:left;font-size:14px;vertical-align:top}
     th{color:#cbd5e1;background:var(--head);position:sticky;top:0}
     .mono{font-family:ui-monospace,Menlo,Consolas,monospace}
     button{border:0;border-radius:10px;background:var(--blue);color:white;padding:10px 12px;font-weight:700;cursor:pointer;min-height:42px}
     button.secondary{background:var(--button)}
+    .mini-btn{margin-top:8px;padding:7px 9px;min-height:34px;border-radius:8px;font-size:12px;background:#1d4ed8}
     .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
     .small{font-size:13px}
     .section-title{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
     .empty{padding:14px;background:var(--panel-2);border:1px dashed #475569;border-radius:12px;color:var(--muted)}
     .signal{font-weight:700}.green{color:#86efac}.yellow{color:#fde68a}.red{color:#fca5a5}
     .guide{max-width:920px}
+    .calculator-card{border-color:#475569;background:linear-gradient(180deg,#111827 0%,#0b1220 100%)}
+    .calculator-copy{margin:0 0 14px;color:#cbd5e1}
+    .calculator-layout{display:grid;grid-template-columns:minmax(260px,.92fr) minmax(300px,1.08fr);gap:16px;align-items:start}
+    .calc-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .field label{display:block;margin-bottom:6px;color:#cbd5e1;font-size:13px;font-weight:700}
+    .input-wrap{display:flex;align-items:center;gap:8px;background:#020617;border:1px solid #334155;border-radius:10px;padding:0 10px;min-height:44px}
+    .input-wrap input{width:100%;border:0;outline:0;background:transparent;color:var(--text);font-size:16px;padding:10px 0}
+    .input-wrap span{color:#94a3b8;font-size:13px;white-space:nowrap}
+    .calc-results{background:#020617;border:1px solid #334155;border-radius:12px;padding:14px}
+    .result-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px}
+    .result-item{background:#0f172a;border:1px solid #1f2937;border-radius:10px;padding:10px}
+    .result-label{display:block;color:#94a3b8;font-size:12px;margin-bottom:4px}
+    .result-value{display:block;color:#f8fafc;font-size:20px;font-weight:800;line-height:1.2;overflow-wrap:anywhere}
+    .calc-message{margin-top:10px;color:#94a3b8;font-size:13px}
+    .calc-warning{margin-top:10px;padding:10px 12px;border-radius:10px;background:var(--amber-bg);border:1px solid #92400e;color:#fde68a;font-weight:700}
+    .risk-note{margin-top:12px;padding-top:12px;border-top:1px solid #1f2937;color:#94a3b8;font-size:12px}
 
     @media (max-width:720px){
       body{background:#0b1120}
@@ -48,6 +65,9 @@
       .section-title{align-items:flex-start}
       .section-title h2{max-width:calc(100% - 76px)}
       .pill{font-size:12px;padding:5px 9px}
+      .calculator-layout,.calc-form,.result-grid{grid-template-columns:1fr}
+      .calculator-copy{font-size:14px}
+      .result-value{font-size:18px}
       .table-scroll{overflow:visible}
       table{display:block;min-width:0;margin-top:8px}
       thead{display:none}
@@ -56,6 +76,7 @@
       td{display:grid;grid-template-columns:76px minmax(0,1fr);gap:10px;border-bottom:1px solid var(--line-soft);padding:9px 0;font-size:14px;overflow-wrap:anywhere}
       td:last-child{border-bottom:0}
       td::before{content:attr(data-label);color:var(--muted);font-size:12px;font-weight:700;line-height:1.5}
+      .mini-btn{width:100%}
       .small{font-size:12px}
       .empty{padding:12px}
       .guide{font-size:13px}
@@ -88,6 +109,48 @@
       </div>
     </div>
 
+    <div class="card calculator-card" id="positionCalculator">
+      <div class="section-title">
+        <h2>主升段部位計算器</h2>
+        <span class="pill blue">風險控管</span>
+      </div>
+      <p class="calculator-copy">用「最多能虧多少」反推「這檔能買多少」。四燈負責幫你找機會，部位計算器負責幫你活下來。</p>
+      <div class="calculator-layout">
+        <div>
+          <div class="calc-form">
+            <div class="field">
+              <label for="accountCapital">帳戶總資金</label>
+              <div class="input-wrap"><input id="accountCapital" type="number" inputmode="decimal" min="0" placeholder="例如 100000"><span>元 / 美金</span></div>
+            </div>
+            <div class="field">
+              <label for="riskPercent">單筆可虧比例</label>
+              <div class="input-wrap"><input id="riskPercent" type="number" inputmode="decimal" min="0" step="0.1" placeholder="例如 3" value="3"><span>%</span></div>
+            </div>
+            <div class="field">
+              <label for="buyPrice">買進價</label>
+              <div class="input-wrap"><input id="buyPrice" type="number" inputmode="decimal" min="0" step="0.01" placeholder="例如 100"></div>
+            </div>
+            <div class="field">
+              <label for="stopPrice">停損價</label>
+              <div class="input-wrap"><input id="stopPrice" type="number" inputmode="decimal" min="0" step="0.01" placeholder="例如 92"></div>
+            </div>
+          </div>
+          <div class="calc-message" id="calcHint">請輸入帳戶資金、買進價與停損價，系統會即時計算可買部位。</div>
+          <div class="calc-warning" id="calcWarning" hidden></div>
+        </div>
+        <div class="calc-results">
+          <div class="small muted">不是用本金決定買多少，是用停損決定買多少。</div>
+          <div class="result-grid">
+            <div class="result-item"><span class="result-label">最多可虧金額</span><span class="result-value" id="maxLossResult">-</span></div>
+            <div class="result-item"><span class="result-label">停損幅度</span><span class="result-value" id="stopRateResult">-</span></div>
+            <div class="result-item"><span class="result-label">建議投入金額</span><span class="result-value" id="investAmountResult">-</span></div>
+            <div class="result-item"><span class="result-label">建議可買股數</span><span class="result-value" id="sharesResult">-</span></div>
+          </div>
+          <div class="risk-note">主升段可以重倉，但每一筆進場前，都要先知道自己錯了最多虧多少。此計算結果僅供資金控管參考，不代表投資建議。實際交易仍需自行判斷並承擔風險。</div>
+        </div>
+      </div>
+    </div>
+
     <div class="grid">
       <div class="card"><div class="section-title"><h2>台股嚴格候選</h2><span id="twStrictBadge" class="pill">-</span></div><div id="twStrict"></div></div>
       <div class="card"><div class="section-title"><h2>美股嚴格候選</h2><span id="usStrictBadge" class="pill">-</span></div><div id="usStrict"></div></div>
@@ -111,12 +174,23 @@
 <script>
 function clsByStatus(row){if(row.strictOk)return'ok';if(row.forbiddenChase)return'bad';return'warn'}
 function signalText(row){if(row.strictOk)return'<span class="signal green">可研究進場</span>';if(row.forbiddenChase)return'<span class="signal red">禁止追高</span>';return'<span class="signal yellow">等確認</span>'}
-function table(rows,market){if(!rows||rows.length===0)return'<div class="empty">目前沒有符合條件標的。</div>';const head='<thead><tr><th>股票</th><th>訊號</th><th>現價</th><th>型態</th><th>進場/停損</th><th>策略</th></tr></thead>';const body=rows.map(r=>`<tr><td data-label="股票"><b>${r.name||''}</b><br><span class="mono">${r.code||r.ticker||''}</span><br><span class="muted small">${r.score||0}/4｜${r.winRate||'-'}勝率</span></td><td data-label="訊號">${signalText(r)}<br><span class="pill ${clsByStatus(r)}">${r.status||''}</span></td><td data-label="現價">${r.close||'-'} ${market==='us'?'USD':''}<br><span class="muted small">${r.date||''}</span></td><td data-label="型態">${r.pattern||'-'}<br><span class="muted small">${r.stage||'-'}</span><br><span class="muted small">頸線 ${r.neckline||'-'}｜目標 ${r.target||'-'}</span></td><td data-label="進出">突破：${r.entryBreakout||'-'}<br>回踩：${r.entryPullback||'-'}<br>停損：${r.stopLoss||'-'}<br><span class="muted small">追價 ${r.chaseRangeLow||'-'}～${r.chaseRangeHigh||'-'}</span></td><td data-label="策略">${r.planStatus||''}<br><span class="muted small">${r.reason||''}</span></td></tr>`).join('');return`<div class="table-scroll"><table>${head}<tbody>${body}</tbody></table></div>`}
+function escAttr(value){return String(value??'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function firstNumber(value){const match=String(value??'').replace(/,/g,'').match(/-?\d+(\.\d+)?/);return match?Number(match[0]):''}
+function bestEntry(row){return firstNumber(row.entryBreakout)||firstNumber(row.entryPullback)||firstNumber(row.close)||''}
+function table(rows,market){if(!rows||rows.length===0)return'<div class="empty">目前沒有符合條件標的。</div>';const head='<thead><tr><th>股票</th><th>訊號</th><th>現價</th><th>型態</th><th>進場/停損</th><th>策略</th></tr></thead>';const body=rows.map(r=>{const entry=bestEntry(r),stop=firstNumber(r.stopLoss);return `<tr><td data-label="股票"><b>${r.name||''}</b><br><span class="mono">${r.code||r.ticker||''}</span><br><span class="muted small">${r.score||0}/4｜${r.winRate||'-'}勝率</span></td><td data-label="訊號">${signalText(r)}<br><span class="pill ${clsByStatus(r)}">${r.status||''}</span></td><td data-label="現價">${r.close||'-'} ${market==='us'?'USD':''}<br><span class="muted small">${r.date||''}</span></td><td data-label="型態">${r.pattern||'-'}<br><span class="muted small">${r.stage||'-'}</span><br><span class="muted small">頸線 ${r.neckline||'-'}｜目標 ${r.target||'-'}</span></td><td data-label="進出">突破：${r.entryBreakout||'-'}<br>回踩：${r.entryPullback||'-'}<br>停損：${r.stopLoss||'-'}<br><span class="muted small">追價 ${r.chaseRangeLow||'-'}～${r.chaseRangeHigh||'-'}</span><br><button class="mini-btn calc-fill" data-entry="${escAttr(entry)}" data-stop="${escAttr(stop)}" data-name="${escAttr(r.name||r.code||r.ticker||'此標的')}">帶入計算</button></td><td data-label="策略">${r.planStatus||''}<br><span class="muted small">${r.reason||''}</span></td></tr>`}).join('');return`<div class="table-scroll"><table>${head}<tbody>${body}</tbody></table></div>`}
 function topRows(stocks,strictOnly,limit=5){return (stocks||[]).filter(r=>strictOnly?r.strictOk:(r.score>=3&&!r.strictOk)).slice(0,limit)}
 async function loadJson(path){const res=await fetch(path+'?ts='+Date.now());if(!res.ok)throw new Error(path+' not found');return res.json()}
 function renderTw(payload){const m=payload.meta||{},s=payload.stocks||[];twMeta.innerHTML=`更新：${m.updatedAt||'-'}<br>掃描：${m.totalAnalyzed||0} 檔｜3燈以上：${m.qualified3Plus||0}｜4燈：${m.qualified4||0}｜嚴格候選：${m.strictCandidates||0}`;twStrictBadge.textContent=`${m.strictCandidates||0} 檔`;twStrict.innerHTML=table(topRows(s,true,5),'tw');twWatch.innerHTML=table(topRows(s,false,5),'tw')}
 function renderUs(payload){const m=payload.meta||{},s=payload.stocks||[],market=payload.market||{};usMeta.innerHTML=`美東：${m.updatedAtET||'-'}<br>台灣：${m.updatedAtTW||'-'}<br>市場：${m.sessionStatus||'-'}｜${market.marketState||'-'}｜${market.suggestion||'-'}<br>掃描：${m.totalAnalyzed||0} 檔｜3分以上：${m.qualified3Plus||0}｜嚴格候選：${m.strictCandidates||0}`;usStrictBadge.textContent=`${m.strictCandidates||0} 檔`;usStrict.innerHTML=table(topRows(s,true,5),'us');usWatch.innerHTML=table(topRows(s,false,5),'us')}
+function money(value){return Number(value).toLocaleString('zh-TW',{maximumFractionDigits:2})}
+function setResult(id,value){document.getElementById(id).textContent=value}
+function resetResults(){setResult('maxLossResult','-');setResult('stopRateResult','-');setResult('investAmountResult','-');setResult('sharesResult','-')}
+function updateCalculator(){const capital=Number(accountCapital.value),risk=Number(riskPercent.value||0),buy=Number(buyPrice.value),stop=Number(stopPrice.value);calcWarning.hidden=true;calcWarning.textContent='';if(risk>5){calcWarning.hidden=false;calcWarning.textContent='單筆風險超過 5%，屬於高風險操作，請確認是否適合。'}if(!accountCapital.value||!buyPrice.value||!stopPrice.value){resetResults();calcHint.textContent=!stopPrice.value&&buyPrice.value?'請先輸入停損價，系統才能計算可買部位。':'請輸入帳戶資金、買進價與停損價，系統會即時計算可買部位。';return}if(!capital||!buy||!stop){resetResults();calcHint.textContent='請輸入有效數字。';return}if(stop>=buy){resetResults();calcHint.textContent='停損價必須低於買進價，才能計算風險。';return}const maxLoss=capital*(risk/100),stopRate=(buy-stop)/buy,invest=maxLoss/stopRate,shares=Math.floor(invest/buy);setResult('maxLossResult',money(maxLoss));setResult('stopRateResult',(stopRate*100).toFixed(2)+'%');setResult('investAmountResult',money(invest));setResult('sharesResult',shares.toLocaleString('zh-TW')+' 股');calcHint.textContent=`帳戶資金：${money(capital)}｜單筆可虧：${risk}%｜買進價：${money(buy)}｜停損價：${money(stop)}`}
+function prefillCalculator(entry,stop,name){if(entry)buyPrice.value=entry;if(stop){stopPrice.value=stop;calcHint.textContent=`已帶入 ${name} 的進場價與停損價，可再手動調整。`}else{stopPrice.value='';calcHint.textContent='請先輸入停損價，系統才能計算可買部位。'}updateCalculator();document.getElementById('positionCalculator').scrollIntoView({behavior:'smooth',block:'start'})}
 async function loadAll(){twMeta.textContent='讀取中...';usMeta.textContent='讀取中...';try{renderTw(await loadJson('data/latest.json'))}catch(e){twMeta.innerHTML='<span class="red">台股資料尚未產生，請先跑 Update Four Lights Scanner。</span>'}try{renderUs(await loadJson('data/us_latest.json'))}catch(e){usMeta.innerHTML='<span class="red">美股資料尚未產生，請先跑 Update US Four Lights Scanner。</span>'}}
+['accountCapital','riskPercent','buyPrice','stopPrice'].forEach(id=>document.getElementById(id).addEventListener('input',updateCalculator));
+document.addEventListener('click',event=>{const btn=event.target.closest('.calc-fill');if(!btn)return;prefillCalculator(btn.dataset.entry,btn.dataset.stop,btn.dataset.name)});
+updateCalculator();
 loadAll();
 </script>
 </body>
