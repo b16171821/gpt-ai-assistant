@@ -1,0 +1,36 @@
+策略狀態追蹤規格
+
+每檔股票新增：
+strategyStage：WATCH / WAIT_BREAKOUT / TEST / ENTRY_CONFIRMED / HOLD / TAKE_PROFIT / STOP_LOSS / CANCELLED
+strategyChange：UNCHANGED / UPGRADED / DOWNGRADED / CANCELLED
+
+顯示格式：
+昨日狀態：
+今日狀態：
+策略變化：
+變化原因：
+
+會員最終指令：
+空手等確認 / 可小部位試單 / 正式進場 / 持有者續抱，空手者不追 / 已到目標，分批停利 / 跌破風險區，出場 / 策略取消，移出觀察
+
+持有者：
+空手者：
+
+下一個判斷點：
+突破某價格：策略升級
+跌破某價格：策略降級
+接近目標價：分批停利
+跌破停損：出場
+
+LINE格式：
+【今日策略追蹤】
+股票：
+昨日狀態：
+今日狀態：
+策略變化：
+持有者：
+空手者：
+下一個判斷點：
+提醒：
+有確認才進，沒確認不追。
+持有跟新進是兩件事。
