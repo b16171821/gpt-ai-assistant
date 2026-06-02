@@ -14,17 +14,9 @@ body{margin:0;background:#0f172a;color:#e5e7eb;font-family:Arial,'Noto Sans TC',
 <div class="muted">固定讀取掃描器結果｜股票清單收合顯示｜策略鎖定 V1</div>
 <div class="links"><a href="#rank">勝率排行</a><a href="#forming">即將成形</a><a href="#pullback">回踩確認</a><a href="#hold">續抱</a><a href="#profit">停利</a></div>
 <div class="bar">原始第一目標固定不變；延伸目標只給持有者剩餘部位參考，空手者不追高。</div>
-<div class="card">
-  <div class="btns"><button onclick="loadAll()">重新讀取</button><button class="secondary" onclick="location.href='data/latest_report.md'">台股報告</button><button class="secondary" onclick="location.href='data/us_latest_report.md'">美股報告</button></div>
-  <div class="tabs"><button id="tabTW" class="active" onclick="setMarket('台股')">台股</button><button id="tabUS" onclick="setMarket('美股')">美股</button></div>
-  <div class="summarygrid"><div class="card"><h2>台股</h2><div id="twMeta" class="muted">讀取中...</div></div><div class="card"><h2>美股</h2><div id="usMeta" class="muted">讀取中...</div></div></div>
-</div>
+<div class="card"><div class="btns"><button onclick="loadAll()">重新讀取</button><button class="secondary" onclick="location.href='data/latest_report.md'">台股報告</button><button class="secondary" onclick="location.href='data/us_latest_report.md'">美股報告</button></div><div class="tabs"><button id="tabTW" class="active" onclick="setMarket('台股')">台股</button><button id="tabUS" onclick="setMarket('美股')">美股</button></div><div class="summarygrid"><div class="card"><h2>台股</h2><div id="twMeta" class="muted">讀取中...</div></div><div class="card"><h2>美股</h2><div id="usMeta" class="muted">讀取中...</div></div></div></div>
 <section class="card"><h2>主升段成形 5 條件說明</h2><div class="explain"><div><b>1. 趨勢</b><br>股價站上主要均線，均線結構偏多。</div><div><b>2. 型態</b><br>箱型、W底、旗型、三角收斂或回踩結構。</div><div><b>3. 量能</b><br>成交量放大，代表資金進場。</div><div><b>4. 位置</b><br>接近頸線、剛突破，或回踩不破。</div><div><b>5. 風控</b><br>停損明確，風險可控。</div></div><div class="section"><b>判斷方式：</b><br>5/5：條件完整，高關注。<br>4/5：接近完整，可觀察。<br>3/5：預備觀察，等確認。</div></section>
-<section id="rank" class="card"><h2><span class="pill hot">勝率排行</span> <span id="rankN" class="muted small"></span></h2><div id="rankList" class="list"></div></section>
-<section id="forming" class="card"><h2><span class="pill okp">即將成形</span> <span id="formingN" class="muted small"></span></h2><div id="formingList" class="list"></div></section>
-<section id="pullback" class="card"><h2><span class="pill wait">回踩確認中</span> <span id="pullbackN" class="muted small"></span></h2><div id="pullbackList" class="list"></div></section>
-<section id="hold" class="card"><h2><span class="pill hot">主升段續抱</span> <span id="holdN" class="muted small"></span></h2><div id="holdList" class="list"></div></section>
-<section id="profit" class="card"><h2><span class="pill profit">接近目標停利</span> <span id="profitN" class="muted small"></span></h2><div id="profitList" class="list"></div></section>
+<section id="rank" class="card"><h2><span class="pill hot">勝率排行</span> <span id="rankN" class="muted small"></span></h2><div id="rankList" class="list"></div></section><section id="forming" class="card"><h2><span class="pill okp">即將成形</span> <span id="formingN" class="muted small"></span></h2><div id="formingList" class="list"></div></section><section id="pullback" class="card"><h2><span class="pill wait">回踩確認中</span> <span id="pullbackN" class="muted small"></span></h2><div id="pullbackList" class="list"></div></section><section id="hold" class="card"><h2><span class="pill hot">主升段續抱</span> <span id="holdN" class="muted small"></span></h2><div id="holdList" class="list"></div></section><section id="profit" class="card"><h2><span class="pill profit">接近目標停利</span> <span id="profitN" class="muted small"></span></h2><div id="profitList" class="list"></div></section>
 </div>
 <script>
 let all=[],locks={},currentMarket='台股';
