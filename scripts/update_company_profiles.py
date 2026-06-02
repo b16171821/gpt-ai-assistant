@@ -10,7 +10,7 @@ TW_PATH = DATA_DIR / "latest.json"
 US_PATH = DATA_DIR / "us_latest.json"
 PROFILE_PATH = DATA_DIR / "company_profiles.json"
 TAIPEI_TZ = timezone(timedelta(hours=8))
-MAX_PER_MARKET = 30
+MAX_PER_MARKET = 80
 
 
 def now_tw():
@@ -35,14 +35,19 @@ def key_for(market, row):
     return f"{market}:{code}"
 
 
-def yfinance_ticker(market, row):
+def short(text, max_len=160):
+    text = " ".join(str(text or "").replace("\n", " ").split())
+    return text[:max_len]
+
+
+def ticker_for(market, row):
     if market == "美股":
         return row.get("ticker")
     code = row.get("code")
-    market_name = row.get("market", "")
     if not code:
         return None
-    if "上櫃" in market_name or row.get("ticker", "").endswith(".TWO"):
+    market_name = row.get("market", "")
+    if "上櫃" in market_name or str(row.get("ticker", "")).endswith(".TWO"):
         return f"{code}.TWO"
     return f"{code}.TW"
 
@@ -51,50 +56,36 @@ def fallback_profile(market, row):
     name = row.get("name") or row.get("ticker") or row.get("code") or "該公司"
     pattern = row.get("pattern") or "主升段型態"
     reason = row.get("reason") or "量價條件符合觀察"
-    theme = row.get("theme") or "尚未取得公開題材資料"
+    market_name = row.get("market") or market
     return {
-        "market": market,
-        "code": row.get("code") or row.get("ticker"),
-        "name": name,
-        "industry": row.get("industry") or "尚未取得產業分類",
-        "sector": row.get("sector") or "尚未取得產業分類",
-        "businessSummary": f"{name}：{theme}。目前系統主要依據型態、量能與位置觀察。",
-        "themeSummary": f"型態：{pattern}｜原因：{reason}",
-        "newsSummary": "尚未取得最近重大資訊，請以公開資訊觀測站、公司公告或券商新聞為準。",
-        "source": "scanner fallback",
-        "updatedAt": now_tw(),
+        "industry": row.get("industry") or market_name,
+        "sector": row.get("sector") or market,
+        "companyProfile": short(f"{name}目前以技術型態、量能與位置作為觀察重點。"),
+        "theme": short(f"型態：{pattern}｜原因：{reason}"),
+        "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+        "profileSource": "scanner fallback",
+        "profileUpdatedAt": now_tw(),
     }
 
 
 def fetch_profile(market, row):
     base = fallback_profile(market, row)
-    ticker = yfinance_ticker(market, row)
+    ticker = ticker_for(market, row)
     if not ticker:
         return base
     try:
         info = yf.Ticker(ticker).info or {}
         industry = info.get("industry") or base["industry"]
         sector = info.get("sector") or base["sector"]
-        summary = info.get("longBusinessSummary") or info.get("businessSummary") or base["businessSummary"]
-        news_items = []
-        try:
-            for item in (yf.Ticker(ticker).news or [])[:3]:
-                title = item.get("title")
-                if title:
-                    news_items.append(title)
-        except Exception:
-            pass
-        news_summary = "；".join(news_items) if news_items else base["newsSummary"]
-        theme_summary = f"產業：{industry}｜題材：{sector}｜型態：{row.get('pattern') or '-'}｜原因：{row.get('reason') or '-'}"
+        summary = info.get("longBusinessSummary") or base["companyProfile"]
         return {
             **base,
             "industry": industry,
             "sector": sector,
-            "businessSummary": str(summary).strip()[:260],
-            "themeSummary": theme_summary,
-            "newsSummary": news_summary,
-            "source": "Yahoo Finance / yfinance",
-            "updatedAt": now_tw(),
+            "companyProfile": short(summary, 180),
+            "theme": short(f"產業：{industry}｜板塊：{sector}｜型態：{row.get('pattern') or '-'}｜原因：{row.get('reason') or '-'}", 180),
+            "profileSource": "Yahoo Finance / yfinance",
+            "profileUpdatedAt": now_tw(),
         }
     except Exception:
         return base
@@ -116,26 +107,51 @@ def rank_score(row):
 
 def process_market(market, payload, profiles):
     stocks = payload.get("stocks", []) if isinstance(payload, dict) else []
-    stocks = [s for s in stocks if float(s.get("score") or 0) >= 3]
-    stocks = sorted(stocks, key=rank_score, reverse=True)[:MAX_PER_MARKET]
+    candidates = [s for s in stocks if float(s.get("score") or 0) >= 3]
+    candidates = sorted(candidates, key=rank_score, reverse=True)[:MAX_PER_MARKET]
+
+    for row in candidates:
+        k = key_for(market, row)
+        if k not in profiles:
+            profiles[k] = fetch_profile(market, row)
+
+    output = []
     for row in stocks:
         k = key_for(market, row)
-        old = profiles.get(k)
-        # 每天更新一次；已經有資料也會重新整理，避免題材太舊。
-        profiles[k] = fetch_profile(market, row)
-    return profiles
+        profile = profiles.get(k)
+        if profile:
+            row.update(profile)
+        else:
+            row.update(fallback_profile(market, row))
+        output.append(row)
+
+    payload["stocks"] = output
+    meta = payload.get("meta", {})
+    meta["profileEnriched"] = True
+    meta["profileUpdatedAt"] = now_tw()
+    payload["meta"] = meta
+    return payload, profiles
 
 
 def main():
     DATA_DIR.mkdir(exist_ok=True)
-    payload = read_json(PROFILE_PATH, {"profiles": {}})
-    profiles = payload.get("profiles", {}) if isinstance(payload, dict) else {}
-    tw = read_json(TW_PATH, {"stocks": []})
-    us = read_json(US_PATH, {"stocks": []})
-    profiles = process_market("台股", tw, profiles)
-    profiles = process_market("美股", us, profiles)
+    cache = read_json(PROFILE_PATH, {"profiles": {}})
+    profiles = cache.get("profiles", {}) if isinstance(cache, dict) else {}
+
+    if TW_PATH.exists():
+        tw = read_json(TW_PATH, {"meta": {}, "stocks": []})
+        tw, profiles = process_market("台股", tw, profiles)
+        write_json(TW_PATH, tw)
+        print(f"enriched 台股: {len(tw.get('stocks', []))}")
+
+    if US_PATH.exists():
+        us = read_json(US_PATH, {"meta": {}, "stocks": []})
+        us, profiles = process_market("美股", us, profiles)
+        write_json(US_PATH, us)
+        print(f"enriched 美股: {len(us.get('stocks', []))}")
+
     write_json(PROFILE_PATH, {"updatedAt": now_tw(), "profiles": profiles})
-    print(f"company profiles updated: {len(profiles)}")
+    print(f"company profiles cached: {len(profiles)}")
 
 
 if __name__ == "__main__":
