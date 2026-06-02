@@ -25,10 +25,15 @@ MIN_HISTORY_ROWS = 80
 PERIOD = "1y"
 BATCH_SIZE = 80
 MAX_CODES = 1200
+TW_CLOSE_CONFIRM_MINUTE = 14 * 60 + 30
+
+
+def now_tw_dt():
+    return datetime.now(TAIPEI_TZ)
 
 
 def now_tw():
-    return datetime.now(TAIPEI_TZ).isoformat()
+    return now_tw_dt().isoformat()
 
 
 def sf(v, default=0.0):
@@ -43,6 +48,23 @@ def sf(v, default=0.0):
 def sr(v, digits=2):
     v = sf(v)
     return round(v, digits) if math.isfinite(v) else 0
+
+
+def trim_to_completed_daily_bars(df):
+    """只保留完整收盤日K；若 yfinance 抓到今天盤中未完成日K，直接移除。"""
+    if df is None or df.empty:
+        return df
+    x = df.dropna(subset=["Close"]).copy()
+    if x.empty:
+        return x
+    x.index = pd.to_datetime(x.index)
+    now = now_tw_dt()
+    minutes = now.hour * 60 + now.minute
+    today = now.date()
+    latest_date = x.index[-1].date()
+    if latest_date >= today and minutes < TW_CLOSE_CONFIRM_MINUTE:
+        x = x[x.index.date < today]
+    return x.dropna(subset=["Close"])
 
 
 def load_theme_config():
@@ -114,7 +136,6 @@ def pattern_plan(df):
     distance_from_neckline = (close - neckline) / neckline * 100 if neckline else 999
     distance_from_prev_high = abs(close - high60) / high60 * 100 if high60 else 999
     upper_shadow_pct = (sf(r.iloc[-1]["High"]) - max(close, sf(r.iloc[-1]["Open"]))) / close * 100 if close else 999
-
     if compression <= 12 and close >= neckline * 0.98:
         pattern = "箱型突破"
     elif compression <= 18 and vol_ratio >= 1.5:
@@ -123,7 +144,6 @@ def pattern_plan(df):
         pattern = "旗型整理突破"
     else:
         pattern = "接近成形"
-
     breakout_confirmed = close >= neckline * 1.02 and vol_ratio >= 2 and upper_shadow_pct <= 3
     pullback_confirmed = abs(close - neckline) / neckline * 100 <= 3 and close >= neckline and vol_ratio >= 1
     stage = "突破第一根" if breakout_confirmed else ("回踩頸線不破" if pullback_confirmed else "接近成形＋可觀察")
@@ -149,30 +169,20 @@ def pattern_plan(df):
         plan_status = "預備單，等待確認條件"
     confirm = f"收盤站上頸線 {sr(neckline)} 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
     return {
-        "pattern": pattern,
-        "neckline": sr(neckline),
-        "support": sr(support),
-        "target": sr(target),
-        "stage": stage,
-        "entryBreakout": sr(entry_breakout),
-        "entryPullback": sr(entry_pullback),
-        "chaseRangeLow": sr(chase_low),
-        "chaseRangeHigh": sr(chase_high),
-        "stopLoss": sr(stop_loss),
-        "riskPct": sr(risk_pct),
-        "winRate": win_rate,
-        "distanceFromNecklinePct": sr(distance_from_neckline),
-        "distanceFromPrevHighPct": sr(distance_from_prev_high),
-        "forbiddenChase": bool(forbidden),
-        "planStatus": plan_status,
-        "confirmConditions": confirm,
+        "pattern": pattern, "neckline": sr(neckline), "support": sr(support), "target": sr(target), "stage": stage,
+        "entryBreakout": sr(entry_breakout), "entryPullback": sr(entry_pullback), "chaseRangeLow": sr(chase_low),
+        "chaseRangeHigh": sr(chase_high), "stopLoss": sr(stop_loss), "riskPct": sr(risk_pct), "winRate": win_rate,
+        "distanceFromNecklinePct": sr(distance_from_neckline), "distanceFromPrevHighPct": sr(distance_from_prev_high),
+        "forbiddenChase": bool(forbidden), "planStatus": plan_status, "confirmConditions": confirm,
     }
 
 
 def analyze_one(df, meta, theme_config):
     if df is None or df.empty:
         return None
-    df = df.dropna(subset=["Close"]).copy()
+    df = trim_to_completed_daily_bars(df)
+    if df is None or df.empty:
+        return None
     if len(df) < MIN_HISTORY_ROWS:
         return None
     df["MA5"] = df["Close"].rolling(5).mean()
@@ -212,30 +222,15 @@ def analyze_one(df, meta, theme_config):
     if fund: reasons.append("量能放大")
     if theme_hit: reasons.append("題材命中")
     if price_vol: reasons.append("價量條件足")
+    strategy_date = str(df.index[-1].date())
     base = {
-        "date": str(df.index[-1].date()),
-        "market": meta["market"],
-        "code": meta["code"],
-        "name": meta["name"],
-        "close": sr(close),
-        "ma5": sr(latest["MA5"]),
-        "ma20": sr(ma20),
-        "ma60": sr(ma60),
-        "ma240": sr(ma240),
-        "rise60": sr(rise60),
-        "volume": int(volume),
-        "avgVolume20": int(avg_volume20),
-        "adx": sr(adx),
-        "kline": kline,
-        "theme": theme_text,
-        "trend": bool(trend),
-        "fund": bool(fund),
-        "themeHit": bool(theme_hit),
-        "priceVol": bool(price_vol),
-        "score": int(score),
-        "strictOk": bool(strict_ok),
-        "status": status,
-        "reason": "、".join(reasons) if reasons else "條件不足",
+        "date": strategy_date, "strategyAsOfDate": strategy_date, "priceType": "收盤確認價",
+        "source": "Yahoo Finance via yfinance（日K完整收盤資料）", "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K",
+        "market": meta["market"], "code": meta["code"], "name": meta["name"], "close": sr(close),
+        "ma5": sr(latest["MA5"]), "ma20": sr(ma20), "ma60": sr(ma60), "ma240": sr(ma240), "rise60": sr(rise60),
+        "volume": int(volume), "avgVolume20": int(avg_volume20), "adx": sr(adx), "kline": kline, "theme": theme_text,
+        "trend": bool(trend), "fund": bool(fund), "themeHit": bool(theme_hit), "priceVol": bool(price_vol),
+        "score": int(score), "strictOk": bool(strict_ok), "status": status, "reason": "、".join(reasons) if reasons else "條件不足",
     }
     base.update(plan)
     return base
@@ -275,8 +270,13 @@ def card(row, idx):
 
 **一句話策略：** {action}。{row.get('planStatus')}
 
+**資料時間**
+- 策略依據：{row.get('strategyAsOfDate')} 收盤資料
+- 價格類型：{row.get('priceType')}
+- 資料來源：{row.get('source')}
+
 **現在位置**
-- 現價：{row.get('close')}（資料日：{row.get('date')}）
+- 資料價格：{row.get('close')}（資料日：{row.get('date')}）
 - 型態：{row.get('pattern')}｜階段：{row.get('stage')}
 - 原因：{row.get('reason')}
 - 題材：{row.get('theme') or '尚未標註題材'}
@@ -302,31 +302,15 @@ def write_report(rows, meta):
     strict = [r for r in rows if r.get("strictOk")]
     watch = [r for r in rows if r.get("score", 0) >= 3 and not r.get("strictOk")]
     top = (strict + watch)[:10]
-    if strict:
-        conclusion = "有符合嚴格條件的候選股，但仍要等隔日不跌破頸線確認。"
-    elif watch:
-        conclusion = "目前沒有完美進場股，優先列預備單，等突破或回踩確認。"
-    else:
-        conclusion = "目前無符合條件標的，不硬選。"
+    conclusion = "有符合嚴格條件的候選股，但仍要等隔日不跌破頸線確認。" if strict else ("目前沒有完美進場股，優先列預備單，等突破或回踩確認。" if watch else "目前無符合條件標的，不硬選。")
     lines = [
-        "# 台股四燈型態學策略報告",
-        "",
-        f"更新時間：{meta.get('updatedAt')}",
-        "",
-        f"## 結論：{conclusion}",
-        "",
-        f"- 掃描檔數：{meta.get('totalAnalyzed')}",
-        f"- 3燈以上：{meta.get('qualified3Plus')}",
-        f"- 4燈：{meta.get('qualified4')}",
-        f"- 嚴格進場候選：{meta.get('strictCandidates')}",
-        "",
-        "## 先看這裡",
-        "- strictOk = True：才是比較接近可操作的候選。",
-        "- forbiddenChase = True：禁止追高，只能等回踩。",
-        "- planStatus：直接看它告訴你要做什麼。",
-        "- 合理追價範圍：確認後才可用，不是現在直接追。",
-        "",
-        "---",
+        "# 台股四燈型態學策略報告", "",
+        f"策略依據：{meta.get('strategyAsOfDate')} 收盤資料",
+        f"系統更新：{meta.get('updatedAt')}", "",
+        f"## 結論：{conclusion}", "",
+        f"- 掃描檔數：{meta.get('totalAnalyzed')}", f"- 3燈以上：{meta.get('qualified3Plus')}",
+        f"- 4燈：{meta.get('qualified4')}", f"- 嚴格進場候選：{meta.get('strictCandidates')}", "",
+        "## 先看這裡", "- 策略只依據完整收盤日K，不使用盤中未完成K。", "- strictOk = True：才是比較接近可操作的候選。", "- forbiddenChase = True：禁止追高，只能等回踩。", "- 合理追價範圍：確認後才可用，不是現在直接追。", "", "---",
     ]
     if not top:
         lines.append("目前無符合條件標的。")
@@ -341,7 +325,8 @@ def write_outputs(rows, errors, total_master):
     DATA_DIR.mkdir(exist_ok=True)
     qualified = [r for r in rows if r["score"] >= 3]
     strict = [r for r in rows if r.get("strictOk")]
-    meta = {"updatedAt": now_tw(), "mode": "pattern-four-lights-scan", "totalMaster": total_master, "totalAnalyzed": len(rows), "qualified3Plus": len(qualified), "qualified4": sum(1 for r in rows if r["score"] >= 4), "strictCandidates": len(strict), "errors": errors[:50], "note": "四燈＋型態學＋確認條件＋追價範圍＋風控；僅供觀察，不構成買賣建議。"}
+    strategy_date = max([r.get("strategyAsOfDate", "") for r in rows], default="")
+    meta = {"updatedAt": now_tw(), "strategyAsOfDate": strategy_date, "priceType": "收盤確認價", "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K", "mode": "pattern-four-lights-close-only-scan", "totalMaster": total_master, "totalAnalyzed": len(rows), "qualified3Plus": len(qualified), "qualified4": sum(1 for r in rows if r["score"] >= 4), "strictCandidates": len(strict), "errors": errors[:50], "note": "正式策略僅依據上一個完整收盤交易日；僅供觀察，不構成買賣建議。"}
     payload = {"meta": meta, "stocks": rows}
     LATEST_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     fieldnames = list(rows[0].keys()) if rows else ["date", "code", "name", "score", "status", "reason"]
