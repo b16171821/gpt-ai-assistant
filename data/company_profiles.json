@@ -1,3 +1,347 @@
 {
-  "profiles": {}
+  "updatedAt": "2026-06-02 19:52:57",
+  "profiles": {
+    "台股:2377": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Micro-Star International Co., Ltd. engages in the manufacture and sale of motherboards, interface cards, notebook computers, and other electronic products in Asia, Europe, the Unit",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、題材命中、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:51"
+    },
+    "台股:6127": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "LEATEC Fine Ceramics Co., Ltd. engages in the manufacture, design, processing, and sale of ceramic substrates, circuit components, and solar junction boxes in Taiwan and China. The",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:51"
+    },
+    "台股:8102": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Jeilin Technology Co., Ltd. engages in the research and development and sale of image processing systems and related products on chips in Taiwan. The company is involved in softwar",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:51"
+    },
+    "台股:4543": {
+      "industry": "Auto Parts",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Man Zai Industrial Co., Ltd. engages in the manufacture and sale of air- conditioning products in Asia, the United States, Europe, and internationally. The company offers auto air-",
+      "theme": "產業：Auto Parts｜板塊：Consumer Cyclical｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:52"
+    },
+    "台股:2353": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Acer Incorporated research, designs, markets, and sells computers and display products Taiwan and internationally. The company offers notebook and desktop PCs; monitors; projectors",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:52"
+    },
+    "台股:2362": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Clevo Co., together with its subsidiaries, primarily engages in the design, manufacture, and sale of visual display units, computers, and peripheral devices in Taiwan, China, the A",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:52"
+    },
+    "台股:6147": {
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "Chipbond Technology Corporation, together with its subsidiaries, engages in the research, development, manufacture, and sale of driver IC and non-driver IC packaging and testing se",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、題材命中、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:52"
+    },
+    "台股:8064": {
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "Contrel Technology Co., Ltd. researches, develops, manufactures, and sells LCD equipment in Taiwan and China. The company offers mini LED test, repair, laser drilling, tile laminat",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:52"
+    },
+    "台股:2356": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Inventec Corporation, together with its subsidiaries, develops, manufacture, processes, and trades in computers and related products in Taiwan, the United States, Japan, Hong Kong,",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:52"
+    },
+    "台股:3556": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "eGalax_eMPIA Technology Inc., together with its subsidiaries, engages in the designing, processing, manufacturing, and sale of integrated circuits (IC) in China, Taiwan, and intern",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:53"
+    },
+    "台股:2376": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Giga-Byte Technology Co., Ltd., together with its subsidiaries, manufactures, processes, and trades in computer hardware peripherals and components in Taiwan, Europe, America, Cana",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、題材命中、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:53"
+    },
+    "台股:3438": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Advanced Analog Technology, Inc. designs and develops integrated circuits in Taiwan and internationally. The company offers multifunctional PMICs, such as TFT LCDs, AMOLEDs, DSC/DV",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:53"
+    },
+    "台股:6548": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Chang Wah Technology Co., Ltd. develops, manufactures, and sells LED lead frame and molding compound materials in Taiwan, Asia, and internationally. The company offers industrial p",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:53"
+    },
+    "台股:1563": {
+      "industry": "Auto Parts",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "SuperAlloy Industrial Co., Ltd. engages in engineering and manufacturing lightweight forging solutions primarily for the automotive industry. The company offers forged aluminum whe",
+      "theme": "產業：Auto Parts｜板塊：Consumer Cyclical｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:53"
+    },
+    "台股:3491": {
+      "industry": "Communication Equipment",
+      "sector": "Technology",
+      "companyProfile": "Universal Microwave Technology, Inc. manufactures and sells electronic components in Taiwan, Mainland China, Asia, Europe, the United States, and Oceania. The company operates thro",
+      "theme": "產業：Communication Equipment｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、題材命中、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:53"
+    },
+    "台股:6290": {
+      "industry": "Electrical Equipment & Parts",
+      "sector": "Industrials",
+      "companyProfile": "Longwell Company manufactures and sells power cords, cable assemblies, and charger plugs in Taiwan, China, the United States, Japan, and internationally. It offers raw cables, powe",
+      "theme": "產業：Electrical Equipment & Parts｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、題材命中、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:54"
+    },
+    "台股:5488": {
+      "industry": "Electrical Equipment & Parts",
+      "sector": "Industrials",
+      "companyProfile": "Sunf Pu Technology Co., Ltd., together with its subsidiaries, engages in the research, development, manufacturing, and sale of various wire and cable products in Asia, the Americas",
+      "theme": "產業：Electrical Equipment & Parts｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:54"
+    },
+    "台股:6485": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "ASolid Technology Co., Ltd. engages in the provision of NAND flash controller in Taiwan. It offers eMMC controllers, SD controllers, SSD controllers, and UFD controllers. The compa",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:54"
+    },
+    "台股:2382": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Quanta Computer Inc. manufactures, processes, and sells laptop computers and telecommunication products in the United States, Mainland China, the Netherlands, Japan, and internatio",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、題材命中",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:54"
+    },
+    "台股:8088": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Panram International Corp. engages in the design, manufacture, and sale of memory modules and flash memory related products in Taiwan. The company offers IP Phone, FPGA development",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:54"
+    },
+    "台股:6150": {
+      "industry": "Electronics & Computer Distribution",
+      "sector": "Technology",
+      "companyProfile": "TUL Corporation engages in the manufacture of computer graphics card worldwide. The company offers gaming graphics cards, customized graphics cards for industrial control, SoC moth",
+      "theme": "產業：Electronics & Computer Distribution｜板塊：Technology｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:54"
+    },
+    "台股:5353": {
+      "industry": "Communication Equipment",
+      "sector": "Technology",
+      "companyProfile": "Tailyn Technologies, Inc. provides industrial communication products for communication and applications sectors in Taiwan. The company provides software and hardware design service",
+      "theme": "產業：Communication Equipment｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:55"
+    },
+    "台股:3114": {
+      "industry": "Industrial Distribution",
+      "sector": "Industrials",
+      "companyProfile": "Howteh Technology Co., Ltd. engages in the trading and agency business in active and passive components, and equipment in Taiwan, China, and internationally. It provides integrated",
+      "theme": "產業：Industrial Distribution｜板塊：Industrials｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:55"
+    },
+    "台股:5309": {
+      "industry": "Scientific & Technical Instruments",
+      "sector": "Technology",
+      "companyProfile": "Sysgration Ltd. manufactures and sells automobile electronics and power management products in Taiwan, Asia, the United States, Europe, and internationally. It also provides intern",
+      "theme": "產業：Scientific & Technical Instruments｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:55"
+    },
+    "台股:4966": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Parade Technologies, Ltd., operates as a fabless semiconductor company in South Korea, China, Taiwan, Japan, and internationally. It engages in research and development, and market",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、題材命中、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:55"
+    },
+    "台股:5475": {
+      "industry": "Textile Manufacturing",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Glotech Industrial Corp. engages in research and development, production, and sale of electronic-grade fiberglass fabrics in Taiwan and internationally. The company offers fibergla",
+      "theme": "產業：Textile Manufacturing｜板塊：Consumer Cyclical｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:55"
+    },
+    "台股:3324": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Auras Technology Co., Ltd. engages in the manufacturing, processing, and retailing of electronic materials and computer cooling modules in China, Taiwan, Ireland, Singapore, the Un",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、題材命中",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:55"
+    },
+    "美股:HPE": {
+      "industry": "Communication Equipment",
+      "sector": "Technology",
+      "companyProfile": "Hewlett Packard Enterprise Company, together with its subsidiaries, develops intelligent solutions in the United States, the Americas, Europe, the Middle East, Africa, the Asia Pac",
+      "theme": "產業：Communication Equipment｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、量能放大、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:56"
+    },
+    "美股:ARM": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Arm Holdings plc researches, develops, licenses, and markets central processing unit (CPU) intellectual property (IP), graphics processing unit IP, systems IP, compute subsystems (",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:56"
+    },
+    "美股:DELL": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Dell Technologies Inc. designs, develops, manufactures, markets, sells, and supports various comprehensive and integrated solutions, products, and services in the Americas, Europe,",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:56"
+    },
+    "美股:MU": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Micron Technology, Inc. designs, develops, manufactures, and sells memory and storage products in the United States, Taiwan, Japan, Mainland China, Hong Kong, Europe, and internati",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:56"
+    },
+    "美股:AMD": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers ar",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:56"
+    },
+    "美股:STX": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Seagate Technology Holdings plc engages in the provision of data storage technology and infrastructure solutions in Singapore, the United States, the Netherlands, and international",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:56"
+    },
+    "美股:MRVL": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United State",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:57"
+    },
+    "美股:DDOG": {
+      "industry": "Software - Application",
+      "sector": "Technology",
+      "companyProfile": "Datadog, Inc. operates an observability and security platform for cloud applications in the United States and internationally. The company's products comprise infrastructure and ap",
+      "theme": "產業：Software - Application｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:57"
+    },
+    "美股:CRWD": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "CrowdStrike Holdings, Inc. provides cybersecurity solutions in the United States and internationally. Its unified platform provides cloud-delivered protection of endpoints, cloud w",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:57"
+    },
+    "美股:ORCL": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "Oracle Corporation offers products and services that address enterprise information technology environments worldwide. Its Oracle cloud software as a service offering include vario",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：旗型整理突破｜原因：量能放大、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:57"
+    },
+    "美股:MDB": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service so",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：旗型整理突破｜原因：量能放大、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:57"
+    }
+  }
 }
