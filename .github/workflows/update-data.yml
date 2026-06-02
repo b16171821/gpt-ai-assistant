@@ -30,6 +30,7 @@ jobs:
           python scripts/update_us_stock_scanner.py
           python scripts/update_company_profiles.py
           python scripts/update_strategy_locks.py
+          python scripts/update_strategy_snapshots.py
       - name: Commit data files
         run: |
           git config user.name github-actions
