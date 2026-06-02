@@ -2,6 +2,8 @@ import json
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
+import yfinance as yf
+
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 LOCK_PATH = DATA_DIR / "strategy_locks.json"
@@ -37,6 +39,41 @@ def stock_key(market, row):
     return f"{market}:{row.get('code') or row.get('ticker') or row.get('name')}"
 
 
+def yf_symbol(market, row):
+    if market == "美股":
+        return row.get("ticker") or row.get("code")
+    code = row.get("code")
+    if not code:
+        return None
+    market_name = row.get("market", "") or ""
+    ticker = row.get("ticker", "") or ""
+    if "上櫃" in market_name or ticker.endswith(".TWO"):
+        return f"{code}.TWO"
+    return f"{code}.TW"
+
+
+def recent_closes(market, row):
+    symbol = yf_symbol(market, row)
+    if not symbol:
+        return []
+    try:
+        df = yf.download(symbol, period="14d", interval="1d", auto_adjust=False, progress=False, threads=False)
+        if df is None or df.empty or "Close" not in df:
+            return []
+        df = df.dropna(subset=["Close"]).tail(5)
+        out = []
+        for idx, item in df.iterrows():
+            close = item.get("Close")
+            try:
+                close = float(close)
+            except Exception:
+                continue
+            out.append({"date": str(idx.date()), "close": round(close, 2)})
+        return out
+    except Exception:
+        return []
+
+
 def rank_score(row):
     score = n(row.get("score"))
     strict = 50 if row.get("strictOk") else 0
@@ -45,7 +82,7 @@ def rank_score(row):
     return score * 100 + strict + win + rise
 
 
-def current_status(row, lock):
+def current_status(row, lock, market):
     close = n(row.get("close"))
     original_target = n(lock.get("originalTarget"))
     original_stop = n(lock.get("originalStopLoss"))
@@ -79,6 +116,7 @@ def current_status(row, lock):
         "currentTarget": round(current_target, 2) if current_target else None,
         "currentStopLoss": round(current_stop, 2) if current_stop else None,
         "extensionTarget": extension_target,
+        "recentCloses": recent_closes(market, row),
         "holderAction": holder,
         "emptyAction": empty,
         "updatedAt": now_tw(),
@@ -125,7 +163,7 @@ def process_market(market, payload, locks):
         if key not in locks:
             locks[key] = create_lock(market, row)
         if locks[key].get("status") != "ended":
-            locks[key].update(current_status(row, locks[key]))
+            locks[key].update(current_status(row, locks[key], market))
             if locks[key].get("trackingStatus") == "策略結束":
                 locks[key]["status"] = "ended"
     return locks
