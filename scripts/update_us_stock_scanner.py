@@ -171,7 +171,7 @@ def pattern_plan(df):
         win_rate = "中"
         plan_status = "預備單，等待確認條件"
     confirm = f"收盤站上頸線 {sr(neckline)} 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
-    return {"pattern": pattern, "neckline": sr(neckline), "support": sr(support), "target": sr(target), "stage": stage, "entryBreakout": sr(entry_breakout), "entryPullback": sr(entry_pullback), "chaseRangeLow": sr(chase_low), "chaseRangeHigh": sr(chase_high), "stopLoss": sr(stop_loss), "riskPct": sr(risk_pct), "winRate": win_rate, "distanceFromNecklinePct": sr(distance_from_neckline), "distanceFromPrevHighPct": sr(distance_from_prev_high), "forbiddenChase": bool(forbidden), "planStatus": plan_status, "confirmConditions": confirm}
+    return {"pattern": pattern, "neckline": sr(neckline), "support": sr(support), "target": sr(target), "stage": stage, "entryBreakout": sr(entry_breakout), "entryPullback": sr(entry_pullback), "chaseRangeLow": sr(chase_low), "chaseRangeHigh": sr(chase_high), "observationEntry": sr(entry_breakout), "limitPrice": sr(entry_breakout), "stopLoss": sr(stop_loss), "riskPct": sr(risk_pct), "winRate": win_rate, "distanceFromNecklinePct": sr(distance_from_neckline), "distanceFromPrevHighPct": sr(distance_from_prev_high), "forbiddenChase": bool(forbidden), "planStatus": plan_status, "confirmConditions": confirm}
 
 
 def analyze_one(df, ticker, name=None, market_ok=True):
@@ -300,15 +300,17 @@ def card(row, idx):
 - K棒：{row.get('kline')}｜ADX：{row.get('adx')}｜60日漲幅：{row.get('rise60')}%
 
 **關鍵價位**
-- 頸線 / 壓力：{row.get('neckline')}
-- 支撐：{row.get('support')}
-- 滿足點：{row.get('target')}
-- 停損：{row.get('stopLoss')}
+- 頸線 / 壓力：{row.get('neckline')} 美元
+- 支撐：{row.get('support')} 美元
+- 限價 / 觀察價：{row.get('limitPrice') or row.get('observationEntry') or row.get('entryBreakout')} 美元
+- 買入觀察區：{row.get('chaseRangeLow')} ～ {row.get('chaseRangeHigh')} 美元
+- 滿足點 / 目標價：{row.get('target')} 美元
+- 停損：{row.get('stopLoss')} 美元
 
 **進場計畫**
-- 突破進場：{row.get('entryBreakout')}
-- 回踩進場：{row.get('entryPullback')}
-- 合理追價範圍：{row.get('chaseRangeLow')} ～ {row.get('chaseRangeHigh')}
+- 突破進場：{row.get('entryBreakout')} 美元
+- 回踩進場：{row.get('entryPullback')} 美元
+- 合理追價範圍：{row.get('chaseRangeLow')} ～ {row.get('chaseRangeHigh')} 美元
 - 距離頸線：{row.get('distanceFromNecklinePct')}%｜風險：約 {row.get('riskPct')}%
 
 **確認條件**
@@ -321,7 +323,7 @@ def write_report(rows, meta, market):
     watch = [r for r in rows if r.get("score", 0) >= 3 and not r.get("strictOk")]
     top = (strict + watch)[:3]
     conclusion = "有符合嚴格條件的美股候選，但仍要等隔日不跌破頸線確認。" if strict else ("今日無完整高勝率標的；以下為接近成形＋可觀察進場3檔。" if watch else "今日無符合型態學高勝率標的。")
-    lines = ["# 美股型態學高勝率策略報告", "", f"策略依據：{meta.get('strategyAsOfDate')} 收盤資料", f"系統更新（美東）：{meta.get('updatedAtET')}", f"系統更新（台灣）：{meta.get('updatedAtTW')}", f"市場狀態：{meta.get('sessionStatus')}", "", f"## 結論：{conclusion}", "", "## 美股大盤判斷", f"- S&P500：{market['indexes'].get('SPX', {}).get('status')}｜收盤 {market['indexes'].get('SPX', {}).get('close')}｜20MA {market['indexes'].get('SPX', {}).get('ma20')}", f"- NASDAQ：{market['indexes'].get('NASDAQ', {}).get('status')}｜收盤 {market['indexes'].get('NASDAQ', {}).get('close')}｜20MA {market['indexes'].get('NASDAQ', {}).get('ma20')}", f"- 道瓊：{market['indexes'].get('DJI', {}).get('status')}｜收盤 {market['indexes'].get('DJI', {}).get('close')}｜20MA {market['indexes'].get('DJI', {}).get('ma20')}", f"- 當前市場：{market.get('marketState')}", f"- 是否適合進攻：{market.get('attack')}", f"- 建議：{market.get('suggestion')}", "", "## 判讀順序", "1. 本報告只使用完整收盤日K，不使用盤中未完成K。", "2. 先看結論：有沒有嚴格候選。", "3. 再看一句話策略：可進場 / 禁止追高 / 等確認。", "4. 最後看進場點、停損、追價範圍。", "", "---"]
+    lines = ["# 美股型態學高勝率策略報告", "", f"策略依據：{meta.get('strategyAsOfDate')} 收盤資料", f"系統更新（美東）：{meta.get('updatedAtET')}", f"系統更新（台灣）：{meta.get('updatedAtTW')}", f"市場狀態：{meta.get('sessionStatus')}", "", f"## 結論：{conclusion}", "", "## 美股大盤判斷", f"- S&P500：{market['indexes'].get('SPX', {}).get('status')}｜收盤 {market['indexes'].get('SPX', {}).get('close')}｜20MA {market['indexes'].get('SPX', {}).get('ma20')}", f"- NASDAQ：{market['indexes'].get('NASDAQ', {}).get('status')}｜收盤 {market['indexes'].get('NASDAQ', {}).get('close')}｜20MA {market['indexes'].get('NASDAQ', {}).get('ma20')}", f"- 道瓊：{market['indexes'].get('DJI', {}).get('status')}｜收盤 {market['indexes'].get('DJI', {}).get('close')}｜20MA {market['indexes'].get('DJI', {}).get('ma20')}", f"- 當前市場：{market.get('marketState')}", f"- 是否適合進攻：{market.get('attack')}", f"- 建議：{market.get('suggestion')}", "", "## 判讀順序", "1. 本報告只使用完整收盤日K，不使用盤中未完成K。", "2. 先看結論：有沒有嚴格候選。", "3. 再看一句話策略：可進場 / 禁止追高 / 等確認。", "4. 最後看限價、進場點、停損、追價範圍。", "", "---"]
     if not top:
         lines.append("今日無符合型態學高勝率標的。")
     else:
