@@ -2,6 +2,11 @@ name: Update Stock Data
 
 on:
   workflow_dispatch:
+  schedule:
+    # 台股收盤後更新：台灣時間 15:40，週一～週五
+    - cron: '40 7 * * 1-5'
+    # 美股收盤後更新：台灣時間 06:40，週二～週六
+    - cron: '40 22 * * 1-5'
 
 permissions:
   contents: write
