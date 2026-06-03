@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-02 19:52:57",
+  "updatedAt": "2026-06-03 08:17:27",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -342,6 +342,42 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-02 19:52:57"
+    },
+    "美股:PANW": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "Palo Alto Networks, Inc. provides cybersecurity solutions in the Americas, Europe, the Middle East, Africa, the Asia Pacific, and Japan. It offers Prisma Access, a secure access se",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 08:17:27"
+    },
+    "美股:QCOM": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "QUALCOMM Incorporated engages in the development and commercialization of foundational technologies for the wireless industry worldwide. It operates through three segments: Qualcom",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 08:17:27"
+    },
+    "美股:TXN": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Texas Instruments Incorporated designs, manufactures, and sells semiconductors to electronics designers and manufacturers in the United States, China, the rest of Asia, Europe, the",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 08:17:27"
+    },
+    "美股:NET": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "Cloudflare, Inc. operates as a cloud services provider that delivers a range of services to businesses worldwide. The company provides a cloud-based security solution to secure a r",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 08:17:27"
     }
   }
 }

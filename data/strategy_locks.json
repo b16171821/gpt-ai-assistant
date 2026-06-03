@@ -22,7 +22,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-02 19:52:58"
+    "updatedAt": "2026-06-03 08:17:28"
   },
   "台股:2356": {
     "key": "台股:2356",
@@ -72,7 +72,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-02 19:52:58"
+    "updatedAt": "2026-06-03 08:17:28"
   },
   "台股:2377": {
     "key": "台股:2377",
@@ -97,7 +97,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-02 19:52:58"
+    "updatedAt": "2026-06-03 08:17:28"
   },
   "台股:3556": {
     "key": "台股:3556",
@@ -122,7 +122,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-02 19:52:59"
+    "updatedAt": "2026-06-03 08:17:28"
   },
   "台股:4543": {
     "key": "台股:4543",
@@ -147,7 +147,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-02 19:52:58"
+    "updatedAt": "2026-06-03 08:17:28"
   },
   "台股:6127": {
     "key": "台股:6127",
@@ -172,7 +172,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-02 19:52:58"
+    "updatedAt": "2026-06-03 08:17:28"
   },
   "台股:6147": {
     "key": "台股:6147",
@@ -247,7 +247,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-02 19:52:58"
+    "updatedAt": "2026-06-03 08:17:28"
   },
   "美股:AMD": {
     "key": "美股:AMD",
@@ -315,14 +315,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 782.17,
+    "currentPrice": 768.95,
     "currentTarget": 1209.51,
     "currentStopLoss": 762.09,
     "extensionTarget": null,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-02 19:52:59"
+    "updatedAt": "2026-06-03 08:17:28"
   },
   "美股:DDOG": {
     "key": "美股:DDOG",
@@ -337,17 +337,17 @@
     "originalNeckline": 278.7,
     "originalStage": "接近成形＋可觀察",
     "originalWinRate": "中",
-    "status": "active",
+    "status": "ended",
     "createdBy": "strategy-lock-v1",
-    "trackingStatus": "策略追蹤中",
-    "currentPrice": 277.49,
+    "trackingStatus": "策略結束",
+    "currentPrice": 269.13,
     "currentTarget": 456.61,
     "currentStopLoss": 270.34,
     "extensionTarget": null,
     "recentCloses": [],
-    "holderAction": "未達第一目標前，守風險區續抱觀察。",
-    "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-02 19:52:59"
+    "holderAction": "跌破原始停損，依紀律處理。",
+    "emptyAction": "取消觀察，等待新結構。",
+    "updatedAt": "2026-06-03 08:17:28"
   },
   "美股:DELL": {
     "key": "美股:DELL",
@@ -415,14 +415,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 219.43,
-    "currentTarget": 366.88,
-    "currentStopLoss": 218.39,
-    "extensionTarget": null,
+    "currentPrice": 290.79,
+    "currentTarget": 498.4,
+    "currentStopLoss": 282.56,
+    "extensionTarget": 498.4,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-02 19:52:59"
+    "updatedAt": "2026-06-03 08:17:28"
   },
   "美股:MU": {
     "key": "美股:MU",
@@ -440,14 +440,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 1035.5,
-    "currentTarget": 1782.45,
-    "currentStopLoss": 1015.56,
-    "extensionTarget": null,
+    "currentPrice": 1064.1,
+    "currentTarget": 1841.55,
+    "currentStopLoss": 1044.22,
+    "extensionTarget": 1841.55,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-02 19:52:59"
+    "updatedAt": "2026-06-03 08:17:28"
   },
   "美股:ORCL": {
     "key": "美股:ORCL",
@@ -474,6 +474,56 @@
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
     "updatedAt": "2026-06-02 19:53:00"
   },
+  "美股:PANW": {
+    "key": "美股:PANW",
+    "market": "美股",
+    "code": "PANW",
+    "name": "PANW",
+    "createdAt": "2026-06-02",
+    "originalBuyLow": 309.01,
+    "originalBuyHigh": 318.28,
+    "originalStopLoss": 293.86,
+    "originalTarget": 462.4,
+    "originalNeckline": 302.95,
+    "originalStage": "接近成形＋可觀察",
+    "originalWinRate": "中",
+    "status": "active",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略追蹤中",
+    "currentPrice": 297.18,
+    "currentTarget": 462.4,
+    "currentStopLoss": 293.86,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "未達第一目標前，守風險區續抱觀察。",
+    "emptyAction": "空手不追高，等突破確認或回踩不破。",
+    "updatedAt": "2026-06-03 08:17:28"
+  },
+  "美股:QCOM": {
+    "key": "美股:QCOM",
+    "market": "美股",
+    "code": "QCOM",
+    "name": "QCOM",
+    "createdAt": "2026-06-02",
+    "originalBuyLow": 265.12,
+    "originalBuyHigh": 273.07,
+    "originalStopLoss": 252.12,
+    "originalTarget": 397.85,
+    "originalNeckline": 259.92,
+    "originalStage": "接近成形＋可觀察",
+    "originalWinRate": "中",
+    "status": "ended",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略結束",
+    "currentPrice": 240.84,
+    "currentTarget": 397.85,
+    "currentStopLoss": 252.12,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "跌破原始停損，依紀律處理。",
+    "emptyAction": "取消觀察，等待新結構。",
+    "updatedAt": "2026-06-03 08:17:28"
+  },
   "美股:STX": {
     "key": "美股:STX",
     "market": "美股",
@@ -490,13 +540,38 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 921.26,
-    "currentTarget": 1539.58,
-    "currentStopLoss": 912.57,
-    "extensionTarget": null,
+    "currentPrice": 926.61,
+    "currentTarget": 1565.44,
+    "currentStopLoss": 925.11,
+    "extensionTarget": 1565.44,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-02 19:52:59"
+    "updatedAt": "2026-06-03 08:17:28"
+  },
+  "美股:TXN": {
+    "key": "美股:TXN",
+    "market": "美股",
+    "code": "TXN",
+    "name": "TXN",
+    "createdAt": "2026-06-02",
+    "originalBuyLow": 338.14,
+    "originalBuyHigh": 348.28,
+    "originalStopLoss": 321.56,
+    "originalTarget": 478.12,
+    "originalNeckline": 331.51,
+    "originalStage": "接近成形＋可觀察",
+    "originalWinRate": "中",
+    "status": "ended",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略結束",
+    "currentPrice": 308.12,
+    "currentTarget": 478.12,
+    "currentStopLoss": 321.56,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "跌破原始停損，依紀律處理。",
+    "emptyAction": "取消觀察，等待新結構。",
+    "updatedAt": "2026-06-03 08:17:29"
   }
 }
