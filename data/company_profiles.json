@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-03 08:17:27",
+  "updatedAt": "2026-06-03 20:25:39",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -378,6 +378,213 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-03 08:17:27"
+    },
+    "台股:4908": {
+      "industry": "Communication Equipment",
+      "sector": "Technology",
+      "companyProfile": "APAC Opto Electronics Inc. manufactures and sells fiber optical transmission components for local area networks, wide area networks, storage networks, metropolitan area networks, a",
+      "theme": "產業：Communication Equipment｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、題材命中、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:35"
+    },
+    "台股:6016": {
+      "industry": "Capital Markets",
+      "sector": "Financial Services",
+      "companyProfile": "Concord Securities Co., Ltd., through its subsidiaries, provides brokerage and wealth management services in Taiwan. The company engages in trading securities proprietary and broke",
+      "theme": "產業：Capital Markets｜板塊：Financial Services｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:36"
+    },
+    "台股:5701": {
+      "industry": "Leisure",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Janfusun Fancyworld Corp. operates theme parks and hotels in Taiwan. The company also offers management and business administration consulting, horticultural, landscaping, and inte",
+      "theme": "產業：Leisure｜板塊：Consumer Cyclical｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:36"
+    },
+    "台股:6126": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Singatron Enterprise Co.,Ltd develops, manufactures, and supplies electrical connectors for laptop industries in worldwide. It offers waterproof connectors, such as circular, quick",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:36"
+    },
+    "台股:3288": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Silicon Touch Technology Inc. researches, designs, develops, produces, and sells mixed signal analogue and digital ICs in the Americas, Mainland China, Europe, Taiwan, Japan, South",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:36"
+    },
+    "台股:3147": {
+      "industry": "Information Technology Services",
+      "sector": "Technology",
+      "companyProfile": "Jetwell Computer Co., Ltd. engages in manufacturing of computers and peripheral equipment in China, Taiwan, and internatinally. It also offers data storage media, printers, office ",
+      "theme": "產業：Information Technology Services｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:36"
+    },
+    "台股:3268": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Higher Way Electronic Co., Ltd. engages in the sale of consumer, multimedia, and micro controller IC in Taiwan, Hong Kong, Mainland China, the United States, and internationally. I",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:36"
+    },
+    "台股:2390": {
+      "industry": "Security & Protection Services",
+      "sector": "Industrials",
+      "companyProfile": "Everspring Industry Co., Ltd. engages in the manufacturing, reprocessing, and trading of burglar alarm and other electronic products and parts. The company offers disaster preventi",
+      "theme": "產業：Security & Protection Services｜板塊：Industrials｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:37"
+    },
+    "台股:3483": {
+      "industry": "Electronics & Computer Distribution",
+      "sector": "Technology",
+      "companyProfile": "Forcecon Technology Co., Ltd. engages in the research, development, production, and sale of thermal management products in Taiwan and internationally. The company offers axial and ",
+      "theme": "產業：Electronics & Computer Distribution｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:37"
+    },
+    "台股:1809": {
+      "industry": "Building Products & Equipment",
+      "sector": "Industrials",
+      "companyProfile": "China Glaze Co.,Ltd. manufactures and sells ceramic glaze materials. The company offers frits, glazes, glass pigments, fine ceramics, crystallized glass, photoelectric fluorescent ",
+      "theme": "產業：Building Products & Equipment｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:37"
+    },
+    "台股:3071": {
+      "industry": "Electrical Equipment & Parts",
+      "sector": "Industrials",
+      "companyProfile": "Adda Corporation designs, manufactures, and sells electronic thermal management products primarily for the information technology industry worldwide. The company offers CPU cooler ",
+      "theme": "產業：Electrical Equipment & Parts｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:37"
+    },
+    "台股:2324": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Compal Electronics, Inc. manufactures and sells notebook personal computers, monitors, LCD TVs, mobile phones, and other components and peripherals in Taiwan, the United States, Ch",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:37"
+    },
+    "台股:3689": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "U.D. Electronic Corp. researches, manufactures, and sells electronic components and materials, connectors, and products in Taiwan and China. The company offers RJ45 integrated conn",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:37"
+    },
+    "台股:6217": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "C.C.P. Contact Probes Co., Ltd., together with its subsidiaries, engages in manufacturing, processing, purchasing, selling, importing, and exporting of probes and testing stations ",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、題材命中",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:38"
+    },
+    "台股:3564": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "AEWIN Technologies Co.,Ltd. engages in the design, manufacture, and sale of network security-related products in Asia, the United States, and Europe. The company offers network app",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:38"
+    },
+    "台股:1605": {
+      "industry": "Steel",
+      "sector": "Basic Materials",
+      "companyProfile": "Walsin Lihwa Corporation engages in the manufacture and sale of wires and cables, and stainless-steel products in Asia, the United States, Europe, and internationally. The company ",
+      "theme": "產業：Steel｜板塊：Basic Materials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:38"
+    },
+    "台股:6020": {
+      "industry": "Capital Markets",
+      "sector": "Financial Services",
+      "companyProfile": "Tachan Securities Co., Ltd. engages in the securities, investment consulting, and venture capital businesses in Taiwan. The company provides brokerage, underwriting, proprietary tr",
+      "theme": "產業：Capital Markets｜板塊：Financial Services｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:38"
+    },
+    "台股:2330": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in ",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：箱型突破｜原因：趨勢多頭、題材命中、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:38"
+    },
+    "台股:6811": {
+      "industry": "Information Technology Services",
+      "sector": "Technology",
+      "companyProfile": "Acer E-Enabling Service Business Inc. operates as a cloud company in Taiwan, China, Thailand, the United States, France, and internationally. It operates through Information Softwa",
+      "theme": "產業：Information Technology Services｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:38"
+    },
+    "台股:6506": {
+      "industry": "Specialty Chemicals",
+      "sector": "Basic Materials",
+      "companyProfile": "Shuang-Bang Industrial Corp. develops and manufactures polyurethane (PU) resins for shoes, synthetic leather crosslinkers, and polyol resins in Taiwan. It offers synthetic resins, ",
+      "theme": "產業：Specialty Chemicals｜板塊：Basic Materials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:38"
+    },
+    "台股:8040": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "IC Plus Corp. engages in the research, development, manufacturing, sale, import, and export of integrated circuits in Taiwan, China, and internationally. The company offers PHY tra",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、題材命中、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:39"
+    },
+    "台股:6190": {
+      "industry": "Communication Equipment",
+      "sector": "Technology",
+      "companyProfile": "Wonderful Hi-tech Co., Ltd. manufactures, trading, and imports/exports various wires and cable in Taiwan, Mainland China, Hong Kong, Thailand, Vietnam, and the United States. Its p",
+      "theme": "產業：Communication Equipment｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、題材命中、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:39"
+    },
+    "台股:3086": {
+      "industry": "Electronic Gaming & Multimedia",
+      "sector": "Communication Services",
+      "companyProfile": "Wayi International Digital Entertainment Co., Ltd., together with its subsidiaries, designs and trades computer software and hardware programs. The company also publishes gaming so",
+      "theme": "產業：Electronic Gaming & Multimedia｜板塊：Communication Services｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 20:25:39"
     }
   }
 }
