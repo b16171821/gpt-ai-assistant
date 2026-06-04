@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-04 18:51:26",
+  "updatedAt": "2026-06-05 07:50:50",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -720,6 +720,24 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-04 18:51:26"
+    },
+    "美股:WDC": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Western Digital Corporation develops, manufactures, and sells data storage devices and solutions based on hard disk drive (HDD) technology in the United States, Asia, Europe, the M",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-05 07:50:49"
+    },
+    "美股:FIX": {
+      "industry": "Engineering & Construction",
+      "sector": "Industrials",
+      "companyProfile": "Comfort Systems USA, Inc., together with its subsidiaries, provides mechanical and electrical installation, renovation, maintenance, repair, and replacement services for the mechan",
+      "theme": "產業：Engineering & Construction｜板塊：Industrials｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-05 07:50:50"
     }
   }
 }
