@@ -1,18 +1,20 @@
 {
   "meta": {
-    "updatedAtET": "2026/06/03 19:19:37 EDT",
-    "updatedAtTW": "2026/06/04 07:19:37 CST",
+    "updatedAtET": "2026/06/03 20:19:56 EDT",
+    "updatedAtTW": "2026/06/04 08:19:56 CST",
     "strategyAsOfDate": "2026-06-03",
     "priceType": "收盤確認價",
     "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K",
-    "sessionStatus": "盤後",
+    "sessionStatus": "收盤後",
     "mode": "us-pattern-close-only-scan",
     "source": "Yahoo Finance via yfinance",
     "totalWatchlist": 74,
     "totalAnalyzed": 70,
     "qualified3Plus": 13,
     "strictCandidates": 0,
-    "errors": []
+    "errors": [],
+    "profileEnriched": true,
+    "profileUpdatedAt": "2026-06-04 08:19:57"
   },
   "market": {
     "indexes": {
@@ -25,10 +27,12 @@
         "strategyAsOfDate": "2026-06-03"
       },
       "NASDAQ": {
-        "status": "資料不足",
-        "close": 0,
-        "ma20": 0,
-        "trend": false
+        "status": "站上月線",
+        "close": 26853.98,
+        "ma20": 26432.09,
+        "ma60": 24205.39,
+        "trend": true,
+        "strategyAsOfDate": "2026-06-03"
       },
       "DJI": {
         "status": "站上月線",
@@ -90,7 +94,14 @@
       "distanceFromPrevHighPct": 3.78,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 427.99 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 427.99 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Arm Holdings plc researches, develops, licenses, and markets central processing unit (CPU) intellectual property (IP), graphics processing unit IP, systems IP, compute subsystems (",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:56"
     },
     {
       "date": "2026-06-03",
@@ -137,7 +148,14 @@
       "distanceFromPrevHighPct": 6.94,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 324.15 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 324.15 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United State",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:57"
     },
     {
       "date": "2026-06-03",
@@ -184,7 +202,14 @@
       "distanceFromPrevHighPct": 10.31,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 469.47 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 469.47 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Dell Technologies Inc. designs, develops, manufactures, markets, sells, and supports various comprehensive and integrated solutions, products, and services in the Americas, Europe,",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:56"
     },
     {
       "date": "2026-06-03",
@@ -231,7 +256,14 @@
       "distanceFromPrevHighPct": 0.89,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 1089.29 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 1089.29 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Micron Technology, Inc. designs, develops, manufactures, and sells memory and storage products in the United States, Taiwan, Japan, Mainland China, Hong Kong, Europe, and internati",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:56"
     },
     {
       "date": "2026-06-03",
@@ -278,7 +310,14 @@
       "distanceFromPrevHighPct": 0.72,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 546.44 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 546.44 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers ar",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:56"
     },
     {
       "date": "2026-06-03",
@@ -325,7 +364,14 @@
       "distanceFromPrevHighPct": 14.16,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 64.25 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 64.25 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "Communication Equipment",
+      "sector": "Technology",
+      "companyProfile": "Hewlett Packard Enterprise Company, together with its subsidiaries, develops intelligent solutions in the United States, the Americas, Europe, the Middle East, Africa, the Asia Pac",
+      "theme": "產業：Communication Equipment｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、量能放大、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:56"
     },
     {
       "date": "2026-06-03",
@@ -372,7 +418,14 @@
       "distanceFromPrevHighPct": 2.7,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 966.8 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 966.8 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Seagate Technology Holdings plc engages in the provision of data storage technology and infrastructure solutions in Singapore, the United States, the Netherlands, and international",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:56"
     },
     {
       "date": "2026-06-03",
@@ -419,7 +472,14 @@
       "distanceFromPrevHighPct": 10.18,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 278.7 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 278.7 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "Software - Application",
+      "sector": "Technology",
+      "companyProfile": "Datadog, Inc. operates an observability and security platform for cloud applications in the United States and internationally. The company's products comprise infrastructure and ap",
+      "theme": "產業：Software - Application｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:57"
     },
     {
       "date": "2026-06-03",
@@ -466,7 +526,14 @@
       "distanceFromPrevHighPct": 3.81,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 259.92 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 259.92 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "QUALCOMM Incorporated engages in the development and commercialization of foundational technologies for the wireless industry worldwide. It operates through three segments: Qualcom",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 08:17:27"
     },
     {
       "date": "2026-06-03",
@@ -513,7 +580,14 @@
       "distanceFromPrevHighPct": 4.84,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 785.66 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 785.66 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "CrowdStrike Holdings, Inc. provides cybersecurity solutions in the United States and internationally. Its unified platform provides cloud-delivered protection of endpoints, cloud w",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:57"
     },
     {
       "date": "2026-06-03",
@@ -560,7 +634,14 @@
       "distanceFromPrevHighPct": 7.43,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 302.95 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 302.95 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "Palo Alto Networks, Inc. provides cybersecurity solutions in the Americas, Europe, the Middle East, Africa, the Asia Pacific, and Japan. It offers Prisma Access, a secure access se",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 08:17:27"
     },
     {
       "date": "2026-06-03",
@@ -607,7 +688,14 @@
       "distanceFromPrevHighPct": 0.71,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 346.18 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 346.18 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "Lam Research Corporation designs, manufactures, markets, refurbishes, and services semiconductor processing equipment used in the fabrication of integrated circuits in the United S",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -654,7 +742,14 @@
       "distanceFromPrevHighPct": 6.91,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 331.51 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 331.51 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Texas Instruments Incorporated designs, manufactures, and sells semiconductors to electronics designers and manufacturers in the United States, China, the rest of Asia, Europe, the",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 08:17:27"
     },
     {
       "date": "2026-06-03",
@@ -701,7 +796,14 @@
       "distanceFromPrevHighPct": 15.1,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 132.75 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 132.75 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "INTC目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -748,7 +850,14 @@
       "distanceFromPrevHighPct": 1.4,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 602.54 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 602.54 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "WDC目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：均線多頭排列、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -795,7 +904,14 @@
       "distanceFromPrevHighPct": 7.35,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 73.65 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 73.65 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "IONQ目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -842,7 +958,14 @@
       "distanceFromPrevHighPct": 1.41,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 1714.09 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 1714.09 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "MPWR目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：均線多頭排列、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -889,7 +1012,14 @@
       "distanceFromPrevHighPct": 0.95,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 2145.47 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 2145.47 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "KLAC目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：均線多頭排列、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -936,7 +1066,14 @@
       "distanceFromPrevHighPct": 1.47,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 508.26 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 508.26 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "AMAT目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：均線多頭排列、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -983,7 +1120,14 @@
       "distanceFromPrevHighPct": 3.19,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 495.0 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 495.0 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "AVGO目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：均線多頭排列、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -1030,7 +1174,14 @@
       "distanceFromPrevHighPct": 2.95,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 420.6 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 420.6 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "TER目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：均線多頭排列、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -1077,7 +1228,14 @@
       "distanceFromPrevHighPct": 1.06,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 1067.88 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 1067.88 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "URI目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -1124,7 +1282,14 @@
       "distanceFromPrevHighPct": 10.8,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 2073.99 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 2073.99 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "FIX目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -1171,7 +1336,14 @@
       "distanceFromPrevHighPct": 6.72,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 404.15 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 404.15 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "UNH目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -1218,7 +1390,14 @@
       "distanceFromPrevHighPct": 1.12,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 936.71 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 936.71 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "CAT目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：箱型突破｜原因：均線多頭排列、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -1265,7 +1444,14 @@
       "distanceFromPrevHighPct": 3.39,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 274.63 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 274.63 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "Cloudflare, Inc. operates as a cloud services provider that delivers a range of services to businesses worldwide. The company provides a cloud-based security solution to secure a r",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 08:17:27"
     },
     {
       "date": "2026-06-03",
@@ -1312,7 +1498,14 @@
       "distanceFromPrevHighPct": 2.99,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 450.16 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 450.16 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "TSM目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：均線多頭排列、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -1359,7 +1552,14 @@
       "distanceFromPrevHighPct": 3.02,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 177.48 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 177.48 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "ANET目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：均線多頭排列、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -1406,7 +1606,14 @@
       "distanceFromPrevHighPct": 0.97,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 1743.27 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 1743.27 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "ASML目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：均線多頭排列、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -1453,7 +1660,14 @@
       "distanceFromPrevHighPct": 9.39,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 11.82 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 11.82 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "AI目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：量能放大、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -1500,7 +1714,14 @@
       "distanceFromPrevHighPct": 2.11,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 316.94 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 316.94 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "AAPL目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：均線多頭排列、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -1547,7 +1768,14 @@
       "distanceFromPrevHighPct": 3.27,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 426.58 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 426.58 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "ETN目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：均線多頭排列、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -1594,7 +1822,14 @@
       "distanceFromPrevHighPct": 6.12,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 1149.1 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 1149.1 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "LLY目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：均線多頭排列、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -1641,7 +1876,14 @@
       "distanceFromPrevHighPct": 7.96,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 250.25 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 250.25 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "Oracle Corporation offers products and services that address enterprise information technology environments worldwide. Its Oracle cloud software as a service offering include vario",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：旗型整理突破｜原因：量能放大、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:57"
     },
     {
       "date": "2026-06-03",
@@ -1688,7 +1930,14 @@
       "distanceFromPrevHighPct": 7.74,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 51.4 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 51.4 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "SMCI目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -1735,7 +1984,14 @@
       "distanceFromPrevHighPct": 15.34,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 284.99 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 284.99 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "SNOW目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -1782,7 +2038,14 @@
       "distanceFromPrevHighPct": 10.6,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 412.0 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 412.0 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service so",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：旗型整理突破｜原因：量能放大、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:57"
     },
     {
       "date": "2026-06-03",
@@ -1829,7 +2092,14 @@
       "distanceFromPrevHighPct": 12.76,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 379.93 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 379.93 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "VRT目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -1876,7 +2146,14 @@
       "distanceFromPrevHighPct": 8.44,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 133.46 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 133.46 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "ROKU目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -1923,7 +2200,14 @@
       "distanceFromPrevHighPct": 8.23,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 622.0 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 622.0 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "APP目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -1970,7 +2254,14 @@
       "distanceFromPrevHighPct": 11.54,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 5.46 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 5.46 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "BBAI目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2017,7 +2308,14 @@
       "distanceFromPrevHighPct": 12.14,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 408.61 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 408.61 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "GOOGL目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：三角收斂突破｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2064,7 +2362,14 @@
       "distanceFromPrevHighPct": 10.25,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 277.8 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 277.8 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "AMZN目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2111,7 +2416,14 @@
       "distanceFromPrevHighPct": 9.21,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 236.54 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 236.54 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "NVDA目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2158,7 +2470,14 @@
       "distanceFromPrevHighPct": 11.81,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 951.96 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 951.96 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "EME目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2205,7 +2524,14 @@
       "distanceFromPrevHighPct": 18.83,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 1125.43 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 1125.43 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "GEV目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2252,7 +2578,14 @@
       "distanceFromPrevHighPct": 12.12,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 47.79 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 47.79 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "NVO目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2299,7 +2632,14 @@
       "distanceFromPrevHighPct": 6.55,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 453.4 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 453.4 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "TSLA目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2346,7 +2686,14 @@
       "distanceFromPrevHighPct": 12.24,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 94.4 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 94.4 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "HOOD目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2393,7 +2740,14 @@
       "distanceFromPrevHighPct": 8.36,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 466.32 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 466.32 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "MSFT目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2440,7 +2794,14 @@
       "distanceFromPrevHighPct": 19.56,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 9.72 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 9.72 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "SOUN目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2487,7 +2848,14 @@
       "distanceFromPrevHighPct": 15.3,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 139.2 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 139.2 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "NOW目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2534,7 +2902,14 @@
       "distanceFromPrevHighPct": 9.28,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 146.97 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 146.97 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "ABNB目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2581,7 +2956,14 @@
       "distanceFromPrevHighPct": 10.52,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 99.97 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 99.97 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "SE目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2628,7 +3010,14 @@
       "distanceFromPrevHighPct": 11.31,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 80.83 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 80.83 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "UBER目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2675,7 +3064,14 @@
       "distanceFromPrevHighPct": 9.81,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 211.34 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 211.34 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "CRM目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2722,7 +3118,14 @@
       "distanceFromPrevHighPct": 9.91,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 643.0 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 643.0 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "META目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2769,7 +3172,14 @@
       "distanceFromPrevHighPct": 13.13,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 163.7 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 163.7 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "PLTR目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2816,7 +3226,14 @@
       "distanceFromPrevHighPct": 13.9,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 1890.0 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 1890.0 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "MELI目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2863,7 +3280,14 @@
       "distanceFromPrevHighPct": 35.76,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 197.0 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 197.0 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "MSTR目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2910,7 +3334,14 @@
       "distanceFromPrevHighPct": 17.14,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 18.8 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 18.8 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "SOFI目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -2957,7 +3388,14 @@
       "distanceFromPrevHighPct": 17.74,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 124.62 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 124.62 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "SHOP目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -3004,7 +3442,14 @@
       "distanceFromPrevHighPct": 15.67,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 456.68 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 456.68 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "VRTX目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -3051,7 +3496,14 @@
       "distanceFromPrevHighPct": 29.74,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 191.25 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 191.25 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "ZS目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -3098,7 +3550,14 @@
       "distanceFromPrevHighPct": 18.72,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 328.8 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 328.8 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "CEG目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -3145,7 +3604,14 @@
       "distanceFromPrevHighPct": 25.18,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 91.48 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 91.48 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "NFLX目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -3192,7 +3658,14 @@
       "distanceFromPrevHighPct": 17.89,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 462.4 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 462.4 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "ISRG目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -3239,7 +3712,14 @@
       "distanceFromPrevHighPct": 26.59,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 222.35 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 222.35 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "COIN目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -3286,7 +3766,14 @@
       "distanceFromPrevHighPct": 21.52,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 730.59 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 730.59 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "REGN目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-06-03",
@@ -3333,7 +3820,14 @@
       "distanceFromPrevHighPct": 32.19,
       "forbiddenChase": true,
       "planStatus": "距離頸線或前高過遠，禁止追高",
-      "confirmConditions": "收盤站上頸線 48.53 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
+      "confirmConditions": "收盤站上頸線 48.53 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "RBLX目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     }
   ]
 }

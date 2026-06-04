@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-03 20:25:39",
+  "updatedAt": "2026-06-04 08:19:57",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -585,6 +585,15 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-03 20:25:39"
+    },
+    "美股:LRCX": {
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "Lam Research Corporation designs, manufactures, markets, refurbishes, and services semiconductor processing equipment used in the fabrication of integrated circuits in the United S",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     }
   }
 }
