@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-04 08:19:57",
+  "updatedAt": "2026-06-04 18:51:26",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -594,6 +594,132 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-04 08:19:57"
+    },
+    "台股:3066": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Taiwan Oasis Technology Co., Ltd., together with its subsidiaries, develops, produces, and sells light emitting diode (LED) and semiconductor components in Asia, Europe, America, A",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-04 18:51:24"
+    },
+    "台股:5426": {
+      "industry": "Metal Fabrication",
+      "sector": "Industrials",
+      "companyProfile": "Cheng Fwa Industrial Co., Ltd. manufactures, processes, and supplies precision-stamping metal parts for THE computer, telecommunication, networking, and electronic industries in Ta",
+      "theme": "產業：Metal Fabrication｜板塊：Industrials｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-04 18:51:24"
+    },
+    "台股:1514": {
+      "industry": "Electrical Equipment & Parts",
+      "sector": "Industrials",
+      "companyProfile": "Allis Electric Co.,Ltd. develops, produces, and sells transformers, switching devices, and electronic products worldwide. The company provides line interactive and online uninterru",
+      "theme": "產業：Electrical Equipment & Parts｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-04 18:51:24"
+    },
+    "台股:2243": {
+      "industry": "Auto Parts",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "HORNG SHIUE HOLDING Co., Ltd. engages in the manufacture, processing, and trading of automotive sheet metal stamping dies and gauges in China and internationally. It also provides ",
+      "theme": "產業：Auto Parts｜板塊：Consumer Cyclical｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-04 18:51:24"
+    },
+    "台股:3615": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "AimCore Technology Co., Ltd processes, manufactures, processing, and sales of conductive glass related products in Taiwan and internationally. The company operates through two segm",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-04 18:51:24"
+    },
+    "台股:6015": {
+      "industry": "Capital Markets",
+      "sector": "Financial Services",
+      "companyProfile": "Horizon Securities Co., Ltd., an integrated securities firm, provides financial services in Taiwan. It is involved in stock brokerage, proprietary trading, underwriting, and future",
+      "theme": "產業：Capital Markets｜板塊：Financial Services｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-04 18:51:24"
+    },
+    "台股:2352": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Qisda Corporation, together with its subsidiaries, manufactures, sells, and services monitors, opto-mechatronics products, and optoelectronics film in Taiwan, the Americas, Mainlan",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-04 18:51:25"
+    },
+    "台股:3511": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Simula Technology Inc. designs, manufactures, and sells connectors, cables, and accessories in Taiwan, China, the United States, Thailand, and internationally. It offers audio and ",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-04 18:51:25"
+    },
+    "台股:2364": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Twinhead International Corp., together with its subsidiaries, designs, develops, manufactures, and sells computers, computer components, peripherals, software, ASIC chips, and work",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-04 18:51:25"
+    },
+    "台股:2347": {
+      "industry": "Electronics & Computer Distribution",
+      "sector": "Technology",
+      "companyProfile": "Synnex Technology International Corporation, together with its subsidiaries, distributes information, communication, consumer, and semiconductor products. The company is involved i",
+      "theme": "產業：Electronics & Computer Distribution｜板塊：Technology｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-04 18:51:25"
+    },
+    "台股:6870": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "Turn Cloud Technology Service Inc., together with its subsidiaries, provides digital transformation solutions for commercial real estate operators, brand operators, wholesalers, an",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-04 18:51:25"
+    },
+    "台股:3289": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Integrated Service Technology Inc. research, develops, and manufactures integrated circuits, analysis and burn-in, and testing in Taiwan and internationally. The company provides M",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-04 18:51:25"
+    },
+    "台股:6716": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "PADAUK Technology Company Limited engages in the research, development, design, manufacture, and sale of integrated circuit products. Its products are used in interactive smart toy",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、題材命中、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-04 18:51:25"
+    },
+    "美股:AVGO": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Broadcom Inc. designs, develops, and supplies various semiconductor devices and infrastructure software solutions internationally. The company operates in two segments: Semiconduct",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、量能放大、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-04 18:51:26"
     }
   }
 }
