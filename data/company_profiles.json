@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-05 19:01:08",
+  "updatedAt": "2026-06-05 23:10:15",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -738,6 +738,123 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-05 07:50:50"
+    },
+    "台股:3441": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Unique Opto-Electronics Co.,Ltd. develops, manufactures, processes, and trades in various optical glasses, optical lenses, lens blank, and lens blanks in Taiwan, China, Malayasia, ",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-05 23:10:13"
+    },
+    "台股:2059": {
+      "industry": "Furnishings, Fixtures & Appliances",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "King Slide Works Co., Ltd., together with its subsidiaries, designs, manufactures, and sells rail kits for computer and network communications equipment, furniture wooden kitchen a",
+      "theme": "產業：Furnishings, Fixtures & Appliances｜板塊：Consumer Cyclical｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-05 23:10:13"
+    },
+    "台股:4556": {
+      "industry": "Pollution & Treatment Controls",
+      "sector": "Industrials",
+      "companyProfile": "Bright Sheland International Co., Ltd. researches, develops, manufactures, markets, and sells water filters and compressed air separation systems under the Filtrafine brand in Taiw",
+      "theme": "產業：Pollution & Treatment Controls｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、題材命中",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-05 23:10:13"
+    },
+    "台股:3362": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Ability Opto-Electronics Technology Co.,Ltd. engages in the research, design, development, manufacturing, and sale of optical lens in Taiwan and internationally. The company provid",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-05 23:10:13"
+    },
+    "台股:2221": {
+      "industry": "Steel",
+      "sector": "Basic Materials",
+      "companyProfile": "Tachia Yung Ho Machine Industry Co., Ltd. engages in the manufacture and sale of butt-welding pipe fittings and high purity components in Taiwan. It offers butt-welding pipe fittin",
+      "theme": "產業：Steel｜板塊：Basic Materials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-05 23:10:13"
+    },
+    "台股:1762": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare",
+      "companyProfile": "Chunghwa Chemical Synthesis & Biotech Co., Ltd. engages in the research, development, manufacturing, and sale of active pharmaceutical ingredients in Taiwan, the United States, Ind",
+      "theme": "產業：Biotechnology｜板塊：Healthcare｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-05 23:10:13"
+    },
+    "台股:4542": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "companyProfile": "Asia Neo Tech Industrial Co.,Ltd. researches, develops, manufactures, and sells automatic drying equipment in Taiwan, Mainland China, and internationally. The company offers hot-ai",
+      "theme": "產業：Specialty Industrial Machinery｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-05 23:10:14"
+    },
+    "台股:1409": {
+      "industry": "Textile Manufacturing",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Shinkong Synthetic Fibers Corporation researches for, manufactures, and sells polyester chips and polyester films in Asia. The company's products primarily include partially orient",
+      "theme": "產業：Textile Manufacturing｜板塊：Consumer Cyclical｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-05 23:10:14"
+    },
+    "台股:3555": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "BaaS Innovation Co., Ltd. provides blockchain solutions and applications. The company offers Soteria Space, a data management and access control system based on blockchain with mul",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、題材命中",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-05 23:10:14"
+    },
+    "台股:6907": {
+      "industry": "上櫃",
+      "sector": "台股",
+      "companyProfile": "Artery Technology Corporation, through its subsidiaries, designs microcontroller units in Taiwan and China. The company offers low power MCU, value for money MCU, mainstream MCU, h",
+      "theme": "產業：上櫃｜板塊：台股｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-05 23:10:14"
+    },
+    "台股:3213": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Mildef Crete Inc., together with its subsidiaries, research, designs, plans, manufactures, sells, imports, and exports computer software, hardware, and peripheral equipment in Taiw",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-05 23:10:14"
+    },
+    "台股:6021": {
+      "industry": "Capital Markets",
+      "sector": "Financial Services",
+      "companyProfile": "Good Finance Securities Co., Ltd., together with its subsidiaries, engages in the securities commission agency and brokerage business in Taiwan. It operates through Client Partner,",
+      "theme": "產業：Capital Markets｜板塊：Financial Services｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-05 23:10:14"
+    },
+    "台股:8277": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Unifosa Corp. operates as a memory modules ODM/OEM company in Taiwan. The company offers notebook computer memory modules and niche product memory modules, such as DRAM, RAM, and F",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-05 23:10:15"
     }
   }
 }
