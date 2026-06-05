@@ -2,6 +2,10 @@ name: Update Stock Data
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/update_tw_stock_scanner.py'
+      - '.github/workflows/update-data.yml'
   schedule:
     # 台股收盤後更新：台灣時間 15:40，週一～週五
     - cron: '40 7 * * 1-5'
@@ -37,4 +41,5 @@ jobs:
           git config user.email actions@github.com
           git add data
           git commit -m update-data || echo no-changes
+          git pull --rebase --autostash origin main
           git push
