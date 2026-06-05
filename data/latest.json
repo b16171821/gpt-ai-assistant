@@ -1,8 +1,10 @@
 {
   "meta": {
-    "updatedAt": "2026-06-05T15:24:01.253472+08:00",
+    "updatedAt": "2026-06-05T19:01:01.898420+08:00",
     "mode": "failed-safe",
-    "error": "dict contains fields not in fieldnames: 'yahooCloseBeforeAudit', 'officialSource', 'officialTradeDate', 'officialClose'"
+    "error": "dict contains fields not in fieldnames: 'yahooCloseBeforeAudit', 'officialClose', 'officialTradeDate', 'officialSource'",
+    "profileEnriched": true,
+    "profileUpdatedAt": "2026-06-05 19:01:08"
   },
   "stocks": []
 }
