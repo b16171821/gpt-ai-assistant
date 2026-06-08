@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-06 07:50:48",
+  "updatedAt": "2026-06-08 20:16:58",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -855,6 +855,87 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-05 23:10:15"
+    },
+    "台股:2241": {
+      "industry": "Auto Parts",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Amulaire Thermal Technology, Inc. engages in the manufacturing and sales of vehicles and electronic components in Taiwan, Germany, China, and Japan. The company offers thermal modu",
+      "theme": "產業：Auto Parts｜板塊：Consumer Cyclical｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-08 20:16:57"
+    },
+    "台股:8043": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Honey Hope Honesty Enterprise Co.,Ltd, together with its subsidiaries, engages in the sales agency of multilayer ceramic capacitors and inductors in passive components in Taiwan, A",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-08 20:16:57"
+    },
+    "台股:6175": {
+      "industry": "Aluminum",
+      "sector": "Basic Materials",
+      "companyProfile": "Liton Technology Corp. engages in the manufacture and sale of electro etched and formed aluminum foils. The company offers low, medium, and high voltage formed aluminum foils for a",
+      "theme": "產業：Aluminum｜板塊：Basic Materials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-08 20:16:57"
+    },
+    "台股:4939": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Asia Electronic Material Co., Ltd. manufactures and sells various electronic products and materials in Taiwan, China, and internationally. The company offers adhesive and non-adhes",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-08 20:16:57"
+    },
+    "台股:3093": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Taiwan Kong King Co.,Ltd engages in the electronics industry in Taiwan and China. The company operates in two segments, Equipment Division and Production. It is involved in the ins",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：量能放大、題材命中、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-08 20:16:57"
+    },
+    "台股:4529": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Electric Power Technology Limited, together with its subsidiaries, engages in the development, manufacture, and sale of electric vehicles in Taiwan. It also invests in electric veh",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、題材命中、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-08 20:16:58"
+    },
+    "台股:6270": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Professional Computer Technology Limited engages in the programming, processing, testing, and trading of computer electronic products and components in China. The company sells act",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-08 20:16:58"
+    },
+    "台股:2025": {
+      "industry": "Steel",
+      "sector": "Basic Materials",
+      "companyProfile": "Chien Shing Stainless Steel Co., Ltd. engages in the stainless-steel business in Taiwan and internationally. It engages in the cutting and sliding of stainless-steel coils; trading",
+      "theme": "產業：Steel｜板塊：Basic Materials｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-08 20:16:58"
+    },
+    "台股:3520": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Jhen Vei Electronic Co., Ltd. engages in the manufacture and sale of wires and cables. The company trades in plug, connectors, socket, computer cable, and electronic components. It",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-08 20:16:58"
     }
   }
 }
