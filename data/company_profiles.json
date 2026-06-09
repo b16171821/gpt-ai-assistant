@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-09 07:52:12",
+  "updatedAt": "2026-06-10 07:58:52",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -936,6 +936,69 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-08 20:16:58"
+    },
+    "台股:4931": {
+      "industry": "Electrical Equipment & Parts",
+      "sector": "Industrials",
+      "companyProfile": "STL Technology Co., Ltd. designs, manufactures, and sells lithium-ion power batteries for electric light vehicles, gardening and hand-held power tools, and energy storage system ap",
+      "theme": "產業：Electrical Equipment & Parts｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-10 07:58:50"
+    },
+    "台股:5228": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Max Echo Technology Corp. manufactures and sells chip beads and chip inductor in Taiwan. It offers inductors, such as high frequency ceramic chip, wire wound ceramic chip, multilay",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-10 07:58:51"
+    },
+    "台股:3221": {
+      "industry": "Communication Equipment",
+      "sector": "Technology",
+      "companyProfile": "Tai-Saw Technology Co.,Ltd. manufactures and sells electronic components in Taiwan, the rest of Asia, the United States, Europe, and internationally. The company engages in the res",
+      "theme": "產業：Communication Equipment｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-10 07:58:51"
+    },
+    "台股:8044": {
+      "industry": "Internet Retail",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "PChome Online Inc., together with its subsidiaries, provides e-commerce, fintech, and web portal services in Taiwan. It operates through E-Commerce-Sales, Market Place, Fintech, an",
+      "theme": "產業：Internet Retail｜板塊：Consumer Cyclical｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-10 07:58:51"
+    },
+    "台股:6922": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Neousys Technology Inc. designs, manufactures, and markets edge AI computing platforms and rugged embedded computers in Taiwan. The company offers industrial computers, including f",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-10 07:58:51"
+    },
+    "台股:5864": {
+      "industry": "Capital Markets",
+      "sector": "Financial Services",
+      "companyProfile": "Concord International Securities Co., Ltd provides brokerage, underwriting, stock agency, and consulting services in Taiwan. The company offers brokerage services, including busine",
+      "theme": "產業：Capital Markets｜板塊：Financial Services｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-10 07:58:51"
+    },
+    "台股:3171": {
+      "industry": "Packaging & Containers",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Yem Chio Distribution Co., Ltd., together with its subsidiaries, engages in the sale, import, and export of packaging materials in Taiwan, China, and internationally. The company o",
+      "theme": "產業：Packaging & Containers｜板塊：Consumer Cyclical｜型態：箱型突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-10 07:58:52"
     }
   }
 }
