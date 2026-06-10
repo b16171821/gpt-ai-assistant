@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-10 07:58:52",
+  "updatedAt": "2026-06-10 19:12:10",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -999,6 +999,87 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-10 07:58:52"
+    },
+    "台股:8071": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "ABICO NetCom Co.,Ltd. manufactures and trades in machinery parts in Taiwan, China, Asia, the Americas, Europe, and internationally. The company is also involved in the manufacturin",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-10 19:12:09"
+    },
+    "台股:6174": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Aker Technology Co., Ltd designs, manufactures, and markets various frequency control solutions worldwide. It offers crystal and oscillator solutions for automotive, microprocessor",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-10 19:12:09"
+    },
+    "台股:3357": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "TAI-TECH Advanced Electronics Co., Ltd., together with its subsidiaries, develops, manufactures, and sells magnetic materials and inductive components in Taiwan. It offers EMI supp",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-10 19:12:09"
+    },
+    "台股:3537": {
+      "industry": "Electrical Equipment & Parts",
+      "sector": "Industrials",
+      "companyProfile": "Podak Co., Ltd. operates as a sales agent in Taiwan, China, and internationally. The company offers passive components, including aluminum and tantalum polymer solid, DIP solid, el",
+      "theme": "產業：Electrical Equipment & Parts｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-10 19:12:09"
+    },
+    "台股:8121": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Acme Electronics Corporation produces and sells soft ferrite products in Taiwan, Asia, the Americas, Europe, and internationally. The company provides manganese-zinc and nickel-zin",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-10 19:12:10"
+    },
+    "台股:6204": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Taiwan Alpha Electronic Co., Ltd. provides electronic components and sensor solutions in Taiwan. It offers printed membrane sensors, such as stretch, force, insole pressure, bendin",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-10 19:12:10"
+    },
+    "台股:5328": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Hua Jung Components Co.,Ltd. manufactures and sells film capacitors in Taiwan and internationally. It provides metallized polyester, metallized polypropylene, EMI suppression, and ",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-10 19:12:10"
+    },
+    "台股:6642": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Fuzetec Technology Co., Ltd. engages in the manufacturing and trading of electronic components products in Mainland China, Taiwan, the United States, and internationally. The compa",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-10 19:12:10"
+    },
+    "台股:3290": {
+      "industry": "Electrical Equipment & Parts",
+      "sector": "Industrials",
+      "companyProfile": "Donpon Precision Inc. operates as an OEM provider specializing in mold design, injection molding, coating, printing, and assembly of plastic components in Taiwan, China, Thailand, ",
+      "theme": "產業：Electrical Equipment & Parts｜板塊：Industrials｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-10 19:12:10"
     }
   }
 }
