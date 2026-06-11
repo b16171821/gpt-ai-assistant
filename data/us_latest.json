@@ -1,11 +1,11 @@
 {
   "meta": {
-    "updatedAtET": "2026/06/10 20:05:40 EDT",
-    "updatedAtTW": "2026/06/11 08:05:40 CST",
+    "updatedAtET": "2026/06/11 07:58:40 EDT",
+    "updatedAtTW": "2026/06/11 19:58:40 CST",
     "strategyAsOfDate": "2026-06-10",
     "priceType": "收盤確認價",
     "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K",
-    "sessionStatus": "收盤後",
+    "sessionStatus": "盤前",
     "mode": "us-pattern-close-only-scan",
     "source": "Yahoo Finance via yfinance",
     "totalWatchlist": 74,
@@ -14,7 +14,7 @@
     "strictCandidates": 0,
     "errors": [],
     "profileEnriched": true,
-    "profileUpdatedAt": "2026-06-11 08:05:41"
+    "profileUpdatedAt": "2026-06-11 19:58:42"
   },
   "market": {
     "indexes": {
@@ -63,9 +63,9 @@
       "ma60": 239.77,
       "ma200": 165.32,
       "rise60": 141.7,
-      "volume": 8250968,
-      "avgVolume20": 11933038,
-      "volumeRatio": 0.69,
+      "volume": 9227700,
+      "avgVolume20": 11983315,
+      "volumeRatio": 0.77,
       "adx": 65.59,
       "kline": "一般K",
       "trend": true,
@@ -117,9 +117,9 @@
       "ma60": 610.29,
       "ma200": 372.99,
       "rise60": 93.18,
-      "volume": 53807408,
-      "avgVolume20": 55060990,
-      "volumeRatio": 0.98,
+      "volume": 55089500,
+      "avgVolume20": 55147395,
+      "volumeRatio": 1.0,
       "adx": 32.41,
       "kline": "一般K",
       "trend": true,
@@ -171,8 +171,8 @@
       "ma60": 202.14,
       "ma200": 193.31,
       "rise60": 55.58,
-      "volume": 6468430,
-      "avgVolume20": 9838711,
+      "volume": 6483600,
+      "avgVolume20": 9839625,
       "volumeRatio": 0.66,
       "adx": 58.41,
       "kline": "紅K突破",
@@ -225,9 +225,9 @@
       "ma60": 1768.81,
       "ma200": 1396.03,
       "rise60": 44.17,
-      "volume": 1598042,
-      "avgVolume20": 1063407,
-      "volumeRatio": 1.5,
+      "volume": 1541970,
+      "avgVolume20": 1059690,
+      "volumeRatio": 1.46,
       "adx": 32.84,
       "kline": "一般K",
       "trend": true,
@@ -263,7 +263,7 @@
       "theme": "型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -279,9 +279,9 @@
       "ma60": 270.75,
       "ma200": 201.86,
       "rise60": 42.09,
-      "volume": 13392569,
-      "avgVolume20": 9560613,
-      "volumeRatio": 1.4,
+      "volume": 14069100,
+      "avgVolume20": 9595215,
+      "volumeRatio": 1.47,
       "adx": 28.95,
       "kline": "一般K",
       "trend": true,
@@ -333,9 +333,9 @@
       "ma60": 161.87,
       "ma200": 106.46,
       "rise60": 178.21,
-      "volume": 52738310,
-      "avgVolume20": 53346580,
-      "volumeRatio": 0.99,
+      "volume": 53625700,
+      "avgVolume20": 53410925,
+      "volumeRatio": 1.0,
       "adx": 48.69,
       "kline": "長黑",
       "trend": true,
@@ -387,9 +387,9 @@
       "ma60": 218.6,
       "ma200": 160.04,
       "rise60": 141.48,
-      "volume": 7903079,
-      "avgVolume20": 12529043,
-      "volumeRatio": 0.63,
+      "volume": 7965900,
+      "avgVolume20": 12534475,
+      "volumeRatio": 0.64,
       "adx": 65.38,
       "kline": "一般K",
       "trend": false,
@@ -441,9 +441,9 @@
       "ma60": 31.32,
       "ma200": 25.54,
       "rise60": 109.92,
-      "volume": 33133689,
-      "avgVolume20": 39699109,
-      "volumeRatio": 0.83,
+      "volume": 33160900,
+      "avgVolume20": 39702260,
+      "volumeRatio": 0.84,
       "adx": 66.08,
       "kline": "長黑",
       "trend": true,
@@ -495,9 +495,9 @@
       "ma60": 645.89,
       "ma200": 396.95,
       "rise60": 93.78,
-      "volume": 3105786,
-      "avgVolume20": 3148029,
-      "volumeRatio": 0.99,
+      "volume": 3443700,
+      "avgVolume20": 3165135,
+      "volumeRatio": 1.09,
       "adx": 26.57,
       "kline": "一般K",
       "trend": false,
@@ -549,11 +549,11 @@
       "ma60": 164.61,
       "ma200": 148.55,
       "rise60": 76.64,
-      "volume": 3507192,
-      "avgVolume20": 6106159,
+      "volume": 3509100,
+      "avgVolume20": 6106410,
       "volumeRatio": 0.57,
       "adx": 70.34,
-      "kline": "一般K",
+      "kline": "下影線",
       "trend": false,
       "volumeOk": false,
       "priceVol": true,
@@ -603,9 +603,9 @@
       "ma60": 46.01,
       "ma200": 48.81,
       "rise60": 70.01,
-      "volume": 23355967,
-      "avgVolume20": 31816398,
-      "volumeRatio": 0.73,
+      "volume": 23458400,
+      "avgVolume20": 31827510,
+      "volumeRatio": 0.74,
       "adx": 39.04,
       "kline": "一般K",
       "trend": false,
@@ -641,7 +641,7 @@
       "theme": "型態：接近成形｜原因：價量趨勢成立",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -657,8 +657,8 @@
       "ma60": 414.22,
       "ma200": 249.1,
       "rise60": 56.17,
-      "volume": 5940016,
-      "avgVolume20": 6515805,
+      "volume": 5950700,
+      "avgVolume20": 6516945,
       "volumeRatio": 0.91,
       "adx": 27.66,
       "kline": "一般K",
@@ -711,8 +711,8 @@
       "ma60": 510.58,
       "ma200": 481.52,
       "rise60": 49.52,
-      "volume": 2518234,
-      "avgVolume20": 3864516,
+      "volume": 2519900,
+      "avgVolume20": 3864830,
       "volumeRatio": 0.65,
       "adx": 65.41,
       "kline": "一般K",
@@ -765,10 +765,10 @@
       "ma60": 880.89,
       "ma200": 881.36,
       "rise60": 41.79,
-      "volume": 464212,
-      "avgVolume20": 495095,
-      "volumeRatio": 0.94,
-      "adx": 46.7,
+      "volume": 574700,
+      "avgVolume20": 500620,
+      "volumeRatio": 1.15,
+      "adx": 46.66,
       "kline": "一般K",
       "trend": false,
       "volumeOk": false,
@@ -803,7 +803,7 @@
       "theme": "型態：旗型整理突破｜原因：價量趨勢成立",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -819,8 +819,8 @@
       "ma60": 344.1,
       "ma200": 330.54,
       "rise60": 41.69,
-      "volume": 6475440,
-      "avgVolume20": 7183147,
+      "volume": 6495900,
+      "avgVolume20": 7184525,
       "volumeRatio": 0.9,
       "adx": 24.29,
       "kline": "一般K",
@@ -833,31 +833,31 @@
       "status": "只觀察",
       "reason": "均線多頭排列",
       "pattern": "旗型整理突破",
-      "neckline": 415.96,
+      "neckline": 415.98,
       "support": 374.72,
-      "target": 575.96,
+      "target": 575.99,
       "stage": "接近成形＋可觀察",
-      "entryBreakout": 424.28,
-      "entryPullback": 415.96,
-      "chaseRangeLow": 424.28,
-      "chaseRangeHigh": 437.01,
-      "observationEntry": 424.28,
-      "limitPrice": 424.28,
-      "stopLoss": 403.49,
-      "riskPct": 0.98,
+      "entryBreakout": 424.3,
+      "entryPullback": 415.98,
+      "chaseRangeLow": 424.3,
+      "chaseRangeHigh": 437.03,
+      "observationEntry": 424.3,
+      "limitPrice": 424.3,
+      "stopLoss": 403.5,
+      "riskPct": 0.97,
       "winRate": "中",
-      "distanceFromNecklinePct": -2.04,
-      "distanceFromPrevHighPct": 2.04,
+      "distanceFromNecklinePct": -2.05,
+      "distanceFromPrevHighPct": 2.05,
       "forbiddenChase": false,
       "planStatus": "預備單，等待確認條件",
-      "confirmConditions": "收盤站上頸線 415.96 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
+      "confirmConditions": "收盤站上頸線 415.98 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場",
       "industry": "美股",
       "sector": "美股",
       "companyProfile": "UNH目前以技術型態、量能與位置作為觀察重點。",
       "theme": "型態：旗型整理突破｜原因：均線多頭排列",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -873,8 +873,8 @@
       "ma60": 407.61,
       "ma200": 305.27,
       "rise60": 41.01,
-      "volume": 11373115,
-      "avgVolume20": 8723485,
+      "volume": 11377500,
+      "avgVolume20": 8724840,
       "volumeRatio": 1.3,
       "adx": 20.26,
       "kline": "一般K",
@@ -911,7 +911,7 @@
       "theme": "型態：旗型整理突破｜原因：均線多頭排列",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -927,8 +927,8 @@
       "ma60": 168.86,
       "ma200": 205.12,
       "rise60": 37.4,
-      "volume": 6144539,
-      "avgVolume20": 11413306,
+      "volume": 6147100,
+      "avgVolume20": 11413680,
       "volumeRatio": 0.54,
       "adx": 64.14,
       "kline": "下影線",
@@ -965,7 +965,7 @@
       "theme": "型態：接近成形｜原因：價量趨勢成立",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -981,9 +981,9 @@
       "ma60": 177.58,
       "ma200": 206.35,
       "rise60": 30.11,
-      "volume": 39876567,
-      "avgVolume20": 22760398,
-      "volumeRatio": 1.75,
+      "volume": 43647200,
+      "avgVolume20": 22954430,
+      "volumeRatio": 1.9,
       "adx": 31.08,
       "kline": "一般K",
       "trend": false,
@@ -1035,9 +1035,9 @@
       "ma60": 1487.48,
       "ma200": 1233.93,
       "rise60": 24.84,
-      "volume": 2568886,
-      "avgVolume20": 1746819,
-      "volumeRatio": 1.47,
+      "volume": 2580300,
+      "avgVolume20": 1747530,
+      "volumeRatio": 1.48,
       "adx": 32.64,
       "kline": "一般K",
       "trend": true,
@@ -1073,7 +1073,7 @@
       "theme": "型態：旗型整理突破｜原因：均線多頭排列",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -1089,8 +1089,8 @@
       "ma60": 974.73,
       "ma200": 954.13,
       "rise60": 22.14,
-      "volume": 2686974,
-      "avgVolume20": 3237628,
+      "volume": 2692600,
+      "avgVolume20": 3238015,
       "volumeRatio": 0.83,
       "adx": 55.71,
       "kline": "一般K",
@@ -1127,7 +1127,7 @@
       "theme": "型態：旗型整理突破｜原因：均線多頭排列",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -1143,8 +1143,8 @@
       "ma60": 987.48,
       "ma200": 761.18,
       "rise60": 2.73,
-      "volume": 5292761,
-      "avgVolume20": 2620053,
+      "volume": 5294600,
+      "avgVolume20": 2620245,
       "volumeRatio": 2.02,
       "adx": 27.52,
       "kline": "一般K",
@@ -1181,7 +1181,7 @@
       "theme": "型態：接近成形｜原因：量能放大",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -1197,9 +1197,9 @@
       "ma60": 30.7,
       "ma200": 35.94,
       "rise60": -7.11,
-      "volume": 188978616,
-      "avgVolume20": 49824075,
-      "volumeRatio": 3.79,
+      "volume": 189998900,
+      "avgVolume20": 49961380,
+      "volumeRatio": 3.8,
       "adx": 47.97,
       "kline": "長黑",
       "trend": false,
@@ -1235,7 +1235,7 @@
       "theme": "型態：接近成形｜原因：量能放大",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -1251,9 +1251,9 @@
       "ma60": 84.63,
       "ma200": 52.54,
       "rise60": 142.94,
-      "volume": 121541237,
-      "avgVolume20": 124793216,
-      "volumeRatio": 0.97,
+      "volume": 122098200,
+      "avgVolume20": 124846750,
+      "volumeRatio": 0.98,
       "adx": 16.62,
       "kline": "一般K",
       "trend": false,
@@ -1289,7 +1289,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -1305,8 +1305,8 @@
       "ma60": 346.42,
       "ma200": 250.58,
       "rise60": 130.45,
-      "volume": 27523098,
-      "avgVolume20": 31635039,
+      "volume": 27601100,
+      "avgVolume20": 31644715,
       "volumeRatio": 0.87,
       "adx": 24.31,
       "kline": "一般K",
@@ -1359,8 +1359,8 @@
       "ma60": 172.3,
       "ma200": 165.15,
       "rise60": 45.3,
-      "volume": 18320746,
-      "avgVolume20": 23219687,
+      "volume": 18345800,
+      "avgVolume20": 23223055,
       "volumeRatio": 0.79,
       "adx": 22.66,
       "kline": "長黑",
@@ -1413,8 +1413,8 @@
       "ma60": 255.72,
       "ma200": 207.21,
       "rise60": 45.03,
-      "volume": 7311000,
-      "avgVolume20": 8175075,
+      "volume": 7313500,
+      "avgVolume20": 8175325,
       "volumeRatio": 0.89,
       "adx": 24.97,
       "kline": "一般K",
@@ -1467,8 +1467,8 @@
       "ma60": 1428.68,
       "ma200": 1123.81,
       "rise60": 38.1,
-      "volume": 735499,
-      "avgVolume20": 726214,
+      "volume": 736300,
+      "avgVolume20": 726355,
       "volumeRatio": 1.01,
       "adx": 6.5,
       "kline": "一般K",
@@ -1505,7 +1505,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -1521,8 +1521,8 @@
       "ma60": 285.07,
       "ma200": 330.59,
       "rise60": 27.92,
-      "volume": 1498828,
-      "avgVolume20": 2994876,
+      "volume": 1501200,
+      "avgVolume20": 2995050,
       "volumeRatio": 0.5,
       "adx": 29.55,
       "kline": "一般K",
@@ -1575,10 +1575,10 @@
       "ma60": 9.2,
       "ma200": 12.89,
       "rise60": 22.59,
-      "volume": 7363982,
-      "avgVolume20": 7836344,
-      "volumeRatio": 0.94,
-      "adx": 34.31,
+      "volume": 7442600,
+      "avgVolume20": 7840570,
+      "volumeRatio": 0.95,
+      "adx": 34.32,
       "kline": "下影線",
       "trend": false,
       "volumeOk": false,
@@ -1613,7 +1613,7 @@
       "theme": "型態：旗型整理突破｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -1629,8 +1629,8 @@
       "ma60": 822.66,
       "ma200": 655.03,
       "rise60": 21.96,
-      "volume": 3594209,
-      "avgVolume20": 2743385,
+      "volume": 3605000,
+      "avgVolume20": 2743950,
       "volumeRatio": 1.31,
       "adx": 14.59,
       "kline": "長黑",
@@ -1667,7 +1667,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -1683,9 +1683,9 @@
       "ma60": 113.72,
       "ma200": 103.83,
       "rise60": 21.43,
-      "volume": 2314452,
-      "avgVolume20": 2111742,
-      "volumeRatio": 1.1,
+      "volume": 2353600,
+      "avgVolume20": 2113700,
+      "volumeRatio": 1.11,
       "adx": 11.39,
       "kline": "一般K",
       "trend": false,
@@ -1721,7 +1721,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -1737,8 +1737,8 @@
       "ma60": 1710.85,
       "ma200": 1217.19,
       "rise60": 20.71,
-      "volume": 530927,
-      "avgVolume20": 437901,
+      "volume": 531400,
+      "avgVolume20": 437925,
       "volumeRatio": 1.21,
       "adx": 27.79,
       "kline": "長黑",
@@ -1791,9 +1791,9 @@
       "ma60": 384.97,
       "ma200": 329.17,
       "rise60": 18.14,
-      "volume": 12030856,
-      "avgVolume20": 12727602,
-      "volumeRatio": 0.95,
+      "volume": 13080100,
+      "avgVolume20": 12781015,
+      "volumeRatio": 1.02,
       "adx": 26.46,
       "kline": "一般K",
       "trend": false,
@@ -1829,7 +1829,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -1845,8 +1845,8 @@
       "ma60": 351.0,
       "ma200": 244.58,
       "rise60": 16.1,
-      "volume": 3739085,
-      "avgVolume20": 3603209,
+      "volume": 3741800,
+      "avgVolume20": 3603410,
       "volumeRatio": 1.04,
       "adx": 20.94,
       "kline": "一般K",
@@ -1883,7 +1883,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -1899,9 +1899,9 @@
       "ma60": 388.47,
       "ma200": 357.22,
       "rise60": 15.81,
-      "volume": 37424608,
-      "avgVolume20": 30194315,
-      "volumeRatio": 1.24,
+      "volume": 37981500,
+      "avgVolume20": 30226085,
+      "volumeRatio": 1.26,
       "adx": 20.42,
       "kline": "一般K",
       "trend": false,
@@ -1953,9 +1953,9 @@
       "ma60": 278.37,
       "ma200": 266.22,
       "rise60": 14.69,
-      "volume": 49237715,
-      "avgVolume20": 50637710,
-      "volumeRatio": 0.97,
+      "volume": 52608100,
+      "avgVolume20": 50810460,
+      "volumeRatio": 1.04,
       "adx": 60.95,
       "kline": "一般K",
       "trend": false,
@@ -1991,7 +1991,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -2007,10 +2007,10 @@
       "ma60": 348.65,
       "ma200": 306.44,
       "rise60": 14.62,
-      "volume": 31693010,
-      "avgVolume20": 31890295,
-      "volumeRatio": 0.99,
-      "adx": 23.03,
+      "volume": 32217000,
+      "avgVolume20": 31918425,
+      "volumeRatio": 1.01,
+      "adx": 23.04,
       "kline": "一般K",
       "trend": false,
       "volumeOk": false,
@@ -2045,7 +2045,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -2061,8 +2061,8 @@
       "ma60": 150.21,
       "ma200": 141.26,
       "rise60": 14.05,
-      "volume": 6809073,
-      "avgVolume20": 9902313,
+      "volume": 6850300,
+      "avgVolume20": 9904635,
       "volumeRatio": 0.69,
       "adx": 37.13,
       "kline": "一般K",
@@ -2099,7 +2099,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -2115,9 +2115,9 @@
       "ma60": 77.98,
       "ma200": 102.96,
       "rise60": 11.65,
-      "volume": 41272645,
-      "avgVolume20": 28112447,
-      "volumeRatio": 1.47,
+      "volume": 41785000,
+      "avgVolume20": 28142760,
+      "volumeRatio": 1.48,
       "adx": 42.85,
       "kline": "一般K",
       "trend": false,
@@ -2153,7 +2153,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -2169,8 +2169,8 @@
       "ma60": 41.22,
       "ma200": 48.53,
       "rise60": 11.4,
-      "volume": 16507133,
-      "avgVolume20": 13246886,
+      "volume": 16542700,
+      "avgVolume20": 13249565,
       "volumeRatio": 1.25,
       "adx": 22.03,
       "kline": "一般K",
@@ -2207,7 +2207,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -2223,8 +2223,8 @@
       "ma60": 245.89,
       "ma200": 232.39,
       "rise60": 10.59,
-      "volume": 38263040,
-      "avgVolume20": 40644637,
+      "volume": 38345800,
+      "avgVolume20": 40651970,
       "volumeRatio": 0.94,
       "adx": 29.08,
       "kline": "一般K",
@@ -2261,7 +2261,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -2277,9 +2277,9 @@
       "ma60": 200.55,
       "ma200": 189.02,
       "rise60": 10.16,
-      "volume": 150398224,
-      "avgVolume20": 178468041,
-      "volumeRatio": 0.84,
+      "volume": 160502000,
+      "avgVolume20": 179005005,
+      "volumeRatio": 0.9,
       "adx": 20.6,
       "kline": "一般K",
       "trend": false,
@@ -2315,7 +2315,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -2331,8 +2331,8 @@
       "ma60": 471.36,
       "ma200": 541.58,
       "rise60": 7.38,
-      "volume": 4827965,
-      "avgVolume20": 4796328,
+      "volume": 4831100,
+      "avgVolume20": 4797465,
       "volumeRatio": 1.01,
       "adx": 40.65,
       "kline": "一般K",
@@ -2369,7 +2369,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -2385,9 +2385,9 @@
       "ma60": 828.75,
       "ma200": 719.15,
       "rise60": 6.61,
-      "volume": 351660,
-      "avgVolume20": 355608,
-      "volumeRatio": 0.99,
+      "volume": 417500,
+      "avgVolume20": 358900,
+      "volumeRatio": 1.16,
       "adx": 54.98,
       "kline": "長黑",
       "trend": false,
@@ -2423,7 +2423,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -2439,8 +2439,8 @@
       "ma60": 306.43,
       "ma200": 218.47,
       "rise60": 4.68,
-      "volume": 6871542,
-      "avgVolume20": 6093442,
+      "volume": 6883000,
+      "avgVolume20": 6094505,
       "volumeRatio": 1.13,
       "adx": 23.05,
       "kline": "下影線",
@@ -2477,7 +2477,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -2493,9 +2493,9 @@
       "ma60": 215.17,
       "ma200": 206.76,
       "rise60": 3.85,
-      "volume": 5091498,
-      "avgVolume20": 4154789,
-      "volumeRatio": 1.23,
+      "volume": 5548100,
+      "avgVolume20": 4177970,
+      "volumeRatio": 1.33,
       "adx": 50.49,
       "kline": "長黑",
       "trend": false,
@@ -2547,9 +2547,9 @@
       "ma60": 393.92,
       "ma200": 367.14,
       "rise60": 3.16,
-      "volume": 3504161,
-      "avgVolume20": 2532098,
-      "volumeRatio": 1.38,
+      "volume": 3547100,
+      "avgVolume20": 2534315,
+      "volumeRatio": 1.4,
       "adx": 11.28,
       "kline": "長黑",
       "trend": false,
@@ -2585,7 +2585,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -2601,9 +2601,9 @@
       "ma60": 3.96,
       "ma200": 5.25,
       "rise60": 1.52,
-      "volume": 35048390,
-      "avgVolume20": 49338669,
-      "volumeRatio": 0.71,
+      "volume": 36500000,
+      "avgVolume20": 49419610,
+      "volumeRatio": 0.74,
       "adx": 37.75,
       "kline": "一般K",
       "trend": false,
@@ -2639,7 +2639,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -2655,9 +2655,9 @@
       "ma60": 405.31,
       "ma200": 454.86,
       "rise60": -0.51,
-      "volume": 30387335,
-      "avgVolume20": 36502821,
-      "volumeRatio": 0.83,
+      "volume": 32416800,
+      "avgVolume20": 36607800,
+      "volumeRatio": 0.89,
       "adx": 25.05,
       "kline": "一般K",
       "trend": false,
@@ -2693,7 +2693,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -2709,9 +2709,9 @@
       "ma60": 134.18,
       "ma200": 128.89,
       "rise60": -2.16,
-      "volume": 3585221,
-      "avgVolume20": 3719911,
-      "volumeRatio": 0.96,
+      "volume": 3680600,
+      "avgVolume20": 3724710,
+      "volumeRatio": 0.99,
       "adx": 12.47,
       "kline": "一般K",
       "trend": false,
@@ -2747,7 +2747,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -2763,8 +2763,8 @@
       "ma60": 394.03,
       "ma200": 415.16,
       "rise60": -4.43,
-      "volume": 49166017,
-      "avgVolume20": 47652915,
+      "volume": 49330500,
+      "avgVolume20": 47667910,
       "volumeRatio": 1.03,
       "adx": 20.27,
       "kline": "一般K",
@@ -2801,7 +2801,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -2817,9 +2817,9 @@
       "ma60": 439.21,
       "ma200": 437.86,
       "rise60": -5.79,
-      "volume": 949156,
-      "avgVolume20": 1306912,
-      "volumeRatio": 0.73,
+      "volume": 1101500,
+      "avgVolume20": 1314530,
+      "volumeRatio": 0.84,
       "adx": 15.96,
       "kline": "一般K",
       "trend": false,
@@ -2855,7 +2855,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -2871,8 +2871,8 @@
       "ma60": 86.25,
       "ma200": 125.93,
       "rise60": -5.88,
-      "volume": 4070178,
-      "avgVolume20": 4068573,
+      "volume": 4070900,
+      "avgVolume20": 4068655,
       "volumeRatio": 1.0,
       "adx": 16.36,
       "kline": "一般K",
@@ -2909,7 +2909,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -2925,8 +2925,8 @@
       "ma60": 1713.39,
       "ma200": 1997.8,
       "rise60": -8.09,
-      "volume": 401308,
-      "avgVolume20": 574800,
+      "volume": 402900,
+      "avgVolume20": 574880,
       "volumeRatio": 0.7,
       "adx": 28.52,
       "kline": "一般K",
@@ -2963,7 +2963,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -2979,9 +2979,9 @@
       "ma60": 615.79,
       "ma200": 659.95,
       "rise60": -8.3,
-      "volume": 16735589,
-      "avgVolume20": 17385099,
-      "volumeRatio": 0.96,
+      "volume": 16986900,
+      "avgVolume20": 17399000,
+      "volumeRatio": 0.98,
       "adx": 9.66,
       "kline": "一般K",
       "trend": false,
@@ -3017,7 +3017,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -3033,8 +3033,8 @@
       "ma60": 16.75,
       "ma200": 22.95,
       "rise60": -8.64,
-      "volume": 85827565,
-      "avgVolume20": 73223093,
+      "volume": 85952200,
+      "avgVolume20": 73241595,
       "volumeRatio": 1.17,
       "adx": 34.21,
       "kline": "一般K",
@@ -3071,7 +3071,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -3087,8 +3087,8 @@
       "ma60": 100.88,
       "ma200": 139.16,
       "rise60": -9.13,
-      "volume": 19847953,
-      "avgVolume20": 35410057,
+      "volume": 19895700,
+      "avgVolume20": 35418340,
       "volumeRatio": 0.56,
       "adx": 44.72,
       "kline": "一般K",
@@ -3125,7 +3125,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -3141,9 +3141,9 @@
       "ma60": 73.57,
       "ma200": 82.79,
       "rise60": -11.8,
-      "volume": 21126152,
-      "avgVolume20": 19926712,
-      "volumeRatio": 1.06,
+      "volume": 21857800,
+      "avgVolume20": 19964440,
+      "volumeRatio": 1.09,
       "adx": 26.3,
       "kline": "一般K",
       "trend": false,
@@ -3179,7 +3179,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -3195,10 +3195,10 @@
       "ma60": 182.24,
       "ma200": 219.07,
       "rise60": -12.49,
-      "volume": 10726391,
-      "avgVolume20": 15777179,
+      "volume": 10784500,
+      "avgVolume20": 15780580,
       "volumeRatio": 0.68,
-      "adx": 19.83,
+      "adx": 19.82,
       "kline": "一般K",
       "trend": false,
       "volumeOk": false,
@@ -3233,7 +3233,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -3249,9 +3249,9 @@
       "ma60": 91.69,
       "ma200": 99.62,
       "rise60": -13.1,
-      "volume": 34124945,
-      "avgVolume20": 33054912,
-      "volumeRatio": 1.03,
+      "volume": 36199300,
+      "avgVolume20": 33164240,
+      "volumeRatio": 1.09,
       "adx": 19.21,
       "kline": "紅K突破",
       "trend": false,
@@ -3287,7 +3287,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -3303,9 +3303,9 @@
       "ma60": 7.76,
       "ma200": 11.11,
       "rise60": -13.68,
-      "volume": 25217479,
-      "avgVolume20": 25260893,
-      "volumeRatio": 1.0,
+      "volume": 25591300,
+      "avgVolume20": 25284175,
+      "volumeRatio": 1.01,
       "adx": 20.62,
       "kline": "一般K",
       "trend": false,
@@ -3341,7 +3341,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -3357,9 +3357,9 @@
       "ma60": 449.63,
       "ma200": 492.51,
       "rise60": -14.65,
-      "volume": 1994988,
-      "avgVolume20": 2449154,
-      "volumeRatio": 0.81,
+      "volume": 1996200,
+      "avgVolume20": 2449285,
+      "volumeRatio": 0.82,
       "adx": 28.23,
       "kline": "一般K",
       "trend": false,
@@ -3395,7 +3395,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -3411,9 +3411,9 @@
       "ma60": 115.52,
       "ma200": 138.5,
       "rise60": -15.34,
-      "volume": 7308120,
-      "avgVolume20": 10431651,
-      "volumeRatio": 0.7,
+      "volume": 7373600,
+      "avgVolume20": 10435390,
+      "volumeRatio": 0.71,
       "adx": 32.07,
       "kline": "下影線",
       "trend": false,
@@ -3449,7 +3449,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -3465,9 +3465,9 @@
       "ma60": 142.14,
       "ma200": 160.71,
       "rise60": -16.04,
-      "volume": 29150613,
-      "avgVolume20": 39787335,
-      "volumeRatio": 0.73,
+      "volume": 30384700,
+      "avgVolume20": 39854870,
+      "volumeRatio": 0.76,
       "adx": 21.57,
       "kline": "一般K",
       "trend": false,
@@ -3503,7 +3503,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -3519,8 +3519,8 @@
       "ma60": 142.85,
       "ma200": 215.98,
       "rise60": -20.04,
-      "volume": 3908194,
-      "avgVolume20": 7518009,
+      "volume": 3911200,
+      "avgVolume20": 7518520,
       "volumeRatio": 0.52,
       "adx": 23.77,
       "kline": "一般K",
@@ -3557,7 +3557,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -3573,9 +3573,9 @@
       "ma60": 706.44,
       "ma200": 696.14,
       "rise60": -20.74,
-      "volume": 787746,
-      "avgVolume20": 1235087,
-      "volumeRatio": 0.64,
+      "volume": 815500,
+      "avgVolume20": 1236475,
+      "volumeRatio": 0.66,
       "adx": 43.58,
       "kline": "一般K",
       "trend": false,
@@ -3611,7 +3611,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -3627,8 +3627,8 @@
       "ma60": 288.67,
       "ma200": 320.81,
       "rise60": -21.25,
-      "volume": 4056530,
-      "avgVolume20": 4256676,
+      "volume": 4061400,
+      "avgVolume20": 4257050,
       "volumeRatio": 0.95,
       "adx": 19.37,
       "kline": "一般K",
@@ -3665,7 +3665,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -3681,8 +3681,8 @@
       "ma60": 151.69,
       "ma200": 198.46,
       "rise60": -23.24,
-      "volume": 15454145,
-      "avgVolume20": 18278102,
+      "volume": 15541900,
+      "avgVolume20": 18288835,
       "volumeRatio": 0.85,
       "adx": 36.52,
       "kline": "一般K",
@@ -3719,7 +3719,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -3735,9 +3735,9 @@
       "ma60": 186.47,
       "ma200": 242.39,
       "rise60": -26.76,
-      "volume": 6298618,
-      "avgVolume20": 9490050,
-      "volumeRatio": 0.66,
+      "volume": 6374100,
+      "avgVolume20": 9495160,
+      "volumeRatio": 0.67,
       "adx": 28.44,
       "kline": "一般K",
       "trend": false,
@@ -3773,7 +3773,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     },
     {
       "date": "2026-06-10",
@@ -3789,9 +3789,9 @@
       "ma60": 51.19,
       "ma200": 83.9,
       "rise60": -28.19,
-      "volume": 8419831,
-      "avgVolume20": 10656016,
-      "volumeRatio": 0.79,
+      "volume": 9250100,
+      "avgVolume20": 10697725,
+      "volumeRatio": 0.86,
       "adx": 26.08,
       "kline": "一般K",
       "trend": false,
@@ -3827,7 +3827,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-06-11 08:05:41"
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     }
   ]
 }

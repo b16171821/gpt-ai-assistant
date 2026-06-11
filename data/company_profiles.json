@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-11 08:05:41",
+  "updatedAt": "2026-06-11 19:58:42",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -1080,6 +1080,105 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-10 19:12:10"
+    },
+    "台股:6173": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Prosperity Dielectrics Co., Ltd. manufactures, processes, and sells chip capacitors, chip resistors, dielectric ceramic powder, and magnetic components in Asia, the United States, ",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-11 19:58:40"
+    },
+    "台股:6259": {
+      "industry": "Electronics & Computer Distribution",
+      "sector": "Technology",
+      "companyProfile": "Bull Will Co., Ltd. processing, import, export and trading of electronic materials and parts, and sale of televisions in Taiwan. The company's products include switching power tran",
+      "theme": "產業：Electronics & Computer Distribution｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-11 19:58:41"
+    },
+    "台股:2327": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Yageo Corporation, together with its subsidiaries, manufactures and sells electronic components in China, Europe, the United States, and the rest of Asia. It offers antennas, radio",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-11 19:58:41"
+    },
+    "台股:8042": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Taiwan Chinsan Electronic Industrial Co., Ltd. manufactures, imports, processes, and trades in various electronic equipment and capacitors in Taiwan, rest of Asia, Europe, the Unit",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-11 19:58:41"
+    },
+    "台股:8182": {
+      "industry": "Scientific & Technical Instruments",
+      "sector": "Technology",
+      "companyProfile": "Harmony Electronics Co. Ltd manufactures, process, trades, exports, and import of quartz crystal, oscillators, and filters products in Taiwan, Thailand, and China. The company prov",
+      "theme": "產業：Scientific & Technical Instruments｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-11 19:58:41"
+    },
+    "台股:3236": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "ABC Taiwan Electronics Corp. engages in the manufacturing and sale of electronic products in the United States, Germany, China, Taiwan, and internationally. The company offers chip",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-11 19:58:41"
+    },
+    "台股:6613": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "companyProfile": "Nova Technology Corporation provides services for semiconductor plants, optoelectronic, solar energy, biotech, pharmaceutical, and chemical manufacturers in Taiwan, China, and inte",
+      "theme": "產業：Specialty Industrial Machinery｜板塊：Industrials｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-11 19:58:42"
+    },
+    "台股:3152": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Advanced Ceramic X Corporation designs, manufactures, and sells RF front-end devices and modules for wireless communication applications in Taiwan, China, the United States, and in",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-11 19:58:42"
+    },
+    "台股:5345": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Fullhome Development Co., Ltd. engages in the design, development, and sale of batteries in Taiwan. The company operates through Intelligent Power Control System Sales and Contract",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-11 19:58:42"
+    },
+    "台股:1714": {
+      "industry": "Chemicals",
+      "sector": "Basic Materials",
+      "companyProfile": "Ho Tung Chemical Corp., together with its subsidiaries, manufactures, processes, and sells chemical products in Taiwan, China, Southeast Asia, and internationally. It operates thro",
+      "theme": "產業：Chemicals｜板塊：Basic Materials｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-11 19:58:42"
+    },
+    "台股:5410": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Leo Systems, Inc. engages in planning, designing, and sale of information software and hardware maintenance services in Taiwan. The company provides technology applications, such a",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-11 19:58:42"
     }
   }
 }
