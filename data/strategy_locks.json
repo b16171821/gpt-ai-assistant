@@ -647,7 +647,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-11 19:58:45"
+    "updatedAt": "2026-06-12 08:10:11"
   },
   "台股:3441": {
     "key": "台股:3441",
@@ -665,14 +665,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 60.2,
+    "currentPrice": 71.5,
     "currentTarget": 88.45,
     "currentStopLoss": 57.04,
     "extensionTarget": null,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-06 07:50:49"
+    "updatedAt": "2026-06-12 08:10:12"
   },
   "台股:3537": {
     "key": "台股:3537",
@@ -1097,7 +1097,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-11 19:58:43"
+    "updatedAt": "2026-06-12 08:10:11"
   },
   "台股:6174": {
     "key": "台股:6174",
@@ -1197,7 +1197,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-11 19:58:44"
+    "updatedAt": "2026-06-12 08:10:11"
   },
   "台股:6548": {
     "key": "台股:6548",
@@ -1247,7 +1247,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-11 19:58:45"
+    "updatedAt": "2026-06-12 08:10:11"
   },
   "台股:6922": {
     "key": "台股:6922",
@@ -1472,7 +1472,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-11 19:58:44"
+    "updatedAt": "2026-06-12 08:10:11"
   },
   "美股:AMD": {
     "key": "美股:AMD",
