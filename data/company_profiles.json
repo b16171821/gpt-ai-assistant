@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-12 08:10:10",
+  "updatedAt": "2026-06-12 19:29:35",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -1179,6 +1179,24 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-11 19:58:42"
+    },
+    "台股:6821": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "LinkCom Manufacturing Co.,LTD. designs, produces, and sells magnetic components, intelligent power supplies, and intelligent lighting control solutions worldwide. The company also ",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-12 19:29:35"
+    },
+    "台股:1342": {
+      "industry": "Textile Manufacturing",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Cathay Consolidated, Inc. operates as a contract manufacturer of technical fabrics and finished goods in Taiwan, Asia, the Union States, and internationally. The company engages in",
+      "theme": "產業：Textile Manufacturing｜板塊：Consumer Cyclical｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-12 19:29:35"
     }
   }
 }
