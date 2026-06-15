@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-13 08:06:13",
+  "updatedAt": "2026-06-15 21:36:01",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -1197,6 +1197,33 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-12 19:29:35"
+    },
+    "台股:3516": {
+      "industry": "Furnishings, Fixtures & Appliances",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "ADO Optronics Corporation engages in the manufacturing, processing, and trading of various connectors, plugs, electronic components, and lighting products. It operates through Ligh",
+      "theme": "產業：Furnishings, Fixtures & Appliances｜板塊：Consumer Cyclical｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-15 21:36:01"
+    },
+    "台股:6693": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Inergy Technology Inc. engages in product designing, wholesale, and retail sale of electrical appliances and electronic materials in Taiwan, China, Vietnam, and internationally. It",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-15 21:36:01"
+    },
+    "台股:3303": {
+      "industry": "Metal Fabrication",
+      "sector": "Industrials",
+      "companyProfile": "Univacco Technology Inc. engages in the production and sales of vacuum evaporation thin films and optoelectronic materials in Taiwan, Europe, Mainland China, America, and internati",
+      "theme": "產業：Metal Fabrication｜板塊：Industrials｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-15 21:36:01"
     }
   }
 }
