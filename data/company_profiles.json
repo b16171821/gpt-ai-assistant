@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-15 21:36:01",
+  "updatedAt": "2026-06-16 08:17:57",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -1224,6 +1224,69 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-15 21:36:01"
+    },
+    "美股:KLAC": {
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "KLA Corporation, together with its subsidiaries, designs, manufactures, and markets process control, process-enabling, and yield management solutions for the semiconductor and rela",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 08:17:57"
+    },
+    "美股:AMAT": {
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "Applied Materials, Inc. provides materials engineering solutions, equipment, services, and software to the semiconductor and related industries in the United States, China, Korea, ",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 08:17:57"
+    },
+    "美股:URI": {
+      "industry": "Rental & Leasing Services",
+      "sector": "Industrials",
+      "companyProfile": "United Rentals, Inc., through its subsidiaries, operates as an equipment rental company in the United States, Canada, Europe, Australia, and New Zealand. It operates through two se",
+      "theme": "產業：Rental & Leasing Services｜板塊：Industrials｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 08:17:57"
+    },
+    "美股:ROKU": {
+      "industry": "Entertainment",
+      "sector": "Communication Services",
+      "companyProfile": "Roku, Inc., together with its subsidiaries, operates a TV streaming platform in the United States and internationally. The company operates in two segments, Platform and Devices. I",
+      "theme": "產業：Entertainment｜板塊：Communication Services｜型態：旗型整理突破｜原因：均線多頭排列、量能放大、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 08:17:57"
+    },
+    "美股:UNH": {
+      "industry": "Healthcare Plans",
+      "sector": "Healthcare",
+      "companyProfile": "UnitedHealth Group Incorporated operates as a health care company in the United States and internationally. It operates through four segments: Optum Health, Optum Insight, Optum Rx",
+      "theme": "產業：Healthcare Plans｜板塊：Healthcare｜型態：箱型突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 08:17:57"
+    },
+    "美股:ASML": {
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "ASML Holding N.V. provides lithography solutions for the development, production, marketing, sales, upgrading, and servicing of advanced semiconductor equipment systems. The compan",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 08:17:57"
+    },
+    "美股:TSM": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in ",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 08:17:57"
     }
   }
 }
