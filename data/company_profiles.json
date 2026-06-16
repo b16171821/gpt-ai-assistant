@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-16 08:17:57",
+  "updatedAt": "2026-06-16 20:29:19",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -1287,6 +1287,96 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-16 08:17:57"
+    },
+    "台股:7777": {
+      "industry": "Asset Management",
+      "sector": "Financial Services",
+      "companyProfile": "ABICO Asia Capital Corporation engages in the investment activities. It invests in the industries, including semiconductor, cloud, advanced medical equipment, new energy vehicles, ",
+      "theme": "產業：Asset Management｜板塊：Financial Services｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 20:29:18"
+    },
+    "台股:6292": {
+      "industry": "Electrical Equipment & Parts",
+      "sector": "Industrials",
+      "companyProfile": "Axis Corporation engages in the manufacture, process, trade, and import and export of appliances and related peripheral parts in Taiwan. It provides power supplies, transformers, a",
+      "theme": "產業：Electrical Equipment & Parts｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 20:29:18"
+    },
+    "台股:5483": {
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "Sino-American Silicon Products Inc. engages in the research and development, design, manufacturing, and sale of semiconductor silicon materials and related components, varistors, o",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、題材命中",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 20:29:18"
+    },
+    "台股:8032": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Koryo Electronics Co., Ltd. produce and distributes semiconductor component. The company offers LoRa and WiFi modules, wireless communications, SiC SBD 650V, SiC DMOS 650, security",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 20:29:18"
+    },
+    "台股:5011": {
+      "industry": "Tools & Accessories",
+      "sector": "Industrials",
+      "companyProfile": "OFCO Industrial Corporation engages in the manufacture and sale of screws and related products in Taiwan. It is also involved in manufacturing and trading of metal heat treatment c",
+      "theme": "產業：Tools & Accessories｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 20:29:18"
+    },
+    "台股:3624": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Viking Tech Corporation designs, manufactures, and markets electronic components in Taiwan and internationally. The company offers resistors, inductors, capacitors, supercapacitors",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 20:29:18"
+    },
+    "台股:6654": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "companyProfile": "Tian Zheng International Precision Machinery Co., Ltd., together with its subsidiaries, designs, processes, manufactures, assembles, and sells automated mechanical engineering, and",
+      "theme": "產業：Specialty Industrial Machinery｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 20:29:19"
+    },
+    "台股:3228": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "RDC Semiconductor Co., Ltd. designs and develops 16/32-bit microprocessors in Taiwan and internationally. The company offers EmKore platform for embedded applications, such as poin",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、題材命中、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 20:29:19"
+    },
+    "台股:6494": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Nyquest Technology Co., Ltd. research, designs, and sells integrated circuits (ICs). The company provides voice synthesizer ICs, 4-bit microcontrollers with voice/MIDI products, 8-",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 20:29:19"
+    },
+    "台股:6517": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "BASO Precision Optics Co., LTD. manufactures and sells optical lenses and optical lens products in Taiwan. It provides high-end projectors, AOI, telescope, sport optics, semi-condu",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 20:29:19"
     }
   }
 }
