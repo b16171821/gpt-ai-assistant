@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-17 08:05:18",
+  "updatedAt": "2026-06-17 20:07:52",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -1377,6 +1377,87 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-16 20:29:19"
+    },
+    "台股:2342": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Mosel Vitelic Inc. manufactures and sells power semiconductor devices and power management ICs in Taiwan, Asia, Europe, and the United Sates. The company offers trench power metal ",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-17 20:07:51"
+    },
+    "台股:6207": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Laser Tek Taiwan Co.,Ltd. engages in the processing of surface mounted devices (SMD), surface mount technology (SMT) equipment, enterprise intelligent information systems, and lase",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-17 20:07:51"
+    },
+    "台股:2305": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Microtek International, IMicrotek International, Inc., together with its subsidiaries, engages in the design, manufacture, and sale scanners, related computer information periphera",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-17 20:07:51"
+    },
+    "台股:6182": {
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "Wafer Works Corporation engages in the research, design, manufacturing, and sales of semiconductor silicon, semiconductor epitaxial, and compound semiconductor materials in Taiwan,",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-17 20:07:52"
+    },
+    "台股:2061": {
+      "industry": "Electrical Equipment & Parts",
+      "sector": "Industrials",
+      "companyProfile": "Feng Ching Metal Corporation produces and sells copper wires and enameled copper wires in Taiwan, Mainland China, Vietnam, Thailand, and internationally. It provides new energy ins",
+      "theme": "產業：Electrical Equipment & Parts｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-17 20:07:52"
+    },
+    "台股:2302": {
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "Rectron Limited manufactures and sells discrete semiconductors in Taiwan, rest of Asia, the United States, Europe, and internationally. Its products include bridge rectifiers, ESD ",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-17 20:07:52"
+    },
+    "台股:3285": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Microtips Technology Inc. engages in research, development, processing, manufacturing, trading, and sales of digital audio products, liquid crystal display (LCD) modules, and finis",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-17 20:07:52"
+    },
+    "台股:5227": {
+      "industry": "Electrical Equipment & Parts",
+      "sector": "Industrials",
+      "companyProfile": "Advanced Lithium Electrochemistry (Cayman) Co., Ltd. is mainly engaged in the research, manufacture and sales of Lithium Iron Phosphate Nano Co-Crystalline Olivine (LEP-NCO) batter",
+      "theme": "產業：Electrical Equipment & Parts｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-17 20:07:52"
+    },
+    "台股:3527": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Macroblock, Inc. engages in the research and development, manufacture, testing, and sale of LED driver integrated circuits in China, the United States, Europe, Taiwan, Asia, and in",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-17 20:07:52"
     }
   }
 }
