@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-18 08:03:58",
+  "updatedAt": "2026-06-18 19:38:57",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -1458,6 +1458,78 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-17 20:07:52"
+    },
+    "台股:6208": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "companyProfile": "Highlight Tech Corp. designs, manufactures, sells, retails, wholesales, repairs, and maintains electronic components in Taiwan, Japan, and China. It offers cylindrical, box, D shap",
+      "theme": "產業：Specialty Industrial Machinery｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-18 19:38:55"
+    },
+    "台股:1568": {
+      "industry": "Auto Parts",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Tsang Yow Industrial Co.,Ltd. manufactures and supplies transmission system components and assemblies worldwide. It provides automatic and manual transmission, off highway machiner",
+      "theme": "產業：Auto Parts｜板塊：Consumer Cyclical｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-18 19:38:56"
+    },
+    "台股:6651": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Cystech Electronics Corp. designs, develops, manufactures, and supplies power devices for the computing, consumer electronics, communication, and industrial markets worldwide. The ",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-18 19:38:56"
+    },
+    "台股:6465": {
+      "industry": "Communication Equipment",
+      "sector": "Technology",
+      "companyProfile": "ATrack Technology Inc. telematics products and services in Taiwan, the United States, Canada, Japan, France, Australia, Mexico, and internationally. It offers telematics gateway an",
+      "theme": "產業：Communication Equipment｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-18 19:38:56"
+    },
+    "台股:5468": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "TM Technology, Inc. engages in the design, manufacture, and sale of integrated circuit chips, components, and related products in Taiwan. It offers LED driver ICs for green energy ",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-18 19:38:56"
+    },
+    "台股:2388": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "VIA Technologies, Inc. engages in the programming, design, manufacture, and sale of semiconductors and PC chip sets. The company offers automotive solutions, including a range of V",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-18 19:38:56"
+    },
+    "台股:1590": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "companyProfile": "Airtac International Group manufactures and sells pneumatic control components in Taiwan and internationally. The company offers preparation units and control components comprising",
+      "theme": "產業：Specialty Industrial Machinery｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、題材命中、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-18 19:38:56"
+    },
+    "台股:6229": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "V-TAC Technology Co.,Ltd. provides professional services for the semiconductor industry in Taiwan. It offers various types of MCUs, voice and sound effects, sensor IC, imaging, HMI",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-18 19:38:57"
     }
   }
 }
