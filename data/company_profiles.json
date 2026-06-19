@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19 19:52:47",
+  "updatedAt": "2026-06-20 07:47:54",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -1539,6 +1539,15 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-19 08:15:31"
+    },
+    "美股:CAT": {
+      "industry": "Farm & Heavy Construction Machinery",
+      "sector": "Industrials",
+      "companyProfile": "Caterpillar Inc. provides construction and mining equipment, off-highway diesel and natural gas engines, industrial gas turbines, and diesel-electric locomotives in the United Stat",
+      "theme": "產業：Farm & Heavy Construction Machinery｜板塊：Industrials｜型態：三角收斂突破｜原因：均線多頭排列、量能放大、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-20 07:47:54"
     }
   }
 }
