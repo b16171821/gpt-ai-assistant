@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-20 07:47:54",
+  "updatedAt": "2026-06-22 21:15:15",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -1548,6 +1548,42 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-20 07:47:54"
+    },
+    "台股:1727": {
+      "industry": "Chemicals",
+      "sector": "Basic Materials",
+      "companyProfile": "Chung Hwa Chemical Industrial Works, Ltd. engages in the manufacture and sale of chemical products in Taiwan and internationally. The company provides basic chemicals, including su",
+      "theme": "產業：Chemicals｜板塊：Basic Materials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-22 21:15:15"
+    },
+    "台股:1595": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "companyProfile": "Chime Ball Technology Co.,Ltd., together with its subsidiaries, engages in the research, development, production, and sale of special exposure equipment for printed circuit boards ",
+      "theme": "產業：Specialty Industrial Machinery｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、題材命中、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-22 21:15:15"
+    },
+    "台股:4716": {
+      "industry": "Specialty Chemicals",
+      "sector": "Basic Materials",
+      "companyProfile": "Daily Polymer Corp. manufactures, process, and sells synthetic resins and electronic materials in Taiwan and internationally. It offers polymer materials, including solvent and wat",
+      "theme": "產業：Specialty Chemicals｜板塊：Basic Materials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-22 21:15:15"
+    },
+    "台股:2066": {
+      "industry": "Tools & Accessories",
+      "sector": "Industrials",
+      "companyProfile": "Sumeeko Industries Co., Ltd. provides metal parts in the United States of America, Europe, Asia, Taiwan, and internationally. The company offers fasteners for powertrains, braking ",
+      "theme": "產業：Tools & Accessories｜板塊：Industrials｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-22 21:15:15"
     }
   }
 }

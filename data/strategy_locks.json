@@ -99,6 +99,31 @@
     "emptyAction": "取消觀察，等待新結構。",
     "updatedAt": "2026-06-18 19:38:58"
   },
+  "台股:1595": {
+    "key": "台股:1595",
+    "market": "台股",
+    "code": "1595",
+    "name": "川寶",
+    "createdAt": "2026-06-22",
+    "originalBuyLow": 109.14,
+    "originalBuyHigh": 112.41,
+    "originalStopLoss": 103.79,
+    "originalTarget": 173.9,
+    "originalNeckline": 107.0,
+    "originalStage": "接近成形＋可觀察",
+    "originalWinRate": "低",
+    "status": "ended",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略結束",
+    "currentPrice": 84.7,
+    "currentTarget": 173.9,
+    "currentStopLoss": 103.79,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "跌破原始停損，依紀律處理。",
+    "emptyAction": "取消觀察，等待新結構。",
+    "updatedAt": "2026-06-22 21:15:16"
+  },
   "台股:1714": {
     "key": "台股:1714",
     "market": "台股",
@@ -123,6 +148,31 @@
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
     "updatedAt": "2026-06-13 08:06:15"
+  },
+  "台股:1727": {
+    "key": "台股:1727",
+    "market": "台股",
+    "code": "1727",
+    "name": "中華化",
+    "createdAt": "2026-06-22",
+    "originalBuyLow": 114.24,
+    "originalBuyHigh": 117.67,
+    "originalStopLoss": 108.64,
+    "originalTarget": 177.3,
+    "originalNeckline": 112.0,
+    "originalStage": "接近成形＋可觀察",
+    "originalWinRate": "中",
+    "status": "ended",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略結束",
+    "currentPrice": 102.0,
+    "currentTarget": 177.3,
+    "currentStopLoss": 108.64,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "跌破原始停損，依紀律處理。",
+    "emptyAction": "取消觀察，等待新結構。",
+    "updatedAt": "2026-06-22 21:15:16"
   },
   "台股:1762": {
     "key": "台股:1762",
@@ -415,14 +465,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 50.2,
-    "currentTarget": 68.1,
-    "currentStopLoss": 46.61,
-    "extensionTarget": null,
+    "currentPrice": 58.6,
+    "currentTarget": 75.0,
+    "currentStopLoss": 49.95,
+    "extensionTarget": 75.0,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-18 08:03:58"
+    "updatedAt": "2026-06-22 21:15:16"
   },
   "台股:2353": {
     "key": "台股:2353",
@@ -548,6 +598,31 @@
     "holderAction": "跌破原始停損，依紀律處理。",
     "emptyAction": "取消觀察，等待新結構。",
     "updatedAt": "2026-06-05 23:10:16"
+  },
+  "台股:2388": {
+    "key": "台股:2388",
+    "market": "台股",
+    "code": "2388",
+    "name": "威盛",
+    "createdAt": "2026-06-22",
+    "originalBuyLow": 93.13,
+    "originalBuyHigh": 95.92,
+    "originalStopLoss": 88.56,
+    "originalTarget": 132.9,
+    "originalNeckline": 91.3,
+    "originalStage": "接近成形＋可觀察",
+    "originalWinRate": "中",
+    "status": "ended",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略結束",
+    "currentPrice": 84.4,
+    "currentTarget": 132.9,
+    "currentStopLoss": 88.56,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "跌破原始停損，依紀律處理。",
+    "emptyAction": "取消觀察，等待新結構。",
+    "updatedAt": "2026-06-22 21:15:16"
   },
   "台股:3066": {
     "key": "台股:3066",
@@ -1224,6 +1299,31 @@
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
     "updatedAt": "2026-06-18 08:03:59"
   },
+  "台股:5227": {
+    "key": "台股:5227",
+    "market": "台股",
+    "code": "5227",
+    "name": "立凱-KY",
+    "createdAt": "2026-06-22",
+    "originalBuyLow": 38.05,
+    "originalBuyHigh": 39.19,
+    "originalStopLoss": 36.18,
+    "originalTarget": 54.7,
+    "originalNeckline": 37.3,
+    "originalStage": "突破第一根",
+    "originalWinRate": "低",
+    "status": "active",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略追蹤中",
+    "currentPrice": 43.0,
+    "currentTarget": 54.7,
+    "currentStopLoss": 36.18,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "未達第一目標前，守風險區續抱觀察。",
+    "emptyAction": "空手不追高，等突破確認或回踩不破。",
+    "updatedAt": "2026-06-22 21:15:17"
+  },
   "台股:5228": {
     "key": "台股:5228",
     "market": "台股",
@@ -1565,14 +1665,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 120.0,
-    "currentTarget": 183.4,
-    "currentStopLoss": 103.79,
-    "extensionTarget": null,
+    "currentPrice": 116.5,
+    "currentTarget": 204.4,
+    "currentStopLoss": 113.97,
+    "extensionTarget": 204.4,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-20 07:47:54"
+    "updatedAt": "2026-06-22 21:15:16"
   },
   "台股:6204": {
     "key": "台股:6204",
@@ -1664,15 +1764,15 @@
     "originalWinRate": "高",
     "status": "active",
     "createdBy": "strategy-lock-v1",
-    "trackingStatus": "策略追蹤中",
-    "currentPrice": 30.35,
-    "currentTarget": 40.9,
-    "currentStopLoss": 27.98,
-    "extensionTarget": null,
+    "trackingStatus": "接近第一目標",
+    "currentPrice": 39.35,
+    "currentTarget": 50.6,
+    "currentStopLoss": 32.69,
+    "extensionTarget": 50.6,
     "recentCloses": [],
-    "holderAction": "未達第一目標前，守風險區續抱觀察。",
-    "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-16 08:17:58"
+    "holderAction": "接近原始第一目標，準備分批停利。",
+    "emptyAction": "不追高，等回踩。",
+    "updatedAt": "2026-06-22 21:15:16"
   },
   "台股:6292": {
     "key": "台股:6292",
@@ -2372,7 +2472,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-20 07:47:55"
+    "updatedAt": "2026-06-22 21:15:17"
   },
   "美股:MRVL": {
     "key": "美股:MRVL",
@@ -2397,7 +2497,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-20 07:47:55"
+    "updatedAt": "2026-06-22 21:15:17"
   },
   "美股:MU": {
     "key": "美股:MU",
@@ -2547,7 +2647,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-20 07:47:56"
+    "updatedAt": "2026-06-22 21:15:17"
   },
   "美股:TXN": {
     "key": "美股:TXN",
