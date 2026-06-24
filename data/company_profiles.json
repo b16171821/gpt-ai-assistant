@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-24 07:41:36",
+  "updatedAt": "2026-06-24 18:36:01",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -1656,6 +1656,42 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-23 18:49:24"
+    },
+    "台股:8054": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Alcor Micro,Corp. designs, develops, and markets integrated semiconductors and software solutions for the personal computer peripherals and consumer electronics in China, Taiwan, S",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-24 18:36:01"
+    },
+    "台股:3122": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Megawin Technology Co., Ltd., together with its subsidiaries, engages in the manufacture and sale of electronic instruments and their components in Asia, Europe, and internationall",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：量能放大、題材命中、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-24 18:36:01"
+    },
+    "台股:7715": {
+      "industry": "Waste Management",
+      "sector": "Industrials",
+      "companyProfile": "Yuh Shan Environmental Engineering Co., Ltd. engages in the environmental protection business in Taiwan. The company provides environmental engineering technology consulting, soil ",
+      "theme": "產業：Waste Management｜板塊：Industrials｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-24 18:36:01"
+    },
+    "台股:3360": {
+      "industry": "Electronics & Computer Distribution",
+      "sector": "Technology",
+      "companyProfile": "Sunnic Technology & Merchandise Inc. engages in dealership and distribution of electronic parts and components, and production equipment in China, Taiwan, and internationally. It a",
+      "theme": "產業：Electronics & Computer Distribution｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-24 18:36:01"
     }
   }
 }
