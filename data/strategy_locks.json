@@ -722,7 +722,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-25 18:27:57"
+    "updatedAt": "2026-06-26 07:58:38"
   },
   "台股:3114": {
     "key": "台股:3114",
@@ -1347,7 +1347,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-25 18:27:58"
+    "updatedAt": "2026-06-26 07:58:39"
   },
   "台股:4908": {
     "key": "台股:4908",
@@ -1439,15 +1439,15 @@
     "originalWinRate": "中",
     "status": "active",
     "createdBy": "strategy-lock-v1",
-    "trackingStatus": "策略追蹤中",
-    "currentPrice": 24.85,
-    "currentTarget": 27.2,
-    "currentStopLoss": 19.4,
-    "extensionTarget": null,
+    "trackingStatus": "接近第一目標",
+    "currentPrice": 25.95,
+    "currentTarget": 33.8,
+    "currentStopLoss": 22.6,
+    "extensionTarget": 33.8,
     "recentCloses": [],
-    "holderAction": "未達第一目標前，守風險區續抱觀察。",
-    "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-25 07:48:55"
+    "holderAction": "接近原始第一目標，準備分批停利。",
+    "emptyAction": "不追高，等回踩。",
+    "updatedAt": "2026-06-26 07:58:39"
   },
   "台股:5210": {
     "key": "台股:5210",
@@ -1472,7 +1472,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-25 18:27:57"
+    "updatedAt": "2026-06-26 07:58:39"
   },
   "台股:5227": {
     "key": "台股:5227",
@@ -2147,7 +2147,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-25 18:27:57"
+    "updatedAt": "2026-06-26 07:58:39"
   },
   "台股:6651": {
     "key": "台股:6651",
@@ -2222,7 +2222,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-25 18:27:57"
+    "updatedAt": "2026-06-26 07:58:39"
   },
   "台股:6693": {
     "key": "台股:6693",
@@ -2497,7 +2497,7 @@
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-06-25 18:27:57"
+    "updatedAt": "2026-06-26 07:58:39"
   },
   "台股:8102": {
     "key": "台股:8102",
