@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25 07:48:54",
+  "updatedAt": "2026-06-25 18:27:56",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -1692,6 +1692,42 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-24 18:36:01"
+    },
+    "台股:5210": {
+      "industry": "Software - Application",
+      "sector": "Technology",
+      "companyProfile": "Apex International Financial Engineering Res. & Tech. Co., Ltd, together with its subsidiaries, provides information software services in Taiwan. It operates through Information Se",
+      "theme": "產業：Software - Application｜板塊：Technology｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-25 18:27:55"
+    },
+    "台股:4707": {
+      "industry": "Specialty Chemicals",
+      "sector": "Basic Materials",
+      "companyProfile": "Pan Asia Chemical Co. produces, sells, and distributes chemical products in Taiwan. It offers surfactants, such as nonylphenol, natural alcohol, methoxyl, isotridecanol, trimethylo",
+      "theme": "產業：Specialty Chemicals｜板塊：Basic Materials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-25 18:27:55"
+    },
+    "台股:3430": {
+      "industry": "Specialty Chemicals",
+      "sector": "Basic Materials",
+      "companyProfile": "Chitec Technology Co., Ltd. engages in the research and development of specialty chemicals for applications in automotive coatings, industrial coatings, wood coatings, automotive &",
+      "theme": "產業：Specialty Chemicals｜板塊：Basic Materials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-25 18:27:56"
+    },
+    "台股:3284": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "companyProfile": "Top High Image Corp. engages in the manufacture and sale of pre-sensitized plates for offset printing, and wholesale of aluminum plate materials in Taiwan and internationally. The ",
+      "theme": "產業：Specialty Industrial Machinery｜板塊：Industrials｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-25 18:27:56"
     }
   }
 }
