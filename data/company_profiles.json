@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-26 07:58:38",
+  "updatedAt": "2026-06-26 18:38:57",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -1728,6 +1728,33 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-25 18:27:56"
+    },
+    "台股:1718": {
+      "industry": "Banks - Regional",
+      "sector": "Financial Services",
+      "companyProfile": "China Man-Made Fiber Corporation manufactures and sells man-made fibers, cellophane, polyamine fiber, polyester fiber, chemicals, and the raw materials in Taiwan. The company offer",
+      "theme": "產業：Banks - Regional｜板塊：Financial Services｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-26 18:38:56"
+    },
+    "台股:5230": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Ledlink Optics, Inc. designs, manufactures, and sells optics for lighting companies and other LED manufacturers in Taiwan and internationally. The company offers socket, holder, co",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-26 18:38:56"
+    },
+    "台股:8024": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Alpha Microelectronics Corporation engages in the research, design, development, application, and marketing of integrated circuits (ICs). The company's products portfolio comprises",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-26 18:38:57"
     }
   }
 }
