@@ -222,7 +222,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-26 18:38:58"
+    "updatedAt": "2026-06-27 07:47:02"
   },
   "台股:1727": {
     "key": "台股:1727",
@@ -747,7 +747,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-26 18:38:58"
+    "updatedAt": "2026-06-27 07:47:02"
   },
   "台股:3114": {
     "key": "台股:3114",
@@ -947,7 +947,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-26 18:38:59"
+    "updatedAt": "2026-06-27 07:47:02"
   },
   "台股:3288": {
     "key": "台股:3288",
@@ -1397,7 +1397,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-26 18:38:59"
+    "updatedAt": "2026-06-27 07:47:02"
   },
   "台股:4908": {
     "key": "台股:4908",
@@ -1597,7 +1597,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-26 18:38:59"
+    "updatedAt": "2026-06-27 07:47:02"
   },
   "台股:5328": {
     "key": "台股:5328",
@@ -2122,7 +2122,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-26 18:38:58"
+    "updatedAt": "2026-06-27 07:47:02"
   },
   "台股:6292": {
     "key": "台股:6292",
@@ -2322,7 +2322,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-26 18:38:58"
+    "updatedAt": "2026-06-27 07:47:02"
   },
   "台股:6693": {
     "key": "台股:6693",
@@ -2773,6 +2773,31 @@
     "holderAction": "跌破原始停損，依紀律處理。",
     "emptyAction": "取消觀察，等待新結構。",
     "updatedAt": "2026-06-17 08:05:20"
+  },
+  "美股:CAT": {
+    "key": "美股:CAT",
+    "market": "美股",
+    "code": "CAT",
+    "name": "CAT",
+    "createdAt": "2026-06-26",
+    "originalBuyLow": 1078.21,
+    "originalBuyHigh": 1110.56,
+    "originalStopLoss": 1025.36,
+    "originalTarget": 1409.87,
+    "originalNeckline": 1057.07,
+    "originalStage": "接近成形＋可觀察",
+    "originalWinRate": "中",
+    "status": "ended",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略結束",
+    "currentPrice": 997.47,
+    "currentTarget": 1409.87,
+    "currentStopLoss": 1025.36,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "跌破原始停損，依紀律處理。",
+    "emptyAction": "取消觀察，等待新結構。",
+    "updatedAt": "2026-06-27 07:47:02"
   },
   "美股:CRWD": {
     "key": "美股:CRWD",
