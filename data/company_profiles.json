@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-27 07:47:01",
+  "updatedAt": "2026-06-29 20:18:08",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -1755,6 +1755,51 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-26 18:38:57"
+    },
+    "台股:1444": {
+      "industry": "Textile Manufacturing",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Lealea Enterprise Co., Ltd. engages in the manufacturing and sales of polyester precursors, processed yarns, and polyester granules in Asia, America, Europe, and internationally. T",
+      "theme": "產業：Textile Manufacturing｜板塊：Consumer Cyclical｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-29 20:18:07"
+    },
+    "台股:9960": {
+      "industry": "Specialty Retail",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Dacome International Ltd. distributes and sells golf products in Taiwan and internationally. The company offers golf equipment; woods; iron set; bags, such as clothing and ball bag",
+      "theme": "產業：Specialty Retail｜板塊：Consumer Cyclical｜型態：箱型突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-29 20:18:07"
+    },
+    "台股:8227": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Progate Group Corporation engages in the design, development, manufactures, sale, and trading of integrated circuits in Taiwan. It is also involved in intellectual property rights;",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-29 20:18:07"
+    },
+    "台股:6156": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Song Shang Electronics Co.,Ltd. engages in the production and sales of electronic components and related products in Taiwan, Mainland China, the United States, Germany, and interna",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-29 20:18:08"
+    },
+    "台股:1515": {
+      "industry": "Leisure",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Rexon Industrial Corp.,Ltd manufactures and sells drills, woodworking tools, and fitness equipment in the United States, Europe, Asia, and internationally. It offers benchtop power",
+      "theme": "產業：Leisure｜板塊：Consumer Cyclical｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-29 20:18:08"
     }
   }
 }
