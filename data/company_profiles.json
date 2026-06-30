@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30 07:41:22",
+  "updatedAt": "2026-06-30 18:44:43",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -1800,6 +1800,42 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-06-29 20:18:08"
+    },
+    "台股:6435": {
+      "industry": "上櫃",
+      "sector": "台股",
+      "companyProfile": "大中目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-30 18:44:43"
+    },
+    "台股:1776": {
+      "industry": "上市",
+      "sector": "台股",
+      "companyProfile": "展宇目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-30 18:44:43"
+    },
+    "台股:2236": {
+      "industry": "上市",
+      "sector": "台股",
+      "companyProfile": "百達-KY目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-30 18:44:43"
+    },
+    "台股:5371": {
+      "industry": "上櫃",
+      "sector": "台股",
+      "companyProfile": "中光電目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：三角收斂突破｜原因：趨勢多頭、量能放大、題材命中",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-06-30 18:44:43"
     }
   }
 }
