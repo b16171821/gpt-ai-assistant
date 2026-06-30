@@ -347,7 +347,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-30 18:44:44"
+    "updatedAt": "2026-07-01 07:49:35"
   },
   "台股:1809": {
     "key": "台股:1809",
@@ -472,7 +472,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-30 18:44:44"
+    "updatedAt": "2026-07-01 07:49:35"
   },
   "台股:2241": {
     "key": "台股:2241",
@@ -847,7 +847,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-30 18:44:44"
+    "updatedAt": "2026-07-01 07:49:35"
   },
   "台股:3114": {
     "key": "台股:3114",
@@ -1522,7 +1522,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-30 18:44:44"
+    "updatedAt": "2026-07-01 07:49:34"
   },
   "台股:4716": {
     "key": "台股:4716",
@@ -1797,7 +1797,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-30 18:44:44"
+    "updatedAt": "2026-07-01 07:49:36"
   },
   "台股:5410": {
     "key": "台股:5410",
@@ -1897,7 +1897,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-30 18:44:44"
+    "updatedAt": "2026-07-01 07:49:34"
   },
   "台股:5489": {
     "key": "台股:5489",
@@ -2347,7 +2347,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-30 18:44:44"
+    "updatedAt": "2026-07-01 07:49:34"
   },
   "台股:6538": {
     "key": "台股:6538",
@@ -3190,14 +3190,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 389.04,
-    "currentTarget": 603.4,
-    "currentStopLoss": 388.97,
-    "extensionTarget": 603.4,
+    "currentPrice": 433.33,
+    "currentTarget": 660.5,
+    "currentStopLoss": 425.34,
+    "extensionTarget": 660.5,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-22 21:15:17"
+    "updatedAt": "2026-07-01 07:49:36"
   },
   "美股:MRVL": {
     "key": "美股:MRVL",
@@ -3215,14 +3215,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 310.58,
-    "currentTarget": 573.15,
+    "currentPrice": 297.89,
+    "currentTarget": 553.76,
     "currentStopLoss": 319.98,
-    "extensionTarget": 573.15,
+    "extensionTarget": 553.76,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-22 21:15:17"
+    "updatedAt": "2026-07-01 07:49:36"
   },
   "美股:MU": {
     "key": "美股:MU",
