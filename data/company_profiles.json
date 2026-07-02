@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-02 07:55:17",
+  "updatedAt": "2026-07-02 18:20:27",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -1863,6 +1863,60 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-07-01 18:56:32"
+    },
+    "台股:2375": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Kaimei Electronic Corp. manufactures and sells aluminum electrolytic capacitors and motor fans in Hong Kong, China, Taiwan, rest of the Asia Pacific region, Europe, the Americas, a",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-02 18:20:27"
+    },
+    "台股:5299": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Excelliance MOS Corporation engages in the manufacture and sale of power components and integrated circuits in Taiwan. It is involved in the power semiconductor process development",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-02 18:20:27"
+    },
+    "台股:8935": {
+      "industry": "Specialty Chemicals",
+      "sector": "Basic Materials",
+      "companyProfile": "Pontex Polyblend Co.,Ltd engages in footwear injection molding and engineering plastics compound materials businesses in Taiwan, the Mainland of China, the United States, and inter",
+      "theme": "產業：Specialty Chemicals｜板塊：Basic Materials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-02 18:20:27"
+    },
+    "台股:1710": {
+      "industry": "Chemicals",
+      "sector": "Basic Materials",
+      "companyProfile": "Oriental Union Chemical Corporation produces and sells ethylene oxide, ethylene glycol, and other related chemical products primarily in Taiwan and internationally. The company off",
+      "theme": "產業：Chemicals｜板塊：Basic Materials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-02 18:20:27"
+    },
+    "台股:3577": {
+      "industry": "Communication Equipment",
+      "sector": "Technology",
+      "companyProfile": "ICP Das Co., Ltd. provides automation and Internet of Things solutions worldwide. It offers PC boards, including DAQ, communication, motion control, and watchdog boards; programmab",
+      "theme": "產業：Communication Equipment｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-02 18:20:27"
+    },
+    "台股:5460": {
+      "industry": "Metal Fabrication",
+      "sector": "Industrials",
+      "companyProfile": "Mustang Industrial Corp. engages in the manufacture and sale of progressive die molds and stamping products in Taiwan. The company offers shielding frame and cover assemblies for t",
+      "theme": "產業：Metal Fabrication｜板塊：Industrials｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-02 18:20:27"
     }
   }
 }
