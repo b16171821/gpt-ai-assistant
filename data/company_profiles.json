@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03 07:45:01",
+  "updatedAt": "2026-07-03 18:16:42",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -1917,6 +1917,87 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-07-02 18:20:27"
+    },
+    "台股:3317": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Niko Semiconductor Co., Ltd. engages in the research, design, development, and sale of analog IC products in Taiwan, China, and internationally. It offers Power MOSFET, linear regu",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-03 18:16:40"
+    },
+    "台股:2383": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Elite Material Co., Ltd. engages in the manufacturing and sales of copper clad laminates, electronic-industrial specialty chemical and raw materials, and electronic components in T",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、題材命中、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-03 18:16:40"
+    },
+    "台股:2332": {
+      "industry": "Communication Equipment",
+      "sector": "Technology",
+      "companyProfile": "D-Link Corporation researches, develops, and sells local area computer network systems, wireless local area computer networks, and spare parts for integrated circuits in Taiwan, In",
+      "theme": "產業：Communication Equipment｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-03 18:16:41"
+    },
+    "台股:1708": {
+      "industry": "Chemicals",
+      "sector": "Basic Materials",
+      "companyProfile": "Sesoda Corporation manufactures and markets sulfate of potash (SOP) in Taiwan. The company offers standard, soluble, low chloride, granular, and industrial grade SOP products that ",
+      "theme": "產業：Chemicals｜板塊：Basic Materials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-03 18:16:41"
+    },
+    "台股:1326": {
+      "industry": "Chemicals",
+      "sector": "Basic Materials",
+      "companyProfile": "Formosa Chemicals & Fibre Corporation produces and sells petrochemical products, nylon, and rayon fibers in Taiwan and internationally. The company offers plastic products, includi",
+      "theme": "產業：Chemicals｜板塊：Basic Materials｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-03 18:16:41"
+    },
+    "台股:1467": {
+      "industry": "Apparel Manufacturing",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Tex-Ray Industrial Co., Ltd., together with its subsidiaries, engages in the textile business in Taiwan, the United States, China, Mexico, Africa, Vietnam, and internationally. The",
+      "theme": "產業：Apparel Manufacturing｜板塊：Consumer Cyclical｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-03 18:16:41"
+    },
+    "台股:4541": {
+      "industry": "Aerospace & Defense",
+      "sector": "Industrials",
+      "companyProfile": "Magnate Technology Co., Ltd. manufactures and sells aircraft, machinery and equipment, and general instrument components and other related products in Taiwan, Japan, and internatio",
+      "theme": "產業：Aerospace & Defense｜板塊：Industrials｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-03 18:16:41"
+    },
+    "台股:1301": {
+      "industry": "Specialty Chemicals",
+      "sector": "Basic Materials",
+      "companyProfile": "Formosa Plastics Corporation engages in the manufacture and sale of plastic raw materials, chemical fibers, and related petrochemical industrial products in Taiwan, China, and inte",
+      "theme": "產業：Specialty Chemicals｜板塊：Basic Materials｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-03 18:16:42"
+    },
+    "台股:1455": {
+      "industry": "Textile Manufacturing",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Zig Sheng Industrial Co., Ltd., together with its subsidiaries, engages in the spinning, weaving, dyeing, finishing, printing, processing, and trading of various filaments, artific",
+      "theme": "產業：Textile Manufacturing｜板塊：Consumer Cyclical｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-03 18:16:42"
     }
   }
 }
