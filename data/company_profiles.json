@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04 07:42:38",
+  "updatedAt": "2026-07-06 19:50:20",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -1998,6 +1998,42 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-07-03 18:16:42"
+    },
+    "台股:6732": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Sensortek Technology Corp., a chip design company, provides various sensor integrated circuits for smart phones and wearable devices in Taiwan. The company offers optical sensors, ",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-06 19:50:19"
+    },
+    "台股:1709": {
+      "industry": "Chemicals",
+      "sector": "Basic Materials",
+      "companyProfile": "Formosan Union Chemical Corp. produces and sells chemical products in Taiwan, China, Guatemala, the Philippines, Vietnam, the United States, and internationally. The company offers",
+      "theme": "產業：Chemicals｜板塊：Basic Materials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-06 19:50:19"
+    },
+    "台股:1314": {
+      "industry": "Specialty Chemicals",
+      "sector": "Basic Materials",
+      "companyProfile": "China Petrochemical Development Corporation, together with its subsidiaries, produces and sells of petroleum, alkali-chlorine, phosphoric acid, and other petrochemical products and",
+      "theme": "產業：Specialty Chemicals｜板塊：Basic Materials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-06 19:50:20"
+    },
+    "台股:6129": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Princeton Technology Corporation engages in the design, development, testing, and sale of consumer integrated circuits (ICs) in Taiwan, Japan, Mainland China, South Korea, and inte",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-06 19:50:20"
     }
   }
 }
