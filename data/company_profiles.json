@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07 07:44:27",
+  "updatedAt": "2026-07-07 18:40:46",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2034,6 +2034,51 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-07-06 19:50:20"
+    },
+    "台股:1810": {
+      "industry": "Furnishings, Fixtures & Appliances",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Hocheng Corporation provides bathroom products in Taiwan and internationally. It offers sanitary ceramics and its attachments, tiles, ceramic toys, sand wheels, fine ceramics, elec",
+      "theme": "產業：Furnishings, Fixtures & Appliances｜板塊：Consumer Cyclical｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-07 18:40:46"
+    },
+    "台股:6617": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare",
+      "companyProfile": "Gongwin Biopharm Holdings Co., Ltd., a clinical-stage biopharmaceutical company, develops anticancer drugs in Hong Kong, China, and Singapore. It is developing PTS302, which has co",
+      "theme": "產業：Biotechnology｜板塊：Healthcare｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-07 18:40:46"
+    },
+    "台股:8109": {
+      "industry": "Electrical Equipment & Parts",
+      "sector": "Industrials",
+      "companyProfile": "P-Duke Technology Co.,Ltd. engages in the research, development, manufacture, and trading of power conversion products in Taiwan, Europe, the United States, the Asia Pacific, and i",
+      "theme": "產業：Electrical Equipment & Parts｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-07 18:40:46"
+    },
+    "台股:3498": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "companyProfile": "Usun Technology Co., Ltd., together with its subsidiaries, designs, produces, and maintains automation equipment in Taiwan, China, and internationally. The company offers advanced ",
+      "theme": "產業：Specialty Industrial Machinery｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-07 18:40:46"
+    },
+    "台股:6712": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare",
+      "companyProfile": "Ever Supreme Bio Technology Co., Ltd engages in the research, development, and manufacture of drug products related to human mesenchymal stem cells and immune cells in Taiwan. The ",
+      "theme": "產業：Biotechnology｜板塊：Healthcare｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-07 18:40:46"
     }
   }
 }
