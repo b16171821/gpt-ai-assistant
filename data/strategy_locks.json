@@ -1022,7 +1022,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-07 18:40:47"
+    "updatedAt": "2026-07-08 07:36:22"
   },
   "台股:3093": {
     "key": "台股:3093",
@@ -2097,7 +2097,7 @@
     "recentCloses": [],
     "holderAction": "接近原始第一目標，準備分批停利。",
     "emptyAction": "不追高，等回踩。",
-    "updatedAt": "2026-07-07 18:40:47"
+    "updatedAt": "2026-07-08 07:36:22"
   },
   "台股:5410": {
     "key": "台股:5410",
@@ -2572,7 +2572,7 @@
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-07-07 18:40:47"
+    "updatedAt": "2026-07-08 07:36:22"
   },
   "台股:6270": {
     "key": "台股:6270",
@@ -2772,7 +2772,7 @@
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-07-07 18:40:47"
+    "updatedAt": "2026-07-08 07:36:22"
   },
   "台股:6620": {
     "key": "台股:6620",
@@ -2922,7 +2922,7 @@
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-07-07 18:40:48"
+    "updatedAt": "2026-07-08 07:36:22"
   },
   "台股:6732": {
     "key": "台股:6732",
@@ -2947,7 +2947,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-07 18:40:48"
+    "updatedAt": "2026-07-08 07:36:22"
   },
   "台股:6821": {
     "key": "台股:6821",
@@ -3247,7 +3247,7 @@
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-07-07 18:40:48"
+    "updatedAt": "2026-07-08 07:36:22"
   },
   "台股:8121": {
     "key": "台股:8121",
@@ -3698,6 +3698,31 @@
     "holderAction": "跌破原始停損，依紀律處理。",
     "emptyAction": "取消觀察，等待新結構。",
     "updatedAt": "2026-06-05 07:50:51"
+  },
+  "美股:NET": {
+    "key": "美股:NET",
+    "market": "美股",
+    "code": "NET",
+    "name": "NET",
+    "createdAt": "2026-07-07",
+    "originalBuyLow": 279.48,
+    "originalBuyHigh": 287.86,
+    "originalStopLoss": 265.78,
+    "originalTarget": 383.95,
+    "originalNeckline": 274.0,
+    "originalStage": "接近成形＋可觀察",
+    "originalWinRate": "中",
+    "status": "active",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略追蹤中",
+    "currentPrice": 268.83,
+    "currentTarget": 383.95,
+    "currentStopLoss": 265.78,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "未達第一目標前，守風險區續抱觀察。",
+    "emptyAction": "空手不追高，等突破確認或回踩不破。",
+    "updatedAt": "2026-07-08 07:36:22"
   },
   "美股:ORCL": {
     "key": "美股:ORCL",
