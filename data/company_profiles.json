@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-08 07:36:21",
+  "updatedAt": "2026-07-08 17:58:56",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2079,6 +2079,33 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-07-07 18:40:46"
+    },
+    "台股:8096": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "CoAsia Electronics Corp. provides components for mobile multimedia in Taiwan, rest of Asia, and Europe. The company offers CMOS, 3D, and automotive image sensors; processors, PMICs",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-08 17:58:55"
+    },
+    "台股:2949": {
+      "industry": "Internet Retail",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "H.H.Galaxy Co., Ltd. provides e-commerce operation solutions to brand owners in Taiwan and Southeast Asia. It operates in two segments, E-Commerce Department and Digital Marketing ",
+      "theme": "產業：Internet Retail｜板塊：Consumer Cyclical｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-08 17:58:56"
+    },
+    "台股:4127": {
+      "industry": "Drug Manufacturers - Specialty & Generic",
+      "sector": "Healthcare",
+      "companyProfile": "Tien Liang BioTech Co., Ltd. manufactures and sells pharmaceutical products in Taiwan. The company offers Chinese and Western medicine, other healthcare, and cosmetic products thro",
+      "theme": "產業：Drug Manufacturers - Specialty & Generic｜板塊：Healthcare｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-08 17:58:56"
     }
   }
 }
