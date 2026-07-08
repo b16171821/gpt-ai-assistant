@@ -522,7 +522,7 @@
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-07-08 17:58:57"
+    "updatedAt": "2026-07-09 07:44:17"
   },
   "台股:2221": {
     "key": "台股:2221",
@@ -1022,7 +1022,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-08 17:58:57"
+    "updatedAt": "2026-07-09 07:44:18"
   },
   "台股:3066": {
     "key": "台股:3066",
@@ -1747,7 +1747,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-08 17:58:57"
+    "updatedAt": "2026-07-09 07:44:18"
   },
   "台股:4542": {
     "key": "台股:4542",
@@ -2172,7 +2172,7 @@
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-07-08 17:58:56"
+    "updatedAt": "2026-07-09 07:44:17"
   },
   "台股:5410": {
     "key": "台股:5410",
@@ -2272,7 +2272,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-08 17:58:57"
+    "updatedAt": "2026-07-09 07:44:18"
   },
   "台股:5489": {
     "key": "台股:5489",
@@ -2847,7 +2847,7 @@
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-07-08 17:58:57"
+    "updatedAt": "2026-07-09 07:44:18"
   },
   "台股:6620": {
     "key": "台股:6620",
@@ -3297,7 +3297,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-08 17:58:57"
+    "updatedAt": "2026-07-09 07:44:18"
   },
   "台股:8102": {
     "key": "台股:8102",
@@ -3347,7 +3347,7 @@
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-07-08 17:58:57"
+    "updatedAt": "2026-07-09 07:44:18"
   },
   "台股:8121": {
     "key": "台股:8121",
@@ -3815,14 +3815,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 268.83,
-    "currentTarget": 383.95,
-    "currentStopLoss": 265.78,
+    "currentPrice": 273.4,
+    "currentTarget": 380.89,
+    "currentStopLoss": 266.22,
     "extensionTarget": null,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-08 17:58:57"
+    "updatedAt": "2026-07-09 07:44:18"
   },
   "美股:ORCL": {
     "key": "美股:ORCL",
