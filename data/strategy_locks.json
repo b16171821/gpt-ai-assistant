@@ -2297,7 +2297,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-10 18:37:11"
+    "updatedAt": "2026-07-11 07:38:17"
   },
   "台股:5488": {
     "key": "台股:5488",
@@ -3765,14 +3765,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 49.11,
-    "currentTarget": 76.89,
-    "currentStopLoss": 48.94,
-    "extensionTarget": 76.89,
+    "currentPrice": 48.54,
+    "currentTarget": 77.91,
+    "currentStopLoss": 49.55,
+    "extensionTarget": 77.91,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-10 18:37:12"
+    "updatedAt": "2026-07-11 07:38:18"
   },
   "美股:KLAC": {
     "key": "美股:KLAC",
