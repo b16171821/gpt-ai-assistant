@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-11 07:38:17",
+  "updatedAt": "2026-07-13 18:42:14",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2106,6 +2106,42 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-07-08 17:58:56"
+    },
+    "台股:6241": {
+      "industry": "Communication Equipment",
+      "sector": "Technology",
+      "companyProfile": "Amigo Technology Inc. engages in manufacturing and trading of communication products in Taiwan. The company offers wi-fi router/mesh/extender; wireless routers; multi-gigabit ether",
+      "theme": "產業：Communication Equipment｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-13 18:42:14"
+    },
+    "台股:3374": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Xintec Inc. operates as a wafer level chip scale packaging company in Asia, the United States, and Europe. The company provides wafer level chip scale packaging, wafer-level back c",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-13 18:42:14"
+    },
+    "台股:8027": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "companyProfile": "E&R Engineering Corporation engages in the planning, designing, manufacturing, installation, and selling of automatic machines, related components, computer software, and pollution",
+      "theme": "產業：Specialty Industrial Machinery｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-13 18:42:14"
+    },
+    "台股:7714": {
+      "industry": "Information Technology Services",
+      "sector": "Technology",
+      "companyProfile": "Uniforce Technology Corporation offers professional consulting and construction technical services. The company focuses on introducing and distributing various operation and mainte",
+      "theme": "產業：Information Technology Services｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-13 18:42:14"
     }
   }
 }
