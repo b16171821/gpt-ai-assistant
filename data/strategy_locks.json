@@ -1497,7 +1497,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-13 18:42:15"
+    "updatedAt": "2026-07-14 07:34:15"
   },
   "台股:3430": {
     "key": "台股:3430",
@@ -2347,7 +2347,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-13 18:42:16"
+    "updatedAt": "2026-07-14 07:34:15"
   },
   "台股:5488": {
     "key": "台股:5488",
@@ -2372,7 +2372,7 @@
     "recentCloses": [],
     "holderAction": "接近原始第一目標，準備分批停利。",
     "emptyAction": "不追高，等回踩。",
-    "updatedAt": "2026-07-13 18:42:16"
+    "updatedAt": "2026-07-14 07:34:15"
   },
   "台股:5489": {
     "key": "台股:5489",
@@ -2747,7 +2747,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-13 18:42:15"
+    "updatedAt": "2026-07-14 07:34:15"
   },
   "台股:6259": {
     "key": "台股:6259",
@@ -3865,14 +3865,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 48.54,
-    "currentTarget": 77.91,
+    "currentPrice": 47.24,
+    "currentTarget": 77.48,
     "currentStopLoss": 49.55,
-    "extensionTarget": 77.91,
+    "extensionTarget": 77.48,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-13 18:42:16"
+    "updatedAt": "2026-07-14 07:34:15"
   },
   "美股:KLAC": {
     "key": "美股:KLAC",
@@ -3990,14 +3990,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 275.8,
-    "currentTarget": 380.43,
-    "currentStopLoss": 270.51,
+    "currentPrice": 269.53,
+    "currentTarget": 374.53,
+    "currentStopLoss": 271.74,
     "extensionTarget": null,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-10 18:37:12"
+    "updatedAt": "2026-07-14 07:34:15"
   },
   "美股:ORCL": {
     "key": "美股:ORCL",
