@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14 07:34:14",
+  "updatedAt": "2026-07-15 07:32:15",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2142,6 +2142,33 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-07-13 18:42:14"
+    },
+    "台股:6574": {
+      "industry": "Household & Personal Products",
+      "sector": "Consumer Defensive",
+      "companyProfile": "Mikobeaute International Co., Ltd. engages in the wholesale and retail of cosmetics in Taiwan. The company sells its products under the EDN, NU+ derma, L'HERBOFLORE, and MIKOBEAUTÉ",
+      "theme": "產業：Household & Personal Products｜板塊：Consumer Defensive｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-15 07:32:15"
+    },
+    "台股:6488": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "GlobalWafers Co., Ltd., together with its subsidiaries, researches, develops, designs, manufactures and sells semiconductor ingots/wafers in Taiwan and internationally. The company",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-15 07:32:15"
+    },
+    "台股:2103": {
+      "industry": "Specialty Chemicals",
+      "sector": "Basic Materials",
+      "companyProfile": "TSRC Corporation, together with its subsidiaries, engages in the manufacture, import, transport, and sale of various synthetic rubber and related products in Taiwan, Asia, the Unit",
+      "theme": "產業：Specialty Chemicals｜板塊：Basic Materials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-15 07:32:15"
     }
   }
 }
