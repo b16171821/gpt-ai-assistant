@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-15 07:32:15",
+  "updatedAt": "2026-07-15 17:33:40",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2169,6 +2169,24 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-07-15 07:32:15"
+    },
+    "台股:8050": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "IBASE Technology Inc. designs, manufactures, packages, tests, and sells industrial PCs in Taiwan and internationally. The company offers x86- and RISC-based industrial motherboards",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-15 17:33:40"
+    },
+    "台股:4513": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "companyProfile": "Falcon Machine Tools Co., Ltd., together with its subsidiaries, engages in the manufacturing, processing, and sale of grindering, lathes, milling, planing, drilling, sawing machine",
+      "theme": "產業：Specialty Industrial Machinery｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-15 17:33:40"
     }
   }
 }
