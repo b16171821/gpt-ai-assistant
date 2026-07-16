@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-16 07:41:53",
+  "updatedAt": "2026-07-16 17:37:37",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2187,6 +2187,24 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-07-15 17:33:40"
+    },
+    "台股:8932": {
+      "industry": "Apparel Manufacturing",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Wiselink Co., Ltd. manufactures and sells zippers under the MAX Zipper brand name worldwide. It offers invisible, coil, Delrin, and metal zippers and sliders; tape attachable and a",
+      "theme": "產業：Apparel Manufacturing｜板塊：Consumer Cyclical｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-16 17:37:37"
+    },
+    "台股:1560": {
+      "industry": "Tools & Accessories",
+      "sector": "Industrials",
+      "companyProfile": "Kinik Company produces and sells various abrasives, cutting tools, and reclaimed wafers in Taiwan and internationally. It offers conventional grinding wheels, diamond/CBN grinding ",
+      "theme": "產業：Tools & Accessories｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-16 17:37:37"
     }
   }
 }
