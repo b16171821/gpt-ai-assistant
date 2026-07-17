@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-17 07:37:37",
+  "updatedAt": "2026-07-17 17:31:07",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2205,6 +2205,24 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-07-16 17:37:37"
+    },
+    "台股:4139": {
+      "industry": "Medical Care Facilities",
+      "sector": "Healthcare",
+      "companyProfile": "Ma Kuang Healthcare Holding Limited, an investment holding company, provides medical services in Taiwan, Singapore, Mainland China, and internationally. The company offers communit",
+      "theme": "產業：Medical Care Facilities｜板塊：Healthcare｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-17 17:31:06"
+    },
+    "台股:8383": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "companyProfile": "Chen Full International Co., Ltd., together with its subsidiaries, engages in engineering and machinery businesses in Taiwan and internationally. It offers engineering services, in",
+      "theme": "產業：Specialty Industrial Machinery｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-17 17:31:06"
     }
   }
 }

@@ -1340,14 +1340,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 24.25,
+    "currentPrice": 26.65,
     "currentTarget": 34.25,
     "currentStopLoss": 23.57,
     "extensionTarget": 34.25,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-17 07:37:39"
+    "updatedAt": "2026-07-17 17:31:08"
   },
   "台股:3290": {
     "key": "台股:3290",
@@ -1849,6 +1849,31 @@
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
     "updatedAt": "2026-07-09 07:44:18"
   },
+  "台股:4139": {
+    "key": "台股:4139",
+    "market": "台股",
+    "code": "4139",
+    "name": "馬光-KY",
+    "createdAt": "2026-07-17",
+    "originalBuyLow": 29.17,
+    "originalBuyHigh": 30.05,
+    "originalStopLoss": 27.74,
+    "originalTarget": 35.65,
+    "originalNeckline": 28.6,
+    "originalStage": "突破第一根",
+    "originalWinRate": "低",
+    "status": "active",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "已達第一目標",
+    "currentPrice": 38.0,
+    "currentTarget": 35.65,
+    "currentStopLoss": 27.74,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
+    "emptyAction": "不追高，等新的整理區或回踩不破。",
+    "updatedAt": "2026-07-17 17:31:08"
+  },
   "台股:4513": {
     "key": "台股:4513",
     "market": "台股",
@@ -1890,14 +1915,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 71.3,
+    "currentPrice": 72.6,
     "currentTarget": 91.65,
     "currentStopLoss": 65.38,
     "extensionTarget": 91.65,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-17 07:37:39"
+    "updatedAt": "2026-07-17 17:31:09"
   },
   "台股:4542": {
     "key": "台股:4542",
@@ -2414,15 +2439,15 @@
     "originalWinRate": "中",
     "status": "active",
     "createdBy": "strategy-lock-v1",
-    "trackingStatus": "已達第一目標",
-    "currentPrice": 278.0,
-    "currentTarget": 340.0,
-    "currentStopLoss": 224.56,
-    "extensionTarget": 340.0,
+    "trackingStatus": "策略追蹤中",
+    "currentPrice": 235.5,
+    "currentTarget": 383.0,
+    "currentStopLoss": 245.41,
+    "extensionTarget": 383.0,
     "recentCloses": [],
-    "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
-    "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-07-16 07:41:54"
+    "holderAction": "未達第一目標前，守風險區續抱觀察。",
+    "emptyAction": "空手不追高，等突破確認或回踩不破。",
+    "updatedAt": "2026-07-17 17:31:08"
   },
   "台股:5488": {
     "key": "台股:5488",
@@ -3040,14 +3065,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 131.5,
+    "currentPrice": 130.5,
     "currentTarget": 157.5,
     "currentStopLoss": 123.19,
     "extensionTarget": null,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-15 07:32:16"
+    "updatedAt": "2026-07-17 17:31:08"
   },
   "台股:6613": {
     "key": "台股:6613",
@@ -3799,6 +3824,31 @@
     "emptyAction": "取消觀察，等待新結構。",
     "updatedAt": "2026-06-29 20:18:11"
   },
+  "台股:8383": {
+    "key": "台股:8383",
+    "market": "台股",
+    "code": "8383",
+    "name": "千附",
+    "createdAt": "2026-07-17",
+    "originalBuyLow": 85.88,
+    "originalBuyHigh": 88.46,
+    "originalStopLoss": 81.67,
+    "originalTarget": 115.4,
+    "originalNeckline": 84.2,
+    "originalStage": "突破第一根",
+    "originalWinRate": "低",
+    "status": "active",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略追蹤中",
+    "currentPrice": 89.0,
+    "currentTarget": 115.4,
+    "currentStopLoss": 81.67,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "未達第一目標前，守風險區續抱觀察。",
+    "emptyAction": "空手不追高，等突破確認或回踩不破。",
+    "updatedAt": "2026-07-17 17:31:09"
+  },
   "台股:8932": {
     "key": "台股:8932",
     "market": "台股",
@@ -4222,7 +4272,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-17 07:37:39"
+    "updatedAt": "2026-07-17 17:31:09"
   },
   "美股:ORCL": {
     "key": "美股:ORCL",
