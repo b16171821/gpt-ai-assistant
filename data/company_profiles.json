@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-18 07:34:01",
+  "updatedAt": "2026-07-20 18:28:38",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2223,6 +2223,15 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-07-17 17:31:06"
+    },
+    "台股:5450": {
+      "industry": "Textile Manufacturing",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Nam Liong Global Corporation research and develops textile materials in Taiwan. The company offers textile composites, such as hook loop and functional tapes, functional protective",
+      "theme": "產業：Textile Manufacturing｜板塊：Consumer Cyclical｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-07-20 18:28:38"
     }
   }
 }
