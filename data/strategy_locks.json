@@ -124,6 +124,31 @@
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
     "updatedAt": "2026-07-02 07:55:17"
   },
+  "台股:1467": {
+    "key": "台股:1467",
+    "market": "台股",
+    "code": "1467",
+    "name": "南緯",
+    "createdAt": "2026-07-22",
+    "originalBuyLow": 10.71,
+    "originalBuyHigh": 11.03,
+    "originalStopLoss": 10.19,
+    "originalTarget": 14.16,
+    "originalNeckline": 10.5,
+    "originalStage": "接近成形＋可觀察",
+    "originalWinRate": "中",
+    "status": "ended",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略結束",
+    "currentPrice": 10.0,
+    "currentTarget": 14.16,
+    "currentStopLoss": 10.19,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "跌破原始停損，依紀律處理。",
+    "emptyAction": "取消觀察，等待新結構。",
+    "updatedAt": "2026-07-22 18:05:13"
+  },
   "台股:1514": {
     "key": "台股:1514",
     "market": "台股",
@@ -1540,14 +1565,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 358.0,
-    "currentTarget": 534.0,
-    "currentStopLoss": 345.81,
-    "extensionTarget": null,
+    "currentPrice": 418.0,
+    "currentTarget": 643.5,
+    "currentStopLoss": 405.46,
+    "extensionTarget": 643.5,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-14 07:34:15"
+    "updatedAt": "2026-07-22 18:05:13"
   },
   "台股:3430": {
     "key": "台股:3430",
@@ -1865,14 +1890,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "已達第一目標",
-    "currentPrice": 37.5,
+    "currentPrice": 42.0,
     "currentTarget": 47.55,
     "currentStopLoss": 33.51,
     "extensionTarget": 47.55,
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-07-21 07:38:30"
+    "updatedAt": "2026-07-22 18:05:13"
   },
   "台股:4513": {
     "key": "台股:4513",
@@ -1890,14 +1915,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 21.6,
+    "currentPrice": 22.8,
     "currentTarget": 26.8,
     "currentStopLoss": 19.74,
     "extensionTarget": null,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-17 07:37:39"
+    "updatedAt": "2026-07-22 18:05:14"
   },
   "台股:4541": {
     "key": "台股:4541",
@@ -2465,14 +2490,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 227.5,
-    "currentTarget": 379.5,
+    "currentPrice": 234.0,
+    "currentTarget": 376.5,
     "currentStopLoss": 245.41,
-    "extensionTarget": 379.5,
+    "extensionTarget": 376.5,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-21 07:38:30"
+    "updatedAt": "2026-07-22 18:05:13"
   },
   "台股:5488": {
     "key": "台股:5488",
