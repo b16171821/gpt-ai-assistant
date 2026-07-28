@@ -1389,15 +1389,15 @@
     "originalWinRate": "中",
     "status": "active",
     "createdBy": "strategy-lock-v1",
-    "trackingStatus": "接近第一目標",
-    "currentPrice": 29.3,
-    "currentTarget": 34.25,
-    "currentStopLoss": 23.57,
-    "extensionTarget": 34.25,
+    "trackingStatus": "策略追蹤中",
+    "currentPrice": 27.2,
+    "currentTarget": 38.95,
+    "currentStopLoss": 25.85,
+    "extensionTarget": 38.95,
     "recentCloses": [],
-    "holderAction": "接近原始第一目標，準備分批停利。",
-    "emptyAction": "不追高，等回踩。",
-    "updatedAt": "2026-07-21 07:38:30"
+    "holderAction": "未達第一目標前，守風險區續抱觀察。",
+    "emptyAction": "空手不追高，等突破確認或回踩不破。",
+    "updatedAt": "2026-07-28 18:13:22"
   },
   "台股:3290": {
     "key": "台股:3290",
@@ -1640,14 +1640,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 70.7,
-    "currentTarget": 133.7,
-    "currentStopLoss": 81.0,
-    "extensionTarget": 133.7,
+    "currentPrice": 77.2,
+    "currentTarget": 128.6,
+    "currentStopLoss": 78.67,
+    "extensionTarget": 128.6,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-28 07:43:45"
+    "updatedAt": "2026-07-28 18:13:22"
   },
   "台股:3455": {
     "key": "台股:3455",
