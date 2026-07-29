@@ -1397,7 +1397,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-29 07:39:14"
+    "updatedAt": "2026-07-30 00:11:33"
   },
   "台股:3290": {
     "key": "台股:3290",
@@ -1639,15 +1639,15 @@
     "originalWinRate": "高",
     "status": "active",
     "createdBy": "strategy-lock-v1",
-    "trackingStatus": "接近第一目標",
-    "currentPrice": 84.8,
-    "currentTarget": 124.2,
+    "trackingStatus": "策略追蹤中",
+    "currentPrice": 77.2,
+    "currentTarget": 128.6,
     "currentStopLoss": 78.67,
-    "extensionTarget": 124.2,
+    "extensionTarget": 128.6,
     "recentCloses": [],
-    "holderAction": "接近原始第一目標，準備分批停利。",
-    "emptyAction": "不追高，等回踩。",
-    "updatedAt": "2026-07-29 23:43:36"
+    "holderAction": "未達第一目標前，守風險區續抱觀察。",
+    "emptyAction": "空手不追高，等突破確認或回踩不破。",
+    "updatedAt": "2026-07-30 00:11:33"
   },
   "台股:3455": {
     "key": "台股:3455",
