@@ -157,7 +157,26 @@ class StrategyTrackingTests(unittest.TestCase):
         tracked = updated["records"][0]
 
         self.assertIn(tracked["trackingStatus"], ACTIVE_STATUSES)
-        self.assertEqual(tracked["latestStatus"]["latestDataDate"], "2026-07-28")
+        self.assertEqual(tracked["trackingStatus"], "BREAKOUT_CONFIRMED")
+        self.assertEqual(tracked["latestStatus"]["latestDataDate"], "2026-07-29")
+        self.assertEqual(tracked["latestStatus"]["latestClose"], 103)
+        self.assertTrue(tracked["latestStatus"]["restoredFromStatusHistory"])
+
+    def test_full_latest_status_is_preserved_in_status_history(self):
+        record = create_tracking_record(
+            "台股",
+            base_row(date="2026-07-29", strategyAsOfDate="2026-07-29", close=103),
+            {"strategyAsOfDate": "2026-07-29"},
+        )
+        newest = record["statusHistory"][-1]
+
+        self.assertEqual(newest["date"], "2026-07-29")
+        self.assertEqual(newest["latestStatus"]["latestDataDate"], "2026-07-29")
+        self.assertEqual(newest["latestStatus"]["latestClose"], 103)
+        self.assertEqual(
+            newest["latestStatus"]["latestVolume"],
+            record["latestStatus"]["latestVolume"],
+        )
 
     def test_not_selected_next_day_remains_active(self):
         first = process_tracking(

@@ -947,7 +947,14 @@ def update_tracking_status(tracking_record, latest_market_data, market_regime, c
     }
 
     history = [x for x in record.get("statusHistory", []) if str(x.get("date")) != date]
-    history.append({"date": date, "status": status, "close": rounded(close)})
+    history.append(
+        {
+            "date": date,
+            "status": status,
+            "close": rounded(close),
+            "latestStatus": deepcopy(latest),
+        }
+    )
     record["statusHistory"] = sorted(history, key=lambda x: str(x.get("date", "")))[-60:]
 
     if status in {"TARGET_HIT", "FAILED", "NEED_REVIEW"} and lifecycle_status:
@@ -1359,6 +1366,51 @@ def tracking_origin(record):
     return str(record.get("trackingOrigin") or "LIVE_SIGNAL")
 
 
+def restore_latest_status_from_history(record):
+    history = sorted(
+        [
+            item
+            for item in record.get("statusHistory", [])
+            if isinstance(item, dict) and item.get("date")
+        ],
+        key=lambda item: str(item.get("date") or ""),
+    )
+    if not history:
+        return record
+
+    newest = history[-1]
+    newest_date = str(newest.get("date") or "")[:10]
+    latest = record.setdefault("latestStatus", {})
+    latest_date = str(latest.get("latestDataDate") or "")[:10]
+    if not newest_date or newest_date <= latest_date:
+        return record
+
+    saved_latest = newest.get("latestStatus")
+    if isinstance(saved_latest, dict) and saved_latest:
+        latest = deepcopy(saved_latest)
+    else:
+        close = rounded(newest.get("close"))
+        latest["latestClose"] = close
+        latest["latestHigh"] = close
+        latest["latestLow"] = close
+        latest["latestVolume"] = 0
+        latest["latestMA5"] = 0
+        latest["latestMA10"] = 0
+        latest["latestMA20"] = 0
+        latest["restoredFromStatusHistory"] = True
+    latest["latestDataDate"] = newest_date
+    record["latestStatus"] = latest
+
+    restored_status = str(newest.get("status") or "")
+    if (
+        record.get("trackingStatus") in ACTIVE_STATUSES
+        and restored_status in ACTIVE_STATUSES
+    ):
+        record["trackingStatus"] = restored_status
+        record["trackingStatusText"] = STATUS_TEXT[restored_status]
+    return record
+
+
 def backfill_tracking_metadata(record, market_dates):
     record["trackingOrigin"] = tracking_origin(record)
     first_date = str(record.get("firstSignalDate") or "")[:10]
@@ -1395,7 +1447,7 @@ def backfill_tracking_metadata(record, market_dates):
         ],
     ]
     record["lastUpdateDate"] = max((date for date in known_dates if date), default=first_date)
-    return record
+    return restore_latest_status_from_history(record)
 
 
 def invalidate_failed_at_creation(record):
