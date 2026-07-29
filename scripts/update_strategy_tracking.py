@@ -9,6 +9,7 @@ DATA_DIR = ROOT / "data"
 TW_PATH = DATA_DIR / "latest.json"
 US_PATH = DATA_DIR / "us_latest.json"
 LOCKS_PATH = DATA_DIR / "strategy_locks.json"
+SNAPSHOTS_PATH = DATA_DIR / "strategy_snapshots.json"
 TRACKING_PATH = DATA_DIR / "strategy_tracking.json"
 TAIPEI_TZ = timezone(timedelta(hours=8))
 
@@ -40,6 +41,10 @@ TRACKING_SIGNAL_TEXTS = {
     "等待確認",
     "降級觀察",
 }
+NEW_SIGNAL_NOTICE = (
+    "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。"
+    "新策略僅供空手者參考。"
+)
 
 
 def now_tw():
@@ -478,6 +483,8 @@ def status_result(status):
 
 def update_tracking_status(tracking_record, latest_market_data, market_regime, current_date=None):
     record = deepcopy(tracking_record)
+    immutable_original = deepcopy(record.get("originalStrategy") or {})
+    immutable_first_signal_date = record.get("firstSignalDate")
     row = latest_market_data or {}
     date = current_date or strategy_date(row)
     original = record.get("originalStrategy") or {}
@@ -557,7 +564,7 @@ def update_tracking_status(tracking_record, latest_market_data, market_regime, c
     if status == "FAILED":
         latest["holderAction"] = "跌破原始停損或型態破壞，優先處理。"
         latest["cashAction"] = "取消觀察，等待新的主升段結構。"
-        latest["riskWarning"] = "原始策略已失敗，不可用新策略卡把停損往下移。"
+        latest["riskWarning"] = "原始策略已失敗，不可用新的策略卡延後停損。"
     elif status == "TARGET_HIT":
         latest["holderAction"] = "已達原始第一目標，優先執行分批停利。"
         latest["cashAction"] = "目標已達成，空手者不追高。"
@@ -593,12 +600,16 @@ def update_tracking_status(tracking_record, latest_market_data, market_regime, c
 
     if status in ENDED_STATUSES:
         record["endDate"] = date
+        record["endedAt"] = date
         record["endReason"] = STATUS_TEXT[status]
         record["result"] = status_result(status)
     else:
         record["endDate"] = None
+        record["endedAt"] = None
         record["endReason"] = ""
         record["result"] = ""
+    record["originalStrategy"] = immutable_original
+    record["firstSignalDate"] = immutable_first_signal_date
     return record
 
 
@@ -627,6 +638,7 @@ def create_tracking_record(market, row, meta=None, trigger_reasons=None):
         "firstSignalDate": date,
         "lastUpdateDate": date,
         "endDate": None,
+        "endedAt": None,
         "endReason": "",
         "result": "",
         "trackingStatus": "WATCHING",
@@ -692,6 +704,253 @@ def create_record_from_lock(market, lock, row, meta=None):
     record["firstSignalDate"] = created
     record["trackingId"] = f"{market}:{record['stockCode']}:{created}"
     return update_tracking_status(record, row, record["latestStatus"]["latestMarketRegime"])
+
+
+def records_for_stock(records, market, code):
+    return [
+        record
+        for record in records
+        if record.get("market") == market
+        and str(record.get("stockCode")) == str(code)
+    ]
+
+
+def snapshot_to_row(snapshot):
+    grade = str(snapshot.get("grade") or "").upper()
+    close = n(snapshot.get("close"))
+    return {
+        "date": snapshot.get("date"),
+        "strategyAsOfDate": snapshot.get("date"),
+        "code": snapshot.get("code"),
+        "ticker": snapshot.get("code"),
+        "name": snapshot.get("name"),
+        "grade": grade,
+        "score": 4 if grade == "A" else 3 if grade == "B" else 2,
+        "safeScore": snapshot.get("safeScore"),
+        "riskRewardRatio": snapshot.get("riskRewardRatio"),
+        "riskPct": snapshot.get("riskPct"),
+        "distanceFromNecklinePct": snapshot.get("distanceFromNecklinePct"),
+        "close": close,
+        "high": close,
+        "low": close,
+        "neckline": snapshot.get("neckline"),
+        "observationEntry": pick(snapshot, "entry", default=close),
+        "chaseRangeLow": snapshot.get("buyLow"),
+        "chaseRangeHigh": snapshot.get("buyHigh"),
+        "stopLoss": snapshot.get("stopLoss"),
+        "target": snapshot.get("target"),
+        "stage": pick(snapshot, "category", "pattern", default="舊版策略紀錄"),
+        "originalSignal": pick(snapshot, "action", "category", default="舊版策略紀錄"),
+        "adjustedSignal": pick(snapshot, "action", default=""),
+        "strictOk": grade == "A",
+        "forbiddenChase": grade == "C",
+    }
+
+
+def legacy_snapshot_entry(snapshot):
+    return {
+        "date": str(snapshot.get("date") or "")[:10],
+        "market": snapshot.get("market"),
+        "code": str(snapshot.get("code") or snapshot.get("ticker") or ""),
+        "name": snapshot.get("name"),
+        "grade": snapshot.get("grade"),
+        "safeScore": snapshot.get("safeScore"),
+        "riskRewardRatio": snapshot.get("riskRewardRatio"),
+        "category": snapshot.get("category"),
+        "close": snapshot.get("close"),
+        "neckline": snapshot.get("neckline"),
+        "buyLow": snapshot.get("buyLow"),
+        "buyHigh": snapshot.get("buyHigh"),
+        "stopLoss": snapshot.get("stopLoss"),
+        "target": snapshot.get("target"),
+        "action": snapshot.get("action"),
+    }
+
+
+def attach_legacy_snapshots(record, snapshots):
+    notes = record.setdefault("notes", {"systemNotes": [], "manualNote": ""})
+    existing = {
+        str(item.get("date"))
+        for item in notes.get("legacySnapshots", [])
+        if isinstance(item, dict)
+    }
+    rows = [
+        legacy_snapshot_entry(snapshot)
+        for snapshot in snapshots
+        if isinstance(snapshot, dict)
+        and str(snapshot.get("date") or "") not in existing
+    ]
+    merged = [
+        item
+        for item in notes.get("legacySnapshots", [])
+        if isinstance(item, dict)
+    ] + rows
+    notes["legacySnapshots"] = sorted(
+        merged,
+        key=lambda item: str(item.get("date") or ""),
+        reverse=True,
+    )[:60]
+    if rows:
+        latest_date = max(str(row.get("date") or "") for row in rows)
+        append_system_note(
+            record,
+            latest_date,
+            f"已匯入舊版近 5 日策略紀錄 {len(rows)} 筆，原始策略維持不變。",
+        )
+
+
+def migrate_legacy_snapshots(records, snapshots):
+    if not isinstance(snapshots, dict):
+        return records
+    for key, raw_rows in snapshots.items():
+        rows = sorted(
+            [row for row in raw_rows if isinstance(row, dict) and row.get("date")]
+            if isinstance(raw_rows, list)
+            else [],
+            key=lambda row: str(row.get("date") or ""),
+        )
+        if not rows:
+            continue
+        first = rows[0]
+        market = str(first.get("market") or str(key).split(":", 1)[0])
+        code = str(
+            first.get("code")
+            or first.get("ticker")
+            or (str(key).split(":", 1)[1] if ":" in str(key) else "")
+        )
+        if not market or not code:
+            continue
+        matches = records_for_stock(records, market, code)
+        if matches:
+            target = min(
+                matches,
+                key=lambda record: str(record.get("firstSignalDate") or "9999-99-99"),
+            )
+        else:
+            meta = {
+                "strategyAsOfDate": first.get("date"),
+                "marketRegime": "NO_DATA",
+                "marketRegimeLabel": "舊資料匯入",
+            }
+            target = create_tracking_record(
+                market,
+                snapshot_to_row(first),
+                meta,
+                ["由舊版近 5 日策略紀錄建立追蹤，原始欄位以最早一筆保存。"],
+            )
+            for snapshot in rows[1:]:
+                target = update_tracking_status(
+                    target,
+                    snapshot_to_row(snapshot),
+                    "NO_DATA",
+                    str(snapshot.get("date"))[:10],
+                )
+            records.append(target)
+        attach_legacy_snapshots(target, rows)
+    return records
+
+
+def lock_to_row(lock):
+    buy_low = n(lock.get("originalBuyLow"))
+    buy_high = n(lock.get("originalBuyHigh"))
+    watch = (buy_low + buy_high) / 2 if buy_low and buy_high else buy_low or buy_high
+    close = n(lock.get("currentPrice"), watch)
+    return {
+        "date": str(pick(lock, "updatedAt", "createdAt", default=""))[:10],
+        "strategyAsOfDate": str(pick(lock, "updatedAt", "createdAt", default=""))[:10],
+        "code": lock.get("code"),
+        "ticker": lock.get("code"),
+        "name": lock.get("name"),
+        "score": 3,
+        "grade": "B",
+        "close": close,
+        "high": close,
+        "low": close,
+        "neckline": lock.get("originalNeckline"),
+        "observationEntry": watch,
+        "chaseRangeLow": buy_low,
+        "chaseRangeHigh": buy_high,
+        "stopLoss": lock.get("originalStopLoss"),
+        "target": lock.get("originalTarget"),
+        "stage": pick(lock, "originalStage", default="舊版策略鎖定"),
+        "originalSignal": pick(
+            lock,
+            "trackingStatus",
+            "originalStage",
+            default="舊版策略鎖定",
+        ),
+        "holderAction": lock.get("holderAction"),
+        "emptyAction": lock.get("emptyAction"),
+        "forbiddenChase": False,
+    }
+
+
+def legacy_lock_entry(lock):
+    return {
+        "strategyDate": str(lock.get("createdAt") or "")[:10],
+        "market": lock.get("market"),
+        "code": str(lock.get("code") or ""),
+        "name": lock.get("name"),
+        "originalStage": lock.get("originalStage"),
+        "originalSignal": pick(
+            lock,
+            "trackingStatus",
+            "originalStage",
+            default="舊版策略鎖定",
+        ),
+        "originalNeckline": lock.get("originalNeckline"),
+        "originalBuyLow": lock.get("originalBuyLow"),
+        "originalBuyHigh": lock.get("originalBuyHigh"),
+        "originalStopLoss": lock.get("originalStopLoss"),
+        "originalTarget": lock.get("originalTarget"),
+        "legacyStatus": lock.get("status"),
+        "trackingStatus": lock.get("trackingStatus"),
+        "updatedAt": lock.get("updatedAt"),
+    }
+
+
+def attach_legacy_lock(record, lock):
+    notes = record.setdefault("notes", {"systemNotes": [], "manualNote": ""})
+    if not notes.get("legacyLock"):
+        notes["legacyLock"] = legacy_lock_entry(lock)
+        append_system_note(
+            record,
+            str(pick(lock, "updatedAt", "createdAt", default=""))[:10],
+            "已匯入舊版策略鎖定資料，原始策略維持不變。",
+        )
+
+
+def migrate_legacy_locks(records, locks):
+    if not isinstance(locks, dict):
+        return records
+    for lock in locks.values():
+        if not isinstance(lock, dict):
+            continue
+        market = str(lock.get("market") or "")
+        code = str(lock.get("code") or "")
+        if not market or not code:
+            continue
+        matches = records_for_stock(records, market, code)
+        if matches:
+            target = min(
+                matches,
+                key=lambda record: str(record.get("firstSignalDate") or "9999-99-99"),
+            )
+        else:
+            row = lock_to_row(lock)
+            target = create_record_from_lock(
+                market,
+                lock,
+                row,
+                {
+                    "strategyAsOfDate": lock.get("createdAt"),
+                    "marketRegime": "NO_DATA",
+                    "marketRegimeLabel": "舊資料匯入",
+                },
+            )
+            records.append(target)
+        attach_legacy_lock(target, lock)
+    return records
 
 
 def find_active_record(records, market, code):
@@ -760,7 +1019,7 @@ def process_market(records, market, payload, locks=None):
         current_date = strategy_date(row, meta)
         active = find_active_record(records, market, code)
         if active:
-            append_system_note(active, current_date, "今日再次出現新觀察訊號，原始策略維持不變。")
+            append_system_note(active, current_date, NEW_SIGNAL_NOTICE)
             continue
         ended = newest_ended_record(records, market, code)
         if ended and str(ended.get("endDate")) >= current_date:
@@ -769,13 +1028,18 @@ def process_market(records, market, payload, locks=None):
     return records
 
 
-def process_tracking(existing, tw_payload, us_payload, locks=None):
+def process_tracking(existing, tw_payload, us_payload, locks=None, snapshots=None):
     existing = existing if isinstance(existing, dict) else {}
     records = [
         deepcopy(record)
         for record in existing.get("records", [])
         if isinstance(record, dict) and record.get("trackingId")
     ]
+    for record in records:
+        record.setdefault("endedAt", record.get("endDate"))
+        record.setdefault("notes", {"systemNotes": [], "manualNote": ""})
+    records = migrate_legacy_snapshots(records, snapshots)
+    records = migrate_legacy_locks(records, locks)
     records = process_market(records, "台股", tw_payload, locks)
     records = process_market(records, "美股", us_payload, locks)
     records.sort(
@@ -792,10 +1056,18 @@ def process_tracking(existing, tw_payload, us_payload, locks=None):
     return {
         "meta": {
             "updatedAt": now_tw(),
-            "version": "strategy-tracking-v1",
+            "version": "strategy-tracking-v2",
             "activeCount": active_count,
             "endedCount": ended_count,
             "maxWaitingTradingDays": 15,
+            "legacyLocksImported": sum(
+                bool((record.get("notes") or {}).get("legacyLock"))
+                for record in records
+            ),
+            "legacySnapshotStocksImported": sum(
+                bool((record.get("notes") or {}).get("legacySnapshots"))
+                for record in records
+            ),
         },
         "records": records,
     }
@@ -807,11 +1079,14 @@ def main():
     tw_payload = read_json(TW_PATH, {"meta": {}, "stocks": []})
     us_payload = read_json(US_PATH, {"meta": {}, "stocks": []})
     locks = read_json(LOCKS_PATH, {})
+    snapshots = read_json(SNAPSHOTS_PATH, {})
     if not isinstance(locks, dict):
         locks = {}
+    if not isinstance(snapshots, dict):
+        snapshots = {}
     tw_payload = supplement_active_tracking_rows(existing, "台股", tw_payload)
     us_payload = supplement_active_tracking_rows(existing, "美股", us_payload)
-    output = process_tracking(existing, tw_payload, us_payload, locks)
+    output = process_tracking(existing, tw_payload, us_payload, locks, snapshots)
     TRACKING_PATH.write_text(
         json.dumps(output, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",

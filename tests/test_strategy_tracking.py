@@ -9,6 +9,7 @@ sys.path.insert(0, str(ROOT / "scripts"))
 
 from update_strategy_tracking import (  # noqa: E402
     ACTIVE_STATUSES,
+    NEW_SIGNAL_NOTICE,
     create_tracking_record,
     process_tracking,
     update_tracking_status,
@@ -104,10 +105,16 @@ class StrategyTrackingTests(unittest.TestCase):
         self.assertEqual(failed["trackingStatus"], "FAILED")
         self.assertEqual(failed["result"], "型態失敗")
         self.assertEqual(failed["endDate"], "2026-07-14")
+        self.assertEqual(failed["endedAt"], "2026-07-14")
+        self.assertEqual(
+            failed["latestStatus"]["riskWarning"],
+            "原始策略已失敗，不可用新的策略卡延後停損。",
+        )
 
     def test_new_signal_does_not_overwrite_original_strategy(self):
         record = create_tracking_record("台股", base_row())
         original = deepcopy(record["originalStrategy"])
+        first_signal_date = record["firstSignalDate"]
         next_row = base_row(
             strategyAsOfDate="2026-07-14",
             date="2026-07-14",
@@ -123,8 +130,25 @@ class StrategyTrackingTests(unittest.TestCase):
         )
 
         self.assertEqual(updated["records"][0]["originalStrategy"], original)
+        self.assertEqual(updated["records"][0]["firstSignalDate"], first_signal_date)
+        self.assertEqual(
+            updated["records"][0]["originalStrategy"]["originalStopLoss"],
+            original["originalStopLoss"],
+        )
+        self.assertEqual(
+            updated["records"][0]["originalStrategy"]["originalBuyZoneLow"],
+            original["originalBuyZoneLow"],
+        )
+        self.assertEqual(
+            updated["records"][0]["originalStrategy"]["originalBuyZoneHigh"],
+            original["originalBuyZoneHigh"],
+        )
+        self.assertEqual(
+            updated["records"][0]["originalStrategy"]["originalTarget"],
+            original["originalTarget"],
+        )
         notes = updated["records"][0]["notes"]["systemNotes"]
-        self.assertTrue(any("再次出現新觀察訊號" in note["text"] for note in notes))
+        self.assertTrue(any(NEW_SIGNAL_NOTICE == note["text"] for note in notes))
 
     def test_target_hit_moves_to_ended(self):
         record = create_tracking_record("台股", base_row())
@@ -187,6 +211,54 @@ class StrategyTrackingTests(unittest.TestCase):
 
         self.assertEqual(expired["trackingStatus"], "EXPIRED")
         self.assertEqual(expired["result"], "觀察過期")
+
+    def test_legacy_data_is_attached_without_overwriting_original_strategy(self):
+        record = create_tracking_record("台股", base_row())
+        original = deepcopy(record["originalStrategy"])
+        first_signal_date = record["firstSignalDate"]
+        snapshots = {
+            "台股:3374": [
+                {
+                    "date": "2026-07-12",
+                    "market": "台股",
+                    "code": "3374",
+                    "name": "精材",
+                    "close": 90,
+                    "buyLow": 91,
+                    "buyHigh": 92,
+                    "stopLoss": 80,
+                    "target": 160,
+                    "action": "舊策略訊號",
+                }
+            ]
+        }
+        locks = {
+            "台股:3374": {
+                "market": "台股",
+                "code": "3374",
+                "name": "精材",
+                "createdAt": "2026-07-10",
+                "originalBuyLow": 88,
+                "originalBuyHigh": 89,
+                "originalStopLoss": 79,
+                "originalTarget": 170,
+                "trackingStatus": "舊鎖定訊號",
+            }
+        }
+
+        updated = process_tracking(
+            {"meta": {}, "records": [record]},
+            payload(None, date="2026-07-14"),
+            payload(None),
+            locks,
+            snapshots,
+        )
+        migrated = updated["records"][0]
+
+        self.assertEqual(migrated["originalStrategy"], original)
+        self.assertEqual(migrated["firstSignalDate"], first_signal_date)
+        self.assertEqual(migrated["notes"]["legacySnapshots"][0]["stopLoss"], 80)
+        self.assertEqual(migrated["notes"]["legacyLock"]["originalStopLoss"], 79)
 
 
 if __name__ == "__main__":
