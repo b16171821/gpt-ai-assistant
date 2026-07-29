@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-07-30 02:10:58",
+    "updatedAt": "2026-07-30 02:19:25",
     "version": "strategy-tracking-v4",
     "activeCount": 9,
     "endedCount": 270,
@@ -921,8 +921,8 @@
       "currentProfitPct": 1.0,
       "maxProfitPct": 1.12,
       "result": "",
-      "trackingStatus": "BREAKOUT_CONFIRMED",
-      "trackingStatusText": "突破確認，策略成立",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "突破第一根",
         "originalSignal": "突破買點",
@@ -960,7 +960,7 @@
         "closeHeldNeckline": true,
         "inBuyZone": true,
         "aboveBuyZoneHigh": false,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -974,6 +974,10 @@
           {
             "date": "2026-07-29",
             "text": "風報比達 2 以上；距離頸線在 0%～5%"
+          },
+          {
+            "date": "2026-07-29",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -984,7 +988,7 @@
       "statusHistory": [
         {
           "date": "2026-07-29",
-          "status": "BREAKOUT_CONFIRMED",
+          "status": "PULLBACK_CONFIRM",
           "close": 84.8,
           "latestStatus": {
             "latestClose": 84.8,
