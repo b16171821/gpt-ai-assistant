@@ -9,6 +9,8 @@ import pandas as pd
 import twstock
 import yfinance as yf
 
+from market_filter import apply_breadth_guard, apply_market_filter_to_rows, classify_market_regime, previous_a_count_from_snapshots
+
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 LATEST_JSON = DATA_DIR / "latest.json"
@@ -16,6 +18,7 @@ LATEST_CSV = DATA_DIR / "latest.csv"
 HISTORY_CSV = DATA_DIR / "history.csv"
 REPORT_MD = DATA_DIR / "latest_report.md"
 THEME_PATH = DATA_DIR / "theme_keywords.json"
+SNAPSHOTS_PATH = DATA_DIR / "strategy_snapshots.json"
 TAIPEI_TZ = timezone(timedelta(hours=8))
 
 MIN_RISE_60 = 30
@@ -33,6 +36,7 @@ PERIOD = "1y"
 BATCH_SIZE = 80
 MAX_CODES = 1200
 TW_CLOSE_CONFIRM_MINUTE = 14 * 60 + 30
+TW_INDEX_SYMBOLS = {"加權指數": ["^TWII"], "櫃買指數": ["TWOII.TWO", "^TWOII"]}
 
 
 def now_tw_dt():
@@ -286,6 +290,7 @@ def analyze_one(df, meta, theme_config):
     df["MA20"] = df["Close"].rolling(20).mean()
     df["MA60"] = df["Close"].rolling(60).mean()
     df["MA240"] = df["Close"].rolling(240).mean()
+    df["CHANGE_PCT"] = df["Close"].pct_change() * 100
     df["AVG_VOLUME20"] = df["Volume"].rolling(20).mean()
     df["TURNOVER"] = df["Close"] * df["Volume"]
     df["AVG_TURNOVER20"] = df["TURNOVER"].rolling(20).mean()
@@ -325,6 +330,7 @@ def analyze_one(df, meta, theme_config):
         "source": "Yahoo Finance via yfinance（日K完整收盤資料）", "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K",
         "market": meta["market"], "code": meta["code"], "name": meta["name"], "close": sr(close),
         "ma5": sr(latest["MA5"]), "ma20": sr(ma20), "ma60": sr(ma60), "ma240": sr(ma240), "rise60": sr(rise60),
+        "changePct": sr(latest["CHANGE_PCT"]), "nearLimitUp": bool(sf(latest["CHANGE_PCT"]) >= 8),
         "volume": int(volume), "avgVolume20": int(avg_volume20), "turnover": int(turnover),
         "avgTurnover20": int(avg_turnover20), "volatility20Pct": sr(volatility20),
         "liquidityOk": bool(liquidity_ok), "volatilityOk": bool(volatility_ok),
@@ -350,9 +356,28 @@ def analyze_one(df, meta, theme_config):
     return base
 
 
+def download_index(symbols):
+    for symbol in symbols:
+        try:
+            df = yf.download(symbol, period=PERIOD, interval="1d", auto_adjust=False, progress=False, threads=False)
+            df = trim_to_completed_daily_bars(df)
+            if df is not None and not df.empty:
+                return df
+        except Exception:
+            continue
+    return pd.DataFrame()
+
+
+def build_market_filter():
+    weighted = download_index(TW_INDEX_SYMBOLS["加權指數"])
+    otc = download_index(TW_INDEX_SYMBOLS["櫃買指數"])
+    return classify_market_regime(weighted, otc)
+
+
 def scan_market():
     stock_master = get_stock_master()
     theme_config = load_theme_config()
+    market_filter = build_market_filter()
     by_ticker = {x["ticker"]: x for x in stock_master}
     results, errors = [], []
     tickers = list(by_ticker.keys())
@@ -385,7 +410,9 @@ def scan_market():
         ),
         reverse=True,
     )
-    return results, errors, len(stock_master)
+    market_filter = apply_breadth_guard(market_filter, results, previous_a_count_from_snapshots(SNAPSHOTS_PATH, "台股"))
+    results = apply_market_filter_to_rows(results, market_filter)
+    return results, errors, len(stock_master), market_filter
 
 
 def card(row, idx):
@@ -432,16 +459,23 @@ def card(row, idx):
 """
 
 
-def write_report(rows, meta):
+def write_report(rows, meta, market_filter):
     grade_a = [r for r in rows if r.get("grade") == "A"]
     grade_b = [r for r in rows if r.get("grade") == "B"]
     no_chase = [r for r in rows if r.get("category") == "禁止追高"]
     top = (grade_a + grade_b)[:10]
-    conclusion = "有A級安全候選，仍須等收盤與隔日不跌破頸線確認。" if grade_a else ("目前沒有A級安全候選，優先看B級等確認，不追高。" if grade_b else "目前沒有安全主升段候選，不硬選。")
+    regime = market_filter.get("marketRegime", "WATCH")
+    regime_label = market_filter.get("regimeLabel", "")
+    if regime == "ATTACK":
+        conclusion = "有A級安全候選，仍須等收盤與隔日不跌破頸線確認。" if grade_a else ("目前沒有A級安全候選，優先看B級等確認，不追高。" if grade_b else "目前沒有安全主升段候選，不硬選。")
+    else:
+        conclusion = f"大盤為 {regime} {regime_label}，主升段買點降級觀察，停止積極追價。"
     lines = [
         "# 台股四燈型態學策略報告", "",
         f"策略依據：{meta.get('strategyAsOfDate')} 收盤資料",
         f"系統更新：{meta.get('updatedAt')}", "",
+        f"## 今日大盤狀態：{regime} {regime_label}",
+        f"今日策略：{market_filter.get('strategy')}", "",
         f"## 結論：{conclusion}", "",
         f"- 掃描檔數：{meta.get('totalAnalyzed')}", f"- 3燈以上：{meta.get('qualified3Plus')}",
         f"- 4燈：{meta.get('qualified4')}", f"- A級安全候選：{len(grade_a)}", f"- B級觀察：{len(grade_b)}", f"- 禁止追高：{len(no_chase)}", "",
@@ -467,7 +501,7 @@ def collect_fieldnames(rows, fallback):
     return fieldnames or fallback
 
 
-def write_outputs(rows, errors, total_master):
+def write_outputs(rows, errors, total_master, market_filter):
     DATA_DIR.mkdir(exist_ok=True)
     qualified = [r for r in rows if r["score"] >= 3]
     strict = [r for r in rows if r.get("strictOk")]
@@ -475,8 +509,8 @@ def write_outputs(rows, errors, total_master):
     grade_b = [r for r in rows if r.get("grade") == "B"]
     no_chase = [r for r in rows if r.get("category") == "禁止追高"]
     strategy_date = max([r.get("strategyAsOfDate", "") for r in rows], default="")
-    meta = {"updatedAt": now_tw(), "strategyAsOfDate": strategy_date, "priceType": "收盤確認價", "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K", "mode": "tw-safe-uptrend-v2", "totalMaster": total_master, "totalAnalyzed": len(rows), "qualified3Plus": len(qualified), "qualified4": sum(1 for r in rows if r["score"] >= 4), "strictCandidates": len(strict), "gradeA": len(grade_a), "gradeB": len(grade_b), "forbiddenChaseCount": len(no_chase), "minTurnover": MIN_TURNOVER, "minAvgTurnover20": MIN_AVG_TURNOVER20, "maxVolatility20Pct": MAX_VOLATILITY20_PCT, "errors": errors[:50], "note": "正式策略僅依據上一個完整收盤交易日；僅供觀察，不構成買賣建議。"}
-    payload = {"meta": meta, "stocks": rows}
+    meta = {"updatedAt": now_tw(), "strategyAsOfDate": strategy_date, "priceType": "收盤確認價", "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K", "mode": "tw-safe-uptrend-v2", "totalMaster": total_master, "totalAnalyzed": len(rows), "qualified3Plus": len(qualified), "qualified4": sum(1 for r in rows if r["score"] >= 4), "strictCandidates": len(strict), "gradeA": len(grade_a), "gradeB": len(grade_b), "forbiddenChaseCount": len(no_chase), "marketRegime": market_filter.get("marketRegime"), "marketRegimeLabel": market_filter.get("regimeLabel"), "marketStrategy": market_filter.get("strategy"), "marketFilter": market_filter, "minTurnover": MIN_TURNOVER, "minAvgTurnover20": MIN_AVG_TURNOVER20, "maxVolatility20Pct": MAX_VOLATILITY20_PCT, "errors": errors[:50], "note": "正式策略僅依據上一個完整收盤交易日；僅供觀察，不構成買賣建議。"}
+    payload = {"meta": meta, "marketFilter": market_filter, "stocks": rows}
     LATEST_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     fieldnames = collect_fieldnames(rows, ["date", "code", "name", "score", "status", "reason"])
     with LATEST_CSV.open("w", newline="", encoding="utf-8-sig") as f:
@@ -487,7 +521,7 @@ def write_outputs(rows, errors, total_master):
         writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(rows)
-    write_report(rows, meta)
+    write_report(rows, meta, market_filter)
 
 
 def write_failure(e):
@@ -502,8 +536,8 @@ def write_failure(e):
 
 def main():
     try:
-        rows, errors, total_master = scan_market()
-        write_outputs(rows, errors, total_master)
+        rows, errors, total_master, market_filter = scan_market()
+        write_outputs(rows, errors, total_master, market_filter)
         print(f"Scan complete. analyzed={len(rows)} errors={len(errors)}")
     except Exception as e:
         write_failure(e)
@@ -511,3 +545,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
