@@ -10,6 +10,14 @@ import twstock
 import yfinance as yf
 
 from market_filter import apply_breadth_guard, apply_market_filter_to_rows, classify_market_regime, previous_a_count_from_snapshots
+from tw_official_data import (
+    OfficialDataError,
+    fetch_tpex_index_history,
+    fetch_twse_index_history,
+    load_latest_official_quotes,
+    merge_official_bar,
+    validate_official_coverage,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
@@ -35,6 +43,7 @@ MIN_WATCH_RR = 1.5
 PERIOD = "1y"
 BATCH_SIZE = 80
 MAX_CODES = 1200
+MIN_OFFICIAL_COVERAGE_PCT = 95
 TW_CLOSE_CONFIRM_MINUTE = 14 * 60 + 30
 TW_INDEX_SYMBOLS = {"加權指數": ["^TWII"], "櫃買指數": ["TWOII.TWO", "^TWOII"]}
 
@@ -371,16 +380,22 @@ def download_index(symbols):
     return pd.DataFrame()
 
 
-def build_market_filter():
-    weighted = download_index(TW_INDEX_SYMBOLS["加權指數"])
-    otc = download_index(TW_INDEX_SYMBOLS["櫃買指數"])
+def build_market_filter(official_date):
+    weighted = fetch_twse_index_history(official_date)
+    otc = fetch_tpex_index_history(official_date)
     return classify_market_regime(weighted, otc)
 
 
 def scan_market():
     stock_master = get_stock_master()
     theme_config = load_theme_config()
-    market_filter = build_market_filter()
+    official = load_latest_official_quotes()
+    coverage = validate_official_coverage(
+        [item["code"] for item in stock_master],
+        official["quotes"],
+        minimum_pct=MIN_OFFICIAL_COVERAGE_PCT,
+    )
+    market_filter = build_market_filter(official["officialDate"])
     by_ticker = {x["ticker"]: x for x in stock_master}
     results, errors = [], []
     tickers = list(by_ticker.keys())
@@ -393,12 +408,34 @@ def scan_market():
             continue
         for ticker in batch:
             try:
+                meta = by_ticker[ticker]
+                quote = official["quotes"].get(meta["code"])
+                if not quote:
+                    errors.append(f"{ticker} skipped: official close is unavailable for {official['officialDate']}")
+                    continue
                 df = data if len(batch) == 1 else data[ticker] if ticker in data.columns.get_level_values(0) else None
+                df = merge_official_bar(df, quote)
                 row = analyze_one(df, by_ticker[ticker], theme_config)
                 if row:
+                    row["date"] = official["officialDate"]
+                    row["strategyAsOfDate"] = official["officialDate"]
+                    row["officialDataDate"] = official["officialDate"]
+                    row["dataFresh"] = True
+                    row["priceVerified"] = True
+                    row["source"] = "臺灣證券交易所 / 證券櫃檯買賣中心正式收盤；yfinance 歷史資料"
                     results.append(row)
             except Exception as e:
                 errors.append(f"{ticker} failed: {e}")
+    if not results:
+        raise OfficialDataError(f"{official['officialDate']} 沒有任何完成官方收盤覆蓋的分析資料")
+    stale_rows = [
+        row for row in results
+        if row.get("strategyAsOfDate") != official["officialDate"] or not row.get("dataFresh")
+    ]
+    if stale_rows:
+        raise OfficialDataError(
+            f"分析結果混入 {len(stale_rows)} 筆非 {official['officialDate']} 的資料，已停止發布"
+        )
     grade_rank = {"A": 3, "B": 2, "C": 1}
     results = sorted(
         results,
@@ -415,7 +452,17 @@ def scan_market():
     )
     market_filter = apply_breadth_guard(market_filter, results, previous_a_count_from_snapshots(SNAPSHOTS_PATH, "台股"))
     results = apply_market_filter_to_rows(results, market_filter)
-    return results, errors, len(stock_master), market_filter
+    freshness = {
+        **coverage,
+        "officialDataDate": official["officialDate"],
+        "officialQuoteCount": official["officialQuoteCount"],
+        "listedOfficialCount": official["listedCount"],
+        "otcOfficialCount": official["otcCount"],
+        "freshCount": len(results),
+        "staleCount": 0,
+        "source": official["source"],
+    }
+    return results, errors, len(stock_master), market_filter, freshness
 
 
 def card(row, idx):
@@ -504,24 +551,42 @@ def collect_fieldnames(rows, fallback):
     return fieldnames or fallback
 
 
-def write_outputs(rows, errors, total_master, market_filter):
+def write_outputs(rows, errors, total_master, market_filter, freshness):
     DATA_DIR.mkdir(exist_ok=True)
     qualified = [r for r in rows if r["score"] >= 3]
     strict = [r for r in rows if r.get("strictOk")]
     grade_a = [r for r in rows if r.get("grade") == "A"]
     grade_b = [r for r in rows if r.get("grade") == "B"]
     no_chase = [r for r in rows if r.get("category") == "禁止追高"]
-    strategy_date = max([r.get("strategyAsOfDate", "") for r in rows], default="")
+    strategy_date = freshness.get("officialDataDate", "")
+    if not strategy_date or any(r.get("strategyAsOfDate") != strategy_date for r in rows):
+        raise OfficialDataError("輸出前資料日期一致性檢查失敗，已停止發布")
     meta = {"updatedAt": now_tw(), "strategyAsOfDate": strategy_date, "priceType": "收盤確認價", "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K", "mode": "tw-safe-uptrend-v2", "totalMaster": total_master, "totalAnalyzed": len(rows), "qualified3Plus": len(qualified), "qualified4": sum(1 for r in rows if r["score"] >= 4), "strictCandidates": len(strict), "gradeA": len(grade_a), "gradeB": len(grade_b), "forbiddenChaseCount": len(no_chase), "marketRegime": market_filter.get("marketRegime"), "marketRegimeLabel": market_filter.get("regimeLabel"), "marketStrategy": market_filter.get("strategy"), "marketFilter": market_filter, "minTurnover": MIN_TURNOVER, "minAvgTurnover20": MIN_AVG_TURNOVER20, "maxVolatility20Pct": MAX_VOLATILITY20_PCT, "errors": errors[:50], "note": "正式策略僅依據上一個完整收盤交易日；僅供觀察，不構成買賣建議。"}
+    meta.update({
+        "strategyAsOfDate": strategy_date,
+        "officialDataDate": strategy_date,
+        "mode": "tw-safe-uptrend-v3-official-close",
+        "freshCount": freshness.get("freshCount", len(rows)),
+        "staleCount": freshness.get("staleCount", 0),
+        "officialCoveragePct": freshness.get("coveragePct", 0),
+        "officialCoveredCount": freshness.get("coveredCount", 0),
+        "officialExpectedCount": freshness.get("expectedCount", total_master),
+        "officialQuoteCount": freshness.get("officialQuoteCount", 0),
+        "listedOfficialCount": freshness.get("listedOfficialCount", 0),
+        "otcOfficialCount": freshness.get("otcOfficialCount", 0),
+        "officialSource": freshness.get("source", ""),
+        "freshnessStatus": "COMPLETE",
+        "note": "當日 OHLCV 已以證交所與櫃買中心正式收盤資料覆蓋後重算；官方覆蓋不足時不發布。",
+    })
     payload = {"meta": meta, "marketFilter": market_filter, "stocks": rows}
     LATEST_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     fieldnames = collect_fieldnames(rows, ["date", "code", "name", "score", "status", "reason"])
     with LATEST_CSV.open("w", newline="", encoding="utf-8-sig") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
+        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore", lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     with HISTORY_CSV.open("w", newline="", encoding="utf-8-sig") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore")
+        writer = csv.DictWriter(f, fieldnames=fieldnames, extrasaction="ignore", lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
     write_report(rows, meta, market_filter)
@@ -539,13 +604,13 @@ def write_failure(e):
 
 def main():
     try:
-        rows, errors, total_master, market_filter = scan_market()
-        write_outputs(rows, errors, total_master, market_filter)
+        rows, errors, total_master, market_filter, freshness = scan_market()
+        write_outputs(rows, errors, total_master, market_filter, freshness)
         print(f"Scan complete. analyzed={len(rows)} errors={len(errors)}")
     except Exception as e:
-        write_failure(e)
+        print(f"Update aborted; previous complete data is preserved: {e}")
+        raise
 
 
 if __name__ == "__main__":
     main()
-

@@ -16,7 +16,7 @@ def load_json(path, default):
     try:
         if not path.exists():
             return default
-        text = path.read_text(encoding="utf-8").strip()
+        text = path.read_text(encoding="utf-8-sig").strip()
         if not text:
             return default
         return json.loads(text)
