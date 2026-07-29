@@ -12,6 +12,7 @@ on:
       - 'scripts/update_strategy_snapshots.py'
       - 'tests/test_strategy_tracking.py'
       - 'tests/test_tw_official_data.py'
+      - 'tests/test_us_data_freshness.py'
       - '.github/workflows/update-data.yml'
   schedule:
     # 台股收盤後更新：台灣時間 15:40，週一～週五
@@ -49,7 +50,11 @@ jobs:
             echo "::error title=台股官方收盤更新失敗::$message"
             exit 1
           }
-          python scripts/update_us_stock_scanner.py
+          python scripts/update_us_stock_scanner.py 2>&1 | tee us-scanner.log || {
+            message="$(tail -n 12 us-scanner.log | tr '\n' ' ' | sed 's/%/%25/g; s/\r/%0D/g')"
+            echo "::error title=美股完整收盤更新失敗::$message"
+            exit 1
+          }
           python scripts/update_company_profiles.py
           python scripts/update_strategy_locks.py
           python scripts/update_strategy_snapshots.py

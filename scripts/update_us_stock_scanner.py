@@ -28,6 +28,7 @@ MIN_HISTORY_ROWS = 220
 PERIOD = "1y"
 BATCH_SIZE = 40
 US_CLOSE_CONFIRM_MINUTE = 16 * 60 + 15
+DOWNLOAD_LOOKBACK_DAYS = 400
 
 INDEX_TICKERS = {"SPX": "^GSPC", "NASDAQ": "^IXIC", "DJI": "^DJI"}
 
@@ -71,6 +72,21 @@ def trim_to_completed_daily_bars(df):
     if latest_date >= today and minutes < US_CLOSE_CONFIRM_MINUTE:
         x = x[x.index.date < today]
     return x.dropna(subset=["Close"])
+
+
+def latest_completed_market_date(index_data):
+    dates = []
+    for df in index_data.values():
+        x = trim_to_completed_daily_bars(df)
+        if x is not None and not x.empty:
+            dates.append(str(x.index[-1].date()))
+    if not dates:
+        raise RuntimeError("美股指數沒有可用的完整收盤資料")
+    counts = {date: dates.count(date) for date in set(dates)}
+    market_date = max(counts, key=lambda date: (counts[date], date))
+    if counts[market_date] < 2:
+        raise RuntimeError(f"美股指數收盤日期不一致：{dates}")
+    return market_date
 
 
 def sf(v, default=0.0):
@@ -251,7 +267,18 @@ def market_analysis(index_data):
 
 
 def download_group(tickers):
-    return yf.download(" ".join(tickers), period=PERIOD, interval="1d", group_by="ticker", auto_adjust=False, progress=False, threads=True)
+    end = now_et().date() + timedelta(days=1)
+    start = end - timedelta(days=DOWNLOAD_LOOKBACK_DAYS)
+    return yf.download(
+        " ".join(tickers),
+        start=start.isoformat(),
+        end=end.isoformat(),
+        interval="1d",
+        group_by="ticker",
+        auto_adjust=False,
+        progress=False,
+        threads=True,
+    )
 
 
 def scan_market():
@@ -264,6 +291,7 @@ def scan_market():
             index_data[label] = index_raw[ticker]
         except Exception:
             index_data[label] = pd.DataFrame()
+    market_date = latest_completed_market_date(index_data)
     market = market_analysis(index_data)
     results = []
     for i in range(0, len(tickers), BATCH_SIZE):
@@ -279,8 +307,13 @@ def scan_market():
             try:
                 df = data if len(batch) == 1 else data[ticker] if ticker in data.columns.get_level_values(0) else None
                 row = analyze_one(df, ticker, ticker, market.get("marketOk", False))
-                if row:
+                if row and row.get("strategyAsOfDate") == market_date:
+                    row["dataDate"] = market_date
+                    row["dataFresh"] = True
+                    row["priceVerified"] = True
                     results.append(row)
+                elif row:
+                    errors.append(f"{ticker} skipped: 收盤日 {row.get('strategyAsOfDate')} 不等於市場完整收盤日 {market_date}")
             except Exception as e:
                 errors.append(f"{ticker} failed: {e}")
     results = sorted(results, key=lambda x: (x.get("strictOk", False), x["score"], x.get("winRate") == "高", x["rise60"], x["volume"]), reverse=True)
@@ -290,7 +323,9 @@ def scan_market():
     market["strategy"] = market["marketFilter"].get("strategy")
     market["warnings"] = market["marketFilter"].get("warnings", [])
     results = apply_market_filter_to_rows(results, market.get("marketFilter", {}))
-    return results, errors, market, len(tickers)
+    if not results:
+        raise RuntimeError(f"美股沒有符合完整收盤日 {market_date} 的有效資料")
+    return results, errors, market, len(tickers), market_date
 
 
 def card(row, idx):
@@ -344,12 +379,14 @@ def write_report(rows, meta, market):
     REPORT_MD.write_text("\n".join(lines), encoding="utf-8")
 
 
-def write_outputs(rows, errors, market, total_watchlist):
+def write_outputs(rows, errors, market, total_watchlist, market_date):
     DATA_DIR.mkdir(exist_ok=True)
     strict = [r for r in rows if r.get("strictOk")]
     qualified = [r for r in rows if r.get("score", 0) >= 3]
-    strategy_date = max([r.get("strategyAsOfDate", "") for r in rows], default="")
-    meta = {"updatedAtET": now_et().strftime("%Y/%m/%d %H:%M:%S %Z"), "updatedAtTW": now_tw().strftime("%Y/%m/%d %H:%M:%S %Z"), "strategyAsOfDate": strategy_date, "priceType": "收盤確認價", "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K", "sessionStatus": market_session_status(), "mode": "us-pattern-close-only-scan", "source": "Yahoo Finance via yfinance", "totalWatchlist": total_watchlist, "totalAnalyzed": len(rows), "qualified3Plus": len(qualified), "strictCandidates": len(strict), "marketRegime": market.get("marketRegime"), "marketRegimeLabel": market.get("regimeLabel"), "marketStrategy": market.get("strategy"), "marketFilter": market.get("marketFilter"), "errors": errors[:50]}
+    row_dates = {r.get("strategyAsOfDate") for r in rows}
+    if row_dates != {market_date}:
+        raise RuntimeError(f"美股策略日期不一致：{sorted(row_dates)}，預期 {market_date}")
+    meta = {"updatedAtET": now_et().strftime("%Y/%m/%d %H:%M:%S %Z"), "updatedAtTW": now_tw().strftime("%Y/%m/%d %H:%M:%S %Z"), "strategyAsOfDate": market_date, "completedDataDate": market_date, "freshnessStatus": "COMPLETE", "freshCount": len(rows), "staleCount": 0, "priceType": "收盤確認價", "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K", "sessionStatus": market_session_status(), "mode": "us-pattern-close-only-scan", "source": "Yahoo Finance via yfinance", "totalWatchlist": total_watchlist, "totalAnalyzed": len(rows), "qualified3Plus": len(qualified), "strictCandidates": len(strict), "marketRegime": market.get("marketRegime"), "marketRegimeLabel": market.get("regimeLabel"), "marketStrategy": market.get("strategy"), "marketFilter": market.get("marketFilter"), "errors": errors[:50]}
     payload = {"meta": meta, "market": market, "stocks": rows}
     LATEST_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     fieldnames = list(rows[0].keys()) if rows else ["date", "ticker", "name", "score", "status", "reason"]
@@ -370,12 +407,9 @@ def write_failure(e):
 
 
 def main():
-    try:
-        rows, errors, market, total_watchlist = scan_market()
-        write_outputs(rows, errors, market, total_watchlist)
-        print(f"US scan complete. analyzed={len(rows)} errors={len(errors)}")
-    except Exception as e:
-        write_failure(e)
+    rows, errors, market, total_watchlist, market_date = scan_market()
+    write_outputs(rows, errors, market, total_watchlist, market_date)
+    print(f"US scan complete. date={market_date} analyzed={len(rows)} errors={len(errors)}")
 
 
 if __name__ == "__main__":
