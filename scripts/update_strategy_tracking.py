@@ -602,6 +602,42 @@ def normalize_historical_prices(historical_prices):
     return sorted(rows, key=lambda price: price["date"])
 
 
+def tracking_lifecycle_prices(record, downloaded_prices):
+    prices = list(downloaded_prices or [])
+    latest = record.get("latestStatus") or {}
+    latest_date = str(
+        record.get("lastUpdateDate")
+        or record.get("endedAt")
+        or record.get("endDate")
+        or ""
+    )[:10]
+    latest_close = n(latest.get("latestClose"))
+    if latest_date and latest_close:
+        prices.append(
+            {
+                "date": latest_date,
+                "high": n(latest.get("latestHigh"), latest_close),
+                "low": n(latest.get("latestLow"), latest_close),
+                "close": latest_close,
+            }
+        )
+    for item in record.get("statusHistory", []):
+        if not isinstance(item, dict):
+            continue
+        date = str(item.get("date") or "")[:10]
+        close = n(item.get("close"))
+        if date and close:
+            prices.append(
+                {
+                    "date": date,
+                    "high": close,
+                    "low": close,
+                    "close": close,
+                }
+            )
+    return prices
+
+
 def evaluateTrackingLifecycle(tracking_record, historical_prices):
     record = deepcopy(tracking_record)
     original = record.get("originalStrategy") or {}
@@ -1326,9 +1362,12 @@ def process_tracking(
     records = [
         evaluateTrackingLifecycle(
             record,
-            historical_prices.get(
-                f"{record.get('market')}:{record.get('stockCode')}",
-                [],
+            tracking_lifecycle_prices(
+                record,
+                historical_prices.get(
+                    f"{record.get('market')}:{record.get('stockCode')}",
+                    [],
+                ),
             ),
         )
         for record in records

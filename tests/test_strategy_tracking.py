@@ -347,6 +347,27 @@ class StrategyTrackingTests(unittest.TestCase):
             )
         )
 
+    def test_existing_failed_record_backfills_stop_date_from_latest_status(self):
+        record = create_tracking_record("台股", base_row())
+        record["trackingStatus"] = "FAILED"
+        record["endedAt"] = "2026-07-29"
+        record["endDate"] = "2026-07-29"
+        record["lastUpdateDate"] = "2026-07-29"
+        record["latestStatus"]["latestClose"] = 94
+        record["latestStatus"]["latestHigh"] = 96
+        record["latestStatus"]["latestLow"] = 93
+
+        updated = process_tracking(
+            {"meta": {}, "records": [record]},
+            payload(None, date="2026-07-29"),
+            payload(None),
+        )
+        migrated = updated["records"][0]
+
+        self.assertEqual(migrated["trackingStatus"], "FAILED")
+        self.assertEqual(migrated["stopLossHitDate"], "2026-07-29")
+        self.assertEqual(migrated["endPriority"], "STOP_FIRST")
+
 
 if __name__ == "__main__":
     unittest.main()
