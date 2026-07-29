@@ -1,6 +1,7 @@
 import json
 import math
 import re
+import time
 from collections import Counter
 from datetime import date, datetime
 from urllib.parse import urlencode
@@ -55,8 +56,16 @@ def request_json(url, params=None, form=None, timeout=DEFAULT_TIMEOUT):
             "User-Agent": "Mozilla/5.0 (compatible; gpt-ai-assistant/1.0)",
         },
     )
-    with urlopen(request, timeout=timeout) as response:
-        return json.loads(response.read().decode("utf-8-sig"))
+    last_error = None
+    for attempt in range(3):
+        try:
+            with urlopen(request, timeout=timeout) as response:
+                return json.loads(response.read().decode("utf-8-sig"))
+        except Exception as exc:
+            last_error = exc
+            if attempt < 2:
+                time.sleep(2 ** attempt)
+    raise OfficialDataError(f"官方資料請求失敗：{url}（{last_error}）")
 
 
 def _quote(code, quote_date, open_, high, low, close, volume, market):
@@ -260,7 +269,7 @@ def fetch_tpex_index_history(as_of_date, requester=request_json, months=3):
     for month in _month_starts(as_of_date, months):
         payload = requester(
             TPEX_INDEX_URL,
-            form={"date": month.strftime("%Y/%m/%d"), "response": "json"},
+            params={"date": month.strftime("%Y/%m/%d"), "response": "json"},
         )
         tables = payload.get("tables") or []
         if tables:

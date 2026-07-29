@@ -43,7 +43,12 @@ jobs:
         run: git pull --rebase origin main
       - name: Run scanners and follow-up updates
         run: |
-          python scripts/update_tw_stock_scanner.py
+          set -o pipefail
+          python scripts/update_tw_stock_scanner.py 2>&1 | tee tw-scanner.log || {
+            message="$(tail -n 12 tw-scanner.log | tr '\n' ' ' | sed 's/%/%25/g; s/\r/%0D/g')"
+            echo "::error title=台股官方收盤更新失敗::$message"
+            exit 1
+          }
           python scripts/update_us_stock_scanner.py
           python scripts/update_company_profiles.py
           python scripts/update_strategy_locks.py
