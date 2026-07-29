@@ -1,13 +1,13 @@
 {
   "meta": {
-    "updatedAt": "2026-07-30 00:12:30",
+    "updatedAt": "2026-07-30 00:19:40",
     "version": "strategy-tracking-v3",
     "activeCount": 10,
     "endedCount": 268,
     "maxWaitingTradingDays": 15,
     "legacyLocksImported": 184,
     "legacySnapshotStocksImported": 249,
-    "lifecycleHistoriesEvaluated": 274
+    "lifecycleHistoriesEvaluated": 278
   },
   "records": [
     {
@@ -100,12 +100,12 @@
       "manualRemovedAt": null,
       "endedAt": null,
       "endPriority": null,
-      "maxHighDuringTracking": 0.0,
+      "maxHighDuringTracking": 24.35,
       "targetHitDate": null,
       "stopLossHitDate": null,
       "finalTrackingStatus": null,
       "currentProfitPct": -3.61,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -5.36
     },
     {
       "trackingId": "台股:1231:2026-07-29",
@@ -197,12 +197,12 @@
       "manualRemovedAt": null,
       "endedAt": null,
       "endPriority": null,
-      "maxHighDuringTracking": 0.0,
+      "maxHighDuringTracking": 90.3,
       "targetHitDate": null,
       "stopLossHitDate": null,
       "finalTrackingStatus": null,
       "currentProfitPct": -1.37,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -2.98
     },
     {
       "trackingId": "台股:1736:2026-07-29",
@@ -294,12 +294,12 @@
       "manualRemovedAt": null,
       "endedAt": null,
       "endPriority": null,
-      "maxHighDuringTracking": 0.0,
+      "maxHighDuringTracking": 134.5,
       "targetHitDate": null,
       "stopLossHitDate": null,
       "finalTrackingStatus": null,
       "currentProfitPct": -7.66,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -4.83
     },
     {
       "trackingId": "台股:2006:2026-07-29",
@@ -395,12 +395,12 @@
       "manualRemovedAt": null,
       "endedAt": null,
       "endPriority": null,
-      "maxHighDuringTracking": 0.0,
+      "maxHighDuringTracking": 72.4,
       "targetHitDate": null,
       "stopLossHitDate": null,
       "finalTrackingStatus": null,
       "currentProfitPct": -4.2,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -4.33
     },
     {
       "trackingId": "台股:2027:2026-07-29",
@@ -496,12 +496,12 @@
       "manualRemovedAt": null,
       "endedAt": null,
       "endPriority": null,
-      "maxHighDuringTracking": 0.0,
+      "maxHighDuringTracking": 43.25,
       "targetHitDate": null,
       "stopLossHitDate": null,
       "finalTrackingStatus": null,
       "currentProfitPct": -2.72,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -0.3
     },
     {
       "trackingId": "台股:2206:2026-07-29",
@@ -597,12 +597,12 @@
       "manualRemovedAt": null,
       "endedAt": null,
       "endPriority": null,
-      "maxHighDuringTracking": 0.0,
+      "maxHighDuringTracking": 63.6,
       "targetHitDate": null,
       "stopLossHitDate": null,
       "finalTrackingStatus": null,
       "currentProfitPct": -7.11,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -5.63
     },
     {
       "trackingId": "台股:2207:2026-07-28",
@@ -674,6 +674,10 @@
           {
             "date": "2026-07-28",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-07-28",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -709,8 +713,8 @@
       "currentProfitPct": -1.41,
       "maxProfitPct": -1.41,
       "result": "",
-      "trackingStatus": "BREAKOUT_CONFIRMED",
-      "trackingStatusText": "突破確認，策略成立",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "突破第一根",
         "originalSignal": "突破買點",
@@ -747,7 +751,7 @@
         "closeHeldNeckline": true,
         "inBuyZone": true,
         "aboveBuyZoneHigh": false,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -761,6 +765,10 @@
           {
             "date": "2026-07-28",
             "text": "風報比達 2 以上；距離頸線在 0%～5%；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-07-28",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -771,7 +779,7 @@
       "statusHistory": [
         {
           "date": "2026-07-28",
-          "status": "BREAKOUT_CONFIRMED",
+          "status": "PULLBACK_CONFIRM",
           "close": 27.2
         }
       ],
@@ -848,6 +856,10 @@
           {
             "date": "2026-07-28",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-07-28",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -955,12 +967,12 @@
       "manualRemovedAt": null,
       "endedAt": null,
       "endPriority": null,
-      "maxHighDuringTracking": 0.0,
+      "maxHighDuringTracking": 33.15,
       "targetHitDate": null,
       "stopLossHitDate": null,
       "finalTrackingStatus": null,
       "currentProfitPct": -4.0,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -1.32
     },
     {
       "trackingId": "台股:2356:2026-06-02",
@@ -15069,7 +15081,7 @@
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": false,
         "targetHit": false,
         "patternFailed": true,
@@ -15099,13 +15111,13 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
-      "maxHighDuringTracking": 0.0,
+      "endPriority": "STOP_FIRST",
+      "maxHighDuringTracking": 58.0,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -7.14,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -5.84
     },
     {
       "trackingId": "台股:1216:2026-07-29",
@@ -15156,7 +15168,7 @@
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": false,
         "targetHit": false,
         "patternFailed": true,
@@ -15186,13 +15198,13 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
-      "maxHighDuringTracking": 0.0,
+      "endPriority": "STOP_FIRST",
+      "maxHighDuringTracking": 78.2,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -6.4,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -6.4
     },
     {
       "trackingId": "台股:1229:2026-07-29",
@@ -15243,7 +15255,7 @@
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": false,
         "targetHit": false,
         "patternFailed": true,
@@ -15273,13 +15285,13 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
-      "maxHighDuringTracking": 0.0,
+      "endPriority": "STOP_FIRST",
+      "maxHighDuringTracking": 41.2,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -8.84,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -8.17
     },
     {
       "trackingId": "台股:1301:2026-07-03",
@@ -15446,7 +15458,7 @@
         "inBuyZone": true,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": true,
         "targetHit": false,
         "patternFailed": true,
@@ -15557,10 +15569,10 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
+      "endPriority": "STOP_FIRST",
       "maxHighDuringTracking": 230.0,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -10.38,
       "maxProfitPct": 45.68
@@ -16045,7 +16057,7 @@
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": false,
         "targetHit": false,
         "patternFailed": true,
@@ -16075,13 +16087,13 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
-      "maxHighDuringTracking": 0.0,
+      "endPriority": "STOP_FIRST",
+      "maxHighDuringTracking": 27.75,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -11.97,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -10.35
     },
     {
       "trackingId": "台股:1444:2026-06-29",
@@ -16614,7 +16626,7 @@
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": false,
         "targetHit": false,
         "patternFailed": true,
@@ -16644,13 +16656,13 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
-      "maxHighDuringTracking": 0.0,
+      "endPriority": "STOP_FIRST",
+      "maxHighDuringTracking": 339.5,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -6.58,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -6.31
     },
     {
       "trackingId": "台股:1477:2026-07-29",
@@ -16701,7 +16713,7 @@
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": false,
         "targetHit": false,
         "patternFailed": true,
@@ -16731,13 +16743,13 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
-      "maxHighDuringTracking": 0.0,
+      "endPriority": "STOP_FIRST",
+      "maxHighDuringTracking": 217.5,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -10.63,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -10.22
     },
     {
       "trackingId": "台股:1514:2026-06-04",
@@ -18865,7 +18877,7 @@
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": false,
         "targetHit": false,
         "patternFailed": true,
@@ -18895,13 +18907,13 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
-      "maxHighDuringTracking": 0.0,
+      "endPriority": "STOP_FIRST",
+      "maxHighDuringTracking": 28.9,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -7.46,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -6.0
     },
     {
       "trackingId": "台股:2025:2026-06-08",
@@ -19539,7 +19551,7 @@
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": false,
         "targetHit": false,
         "patternFailed": true,
@@ -19569,13 +19581,13 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
-      "maxHighDuringTracking": 0.0,
+      "endPriority": "STOP_FIRST",
+      "maxHighDuringTracking": 33.2,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -11.76,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -9.17
     },
     {
       "trackingId": "台股:2103:2026-07-14",
@@ -19746,7 +19758,7 @@
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": false,
         "targetHit": false,
         "patternFailed": true,
@@ -19776,13 +19788,13 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
-      "maxHighDuringTracking": 0.0,
+      "endPriority": "STOP_FIRST",
+      "maxHighDuringTracking": 27.65,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -12.04,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -9.92
     },
     {
       "trackingId": "台股:2221:2026-06-05",
@@ -20696,7 +20708,7 @@
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": true,
         "targetHit": false,
         "patternFailed": true,
@@ -20773,10 +20785,10 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
+      "endPriority": "STOP_FIRST",
       "maxHighDuringTracking": 42.65,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -12.65,
       "maxProfitPct": 35.72
@@ -21110,7 +21122,7 @@
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": false,
         "targetHit": false,
         "patternFailed": true,
@@ -21217,13 +21229,13 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
-      "maxHighDuringTracking": 0.0,
+      "endPriority": "STOP_FIRST",
+      "maxHighDuringTracking": 24.2,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -12.36,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -11.63
     },
     {
       "trackingId": "台股:2342:2026-06-17",
@@ -21442,7 +21454,7 @@
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": false,
         "targetHit": false,
         "patternFailed": true,
@@ -21472,13 +21484,13 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
-      "maxHighDuringTracking": 0.0,
+      "endPriority": "STOP_FIRST",
+      "maxHighDuringTracking": 77.0,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -11.74,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -9.63
     },
     {
       "trackingId": "台股:2353:2026-06-02",
@@ -23493,10 +23505,10 @@
       "lastUpdateDate": "2026-07-29",
       "endDate": "2026-06-11",
       "endedAt": "2026-06-11",
-      "endReason": "追蹤期間曾達原始目標，完成追蹤",
-      "result": "目標達成",
-      "trackingStatus": "TARGET_HIT",
-      "trackingStatusText": "目標達成，完成追蹤",
+      "endReason": "同日觸發目標與停損，需人工確認",
+      "result": "需人工確認",
+      "trackingStatus": "NEED_REVIEW",
+      "trackingStatusText": "同日觸發，需人工確認",
       "originalStrategy": {
         "originalStage": "可觀察",
         "originalSignal": "條件接近完整，等收盤確認或回踩不破。",
@@ -23534,7 +23546,7 @@
         "inBuyZone": true,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": true,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": true,
         "targetHit": true,
         "patternFailed": false,
@@ -23635,11 +23647,11 @@
       ],
       "manualRemoved": false,
       "manualRemovedAt": null,
-      "endPriority": "TARGET_FIRST",
+      "endPriority": "SAME_DAY_REVIEW",
       "maxHighDuringTracking": 417.46,
       "targetHitDate": "2026-06-11",
-      "stopLossHitDate": null,
-      "finalTrackingStatus": "TARGET_HIT",
+      "stopLossHitDate": "2026-06-11",
+      "finalTrackingStatus": "NEED_REVIEW",
       "currentProfitPct": -3.64,
       "maxProfitPct": 89.31
     },
@@ -27182,7 +27194,7 @@
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": false,
         "targetHit": false,
         "patternFailed": true,
@@ -27212,13 +27224,13 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
-      "maxHighDuringTracking": 0.0,
+      "endPriority": "STOP_FIRST",
+      "maxHighDuringTracking": 29.35,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -10.28,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -9.97
     },
     {
       "trackingId": "台股:4123:2026-07-29",
@@ -27269,7 +27281,7 @@
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": false,
         "targetHit": false,
         "patternFailed": true,
@@ -27299,13 +27311,13 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
-      "maxHighDuringTracking": 0.0,
+      "endPriority": "STOP_FIRST",
+      "maxHighDuringTracking": 38.5,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -9.24,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -8.29
     },
     {
       "trackingId": "台股:4127:2026-07-08",
@@ -32525,7 +32537,7 @@
       "stopLossHitDate": "2026-07-14",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -27.8,
-      "maxProfitPct": 18.81
+      "maxProfitPct": 18.82
     },
     {
       "trackingId": "台股:5904:2026-07-29",
@@ -32576,7 +32588,7 @@
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": false,
         "targetHit": false,
         "patternFailed": true,
@@ -32606,13 +32618,13 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
-      "maxHighDuringTracking": 0.0,
+      "endPriority": "STOP_FIRST",
+      "maxHighDuringTracking": 740.0,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -9.33,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -6.81
     },
     {
       "trackingId": "台股:6016:2026-06-03",
@@ -32776,7 +32788,7 @@
       "stopLossHitDate": "2026-06-03",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -47.59,
-      "maxProfitPct": -12.35
+      "maxProfitPct": -12.36
     },
     {
       "trackingId": "台股:6020:2026-06-03",
@@ -33059,7 +33071,7 @@
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": false,
         "targetHit": false,
         "patternFailed": true,
@@ -33089,13 +33101,13 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
-      "maxHighDuringTracking": 0.0,
+      "endPriority": "STOP_FIRST",
+      "maxHighDuringTracking": 88.0,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -11.95,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -10.32
     },
     {
       "trackingId": "台股:6126:2026-06-03",
@@ -36916,7 +36928,7 @@
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": false,
         "targetHit": false,
         "patternFailed": true,
@@ -36946,13 +36958,13 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
-      "maxHighDuringTracking": 0.0,
+      "endPriority": "STOP_FIRST",
+      "maxHighDuringTracking": 26.4,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -6.78,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -6.07
     },
     {
       "trackingId": "台股:6613:2026-06-11",
@@ -39784,7 +39796,7 @@
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": false,
         "targetHit": false,
         "patternFailed": true,
@@ -39925,13 +39937,13 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
-      "maxHighDuringTracking": 0.0,
+      "endPriority": "STOP_FIRST",
+      "maxHighDuringTracking": 63.5,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -9.65,
-      "maxProfitPct": 0.0
+      "maxProfitPct": -5.64
     },
     {
       "trackingId": "台股:8054:2026-06-24",
@@ -41706,7 +41718,7 @@
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
-        "stopBroken": false,
+        "stopBroken": true,
         "nearTarget": false,
         "targetHit": false,
         "patternFailed": true,
@@ -41779,10 +41791,10 @@
       "manualRemoved": false,
       "manualRemovedAt": null,
       "endedAt": "2026-07-29",
-      "endPriority": "FAILED",
+      "endPriority": "STOP_FIRST",
       "maxHighDuringTracking": 35.9,
       "targetHitDate": null,
-      "stopLossHitDate": null,
+      "stopLossHitDate": "2026-07-29",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -7.56,
       "maxProfitPct": 6.7
