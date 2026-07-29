@@ -9,12 +9,15 @@ import numpy as np
 import pandas as pd
 import yfinance as yf
 
+from market_filter import apply_breadth_guard, apply_market_filter_to_rows, classify_market_regime, previous_a_count_from_snapshots
+
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 WATCHLIST_PATH = DATA_DIR / "us_watchlist.json"
 LATEST_JSON = DATA_DIR / "us_latest.json"
 LATEST_CSV = DATA_DIR / "us_latest.csv"
 REPORT_MD = DATA_DIR / "us_latest_report.md"
+SNAPSHOTS_PATH = DATA_DIR / "strategy_snapshots.json"
 TAIPEI_TZ = ZoneInfo("Asia/Taipei")
 EASTERN_TZ = ZoneInfo("America/New_York")
 
@@ -171,7 +174,7 @@ def pattern_plan(df):
         win_rate = "中"
         plan_status = "預備單，等待確認條件"
     confirm = f"收盤站上頸線 {sr(neckline)} 至少2%；成交量>=20日均量2倍；不可長上影；隔日不跌破頸線；距離頸線>5%禁止進場"
-    return {"pattern": pattern, "neckline": sr(neckline), "support": sr(support), "target": sr(target), "stage": stage, "entryBreakout": sr(entry_breakout), "entryPullback": sr(entry_pullback), "chaseRangeLow": sr(chase_low), "chaseRangeHigh": sr(chase_high), "observationEntry": sr(entry_breakout), "limitPrice": sr(entry_breakout), "stopLoss": sr(stop_loss), "riskPct": sr(risk_pct), "winRate": win_rate, "distanceFromNecklinePct": sr(distance_from_neckline), "distanceFromPrevHighPct": sr(distance_from_prev_high), "forbiddenChase": bool(forbidden), "planStatus": plan_status, "confirmConditions": confirm}
+    return {"pattern": pattern, "neckline": sr(neckline), "support": sr(support), "target": sr(target), "stage": stage, "entryBreakout": sr(entry_breakout), "entryPullback": sr(entry_pullback), "chaseRangeLow": sr(chase_low), "chaseRangeHigh": sr(chase_high), "stopLoss": sr(stop_loss), "riskPct": sr(risk_pct), "winRate": win_rate, "distanceFromNecklinePct": sr(distance_from_neckline), "distanceFromPrevHighPct": sr(distance_from_prev_high), "forbiddenChase": bool(forbidden), "planStatus": plan_status, "confirmConditions": confirm}
 
 
 def analyze_one(df, ticker, name=None, market_ok=True):
@@ -185,6 +188,7 @@ def analyze_one(df, ticker, name=None, market_ok=True):
     df["MA20"] = df["Close"].rolling(20).mean()
     df["MA60"] = df["Close"].rolling(60).mean()
     df["MA200"] = df["Close"].rolling(200).mean()
+    df["CHANGE_PCT"] = df["Close"].pct_change() * 100
     df["AVG_VOLUME20"] = df["Volume"].rolling(20).mean()
     df["ADX"] = calc_adx(df)
     latest = df.iloc[-1]
@@ -209,7 +213,7 @@ def analyze_one(df, ticker, name=None, market_ok=True):
     if price_vol: reasons.append("價量趨勢成立")
     if market_ok: reasons.append("大盤不弱")
     strategy_date = str(df.index[-1].date())
-    base = {"date": strategy_date, "strategyAsOfDate": strategy_date, "ticker": ticker, "name": name or ticker, "close": sr(close), "currency": "USD", "priceType": "收盤確認價", "source": "Yahoo Finance via yfinance（日K完整收盤資料）", "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K", "ma20": sr(ma20), "ma60": sr(ma60), "ma200": sr(ma200), "rise60": sr(rise60), "volume": int(volume), "avgVolume20": int(avg_volume20), "volumeRatio": sr(volume / avg_volume20 if avg_volume20 else 0), "adx": sr(adx), "kline": kline, "trend": bool(trend), "volumeOk": bool(volume_ok), "priceVol": bool(price_vol), "marketOk": bool(market_ok), "score": int(score), "strictOk": bool(strict_ok), "status": status, "reason": "、".join(reasons) if reasons else "條件不足"}
+    base = {"date": strategy_date, "strategyAsOfDate": strategy_date, "ticker": ticker, "name": name or ticker, "close": sr(close), "currency": "USD", "priceType": "收盤確認價", "source": "Yahoo Finance via yfinance（日K完整收盤資料）", "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K", "ma20": sr(ma20), "ma60": sr(ma60), "ma200": sr(ma200), "rise60": sr(rise60), "changePct": sr(latest["CHANGE_PCT"]), "nearLimitUp": bool(sf(latest["CHANGE_PCT"]) >= 8), "volume": int(volume), "avgVolume20": int(avg_volume20), "volumeRatio": sr(volume / avg_volume20 if avg_volume20 else 0), "adx": sr(adx), "kline": kline, "trend": bool(trend), "volumeOk": bool(volume_ok), "priceVol": bool(price_vol), "marketOk": bool(market_ok), "score": int(score), "strictOk": bool(strict_ok), "status": status, "reason": "、".join(reasons) if reasons else "條件不足"}
     base.update(plan)
     return base
 
@@ -240,7 +244,8 @@ def market_analysis(index_data):
         market_state, attack, suggestion = "震盪", "只適合精選", "保守"
     else:
         market_state, attack, suggestion = "空頭", "不適合進攻", "等待"
-    return {"indexes": rows, "marketState": market_state, "attack": attack, "suggestion": suggestion, "marketOk": ok_count >= 2}
+    regime = classify_market_regime(index_data.get("SPX"), index_data.get("NASDAQ"), support=0)
+    return {"indexes": rows, "marketState": market_state, "attack": attack, "suggestion": suggestion, "marketOk": ok_count >= 2, "marketFilter": regime, "marketRegime": regime.get("marketRegime"), "regimeLabel": regime.get("regimeLabel"), "strategy": regime.get("strategy"), "warnings": regime.get("warnings", [])}
 
 
 def download_group(tickers):
@@ -277,6 +282,12 @@ def scan_market():
             except Exception as e:
                 errors.append(f"{ticker} failed: {e}")
     results = sorted(results, key=lambda x: (x.get("strictOk", False), x["score"], x.get("winRate") == "高", x["rise60"], x["volume"]), reverse=True)
+    market["marketFilter"] = apply_breadth_guard(market.get("marketFilter", {}), results, previous_a_count_from_snapshots(SNAPSHOTS_PATH, "美股"))
+    market["marketRegime"] = market["marketFilter"].get("marketRegime")
+    market["regimeLabel"] = market["marketFilter"].get("regimeLabel")
+    market["strategy"] = market["marketFilter"].get("strategy")
+    market["warnings"] = market["marketFilter"].get("warnings", [])
+    results = apply_market_filter_to_rows(results, market.get("marketFilter", {}))
     return results, errors, market, len(tickers)
 
 
@@ -300,17 +311,15 @@ def card(row, idx):
 - K棒：{row.get('kline')}｜ADX：{row.get('adx')}｜60日漲幅：{row.get('rise60')}%
 
 **關鍵價位**
-- 頸線 / 壓力：{row.get('neckline')} 美元
-- 支撐：{row.get('support')} 美元
-- 限價 / 觀察價：{row.get('limitPrice') or row.get('observationEntry') or row.get('entryBreakout')} 美元
-- 買入觀察區：{row.get('chaseRangeLow')} ～ {row.get('chaseRangeHigh')} 美元
-- 滿足點 / 目標價：{row.get('target')} 美元
-- 停損：{row.get('stopLoss')} 美元
+- 頸線 / 壓力：{row.get('neckline')}
+- 支撐：{row.get('support')}
+- 滿足點：{row.get('target')}
+- 停損：{row.get('stopLoss')}
 
 **進場計畫**
-- 突破進場：{row.get('entryBreakout')} 美元
-- 回踩進場：{row.get('entryPullback')} 美元
-- 合理追價範圍：{row.get('chaseRangeLow')} ～ {row.get('chaseRangeHigh')} 美元
+- 突破進場：{row.get('entryBreakout')}
+- 回踩進場：{row.get('entryPullback')}
+- 合理追價範圍：{row.get('chaseRangeLow')} ～ {row.get('chaseRangeHigh')}
 - 距離頸線：{row.get('distanceFromNecklinePct')}%｜風險：約 {row.get('riskPct')}%
 
 **確認條件**
@@ -323,7 +332,7 @@ def write_report(rows, meta, market):
     watch = [r for r in rows if r.get("score", 0) >= 3 and not r.get("strictOk")]
     top = (strict + watch)[:3]
     conclusion = "有符合嚴格條件的美股候選，但仍要等隔日不跌破頸線確認。" if strict else ("今日無完整高勝率標的；以下為接近成形＋可觀察進場3檔。" if watch else "今日無符合型態學高勝率標的。")
-    lines = ["# 美股型態學高勝率策略報告", "", f"策略依據：{meta.get('strategyAsOfDate')} 收盤資料", f"系統更新（美東）：{meta.get('updatedAtET')}", f"系統更新（台灣）：{meta.get('updatedAtTW')}", f"市場狀態：{meta.get('sessionStatus')}", "", f"## 結論：{conclusion}", "", "## 美股大盤判斷", f"- S&P500：{market['indexes'].get('SPX', {}).get('status')}｜收盤 {market['indexes'].get('SPX', {}).get('close')}｜20MA {market['indexes'].get('SPX', {}).get('ma20')}", f"- NASDAQ：{market['indexes'].get('NASDAQ', {}).get('status')}｜收盤 {market['indexes'].get('NASDAQ', {}).get('close')}｜20MA {market['indexes'].get('NASDAQ', {}).get('ma20')}", f"- 道瓊：{market['indexes'].get('DJI', {}).get('status')}｜收盤 {market['indexes'].get('DJI', {}).get('close')}｜20MA {market['indexes'].get('DJI', {}).get('ma20')}", f"- 當前市場：{market.get('marketState')}", f"- 是否適合進攻：{market.get('attack')}", f"- 建議：{market.get('suggestion')}", "", "## 判讀順序", "1. 本報告只使用完整收盤日K，不使用盤中未完成K。", "2. 先看結論：有沒有嚴格候選。", "3. 再看一句話策略：可進場 / 禁止追高 / 等確認。", "4. 最後看限價、進場點、停損、追價範圍。", "", "---"]
+    lines = ["# 美股型態學高勝率策略報告", "", f"策略依據：{meta.get('strategyAsOfDate')} 收盤資料", f"系統更新（美東）：{meta.get('updatedAtET')}", f"系統更新（台灣）：{meta.get('updatedAtTW')}", f"市場狀態：{meta.get('sessionStatus')}", "", f"## 今日大盤狀態：{market.get('marketRegime')} {market.get('regimeLabel')}", f"今日策略：{market.get('strategy')}", "", f"## 結論：{conclusion}", "", "## 美股大盤判斷", f"- S&P500：{market['indexes'].get('SPX', {}).get('status')}｜收盤 {market['indexes'].get('SPX', {}).get('close')}｜20MA {market['indexes'].get('SPX', {}).get('ma20')}", f"- NASDAQ：{market['indexes'].get('NASDAQ', {}).get('status')}｜收盤 {market['indexes'].get('NASDAQ', {}).get('close')}｜20MA {market['indexes'].get('NASDAQ', {}).get('ma20')}", f"- 道瓊：{market['indexes'].get('DJI', {}).get('status')}｜收盤 {market['indexes'].get('DJI', {}).get('close')}｜20MA {market['indexes'].get('DJI', {}).get('ma20')}", f"- 當前市場：{market.get('marketState')}", f"- 是否適合進攻：{market.get('attack')}", f"- 建議：{market.get('suggestion')}", "", "## 判讀順序", "1. 本報告只使用完整收盤日K，不使用盤中未完成K。", "2. 先看大盤濾網：ATTACK 才能照原策略進攻。", "3. 再看結論：有沒有嚴格候選。", "4. 最後看進場點、停損、追價範圍。", "", "---"]
     if not top:
         lines.append("今日無符合型態學高勝率標的。")
     else:
@@ -338,7 +347,7 @@ def write_outputs(rows, errors, market, total_watchlist):
     strict = [r for r in rows if r.get("strictOk")]
     qualified = [r for r in rows if r.get("score", 0) >= 3]
     strategy_date = max([r.get("strategyAsOfDate", "") for r in rows], default="")
-    meta = {"updatedAtET": now_et().strftime("%Y/%m/%d %H:%M:%S %Z"), "updatedAtTW": now_tw().strftime("%Y/%m/%d %H:%M:%S %Z"), "strategyAsOfDate": strategy_date, "priceType": "收盤確認價", "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K", "sessionStatus": market_session_status(), "mode": "us-pattern-close-only-scan", "source": "Yahoo Finance via yfinance", "totalWatchlist": total_watchlist, "totalAnalyzed": len(rows), "qualified3Plus": len(qualified), "strictCandidates": len(strict), "errors": errors[:50]}
+    meta = {"updatedAtET": now_et().strftime("%Y/%m/%d %H:%M:%S %Z"), "updatedAtTW": now_tw().strftime("%Y/%m/%d %H:%M:%S %Z"), "strategyAsOfDate": strategy_date, "priceType": "收盤確認價", "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K", "sessionStatus": market_session_status(), "mode": "us-pattern-close-only-scan", "source": "Yahoo Finance via yfinance", "totalWatchlist": total_watchlist, "totalAnalyzed": len(rows), "qualified3Plus": len(qualified), "strictCandidates": len(strict), "marketRegime": market.get("marketRegime"), "marketRegimeLabel": market.get("regimeLabel"), "marketStrategy": market.get("strategy"), "marketFilter": market.get("marketFilter"), "errors": errors[:50]}
     payload = {"meta": meta, "market": market, "stocks": rows}
     LATEST_JSON.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     fieldnames = list(rows[0].keys()) if rows else ["date", "ticker", "name", "score", "status", "reason"]
@@ -369,3 +378,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
