@@ -1,11 +1,11 @@
 {
   "meta": {
-    "updatedAt": "2026-07-30 02:29:08",
+    "updatedAt": "2026-07-30 07:42:49",
     "version": "strategy-tracking-v4",
-    "activeCount": 9,
-    "endedCount": 270,
+    "activeCount": 8,
+    "endedCount": 271,
     "invalidAtCreationCount": 19,
-    "liveEndedCount": 2,
+    "liveEndedCount": 3,
     "trackingAsOfDate": "2026-07-29",
     "maxWaitingTradingDays": 15,
     "legacyLocksImported": 184,
@@ -132,129 +132,6 @@
       "finalTrackingStatus": null,
       "currentProfitPct": -5.36,
       "maxProfitPct": -2.64,
-      "trackingOrigin": "LIVE_SIGNAL",
-      "strategyDataDate": "2026-07-29",
-      "trackingCreatedDate": "2026-07-29"
-    },
-    {
-      "trackingId": "台股:1231:2026-07-29",
-      "market": "台股",
-      "stockCode": "1231",
-      "stockName": "聯華食",
-      "firstSignalDate": "2026-07-29",
-      "lastUpdateDate": "2026-07-29",
-      "endDate": null,
-      "endReason": "",
-      "result": "",
-      "trackingStatus": "NEAR_TARGET",
-      "trackingStatusText": "接近目標，注意分批停利",
-      "originalStrategy": {
-        "originalStage": "回踩頸線不破",
-        "originalSignal": "接近目標",
-        "originalNeckline": 89.9,
-        "originalWatchPrice": 90.3,
-        "originalBuyZoneLow": 91.7,
-        "originalBuyZoneHigh": 94.45,
-        "originalStopLoss": 87.2,
-        "originalTarget": 95.7,
-        "originalRiskReward": 1.74,
-        "originalSafetyScore": 87,
-        "originalMarketRegime": "STOP",
-        "originalMarketRegimeImpact": "STOP 停止進場"
-      },
-      "latestStatus": {
-        "latestClose": 90.3,
-        "latestHigh": 92.3,
-        "latestLow": 89.4,
-        "latestVolume": 1076098,
-        "latestMA5": 91.4,
-        "latestMA10": 91.31,
-        "latestMA20": 89.35,
-        "latestSafetyScore": 87,
-        "latestRiskReward": 1.74,
-        "latestMarketRegime": "STOP",
-        "latestSignal": "接近目標",
-        "adjustedSignal": "取消新進場，只保留觀察",
-        "holderAction": "接近原始第一目標，準備分批停利。",
-        "cashAction": "接近目標，空手者不追高。",
-        "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-        "latestDataDate": "2026-07-29"
-      },
-      "progress": {
-        "brokeNeckline": true,
-        "closeHeldNeckline": true,
-        "inBuyZone": true,
-        "aboveBuyZoneHigh": false,
-        "pullbackHeld": true,
-        "stopBroken": false,
-        "nearTarget": true,
-        "targetHit": false,
-        "patternFailed": false,
-        "expired": false,
-        "everBrokeNeckline": true,
-        "trackingDays": 2
-      },
-      "notes": {
-        "systemNotes": [
-          {
-            "date": "2026-07-29",
-            "text": "產生主升段安全觀察策略卡；安全分達 85 以上；距離頸線在 0%～5%；停損距離小於 5.5%"
-          },
-          {
-            "date": "2026-07-29",
-            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
-          },
-          {
-            "date": "2026-07-29",
-            "text": "略過較舊的 2026-07-28 收盤資料，保留 2026-07-29 追蹤狀態。"
-          }
-        ],
-        "manualNote": ""
-      },
-      "trackingDates": [
-        "2026-07-28",
-        "2026-07-29"
-      ],
-      "statusHistory": [
-        {
-          "date": "2026-07-28",
-          "status": "NEAR_TARGET",
-          "close": 91.8
-        },
-        {
-          "date": "2026-07-29",
-          "status": "NEAR_TARGET",
-          "close": 90.3,
-          "latestStatus": {
-            "latestClose": 90.3,
-            "latestHigh": 92.3,
-            "latestLow": 89.4,
-            "latestVolume": 1076098,
-            "latestMA5": 91.4,
-            "latestMA10": 91.31,
-            "latestMA20": 89.35,
-            "latestSafetyScore": 87,
-            "latestRiskReward": 1.74,
-            "latestMarketRegime": "STOP",
-            "latestSignal": "接近目標",
-            "adjustedSignal": "取消新進場，只保留觀察",
-            "holderAction": "接近原始第一目標，準備分批停利。",
-            "cashAction": "接近目標，空手者不追高。",
-            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-            "latestDataDate": "2026-07-29"
-          }
-        }
-      ],
-      "manualRemoved": false,
-      "manualRemovedAt": null,
-      "endedAt": null,
-      "endPriority": null,
-      "maxHighDuringTracking": 92.3,
-      "targetHitDate": null,
-      "stopLossHitDate": null,
-      "finalTrackingStatus": null,
-      "currentProfitPct": -2.98,
-      "maxProfitPct": -0.83,
       "trackingOrigin": "LIVE_SIGNAL",
       "strategyDataDate": "2026-07-29",
       "trackingCreatedDate": "2026-07-29"
@@ -15855,6 +15732,133 @@
       "finalTrackingStatus": "INVALID_AT_CREATION",
       "currentProfitPct": -8.84,
       "maxProfitPct": -8.17,
+      "trackingOrigin": "LIVE_SIGNAL",
+      "strategyDataDate": "2026-07-29",
+      "trackingCreatedDate": "2026-07-29"
+    },
+    {
+      "trackingId": "台股:1231:2026-07-29",
+      "market": "台股",
+      "stockCode": "1231",
+      "stockName": "聯華食",
+      "firstSignalDate": "2026-07-29",
+      "lastUpdateDate": "2026-07-29",
+      "endDate": "2026-07-29",
+      "endReason": "跌破原始停損，型態失敗",
+      "result": "型態失敗",
+      "trackingStatus": "FAILED",
+      "trackingStatusText": "型態失敗，移出追蹤",
+      "originalStrategy": {
+        "originalStage": "回踩頸線不破",
+        "originalSignal": "接近目標",
+        "originalNeckline": 89.9,
+        "originalWatchPrice": 90.3,
+        "originalBuyZoneLow": 91.7,
+        "originalBuyZoneHigh": 94.45,
+        "originalStopLoss": 87.2,
+        "originalTarget": 95.7,
+        "originalRiskReward": 1.74,
+        "originalSafetyScore": 87,
+        "originalMarketRegime": "STOP",
+        "originalMarketRegimeImpact": "STOP 停止進場"
+      },
+      "latestStatus": {
+        "latestClose": 90.3,
+        "latestHigh": 92.3,
+        "latestLow": 89.4,
+        "latestVolume": 1076098,
+        "latestMA5": 91.4,
+        "latestMA10": 91.31,
+        "latestMA20": 89.35,
+        "latestSafetyScore": 87,
+        "latestRiskReward": 1.74,
+        "latestMarketRegime": "STOP",
+        "latestSignal": "接近目標",
+        "adjustedSignal": "取消新進場，只保留觀察",
+        "holderAction": "接近原始第一目標，準備分批停利。",
+        "cashAction": "接近目標，空手者不追高。",
+        "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+        "latestDataDate": "2026-07-29"
+      },
+      "progress": {
+        "brokeNeckline": true,
+        "closeHeldNeckline": true,
+        "inBuyZone": true,
+        "aboveBuyZoneHigh": false,
+        "pullbackHeld": true,
+        "stopBroken": true,
+        "nearTarget": true,
+        "targetHit": false,
+        "patternFailed": true,
+        "expired": false,
+        "everBrokeNeckline": true,
+        "trackingDays": 2
+      },
+      "notes": {
+        "systemNotes": [
+          {
+            "date": "2026-07-29",
+            "text": "產生主升段安全觀察策略卡；安全分達 85 以上；距離頸線在 0%～5%；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-07-29",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
+          },
+          {
+            "date": "2026-07-29",
+            "text": "略過較舊的 2026-07-28 收盤資料，保留 2026-07-29 追蹤狀態。"
+          },
+          {
+            "date": "2026-07-29",
+            "text": "追蹤期間曾接近原始目標，可檢討停利規則。"
+          }
+        ],
+        "manualNote": ""
+      },
+      "trackingDates": [
+        "2026-07-28",
+        "2026-07-29"
+      ],
+      "statusHistory": [
+        {
+          "date": "2026-07-28",
+          "status": "NEAR_TARGET",
+          "close": 91.8
+        },
+        {
+          "date": "2026-07-29",
+          "status": "NEAR_TARGET",
+          "close": 90.3,
+          "latestStatus": {
+            "latestClose": 90.3,
+            "latestHigh": 92.3,
+            "latestLow": 89.4,
+            "latestVolume": 1076098,
+            "latestMA5": 91.4,
+            "latestMA10": 91.31,
+            "latestMA20": 89.35,
+            "latestSafetyScore": 87,
+            "latestRiskReward": 1.74,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "接近目標",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "接近原始第一目標，準備分批停利。",
+            "cashAction": "接近目標，空手者不追高。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-07-29"
+          }
+        }
+      ],
+      "manualRemoved": false,
+      "manualRemovedAt": null,
+      "endedAt": "2026-07-29",
+      "endPriority": "STOP_FIRST",
+      "maxHighDuringTracking": 92.3,
+      "targetHitDate": null,
+      "stopLossHitDate": "2026-07-29",
+      "finalTrackingStatus": "FAILED",
+      "currentProfitPct": -2.98,
+      "maxProfitPct": -0.83,
       "trackingOrigin": "LIVE_SIGNAL",
       "strategyDataDate": "2026-07-29",
       "trackingCreatedDate": "2026-07-29"
