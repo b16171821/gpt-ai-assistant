@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-07-30 01:26:00",
+    "updatedAt": "2026-07-30 01:29:39",
     "version": "strategy-tracking-v4",
     "activeCount": 10,
     "endedCount": 268,
@@ -10,7 +10,7 @@
     "maxWaitingTradingDays": 15,
     "legacyLocksImported": 184,
     "legacySnapshotStocksImported": 249,
-    "lifecycleHistoriesEvaluated": 0
+    "lifecycleHistoriesEvaluated": 278
   },
   "records": [
     {
