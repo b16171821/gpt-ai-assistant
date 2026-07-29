@@ -11,6 +11,7 @@ from update_strategy_tracking import (  # noqa: E402
     ACTIVE_STATUSES,
     NEW_SIGNAL_NOTICE,
     create_tracking_record,
+    evaluateTrackingLifecycle,
     process_tracking,
     update_tracking_status,
 )
@@ -260,7 +261,92 @@ class StrategyTrackingTests(unittest.TestCase):
         self.assertEqual(migrated["notes"]["legacySnapshots"][0]["stopLoss"], 80)
         self.assertEqual(migrated["notes"]["legacyLock"]["originalStopLoss"], 79)
 
+    def test_target_before_stop_finishes_as_target_hit(self):
+        record = create_tracking_record("台股", base_row())
+        evaluated = evaluateTrackingLifecycle(
+            record,
+            [
+                {"date": "2026-07-14", "high": 110, "low": 100, "close": 108},
+                {"date": "2026-07-16", "high": 131, "low": 126, "close": 128},
+                {"date": "2026-07-23", "high": 97, "low": 93, "close": 94},
+            ],
+        )
+
+        self.assertEqual(evaluated["trackingStatus"], "TARGET_HIT")
+        self.assertEqual(evaluated["targetHitDate"], "2026-07-16")
+        self.assertEqual(evaluated["stopLossHitDate"], "2026-07-23")
+        self.assertEqual(evaluated["endedAt"], "2026-07-16")
+        self.assertEqual(evaluated["endPriority"], "TARGET_FIRST")
+
+        locked = update_tracking_status(
+            evaluated,
+            base_row(date="2026-07-24", strategyAsOfDate="2026-07-24", close=90, high=92),
+            "ATTACK",
+            "2026-07-24",
+        )
+        self.assertEqual(locked["trackingStatus"], "TARGET_HIT")
+        self.assertEqual(locked["endedAt"], "2026-07-16")
+
+    def test_stop_before_target_finishes_as_failed(self):
+        record = create_tracking_record("台股", base_row())
+        evaluated = evaluateTrackingLifecycle(
+            record,
+            [
+                {"date": "2026-07-16", "high": 97, "low": 93, "close": 94},
+                {"date": "2026-07-23", "high": 131, "low": 126, "close": 130},
+            ],
+        )
+
+        self.assertEqual(evaluated["trackingStatus"], "FAILED")
+        self.assertEqual(evaluated["endedAt"], "2026-07-16")
+        self.assertEqual(evaluated["endPriority"], "STOP_FIRST")
+
+    def test_same_day_target_and_stop_needs_review(self):
+        record = create_tracking_record("台股", base_row())
+        evaluated = evaluateTrackingLifecycle(
+            record,
+            [
+                {"date": "2026-07-16", "high": 131, "low": 93, "close": 94},
+            ],
+        )
+
+        self.assertEqual(evaluated["trackingStatus"], "NEED_REVIEW")
+        self.assertEqual(evaluated["endedAt"], "2026-07-16")
+        self.assertEqual(evaluated["endPriority"], "SAME_DAY_REVIEW")
+
+    def test_never_hits_target_then_breaks_stop(self):
+        record = create_tracking_record("台股", base_row())
+        evaluated = evaluateTrackingLifecycle(
+            record,
+            [
+                {"date": "2026-07-16", "high": 120, "low": 110, "close": 115},
+                {"date": "2026-07-23", "high": 97, "low": 93, "close": 94},
+            ],
+        )
+
+        self.assertEqual(evaluated["trackingStatus"], "FAILED")
+        self.assertIsNone(evaluated["targetHitDate"])
+        self.assertEqual(evaluated["stopLossHitDate"], "2026-07-23")
+
+    def test_near_target_then_stop_records_review_note(self):
+        record = create_tracking_record("台股", base_row())
+        evaluated = evaluateTrackingLifecycle(
+            record,
+            [
+                {"date": "2026-07-16", "high": 120, "low": 115, "close": 118},
+                {"date": "2026-07-23", "high": 97, "low": 93, "close": 94},
+            ],
+        )
+
+        self.assertEqual(evaluated["trackingStatus"], "FAILED")
+        notes = evaluated["notes"]["systemNotes"]
+        self.assertTrue(
+            any(
+                note["text"] == "追蹤期間曾接近原始目標，可檢討停利規則。"
+                for note in notes
+            )
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
-

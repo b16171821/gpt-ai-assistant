@@ -21,7 +21,14 @@ ACTIVE_STATUSES = {
     "IN_TREND",
     "NEAR_TARGET",
 }
-ENDED_STATUSES = {"TARGET_HIT", "FAILED", "EXPIRED"}
+ENDED_STATUSES = {
+    "TARGET_HIT",
+    "FAILED",
+    "EXPIRED",
+    "MANUAL_CLOSED",
+    "NEED_REVIEW",
+}
+TERMINAL_STATUSES = set(ENDED_STATUSES)
 STATUS_TEXT = {
     "WATCHING": "追蹤中，等待確認",
     "WAIT_CONFIRM": "接近買點，等待收盤確認",
@@ -32,6 +39,8 @@ STATUS_TEXT = {
     "TARGET_HIT": "目標達成，完成追蹤",
     "FAILED": "型態失敗，移出追蹤",
     "EXPIRED": "觀察過期，移出追蹤",
+    "MANUAL_CLOSED": "手動結束追蹤",
+    "NEED_REVIEW": "同日觸發，需人工確認",
 }
 TRACKING_SIGNAL_TEXTS = {
     "今日優先觀察",
@@ -90,7 +99,7 @@ def read_json(path, default):
         return default
 
 
-def download_price_frames(symbols):
+def download_price_frames(symbols, period="3mo"):
     if not symbols:
         return {}
     try:
@@ -105,7 +114,7 @@ def download_price_frames(symbols):
         try:
             downloaded = yf.download(
                 batch,
-                period="3mo",
+                period=period,
                 interval="1d",
                 group_by="ticker",
                 auto_adjust=False,
@@ -251,6 +260,76 @@ def supplement_active_tracking_rows(existing, market, payload):
         )
     payload["stocks"] = rows
     return payload
+
+
+def frame_to_historical_prices(frame):
+    prices = []
+    if frame is None or frame.empty:
+        return prices
+    for index, row in frame.iterrows():
+        close = n(row.get("Close"))
+        if not close:
+            continue
+        prices.append(
+            {
+                "date": str(index)[:10],
+                "high": n(row.get("High"), close),
+                "low": n(row.get("Low"), close),
+                "close": close,
+            }
+        )
+    return prices
+
+
+def download_tracking_histories(existing):
+    records = [
+        record
+        for record in (existing or {}).get("records", [])
+        if isinstance(record, dict)
+        and record.get("stockCode")
+        and record.get("market") in {"台股", "美股"}
+    ]
+    histories = {}
+    for market in ("台股", "美股"):
+        market_records = {
+            str(record.get("stockCode")): record
+            for record in records
+            if record.get("market") == market
+        }
+        if not market_records:
+            continue
+        if market == "美股":
+            symbol_to_code = {code: code for code in market_records}
+            frames = download_price_frames(list(symbol_to_code), period="1y")
+        else:
+            symbol_to_code = {f"{code}.TW": code for code in market_records}
+            frames = download_price_frames(list(symbol_to_code), period="1y")
+            found_codes = {symbol_to_code[symbol] for symbol in frames}
+            otc_symbols = {
+                f"{code}.TWO": code
+                for code in market_records
+                if code not in found_codes
+            }
+            symbol_to_code.update(otc_symbols)
+            frames.update(
+                download_price_frames(list(otc_symbols), period="1y")
+            )
+        for symbol, frame in frames.items():
+            code = symbol_to_code.get(symbol)
+            if not code:
+                continue
+            key = f"{market}:{code}"
+            prices = frame_to_historical_prices(frame)
+            if prices and (
+                key not in histories
+                or len(prices) > len(histories[key])
+            ):
+                histories[key] = prices
+    print(
+        f"tracking lifecycle histories: records={len(records)} "
+        f"downloaded={len(histories)}"
+    )
+    return histories
 
 
 def strategy_date(row, meta=None):
@@ -478,7 +557,174 @@ def status_result(status):
         "TARGET_HIT": "目標達成",
         "FAILED": "型態失敗",
         "EXPIRED": "觀察過期",
+        "MANUAL_CLOSED": "手動結束",
+        "NEED_REVIEW": "需人工確認",
     }.get(status, "")
+
+
+def normalize_historical_prices(historical_prices):
+    if historical_prices is None:
+        return []
+    if isinstance(historical_prices, list):
+        source = historical_prices
+    elif hasattr(historical_prices, "iterrows"):
+        source = []
+        for index, row in historical_prices.iterrows():
+            source.append(
+                {
+                    "date": str(index)[:10],
+                    "high": row.get("High"),
+                    "low": row.get("Low"),
+                    "close": row.get("Close"),
+                }
+            )
+    else:
+        return []
+
+    rows = []
+    for price in source:
+        if not isinstance(price, dict):
+            continue
+        date = str(pick(price, "date", "strategyAsOfDate", default=""))[:10]
+        close = n(pick(price, "close", "Close"))
+        high = n(pick(price, "high", "High"), close)
+        low = n(pick(price, "low", "Low"), close)
+        if not date or not close:
+            continue
+        rows.append(
+            {
+                "date": date,
+                "high": high,
+                "low": low,
+                "close": close,
+            }
+        )
+    return sorted(rows, key=lambda price: price["date"])
+
+
+def evaluateTrackingLifecycle(tracking_record, historical_prices):
+    record = deepcopy(tracking_record)
+    original = record.get("originalStrategy") or {}
+    target = n(original.get("originalTarget"))
+    stop = n(original.get("originalStopLoss"))
+    buy_low = n(original.get("originalBuyZoneLow"))
+    buy_high = n(original.get("originalBuyZoneHigh"))
+    entry = (
+        (buy_low + buy_high) / 2
+        if buy_low and buy_high
+        else n(original.get("originalWatchPrice"), buy_low or buy_high)
+    )
+    first_date = str(record.get("firstSignalDate") or "")[:10]
+    current_status = str(record.get("trackingStatus") or "")
+    terminal_cutoff = (
+        str(record.get("endedAt") or record.get("endDate") or "")[:10]
+        if current_status in TERMINAL_STATUSES
+        else ""
+    )
+
+    target_hit_date = str(record.get("targetHitDate") or "")[:10] or None
+    stop_loss_hit_date = str(record.get("stopLossHitDate") or "")[:10] or None
+    max_high = n(record.get("maxHighDuringTracking"))
+    prices = normalize_historical_prices(historical_prices)
+
+    for price in prices:
+        date = price["date"]
+        if first_date and date < first_date:
+            continue
+        if terminal_cutoff and date > terminal_cutoff:
+            continue
+        max_high = max(max_high, n(price["high"]), n(price["close"]))
+        if (
+            target
+            and max(n(price["high"]), n(price["close"])) >= target
+            and (target_hit_date is None or date < target_hit_date)
+        ):
+            target_hit_date = date
+        if (
+            stop
+            and n(price["close"]) <= stop
+            and (stop_loss_hit_date is None or date < stop_loss_hit_date)
+        ):
+            stop_loss_hit_date = date
+
+    final_status = None
+    if target_hit_date and stop_loss_hit_date:
+        if target_hit_date < stop_loss_hit_date:
+            final_status = "TARGET_HIT"
+        elif stop_loss_hit_date < target_hit_date:
+            final_status = "FAILED"
+        else:
+            final_status = "NEED_REVIEW"
+    elif target_hit_date:
+        final_status = "TARGET_HIT"
+    elif stop_loss_hit_date:
+        final_status = "FAILED"
+    elif current_status in TERMINAL_STATUSES:
+        final_status = current_status
+
+    record["maxHighDuringTracking"] = rounded(max_high)
+    record["targetHitDate"] = target_hit_date
+    record["stopLossHitDate"] = stop_loss_hit_date
+    record["finalTrackingStatus"] = final_status
+    record["currentProfitPct"] = rounded(
+        (n((record.get("latestStatus") or {}).get("latestClose")) - entry)
+        / entry
+        * 100
+        if entry
+        else 0
+    )
+    record["maxProfitPct"] = rounded(
+        (max_high - entry) / entry * 100 if entry and max_high else 0
+    )
+    progress = record.setdefault("progress", {})
+    progress["targetHit"] = bool(target_hit_date)
+    progress["stopBroken"] = bool(stop_loss_hit_date)
+    progress["nearTarget"] = bool(target and max_high >= target * 0.9)
+    progress["patternFailed"] = final_status == "FAILED"
+
+    if final_status == "TARGET_HIT":
+        target_end_date = target_hit_date or terminal_cutoff
+        record["trackingStatus"] = "TARGET_HIT"
+        record["trackingStatusText"] = STATUS_TEXT["TARGET_HIT"]
+        record["endedAt"] = target_end_date
+        record["endDate"] = target_end_date
+        record["endReason"] = "追蹤期間曾達原始目標，完成追蹤"
+        record["endPriority"] = "TARGET_FIRST"
+        record["result"] = status_result("TARGET_HIT")
+    elif final_status == "FAILED":
+        stop_end_date = stop_loss_hit_date or terminal_cutoff
+        record["trackingStatus"] = "FAILED"
+        record["trackingStatusText"] = STATUS_TEXT["FAILED"]
+        record["endedAt"] = stop_end_date
+        record["endDate"] = stop_end_date
+        record["endReason"] = "跌破原始停損，型態失敗"
+        record["endPriority"] = (
+            "STOP_FIRST" if stop_loss_hit_date else record.get("endPriority") or "FAILED"
+        )
+        record["result"] = status_result("FAILED")
+        if target and max_high >= target * 0.9:
+            append_system_note(
+                record,
+                stop_end_date,
+                "追蹤期間曾接近原始目標，可檢討停利規則。",
+            )
+    elif final_status == "NEED_REVIEW":
+        review_date = target_hit_date or stop_loss_hit_date or terminal_cutoff
+        record["trackingStatus"] = "NEED_REVIEW"
+        record["trackingStatusText"] = STATUS_TEXT["NEED_REVIEW"]
+        record["endedAt"] = review_date
+        record["endDate"] = review_date
+        record["endReason"] = "同日觸發目標與停損，需人工確認"
+        record["endPriority"] = "SAME_DAY_REVIEW"
+        record["result"] = status_result("NEED_REVIEW")
+    elif final_status == "EXPIRED":
+        record["endPriority"] = record.get("endPriority") or "EXPIRED"
+    elif final_status == "MANUAL_CLOSED":
+        record["endPriority"] = record.get("endPriority") or "MANUAL_CLOSED"
+    else:
+        record["endPriority"] = None
+
+    return record
 
 
 def update_tracking_status(tracking_record, latest_market_data, market_regime, current_date=None):
@@ -498,6 +744,12 @@ def update_tracking_status(tracking_record, latest_market_data, market_regime, c
     high = n(latest.get("latestHigh"), close)
     low = n(latest.get("latestLow"), close)
     safe_score = n(latest.get("latestSafetyScore"))
+    record["latestStatus"] = latest
+    record = evaluateTrackingLifecycle(
+        record,
+        [{"date": date, "high": high, "low": low, "close": close}],
+    )
+    lifecycle_status = record.get("finalTrackingStatus")
 
     dates = list(dict.fromkeys([str(x)[:10] for x in record.get("trackingDates", []) if x]))
     if date not in dates:
@@ -525,11 +777,12 @@ def update_tracking_status(tracking_record, latest_market_data, market_regime, c
     )
     stop_broken = bool(stop and close <= stop)
     near_target = bool(target and close >= target * 0.9)
-    target_hit = bool(target and max(high, close) >= target)
+    target_hit = bool(record.get("targetHitDate"))
     lost_neckline_after_breakout = bool(
         previously_broke and neckline and close < neckline * 0.97
     )
-    pattern_failed = stop_broken or lost_neckline_after_breakout or is_true(row.get("patternInvalid"))
+    structural_failed = lost_neckline_after_breakout or is_true(row.get("patternInvalid"))
+    pattern_failed = lifecycle_status == "FAILED" or structural_failed
     breakout_confirmed = bool(
         neckline
         and close >= neckline * 1.02
@@ -542,10 +795,10 @@ def update_tracking_status(tracking_record, latest_market_data, market_regime, c
         and (not neckline or close < neckline or safe_score < 70)
     )
 
-    if target_hit:
-        status = "TARGET_HIT"
-    elif pattern_failed:
-        status = "FAILED"
+    if lifecycle_status in {"TARGET_HIT", "FAILED", "NEED_REVIEW"}:
+        status = lifecycle_status
+    elif lifecycle_status in {"EXPIRED", "MANUAL_CLOSED"}:
+        status = lifecycle_status
     elif near_target:
         status = "NEAR_TARGET"
     elif pullback_held:
@@ -554,6 +807,8 @@ def update_tracking_status(tracking_record, latest_market_data, market_regime, c
         status = "IN_TREND"
     elif breakout_confirmed:
         status = "BREAKOUT_CONFIRMED"
+    elif structural_failed:
+        status = "FAILED"
     elif expired:
         status = "EXPIRED"
     elif in_buy_zone or (neckline and close >= neckline * 0.98):
@@ -574,6 +829,10 @@ def update_tracking_status(tracking_record, latest_market_data, market_regime, c
     elif status == "EXPIRED":
         latest["holderAction"] = "原觀察策略已過期，重新檢查持股風險。"
         latest["cashAction"] = "移出進行中追蹤，等待新的完整結構。"
+    elif status == "NEED_REVIEW":
+        latest["holderAction"] = "同日觸及目標與停損，日 K 無法判斷先後，請人工核對。"
+        latest["cashAction"] = "終局順序未明，不把此紀錄視為新進場訊號。"
+        latest["riskWarning"] = "同日觸發目標與停損，需人工確認。"
 
     record["latestStatus"] = latest
     record["trackingStatus"] = status
@@ -585,7 +844,7 @@ def update_tracking_status(tracking_record, latest_market_data, market_regime, c
         "inBuyZone": in_buy_zone,
         "aboveBuyZoneHigh": above_buy_zone,
         "pullbackHeld": pullback_held,
-        "stopBroken": stop_broken,
+        "stopBroken": bool(record.get("stopLossHitDate")),
         "nearTarget": near_target,
         "targetHit": target_hit,
         "patternFailed": pattern_failed,
@@ -598,15 +857,19 @@ def update_tracking_status(tracking_record, latest_market_data, market_regime, c
     history.append({"date": date, "status": status, "close": rounded(close)})
     record["statusHistory"] = sorted(history, key=lambda x: str(x.get("date", "")))[-60:]
 
-    if status in ENDED_STATUSES:
-        record["endDate"] = date
-        record["endedAt"] = date
-        record["endReason"] = STATUS_TEXT[status]
-        record["result"] = status_result(status)
+    if status in {"TARGET_HIT", "FAILED", "NEED_REVIEW"} and lifecycle_status:
+        pass
+    elif status in ENDED_STATUSES:
+        record["endDate"] = record.get("endDate") or date
+        record["endedAt"] = record.get("endedAt") or date
+        record["endReason"] = record.get("endReason") or STATUS_TEXT[status]
+        record["endPriority"] = record.get("endPriority") or status
+        record["result"] = record.get("result") or status_result(status)
     else:
         record["endDate"] = None
         record["endedAt"] = None
         record["endReason"] = ""
+        record["endPriority"] = None
         record["result"] = ""
     record["originalStrategy"] = immutable_original
     record["firstSignalDate"] = immutable_first_signal_date
@@ -640,6 +903,13 @@ def create_tracking_record(market, row, meta=None, trigger_reasons=None):
         "endDate": None,
         "endedAt": None,
         "endReason": "",
+        "endPriority": None,
+        "maxHighDuringTracking": 0,
+        "targetHitDate": None,
+        "stopLossHitDate": None,
+        "finalTrackingStatus": None,
+        "currentProfitPct": 0,
+        "maxProfitPct": 0,
         "result": "",
         "trackingStatus": "WATCHING",
         "trackingStatusText": STATUS_TEXT["WATCHING"],
@@ -1028,7 +1298,14 @@ def process_market(records, market, payload, locks=None):
     return records
 
 
-def process_tracking(existing, tw_payload, us_payload, locks=None, snapshots=None):
+def process_tracking(
+    existing,
+    tw_payload,
+    us_payload,
+    locks=None,
+    snapshots=None,
+    historical_prices=None,
+):
     existing = existing if isinstance(existing, dict) else {}
     records = [
         deepcopy(record)
@@ -1037,9 +1314,25 @@ def process_tracking(existing, tw_payload, us_payload, locks=None, snapshots=Non
     ]
     for record in records:
         record.setdefault("endedAt", record.get("endDate"))
+        record.setdefault("endPriority", None)
+        record.setdefault("maxHighDuringTracking", 0)
+        record.setdefault("targetHitDate", None)
+        record.setdefault("stopLossHitDate", None)
+        record.setdefault("finalTrackingStatus", None)
         record.setdefault("notes", {"systemNotes": [], "manualNote": ""})
     records = migrate_legacy_snapshots(records, snapshots)
     records = migrate_legacy_locks(records, locks)
+    historical_prices = historical_prices if isinstance(historical_prices, dict) else {}
+    records = [
+        evaluateTrackingLifecycle(
+            record,
+            historical_prices.get(
+                f"{record.get('market')}:{record.get('stockCode')}",
+                [],
+            ),
+        )
+        for record in records
+    ]
     records = process_market(records, "台股", tw_payload, locks)
     records = process_market(records, "美股", us_payload, locks)
     records.sort(
@@ -1056,7 +1349,7 @@ def process_tracking(existing, tw_payload, us_payload, locks=None, snapshots=Non
     return {
         "meta": {
             "updatedAt": now_tw(),
-            "version": "strategy-tracking-v2",
+            "version": "strategy-tracking-v3",
             "activeCount": active_count,
             "endedCount": ended_count,
             "maxWaitingTradingDays": 15,
@@ -1066,6 +1359,14 @@ def process_tracking(existing, tw_payload, us_payload, locks=None, snapshots=Non
             ),
             "legacySnapshotStocksImported": sum(
                 bool((record.get("notes") or {}).get("legacySnapshots"))
+                for record in records
+            ),
+            "lifecycleHistoriesEvaluated": sum(
+                bool(
+                    historical_prices.get(
+                        f"{record.get('market')}:{record.get('stockCode')}"
+                    )
+                )
                 for record in records
             ),
         },
@@ -1084,9 +1385,17 @@ def main():
         locks = {}
     if not isinstance(snapshots, dict):
         snapshots = {}
+    historical_prices = download_tracking_histories(existing)
     tw_payload = supplement_active_tracking_rows(existing, "台股", tw_payload)
     us_payload = supplement_active_tracking_rows(existing, "美股", us_payload)
-    output = process_tracking(existing, tw_payload, us_payload, locks, snapshots)
+    output = process_tracking(
+        existing,
+        tw_payload,
+        us_payload,
+        locks,
+        snapshots,
+        historical_prices,
+    )
     TRACKING_PATH.write_text(
         json.dumps(output, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
@@ -1099,4 +1408,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
