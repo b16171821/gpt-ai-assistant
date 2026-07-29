@@ -287,6 +287,7 @@ def analyze_one(df, meta, theme_config):
     if len(df) < MIN_HISTORY_ROWS:
         return None
     df["MA5"] = df["Close"].rolling(5).mean()
+    df["MA10"] = df["Close"].rolling(10).mean()
     df["MA20"] = df["Close"].rolling(20).mean()
     df["MA60"] = df["Close"].rolling(60).mean()
     df["MA240"] = df["Close"].rolling(240).mean()
@@ -329,7 +330,9 @@ def analyze_one(df, meta, theme_config):
         "date": strategy_date, "strategyAsOfDate": strategy_date, "priceType": "收盤確認價",
         "source": "Yahoo Finance via yfinance（日K完整收盤資料）", "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K",
         "market": meta["market"], "code": meta["code"], "name": meta["name"], "close": sr(close),
-        "ma5": sr(latest["MA5"]), "ma20": sr(ma20), "ma60": sr(ma60), "ma240": sr(ma240), "rise60": sr(rise60),
+        "high": sr(latest["High"]), "low": sr(latest["Low"]),
+        "ma5": sr(latest["MA5"]), "ma10": sr(latest["MA10"]), "ma20": sr(ma20),
+        "ma60": sr(ma60), "ma240": sr(ma240), "rise60": sr(rise60),
         "changePct": sr(latest["CHANGE_PCT"]), "nearLimitUp": bool(sf(latest["CHANGE_PCT"]) >= 8),
         "volume": int(volume), "avgVolume20": int(avg_volume20), "turnover": int(turnover),
         "avgTurnover20": int(avg_turnover20), "volatility20Pct": sr(volatility20),

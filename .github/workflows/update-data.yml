@@ -7,6 +7,8 @@ on:
       - 'scripts/update_tw_stock_scanner.py'
       - 'scripts/update_us_stock_scanner.py'
       - 'scripts/market_filter.py'
+      - 'scripts/update_strategy_tracking.py'
+      - 'tests/test_strategy_tracking.py'
       - '.github/workflows/update-data.yml'
   schedule:
     # 台股收盤後更新：台灣時間 15:40，週一～週五
@@ -43,6 +45,8 @@ jobs:
           python scripts/update_company_profiles.py
           python scripts/update_strategy_locks.py
           python scripts/update_strategy_snapshots.py
+          python -m unittest discover -s tests -p 'test_strategy_tracking.py'
+          python scripts/update_strategy_tracking.py
       - name: Commit data files
         run: |
           git config user.name github-actions

@@ -185,6 +185,8 @@ def analyze_one(df, ticker, name=None, market_ok=True):
         return None
     if len(df) < MIN_HISTORY_ROWS:
         return None
+    df["MA5"] = df["Close"].rolling(5).mean()
+    df["MA10"] = df["Close"].rolling(10).mean()
     df["MA20"] = df["Close"].rolling(20).mean()
     df["MA60"] = df["Close"].rolling(60).mean()
     df["MA200"] = df["Close"].rolling(200).mean()
@@ -213,7 +215,7 @@ def analyze_one(df, ticker, name=None, market_ok=True):
     if price_vol: reasons.append("價量趨勢成立")
     if market_ok: reasons.append("大盤不弱")
     strategy_date = str(df.index[-1].date())
-    base = {"date": strategy_date, "strategyAsOfDate": strategy_date, "ticker": ticker, "name": name or ticker, "close": sr(close), "currency": "USD", "priceType": "收盤確認價", "source": "Yahoo Finance via yfinance（日K完整收盤資料）", "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K", "ma20": sr(ma20), "ma60": sr(ma60), "ma200": sr(ma200), "rise60": sr(rise60), "changePct": sr(latest["CHANGE_PCT"]), "nearLimitUp": bool(sf(latest["CHANGE_PCT"]) >= 8), "volume": int(volume), "avgVolume20": int(avg_volume20), "volumeRatio": sr(volume / avg_volume20 if avg_volume20 else 0), "adx": sr(adx), "kline": kline, "trend": bool(trend), "volumeOk": bool(volume_ok), "priceVol": bool(price_vol), "marketOk": bool(market_ok), "score": int(score), "strictOk": bool(strict_ok), "status": status, "reason": "、".join(reasons) if reasons else "條件不足"}
+    base = {"date": strategy_date, "strategyAsOfDate": strategy_date, "ticker": ticker, "name": name or ticker, "close": sr(close), "high": sr(latest["High"]), "low": sr(latest["Low"]), "currency": "USD", "priceType": "收盤確認價", "source": "Yahoo Finance via yfinance（日K完整收盤資料）", "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K", "ma5": sr(latest["MA5"]), "ma10": sr(latest["MA10"]), "ma20": sr(ma20), "ma60": sr(ma60), "ma200": sr(ma200), "rise60": sr(rise60), "changePct": sr(latest["CHANGE_PCT"]), "nearLimitUp": bool(sf(latest["CHANGE_PCT"]) >= 8), "volume": int(volume), "avgVolume20": int(avg_volume20), "volumeRatio": sr(volume / avg_volume20 if avg_volume20 else 0), "adx": sr(adx), "kline": kline, "trend": bool(trend), "volumeOk": bool(volume_ok), "priceVol": bool(price_vol), "marketOk": bool(market_ok), "score": int(score), "strictOk": bool(strict_ok), "status": status, "reason": "、".join(reasons) if reasons else "條件不足"}
     base.update(plan)
     return base
 

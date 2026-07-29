@@ -1,0 +1,11 @@
+{
+  "meta": {
+    "updatedAt": "",
+    "version": "strategy-tracking-v1",
+    "activeCount": 0,
+    "endedCount": 0,
+    "maxWaitingTradingDays": 15
+  },
+  "records": []
+}
+
