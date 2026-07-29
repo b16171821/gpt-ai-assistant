@@ -14,6 +14,7 @@ from update_strategy_tracking import (  # noqa: E402
     evaluateTrackingLifecycle,
     process_tracking,
     update_tracking_status,
+    valid_tracking_setup,
 )
 
 
@@ -73,6 +74,91 @@ def payload(row=None, regime="ATTACK", date="2026-07-13"):
 
 
 class StrategyTrackingTests(unittest.TestCase):
+    def test_strategy_data_date_and_tracking_created_date_are_separate(self):
+        record = create_tracking_record(
+            "台股",
+            base_row(date="2026-07-28", strategyAsOfDate="2026-07-28"),
+            {"strategyAsOfDate": "2026-07-29"},
+        )
+
+        self.assertEqual(record["strategyDataDate"], "2026-07-28")
+        self.assertEqual(record["trackingCreatedDate"], "2026-07-29")
+
+    def test_invalid_setup_is_rejected_before_tracking(self):
+        row = base_row(close=94, stopLoss=95)
+
+        self.assertFalse(valid_tracking_setup(row))
+        updated = process_tracking(
+            {"meta": {}, "records": []},
+            payload(row),
+            payload(None),
+        )
+        self.assertEqual(updated["records"], [])
+
+    def test_same_day_failed_record_is_reclassified_as_invalid_creation(self):
+        record = create_tracking_record("台股", base_row(close=94, stopLoss=95))
+        self.assertEqual(record["trackingStatus"], "FAILED")
+
+        updated = process_tracking(
+            {"meta": {}, "records": [record]},
+            payload(None, date="2026-07-14"),
+            payload(None),
+        )
+        migrated = updated["records"][0]
+
+        self.assertEqual(migrated["trackingStatus"], "INVALID_AT_CREATION")
+        self.assertEqual(migrated["endPriority"], "INVALID_AT_CREATION")
+        self.assertIn("不計入正式追蹤成敗", migrated["notes"]["systemNotes"][-1]["text"])
+
+    def test_older_market_row_does_not_overwrite_newer_tracking_state(self):
+        record = create_tracking_record(
+            "台股",
+            base_row(date="2026-07-29", strategyAsOfDate="2026-07-29", close=103),
+            {"strategyAsOfDate": "2026-07-29"},
+        )
+        original_latest = deepcopy(record["latestStatus"])
+        stale_row = base_row(
+            date="2026-07-28",
+            strategyAsOfDate="2026-07-28",
+            close=99,
+        )
+
+        updated = process_tracking(
+            {"meta": {}, "records": [record]},
+            payload(stale_row, date="2026-07-29"),
+            payload(None),
+        )
+        tracked = updated["records"][0]
+
+        self.assertEqual(tracked["lastUpdateDate"], "2026-07-29")
+        self.assertEqual(tracked["latestStatus"]["latestClose"], original_latest["latestClose"])
+
+    def test_stale_latest_status_uses_its_own_data_date(self):
+        record = create_tracking_record(
+            "台股",
+            base_row(date="2026-07-29", strategyAsOfDate="2026-07-29", close=103),
+            {"strategyAsOfDate": "2026-07-29"},
+        )
+        record["latestStatus"].pop("latestDataDate", None)
+        record["latestStatus"]["latestClose"] = 94
+        record["latestStatus"]["latestHigh"] = 96
+        record["latestStatus"]["latestLow"] = 93
+        record["lastUpdateDate"] = "2026-07-28"
+        record["trackingDates"] = ["2026-07-28", "2026-07-29"]
+        record["statusHistory"] = [
+            {"date": "2026-07-29", "status": "BREAKOUT_CONFIRMED", "close": 103}
+        ]
+
+        updated = process_tracking(
+            {"meta": {}, "records": [record]},
+            payload(None, date="2026-07-29"),
+            payload(None),
+        )
+        tracked = updated["records"][0]
+
+        self.assertIn(tracked["trackingStatus"], ACTIVE_STATUSES)
+        self.assertEqual(tracked["latestStatus"]["latestDataDate"], "2026-07-28")
+
     def test_not_selected_next_day_remains_active(self):
         first = process_tracking(
             {"meta": {}, "records": []},
@@ -356,6 +442,7 @@ class StrategyTrackingTests(unittest.TestCase):
         record["latestStatus"]["latestClose"] = 94
         record["latestStatus"]["latestHigh"] = 96
         record["latestStatus"]["latestLow"] = 93
+        record["latestStatus"]["latestDataDate"] = "2026-07-29"
 
         updated = process_tracking(
             {"meta": {}, "records": [record]},

@@ -27,6 +27,7 @@ ENDED_STATUSES = {
     "EXPIRED",
     "MANUAL_CLOSED",
     "NEED_REVIEW",
+    "INVALID_AT_CREATION",
 }
 TERMINAL_STATUSES = set(ENDED_STATUSES)
 STATUS_TEXT = {
@@ -41,6 +42,7 @@ STATUS_TEXT = {
     "EXPIRED": "觀察過期，移出追蹤",
     "MANUAL_CLOSED": "手動結束追蹤",
     "NEED_REVIEW": "同日觸發，需人工確認",
+    "INVALID_AT_CREATION": "建立時已失效，不列入成敗",
 }
 TRACKING_SIGNAL_TEXTS = {
     "今日優先觀察",
@@ -210,14 +212,30 @@ def price_row_from_frame(market, code, name, frame, record):
 def supplement_active_tracking_rows(existing, market, payload):
     payload = deepcopy(payload) if isinstance(payload, dict) else {"meta": {}, "stocks": []}
     rows = [row for row in payload.get("stocks", []) if isinstance(row, dict)]
-    present = {stock_code(market, row) for row in rows}
+    meta = payload.get("meta") or {}
+    payload_date = str(pick(meta, "strategyAsOfDate", default=""))[:10]
+    rows_by_code = {
+        stock_code(market, row): row
+        for row in rows
+        if stock_code(market, row)
+    }
     active = [
         record
         for record in existing.get("records", [])
         if record.get("market") == market
         and record.get("trackingStatus") in ACTIVE_STATUSES
         and not record.get("manualRemoved")
-        and str(record.get("stockCode") or "") not in present
+        and (
+            str(record.get("stockCode") or "") not in rows_by_code
+            or (
+                payload_date
+                and strategy_date(
+                    rows_by_code.get(str(record.get("stockCode") or ""), {}),
+                    meta,
+                )
+                < payload_date
+            )
+        )
     ]
     if not active:
         payload["stocks"] = rows
@@ -251,6 +269,10 @@ def supplement_active_tracking_rows(existing, market, payload):
             record,
         )
         if row:
+            existing_row = rows_by_code.get(code)
+            if existing_row and strategy_date(row) <= strategy_date(existing_row, meta):
+                continue
+            rows = [item for item in rows if stock_code(market, item) != code]
             rows.append(row)
             added.add(code)
     if active:
@@ -488,6 +510,22 @@ def tracking_trigger_reasons(row):
     return list(dict.fromkeys(reasons))
 
 
+def valid_tracking_setup(row):
+    prices = original_prices(row)
+    close = n(row.get("close"))
+    watch = prices["watch"]
+    stop = prices["stop"]
+    target = prices["target"]
+    return bool(
+        close
+        and watch
+        and stop
+        and target
+        and stop < watch < target
+        and close > stop
+    )
+
+
 def default_market_actions(row, regime):
     original_signal = str(
         pick(row, "originalSignal", "buyPointType", "stage", "planStatus", "status", default="追蹤中")
@@ -559,6 +597,7 @@ def status_result(status):
         "EXPIRED": "觀察過期",
         "MANUAL_CLOSED": "手動結束",
         "NEED_REVIEW": "需人工確認",
+        "INVALID_AT_CREATION": "建立時已失效",
     }.get(status, "")
 
 
@@ -606,7 +645,8 @@ def tracking_lifecycle_prices(record, downloaded_prices):
     prices = list(downloaded_prices or [])
     latest = record.get("latestStatus") or {}
     latest_date = str(
-        record.get("lastUpdateDate")
+        latest.get("latestDataDate")
+        or record.get("lastUpdateDate")
         or record.get("endedAt")
         or record.get("endDate")
         or ""
@@ -683,8 +723,14 @@ def evaluateTrackingLifecycle(tracking_record, historical_prices):
         ):
             stop_loss_hit_date = date
 
-    final_status = None
-    if target_hit_date and stop_loss_hit_date:
+    final_status = (
+        "INVALID_AT_CREATION"
+        if current_status == "INVALID_AT_CREATION"
+        else None
+    )
+    if final_status == "INVALID_AT_CREATION":
+        pass
+    elif target_hit_date and stop_loss_hit_date:
         if target_hit_date < stop_loss_hit_date:
             final_status = "TARGET_HIT"
         elif stop_loss_hit_date < target_hit_date:
@@ -757,6 +803,16 @@ def evaluateTrackingLifecycle(tracking_record, historical_prices):
         record["endPriority"] = record.get("endPriority") or "EXPIRED"
     elif final_status == "MANUAL_CLOSED":
         record["endPriority"] = record.get("endPriority") or "MANUAL_CLOSED"
+    elif final_status == "INVALID_AT_CREATION":
+        record["trackingStatus"] = "INVALID_AT_CREATION"
+        record["trackingStatusText"] = STATUS_TEXT["INVALID_AT_CREATION"]
+        record["endPriority"] = "INVALID_AT_CREATION"
+        record["endReason"] = (
+            record.get("endReason")
+            or "建立追蹤時收盤已低於原始停損，未進入正式追蹤"
+        )
+        record["result"] = status_result("INVALID_AT_CREATION")
+        progress["patternFailed"] = False
     else:
         record["endPriority"] = None
 
@@ -776,6 +832,7 @@ def update_tracking_status(tracking_record, latest_market_data, market_regime, c
     stop = n(original.get("originalStopLoss"))
     target = n(original.get("originalTarget"))
     latest = build_latest_status(row, market_regime)
+    latest["latestDataDate"] = date
     close = n(latest.get("latestClose"))
     high = n(latest.get("latestHigh"), close)
     low = n(latest.get("latestLow"), close)
@@ -914,6 +971,9 @@ def update_tracking_status(tracking_record, latest_market_data, market_regime, c
 
 def create_tracking_record(market, row, meta=None, trigger_reasons=None):
     date = strategy_date(row, meta)
+    created_date = str(
+        pick(meta or {}, "strategyAsOfDate", default=date)
+    )[:10] or date
     code = stock_code(market, row)
     name = str(pick(row, "name", default=code))
     regime, label = market_context({"meta": meta or {}})
@@ -935,6 +995,9 @@ def create_tracking_record(market, row, meta=None, trigger_reasons=None):
         "stockCode": code,
         "stockName": name,
         "firstSignalDate": date,
+        "strategyDataDate": date,
+        "trackingCreatedDate": created_date,
+        "trackingOrigin": "LIVE_SIGNAL",
         "lastUpdateDate": date,
         "endDate": None,
         "endedAt": None,
@@ -1008,6 +1071,9 @@ def create_record_from_lock(market, lock, row, meta=None):
     )
     created = str(pick(lock, "createdAt", default=record["firstSignalDate"]))[:10]
     record["firstSignalDate"] = created
+    record["strategyDataDate"] = created
+    record["trackingCreatedDate"] = created
+    record["trackingOrigin"] = "LEGACY_IMPORT"
     record["trackingId"] = f"{market}:{record['stockCode']}:{created}"
     return update_tracking_status(record, row, record["latestStatus"]["latestMarketRegime"])
 
@@ -1144,6 +1210,8 @@ def migrate_legacy_snapshots(records, snapshots):
                 meta,
                 ["由舊版近 5 日策略紀錄建立追蹤，原始欄位以最早一筆保存。"],
             )
+            target["trackingOrigin"] = "LEGACY_IMPORT"
+            target["trackingCreatedDate"] = str(first.get("date"))[:10]
             for snapshot in rows[1:]:
                 target = update_tracking_status(
                     target,
@@ -1152,6 +1220,7 @@ def migrate_legacy_snapshots(records, snapshots):
                     str(snapshot.get("date"))[:10],
                 )
             records.append(target)
+        target["trackingOrigin"] = "LEGACY_IMPORT"
         attach_legacy_snapshots(target, rows)
     return records
 
@@ -1255,6 +1324,7 @@ def migrate_legacy_locks(records, locks):
                 },
             )
             records.append(target)
+        target["trackingOrigin"] = "LEGACY_IMPORT"
         attach_legacy_lock(target, lock)
     return records
 
@@ -1282,6 +1352,84 @@ def newest_ended_record(records, market, code):
     return max(ended, key=lambda x: str(x.get("endDate") or ""), default=None)
 
 
+def tracking_origin(record):
+    notes = record.get("notes") or {}
+    if notes.get("legacyLock") or isinstance(notes.get("legacySnapshots"), list):
+        return "LEGACY_IMPORT"
+    return str(record.get("trackingOrigin") or "LIVE_SIGNAL")
+
+
+def backfill_tracking_metadata(record, market_dates):
+    record["trackingOrigin"] = tracking_origin(record)
+    first_date = str(record.get("firstSignalDate") or "")[:10]
+    record["strategyDataDate"] = (
+        str(record.get("strategyDataDate") or "")[:10] or first_date
+    )
+    if not record.get("trackingCreatedDate"):
+        if (
+            record["trackingOrigin"] == "LIVE_SIGNAL"
+            and record.get("trackingStatus") in ACTIVE_STATUSES
+        ):
+            record["trackingCreatedDate"] = (
+                str(market_dates.get(record.get("market")) or "")[:10]
+                or first_date
+            )
+        else:
+            record["trackingCreatedDate"] = first_date
+
+    previous_update = str(record.get("lastUpdateDate") or "")[:10]
+    latest = record.setdefault("latestStatus", {})
+    latest.setdefault("latestDataDate", previous_update or first_date)
+    known_dates = [
+        first_date,
+        previous_update,
+        *[
+            str(value)[:10]
+            for value in record.get("trackingDates", [])
+            if value
+        ],
+        *[
+            str(item.get("date") or "")[:10]
+            for item in record.get("statusHistory", [])
+            if isinstance(item, dict) and item.get("date")
+        ],
+    ]
+    record["lastUpdateDate"] = max((date for date in known_dates if date), default=first_date)
+    return record
+
+
+def invalidate_failed_at_creation(record):
+    if (
+        record.get("trackingStatus") != "FAILED"
+        or tracking_origin(record) != "LIVE_SIGNAL"
+        or record.get("targetHitDate")
+    ):
+        return record
+    first_date = str(record.get("firstSignalDate") or "")[:10]
+    ended_at = str(record.get("endedAt") or record.get("endDate") or "")[:10]
+    original = record.get("originalStrategy") or {}
+    latest = record.get("latestStatus") or {}
+    stop = n(original.get("originalStopLoss"))
+    close = n(latest.get("latestClose"))
+    if not first_date or first_date != ended_at or not stop or not close or close > stop:
+        return record
+
+    record["trackingStatus"] = "INVALID_AT_CREATION"
+    record["trackingStatusText"] = STATUS_TEXT["INVALID_AT_CREATION"]
+    record["finalTrackingStatus"] = "INVALID_AT_CREATION"
+    record["endPriority"] = "INVALID_AT_CREATION"
+    record["endReason"] = "建立追蹤時收盤已低於原始停損，未進入正式追蹤"
+    record["result"] = status_result("INVALID_AT_CREATION")
+    progress = record.setdefault("progress", {})
+    progress["patternFailed"] = False
+    append_system_note(
+        record,
+        first_date,
+        "此筆建立當日已低於原始停損，改列為無效建立，不計入正式追蹤成敗。",
+    )
+    return record
+
+
 def process_market(records, market, payload, locks=None):
     payload = payload if isinstance(payload, dict) else {}
     meta = payload.get("meta") or {}
@@ -1295,11 +1443,22 @@ def process_market(records, market, payload, locks=None):
             continue
         row = rows_by_code.get(str(record.get("stockCode")))
         if row:
+            row_date = strategy_date(row, meta)
+            if (
+                record.get("lastUpdateDate")
+                and row_date < str(record.get("lastUpdateDate"))[:10]
+            ):
+                append_system_note(
+                    record,
+                    date or row_date,
+                    f"略過較舊的 {row_date} 收盤資料，保留 {record.get('lastUpdateDate')} 追蹤狀態。",
+                )
+                continue
             records[index] = update_tracking_status(
                 record,
                 row,
                 regime,
-                strategy_date(row, meta),
+                row_date,
             )
         elif date:
             append_system_note(record, date, "本日未取得個股完整資料，保留原追蹤紀錄且不改變原始策略。")
@@ -1327,6 +1486,8 @@ def process_market(records, market, payload, locks=None):
         if active:
             append_system_note(active, current_date, NEW_SIGNAL_NOTICE)
             continue
+        if not valid_tracking_setup(row):
+            continue
         ended = newest_ended_record(records, market, code)
         if ended and str(ended.get("endDate")) >= current_date:
             continue
@@ -1343,6 +1504,14 @@ def process_tracking(
     historical_prices=None,
 ):
     existing = existing if isinstance(existing, dict) else {}
+    market_dates = {
+        "台股": str(
+            pick((tw_payload or {}).get("meta") or {}, "strategyAsOfDate", default="")
+        )[:10],
+        "美股": str(
+            pick((us_payload or {}).get("meta") or {}, "strategyAsOfDate", default="")
+        )[:10],
+    }
     records = [
         deepcopy(record)
         for record in existing.get("records", [])
@@ -1358,6 +1527,12 @@ def process_tracking(
         record.setdefault("notes", {"systemNotes": [], "manualNote": ""})
     records = migrate_legacy_snapshots(records, snapshots)
     records = migrate_legacy_locks(records, locks)
+    records = [
+        invalidate_failed_at_creation(
+            backfill_tracking_metadata(record, market_dates)
+        )
+        for record in records
+    ]
     historical_prices = historical_prices if isinstance(historical_prices, dict) else {}
     records = [
         evaluateTrackingLifecycle(
@@ -1385,12 +1560,29 @@ def process_tracking(
     )
     active_count = sum(record.get("trackingStatus") in ACTIVE_STATUSES for record in records)
     ended_count = sum(record.get("trackingStatus") in ENDED_STATUSES for record in records)
+    invalid_count = sum(
+        record.get("trackingStatus") == "INVALID_AT_CREATION"
+        for record in records
+    )
+    live_ended_count = sum(
+        record.get("trackingOrigin") == "LIVE_SIGNAL"
+        and record.get("trackingStatus") in ENDED_STATUSES
+        and record.get("trackingStatus") != "INVALID_AT_CREATION"
+        for record in records
+    )
+    tracking_as_of_date = max(
+        (date for date in market_dates.values() if date),
+        default="",
+    )
     return {
         "meta": {
             "updatedAt": now_tw(),
-            "version": "strategy-tracking-v3",
+            "version": "strategy-tracking-v4",
             "activeCount": active_count,
             "endedCount": ended_count,
+            "invalidAtCreationCount": invalid_count,
+            "liveEndedCount": live_ended_count,
+            "trackingAsOfDate": tracking_as_of_date,
             "maxWaitingTradingDays": 15,
             "legacyLocksImported": sum(
                 bool((record.get("notes") or {}).get("legacyLock"))
