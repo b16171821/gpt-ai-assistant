@@ -2,6 +2,7 @@ import json
 from copy import deepcopy
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+from urllib.request import Request, urlopen
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -12,6 +13,16 @@ LOCKS_PATH = DATA_DIR / "strategy_locks.json"
 SNAPSHOTS_PATH = DATA_DIR / "strategy_snapshots.json"
 TRACKING_PATH = DATA_DIR / "strategy_tracking.json"
 TAIPEI_TZ = timezone(timedelta(hours=8))
+TW_OFFICIAL_QUOTE_URLS = (
+    (
+        "https://www.tpex.org.tw/openapi/v1/tpex_mainboard_daily_close_quotes",
+        "櫃買中心正式收盤",
+    ),
+    (
+        "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL",
+        "臺灣證券交易所正式收盤",
+    ),
+)
 
 ACTIVE_STATUSES = {
     "WATCHING",
@@ -209,6 +220,180 @@ def price_row_from_frame(market, code, name, frame, record):
     }
 
 
+def normalize_tw_official_date(value):
+    digits = "".join(char for char in str(value or "") if char.isdigit())
+    if len(digits) == 7:
+        return f"{int(digits[:3]) + 1911:04d}-{digits[3:5]}-{digits[5:7]}"
+    if len(digits) == 8:
+        return f"{digits[:4]}-{digits[4:6]}-{digits[6:8]}"
+    return ""
+
+
+def download_official_tw_quotes(target_date=None):
+    quotes = {}
+
+    def add_quote(code, date, open_, high, low, close, volume, source):
+        code = str(code or "").strip()
+        date = normalize_tw_official_date(date)
+        close = n(close)
+        if not code or not date or close <= 0:
+            return
+        quote = {
+            "date": date,
+            "open": n(open_, close),
+            "high": n(high, close),
+            "low": n(low, close),
+            "close": close,
+            "volume": int(n(volume)),
+            "source": source,
+        }
+        if code not in quotes or date > quotes[code]["date"]:
+            quotes[code] = quote
+
+    for url, source in TW_OFFICIAL_QUOTE_URLS:
+        try:
+            request = Request(
+                url,
+                headers={
+                    "Accept": "application/json",
+                    "User-Agent": "Mozilla/5.0 strategy-tracking/1.0",
+                },
+            )
+            with urlopen(request, timeout=30) as response:
+                rows = json.loads(response.read().decode("utf-8"))
+        except Exception as exc:
+            print(f"WARN: official TW quote download failed ({source}): {exc}")
+            continue
+        if not isinstance(rows, list):
+            continue
+        for item in rows:
+            if not isinstance(item, dict):
+                continue
+            code = str(
+                pick(item, "SecuritiesCompanyCode", "Code", default="")
+            ).strip()
+            date = normalize_tw_official_date(item.get("Date"))
+            close = n(pick(item, "Close", "ClosingPrice"))
+            add_quote(
+                code,
+                date,
+                pick(item, "Open", "OpeningPrice"),
+                pick(item, "High", "HighestPrice"),
+                pick(item, "Low", "LowestPrice"),
+                close,
+                pick(item, "TradingShares", "TradeVolume"),
+                source,
+            )
+
+    target_digits = "".join(
+        char for char in str(target_date or "") if char.isdigit()
+    )
+    if len(target_digits) == 8:
+        url = (
+            "https://www.twse.com.tw/rwd/zh/afterTrading/MI_INDEX"
+            f"?date={target_digits}&type=ALLBUT0999&response=json"
+        )
+        try:
+            request = Request(
+                url,
+                headers={
+                    "Accept": "application/json",
+                    "User-Agent": "Mozilla/5.0 strategy-tracking/1.0",
+                },
+            )
+            with urlopen(request, timeout=30) as response:
+                payload = json.loads(response.read().decode("utf-8"))
+            for table in payload.get("tables", []):
+                fields = table.get("fields") or []
+                required = {
+                    "code": "證券代號",
+                    "volume": "成交股數",
+                    "open": "開盤價",
+                    "high": "最高價",
+                    "low": "最低價",
+                    "close": "收盤價",
+                }
+                if not all(label in fields for label in required.values()):
+                    continue
+                indexes = {
+                    key: fields.index(label) for key, label in required.items()
+                }
+                for row in table.get("data", []):
+                    if not isinstance(row, list) or len(row) <= max(indexes.values()):
+                        continue
+                    add_quote(
+                        row[indexes["code"]],
+                        target_digits,
+                        row[indexes["open"]],
+                        row[indexes["high"]],
+                        row[indexes["low"]],
+                        row[indexes["close"]],
+                        row[indexes["volume"]],
+                        "臺灣證券交易所正式收盤",
+                    )
+        except Exception as exc:
+            print(f"WARN: TWSE dated close download failed: {exc}")
+    return quotes
+
+
+def price_row_from_official_quote(code, name, quote, record, existing_row=None):
+    original = record.get("originalStrategy") or {}
+    previous = record.get("latestStatus") or {}
+    base = existing_row if isinstance(existing_row, dict) else {}
+    close = n(quote.get("close"))
+    neckline = n(original.get("originalNeckline"))
+    stop = n(original.get("originalStopLoss"))
+    target = n(original.get("originalTarget"))
+    watch = n(original.get("originalWatchPrice"), close)
+    risk_amount = watch - stop if watch and stop else 0
+    reward_amount = target - watch if watch and target else 0
+    safe_score = n(
+        previous.get("latestSafetyScore"),
+        n(original.get("originalSafetyScore")),
+    )
+    return {
+        "_trackingOnly": True,
+        "strategyAsOfDate": quote["date"],
+        "date": quote["date"],
+        "code": code,
+        "ticker": code,
+        "name": name,
+        "score": 4 if safe_score >= 85 else 3,
+        "grade": "A" if safe_score >= 85 else "B",
+        "safeScore": safe_score,
+        "riskRewardRatio": (
+            reward_amount / risk_amount
+            if risk_amount > 0 and reward_amount > 0
+            else n(original.get("originalRiskReward"))
+        ),
+        "riskPct": risk_amount / watch * 100 if watch and risk_amount > 0 else 0,
+        "distanceFromNecklinePct": (
+            (close - neckline) / neckline * 100 if neckline else 999
+        ),
+        "close": close,
+        "high": n(quote.get("high"), close),
+        "low": n(quote.get("low"), close),
+        "volume": int(n(quote.get("volume"))),
+        "ma5": n(base.get("ma5"), n(previous.get("latestMA5"))),
+        "ma10": n(base.get("ma10"), n(previous.get("latestMA10"))),
+        "ma20": n(base.get("ma20"), n(previous.get("latestMA20"))),
+        "neckline": neckline,
+        "observationEntry": watch,
+        "chaseRangeLow": n(original.get("originalBuyZoneLow"), watch),
+        "chaseRangeHigh": n(original.get("originalBuyZoneHigh"), watch),
+        "stopLoss": stop,
+        "target": target,
+        "stage": original.get("originalStage") or "策略追蹤",
+        "originalSignal": original.get("originalSignal") or "等待確認",
+        "adjustedSignal": previous.get("adjustedSignal") or "",
+        "strictOk": safe_score >= 85,
+        "forbiddenChase": False,
+        "trackingPriceSource": quote.get("source") or "台股官方正式收盤",
+        "source": quote.get("source") or "台股官方正式收盤",
+        "market": "台股",
+    }
+
+
 def supplement_active_tracking_rows(existing, market, payload):
     payload = deepcopy(payload) if isinstance(payload, dict) else {"meta": {}, "stocks": []}
     rows = [row for row in payload.get("stocks", []) if isinstance(row, dict)]
@@ -242,20 +427,46 @@ def supplement_active_tracking_rows(existing, market, payload):
         return payload
 
     code_records = {str(record.get("stockCode")): record for record in active}
+    added = set()
+    if market == "台股":
+        official_quotes = download_official_tw_quotes(payload_date)
+        for code, record in code_records.items():
+            quote = official_quotes.get(code)
+            if not quote:
+                continue
+            existing_row = rows_by_code.get(code)
+            if existing_row and quote["date"] <= strategy_date(existing_row, meta):
+                continue
+            row = price_row_from_official_quote(
+                code,
+                str(record.get("stockName") or code),
+                quote,
+                record,
+                existing_row,
+            )
+            rows = [item for item in rows if stock_code(market, item) != code]
+            rows.append(row)
+            rows_by_code[code] = row
+            added.add(code)
+
+    fallback_records = {
+        code: record for code, record in code_records.items() if code not in added
+    }
     if market == "美股":
-        symbol_to_code = {code: code for code in code_records}
+        symbol_to_code = {code: code for code in fallback_records}
         frames = download_price_frames(list(symbol_to_code))
     else:
-        symbol_to_code = {f"{code}.TW": code for code in code_records}
+        symbol_to_code = {f"{code}.TW": code for code in fallback_records}
         frames = download_price_frames(list(symbol_to_code))
         found_codes = {symbol_to_code[symbol] for symbol in frames}
         otc_symbols = {
-            f"{code}.TWO": code for code in code_records if code not in found_codes
+            f"{code}.TWO": code
+            for code in fallback_records
+            if code not in found_codes
         }
         symbol_to_code.update(otc_symbols)
         frames.update(download_price_frames(list(otc_symbols)))
 
-    added = set()
     for symbol, frame in frames.items():
         code = symbol_to_code.get(symbol)
         if not code or code in added:
@@ -278,7 +489,7 @@ def supplement_active_tracking_rows(existing, market, payload):
     if active:
         print(
             f"tracking refresh {market}: requested={len(active)} "
-            f"updated={len(added)}"
+            f"updated={len(added)} official_or_fallback"
         )
     payload["stocks"] = rows
     return payload

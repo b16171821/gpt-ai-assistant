@@ -2,6 +2,7 @@ import sys
 import unittest
 from copy import deepcopy
 from pathlib import Path
+from unittest.mock import patch
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -13,6 +14,7 @@ from update_strategy_tracking import (  # noqa: E402
     create_tracking_record,
     evaluateTrackingLifecycle,
     process_tracking,
+    supplement_active_tracking_rows,
     update_tracking_status,
     valid_tracking_setup,
 )
@@ -74,6 +76,65 @@ def payload(row=None, regime="ATTACK", date="2026-07-13"):
 
 
 class StrategyTrackingTests(unittest.TestCase):
+    @patch("update_strategy_tracking.download_price_frames", return_value={})
+    @patch("update_strategy_tracking.download_official_tw_quotes")
+    def test_official_tw_close_replaces_stale_tracking_row(
+        self,
+        official_quotes,
+        _download_price_frames,
+    ):
+        record = create_tracking_record(
+            "台股",
+            base_row(
+                code="3288",
+                name="點晶",
+                date="2026-07-28",
+                strategyAsOfDate="2026-07-28",
+                close=27.2,
+                high=27.2,
+                low=25.5,
+                neckline=26.65,
+                observationEntry=27.59,
+                chaseRangeLow=27.18,
+                chaseRangeHigh=28,
+                stopLoss=25.85,
+                target=38.95,
+            ),
+            {"strategyAsOfDate": "2026-07-29"},
+        )
+        official_quotes.return_value = {
+            "3288": {
+                "date": "2026-07-29",
+                "open": 24.8,
+                "high": 24.8,
+                "low": 24.5,
+                "close": 24.5,
+                "volume": 106460,
+                "source": "櫃買中心正式收盤",
+            }
+        }
+
+        updated_payload = supplement_active_tracking_rows(
+            {"records": [record]},
+            "台股",
+            payload(
+                base_row(
+                    code="3288",
+                    name="點晶",
+                    date="2026-07-28",
+                    strategyAsOfDate="2026-07-28",
+                    close=27.2,
+                ),
+                date="2026-07-29",
+            ),
+        )
+        row = updated_payload["stocks"][0]
+
+        self.assertEqual(row["strategyAsOfDate"], "2026-07-29")
+        self.assertEqual(row["close"], 24.5)
+        self.assertEqual(row["high"], 24.8)
+        self.assertEqual(row["trackingPriceSource"], "櫃買中心正式收盤")
+
     def test_strategy_data_date_and_tracking_created_date_are_separate(self):
         record = create_tracking_record(
             "台股",
