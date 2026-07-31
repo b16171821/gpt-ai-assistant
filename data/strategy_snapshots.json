@@ -15149,5 +15149,30 @@
       "reason": "趨勢多頭、量能放大、價量條件足",
       "action": "已漲遠或接近目標，空手不追；持有者依策略分批處理。"
     }
+  ],
+  "美股:SNOW": [
+    {
+      "date": "2026-07-31",
+      "market": "美股",
+      "code": "SNOW",
+      "name": "SNOW",
+      "grade": "C",
+      "safeScore": 51,
+      "riskRewardRatio": 10.64,
+      "category": "資料不足",
+      "close": 293.28,
+      "neckline": 304.17,
+      "entry": 310.25,
+      "buyLow": 310.25,
+      "buyHigh": 319.56,
+      "stopLoss": 295.04,
+      "target": 472.14,
+      "riskPct": -0.6,
+      "rewardPct": 52.18,
+      "distanceFromNecklinePct": -3.58,
+      "pattern": "旗型整理突破",
+      "reason": "均線多頭排列、價量趨勢成立、大盤不弱",
+      "action": "預備單，等待確認條件"
+    }
   ]
 }

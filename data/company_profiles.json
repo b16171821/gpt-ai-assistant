@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-31 18:10:40",
+  "updatedAt": "2026-08-01 07:41:03",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2250,6 +2250,15 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-07-31 18:10:40"
+    },
+    "美股:SNOW": {
+      "industry": "Software - Application",
+      "sector": "Technology",
+      "companyProfile": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI)",
+      "theme": "產業：Software - Application｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-01 07:41:03"
     }
   }
 }

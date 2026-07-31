@@ -822,7 +822,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-31 18:10:41"
+    "updatedAt": "2026-08-01 07:41:03"
   },
   "台股:2332": {
     "key": "台股:2332",
@@ -1947,7 +1947,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-31 18:10:41"
+    "updatedAt": "2026-08-01 07:41:04"
   },
   "台股:4513": {
     "key": "台股:4513",
@@ -4498,6 +4498,31 @@
     "holderAction": "跌破原始停損，依紀律處理。",
     "emptyAction": "取消觀察，等待新結構。",
     "updatedAt": "2026-06-17 08:05:20"
+  },
+  "美股:SNOW": {
+    "key": "美股:SNOW",
+    "market": "美股",
+    "code": "SNOW",
+    "name": "SNOW",
+    "createdAt": "2026-07-31",
+    "originalBuyLow": 310.25,
+    "originalBuyHigh": 319.56,
+    "originalStopLoss": 295.04,
+    "originalTarget": 472.14,
+    "originalNeckline": 304.17,
+    "originalStage": "接近成形＋可觀察",
+    "originalWinRate": "中",
+    "status": "ended",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略結束",
+    "currentPrice": 293.28,
+    "currentTarget": 472.14,
+    "currentStopLoss": 295.04,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "跌破原始停損，依紀律處理。",
+    "emptyAction": "取消觀察，等待新結構。",
+    "updatedAt": "2026-08-01 07:41:04"
   },
   "美股:STX": {
     "key": "美股:STX",
