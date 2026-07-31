@@ -4380,6 +4380,29 @@
   ],
   "台股:2330": [
     {
+      "date": "2026-07-31",
+      "market": "台股",
+      "code": "2330",
+      "name": "台積電",
+      "grade": "A",
+      "safeScore": 77,
+      "riskRewardRatio": 2.16,
+      "category": "主升候選",
+      "close": 2425.0,
+      "neckline": 2500.0,
+      "entry": 2550.0,
+      "buyLow": 2550.0,
+      "buyHigh": 2626.5,
+      "stopLoss": 2425.0,
+      "target": 2820.0,
+      "riskPct": 4.9,
+      "rewardPct": 10.59,
+      "distanceFromNecklinePct": -3.0,
+      "pattern": "三角收斂突破",
+      "reason": "趨勢多頭、量能放大、題材命中",
+      "action": "條件接近完整，等收盤確認或回踩不破。"
+    },
+    {
       "date": "2026-06-17",
       "market": "台股",
       "code": "2330",
@@ -15098,6 +15121,31 @@
       "rewardPct": 69.46,
       "distanceFromNecklinePct": -23.11,
       "pattern": "旗型整理突破",
+      "reason": "趨勢多頭、量能放大、價量條件足",
+      "action": "已漲遠或接近目標，空手不追；持有者依策略分批處理。"
+    }
+  ],
+  "台股:4442": [
+    {
+      "date": "2026-07-31",
+      "market": "台股",
+      "code": "4442",
+      "name": "竣邦-KY",
+      "grade": "C",
+      "safeScore": 0,
+      "riskRewardRatio": 0.53,
+      "category": "禁止追高",
+      "close": 72.6,
+      "neckline": 62.5,
+      "entry": 72.6,
+      "buyLow": 63.75,
+      "buyHigh": 65.66,
+      "stopLoss": 60.62,
+      "target": 79.0,
+      "riskPct": 16.49,
+      "rewardPct": 8.82,
+      "distanceFromNecklinePct": 16.16,
+      "pattern": "接近成形",
       "reason": "趨勢多頭、量能放大、價量條件足",
       "action": "已漲遠或接近目標，空手不追；持有者依策略分批處理。"
     }
