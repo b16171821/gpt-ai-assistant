@@ -1639,15 +1639,15 @@
     "originalWinRate": "高",
     "status": "active",
     "createdBy": "strategy-lock-v1",
-    "trackingStatus": "接近第一目標",
-    "currentPrice": 84.8,
-    "currentTarget": 124.2,
+    "trackingStatus": "已達第一目標",
+    "currentPrice": 92.4,
+    "currentTarget": 123.35,
     "currentStopLoss": 78.67,
-    "extensionTarget": 124.2,
+    "extensionTarget": 123.35,
     "recentCloses": [],
-    "holderAction": "接近原始第一目標，準備分批停利。",
-    "emptyAction": "不追高，等回踩。",
-    "updatedAt": "2026-07-30 07:41:58"
+    "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
+    "emptyAction": "不追高，等新的整理區或回踩不破。",
+    "updatedAt": "2026-08-03 18:57:16"
   },
   "台股:3455": {
     "key": "台股:3455",
