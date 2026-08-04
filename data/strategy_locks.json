@@ -4390,14 +4390,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 272.46,
-    "currentTarget": 396.25,
-    "currentStopLoss": 282.27,
-    "extensionTarget": 396.25,
+    "currentPrice": 301.33,
+    "currentTarget": 421.75,
+    "currentStopLoss": 294.64,
+    "extensionTarget": 421.75,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-17 17:31:09"
+    "updatedAt": "2026-08-05 07:42:14"
   },
   "美股:ORCL": {
     "key": "美股:ORCL",
