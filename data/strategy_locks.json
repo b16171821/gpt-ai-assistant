@@ -2447,7 +2447,7 @@
     "recentCloses": [],
     "holderAction": "接近原始第一目標，準備分批停利。",
     "emptyAction": "不追高，等回踩。",
-    "updatedAt": "2026-08-05 18:13:59"
+    "updatedAt": "2026-08-06 07:37:41"
   },
   "台股:5410": {
     "key": "台股:5410",
@@ -4098,6 +4098,31 @@
     "holderAction": "跌破原始停損，依紀律處理。",
     "emptyAction": "取消觀察，等待新結構。",
     "updatedAt": "2026-06-02 19:52:59"
+  },
+  "美股:ANET": {
+    "key": "美股:ANET",
+    "market": "美股",
+    "code": "ANET",
+    "name": "ANET",
+    "createdAt": "2026-08-05",
+    "originalBuyLow": 219.14,
+    "originalBuyHigh": 225.71,
+    "originalStopLoss": 208.39,
+    "originalTarget": 294.55,
+    "originalNeckline": 214.84,
+    "originalStage": "接近成形＋可觀察",
+    "originalWinRate": "中",
+    "status": "ended",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略結束",
+    "currentPrice": 197.31,
+    "currentTarget": 294.55,
+    "currentStopLoss": 208.39,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "跌破原始停損，依紀律處理。",
+    "emptyAction": "取消觀察，等待新結構。",
+    "updatedAt": "2026-08-06 07:37:41"
   },
   "美股:ARM": {
     "key": "美股:ARM",

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-05 18:13:58",
+  "updatedAt": "2026-08-06 07:37:40",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2259,6 +2259,15 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-08-01 07:41:03"
+    },
+    "美股:ANET": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Arista Networks, Inc. engages in the development, marketing, and sale of data-driven, client to cloud networking solutions for AI, data center, campus, and routing environments in ",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、量能放大、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-06 07:37:40"
     }
   }
 }
