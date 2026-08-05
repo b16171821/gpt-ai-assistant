@@ -2440,14 +2440,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "接近第一目標",
-    "currentPrice": 93.2,
-    "currentTarget": 121.8,
-    "currentStopLoss": 91.08,
-    "extensionTarget": 121.8,
+    "currentPrice": 90.5,
+    "currentTarget": 139.5,
+    "currentStopLoss": 99.91,
+    "extensionTarget": 139.5,
     "recentCloses": [],
     "holderAction": "接近原始第一目標，準備分批停利。",
     "emptyAction": "不追高，等回踩。",
-    "updatedAt": "2026-07-10 18:37:11"
+    "updatedAt": "2026-08-05 18:13:59"
   },
   "台股:5410": {
     "key": "台股:5410",
@@ -4391,13 +4391,13 @@
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
     "currentPrice": 301.33,
-    "currentTarget": 421.75,
-    "currentStopLoss": 294.64,
-    "extensionTarget": 421.75,
+    "currentTarget": 421.77,
+    "currentStopLoss": 294.65,
+    "extensionTarget": 421.77,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-05 07:42:14"
+    "updatedAt": "2026-08-05 18:13:59"
   },
   "美股:ORCL": {
     "key": "美股:ORCL",
