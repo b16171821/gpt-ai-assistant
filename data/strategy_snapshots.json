@@ -14238,6 +14238,29 @@
   ],
   "台股:6617": [
     {
+      "date": "2026-08-07",
+      "market": "台股",
+      "code": "6617",
+      "name": "共信-KY",
+      "grade": "C",
+      "safeScore": 35,
+      "riskRewardRatio": 9.19,
+      "category": "禁止追高",
+      "close": 96.3,
+      "neckline": 118.5,
+      "entry": 120.87,
+      "buyLow": 120.87,
+      "buyHigh": 124.5,
+      "stopLoss": 114.94,
+      "target": 175.3,
+      "riskPct": 4.9,
+      "rewardPct": 45.03,
+      "distanceFromNecklinePct": -18.73,
+      "pattern": "旗型整理突破",
+      "reason": "趨勢多頭、量能放大、價量條件足",
+      "action": "已漲遠或接近目標，空手不追；持有者依策略分批處理。"
+    },
+    {
       "date": "2026-07-08",
       "market": "台股",
       "code": "6617",
@@ -15313,6 +15336,31 @@
       "pattern": "旗型整理突破",
       "reason": "均線多頭排列、量能放大、大盤不弱",
       "action": "預備單，等待確認條件"
+    }
+  ],
+  "台股:1435": [
+    {
+      "date": "2026-08-07",
+      "market": "台股",
+      "code": "1435",
+      "name": "中福",
+      "grade": "C",
+      "safeScore": 30,
+      "riskRewardRatio": 10.8,
+      "category": "禁止追高",
+      "close": 23.3,
+      "neckline": 29.2,
+      "entry": 29.78,
+      "buyLow": 29.78,
+      "buyHigh": 30.68,
+      "stopLoss": 28.32,
+      "target": 45.55,
+      "riskPct": 4.9,
+      "rewardPct": 52.93,
+      "distanceFromNecklinePct": -20.21,
+      "pattern": "旗型整理突破",
+      "reason": "趨勢多頭、量能放大、價量條件足",
+      "action": "已漲遠或接近目標，空手不追；持有者依策略分批處理。"
     }
   ]
 }

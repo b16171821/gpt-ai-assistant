@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07 09:39:22",
+  "updatedAt": "2026-08-07 16:37:34",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2268,6 +2268,15 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-08-06 07:37:40"
+    },
+    "台股:1435": {
+      "industry": "Conglomerates",
+      "sector": "Industrials",
+      "companyProfile": "Chung Fu Tex-International Corporation engages in the real estate leasing business. It is also involved in the tobacco and alcohol retail, and warehousing business, as well as resi",
+      "theme": "產業：Conglomerates｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-07 16:37:34"
     }
   }
 }
