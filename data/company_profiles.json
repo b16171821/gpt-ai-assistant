@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-07 16:37:34",
+  "updatedAt": "2026-08-08 07:17:50",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2277,6 +2277,15 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-08-07 16:37:34"
+    },
+    "美股:ABNB": {
+      "industry": "Travel Services",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Airbnb, Inc., together with its subsidiaries, operates a platform for stays, experiences, and services worldwide. The company's marketplace connects hosts and guests online or thro",
+      "theme": "產業：Travel Services｜板塊：Consumer Cyclical｜型態：旗型整理突破｜原因：均線多頭排列、量能放大、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-08 07:17:50"
     }
   }
 }
