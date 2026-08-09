@@ -3272,7 +3272,7 @@
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-08-08 07:17:51"
+    "updatedAt": "2026-08-10 06:27:42"
   },
   "台股:6620": {
     "key": "台股:6620",
@@ -4091,13 +4091,13 @@
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
     "currentPrice": 178.07,
-    "currentTarget": 229.67,
-    "currentStopLoss": 173.1,
-    "extensionTarget": null,
+    "currentTarget": 229.73,
+    "currentStopLoss": 173.13,
+    "extensionTarget": 229.73,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-08 07:17:51"
+    "updatedAt": "2026-08-10 06:27:42"
   },
   "美股:AMAT": {
     "key": "美股:AMAT",
@@ -4472,7 +4472,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-08 07:17:51"
+    "updatedAt": "2026-08-10 06:27:42"
   },
   "美股:ORCL": {
     "key": "美股:ORCL",
