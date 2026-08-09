@@ -10,6 +10,10 @@ on:
       - 'scripts/market_filter.py'
       - 'scripts/update_strategy_tracking.py'
       - 'scripts/update_strategy_snapshots.py'
+      - 'scripts/disposition_service.py'
+      - 'scripts/update_disposition_risk.py'
+      - 'tests/test_disposition_service.py'
+      - 'tests/test_disposition_data.py'
       - 'tests/test_strategy_tracking.py'
       - 'tests/test_tw_official_data.py'
       - 'tests/test_us_data_freshness.py'
@@ -55,6 +59,7 @@ jobs:
             echo "::error title=美股完整收盤更新失敗::$message"
             exit 1
           }
+          python scripts/update_disposition_risk.py
           python scripts/update_company_profiles.py
           python scripts/update_strategy_locks.py
           python scripts/update_strategy_snapshots.py
