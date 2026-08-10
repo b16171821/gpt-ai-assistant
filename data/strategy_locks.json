@@ -3214,15 +3214,15 @@
     "originalWinRate": "高",
     "status": "active",
     "createdBy": "strategy-lock-v1",
-    "trackingStatus": "策略追蹤中",
-    "currentPrice": 130.5,
-    "currentTarget": 157.5,
-    "currentStopLoss": 123.19,
-    "extensionTarget": null,
+    "trackingStatus": "接近第一目標",
+    "currentPrice": 154.0,
+    "currentTarget": 171.0,
+    "currentStopLoss": 134.34,
+    "extensionTarget": 171.0,
     "recentCloses": [],
-    "holderAction": "未達第一目標前，守風險區續抱觀察。",
-    "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-18 07:34:02"
+    "holderAction": "接近原始第一目標，準備分批停利。",
+    "emptyAction": "不追高，等回踩。",
+    "updatedAt": "2026-08-11 07:18:16"
   },
   "台股:6613": {
     "key": "台股:6613",
@@ -3265,14 +3265,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "已達第一目標",
-    "currentPrice": 96.3,
-    "currentTarget": 175.3,
+    "currentPrice": 105.5,
+    "currentTarget": 174.7,
     "currentStopLoss": 114.94,
-    "extensionTarget": 175.3,
+    "extensionTarget": 174.7,
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-08-10 06:27:42"
+    "updatedAt": "2026-08-11 07:18:16"
   },
   "台股:6620": {
     "key": "台股:6620",
@@ -4090,14 +4090,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 178.07,
-    "currentTarget": 229.73,
-    "currentStopLoss": 173.13,
-    "extensionTarget": 229.73,
+    "currentPrice": 184.7,
+    "currentTarget": 244.75,
+    "currentStopLoss": 180.41,
+    "extensionTarget": 244.75,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-10 06:27:42"
+    "updatedAt": "2026-08-11 07:18:16"
   },
   "美股:AMAT": {
     "key": "美股:AMAT",
