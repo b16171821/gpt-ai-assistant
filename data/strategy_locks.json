@@ -599,6 +599,31 @@
     "emptyAction": "取消觀察，等待新結構。",
     "updatedAt": "2026-07-07 18:40:47"
   },
+  "台股:1904": {
+    "key": "台股:1904",
+    "market": "台股",
+    "code": "1904",
+    "name": "正隆",
+    "createdAt": "2026-08-11",
+    "originalBuyLow": 23.77,
+    "originalBuyHigh": 24.48,
+    "originalStopLoss": 22.6,
+    "originalTarget": 28.4,
+    "originalNeckline": 23.3,
+    "originalStage": "突破第一根",
+    "originalWinRate": "低",
+    "status": "active",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略追蹤中",
+    "currentPrice": 24.5,
+    "currentTarget": 28.4,
+    "currentStopLoss": 22.6,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "未達第一目標前，守風險區續抱觀察。",
+    "emptyAction": "空手不追高，等突破確認或回踩不破。",
+    "updatedAt": "2026-08-11 16:33:36"
+  },
   "台股:2059": {
     "key": "台股:2059",
     "market": "台股",
@@ -2565,14 +2590,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 36.3,
-    "currentTarget": 43.65,
-    "currentStopLoss": 29.1,
+    "currentPrice": 30.55,
+    "currentTarget": 39.25,
+    "currentStopLoss": 26.97,
     "extensionTarget": null,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-24 07:41:37"
+    "updatedAt": "2026-08-11 16:33:36"
   },
   "台股:5483": {
     "key": "台股:5483",
@@ -2673,6 +2698,31 @@
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
     "updatedAt": "2026-06-05 07:50:50"
+  },
+  "台股:5904": {
+    "key": "台股:5904",
+    "market": "台股",
+    "code": "5904",
+    "name": "寶雅",
+    "createdAt": "2026-08-11",
+    "originalBuyLow": 80.78,
+    "originalBuyHigh": 83.21,
+    "originalStopLoss": 76.82,
+    "originalTarget": 104.4,
+    "originalNeckline": 79.2,
+    "originalStage": "突破第一根",
+    "originalWinRate": "低",
+    "status": "active",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略追蹤中",
+    "currentPrice": 87.1,
+    "currentTarget": 104.4,
+    "currentStopLoss": 76.82,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "未達第一目標前，守風險區續抱觀察。",
+    "emptyAction": "空手不追高，等突破確認或回踩不破。",
+    "updatedAt": "2026-08-11 16:33:36"
   },
   "台股:6016": {
     "key": "台股:6016",
@@ -3265,14 +3315,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "已達第一目標",
-    "currentPrice": 105.5,
-    "currentTarget": 174.7,
+    "currentPrice": 102.5,
+    "currentTarget": 174.5,
     "currentStopLoss": 114.94,
-    "extensionTarget": 174.7,
+    "extensionTarget": 174.5,
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-08-11 07:18:16"
+    "updatedAt": "2026-08-11 16:33:36"
   },
   "台股:6620": {
     "key": "台股:6620",
@@ -4097,7 +4147,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-11 07:18:16"
+    "updatedAt": "2026-08-11 16:33:36"
   },
   "美股:AMAT": {
     "key": "美股:AMAT",
@@ -4465,14 +4515,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 300.27,
-    "currentTarget": 463.71,
+    "currentPrice": 310.59,
+    "currentTarget": 458.96,
     "currentStopLoss": 314.99,
-    "extensionTarget": 463.71,
+    "extensionTarget": 458.96,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-10 06:27:42"
+    "updatedAt": "2026-08-11 16:33:36"
   },
   "美股:ORCL": {
     "key": "美股:ORCL",

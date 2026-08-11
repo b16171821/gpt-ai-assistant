@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-11 07:18:15",
+  "updatedAt": "2026-08-11 16:33:35",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2286,6 +2286,24 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-08-08 07:17:50"
+    },
+    "台股:5904": {
+      "industry": "Department Stores",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "POYA International Co., Ltd. operates a chain of retail stores in Taiwan. It offers fashionable beauty and skincare products; underwear and socks; daily necessities; and personal c",
+      "theme": "產業：Department Stores｜板塊：Consumer Cyclical｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-11 16:33:35"
+    },
+    "台股:1904": {
+      "industry": "Paper & Paper Products",
+      "sector": "Basic Materials",
+      "companyProfile": "Cheng Loong Corporation manufactures and sells paper products in Taiwan, Mainland China, and Southeast Asia. The company offers paperboard products, including containerboard, liner",
+      "theme": "產業：Paper & Paper Products｜板塊：Basic Materials｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-11 16:33:35"
     }
   }
 }
