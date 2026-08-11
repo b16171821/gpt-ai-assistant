@@ -622,7 +622,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-11 16:33:36"
+    "updatedAt": "2026-08-12 07:23:37"
   },
   "台股:2059": {
     "key": "台股:2059",
@@ -2597,7 +2597,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-11 16:33:36"
+    "updatedAt": "2026-08-12 07:23:37"
   },
   "台股:5483": {
     "key": "台股:5483",
@@ -2722,7 +2722,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-11 16:33:36"
+    "updatedAt": "2026-08-12 07:23:37"
   },
   "台股:6016": {
     "key": "台股:6016",
@@ -3322,7 +3322,7 @@
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-08-11 16:33:36"
+    "updatedAt": "2026-08-12 07:23:37"
   },
   "台股:6620": {
     "key": "台股:6620",
@@ -4140,14 +4140,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 184.7,
-    "currentTarget": 244.75,
-    "currentStopLoss": 180.41,
-    "extensionTarget": 244.75,
+    "currentPrice": 184.98,
+    "currentTarget": 247.01,
+    "currentStopLoss": 181.51,
+    "extensionTarget": 247.01,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-11 16:33:36"
+    "updatedAt": "2026-08-12 07:23:37"
   },
   "美股:AMAT": {
     "key": "美股:AMAT",
@@ -4448,6 +4448,31 @@
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
     "updatedAt": "2026-07-02 18:20:29"
+  },
+  "美股:MDB": {
+    "key": "美股:MDB",
+    "market": "美股",
+    "code": "MDB",
+    "name": "MDB",
+    "createdAt": "2026-08-11",
+    "originalBuyLow": 448.15,
+    "originalBuyHigh": 461.59,
+    "originalStopLoss": 426.18,
+    "originalTarget": 588.15,
+    "originalNeckline": 439.36,
+    "originalStage": "接近成形＋可觀察",
+    "originalWinRate": "中",
+    "status": "active",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略追蹤中",
+    "currentPrice": 439.16,
+    "currentTarget": 588.15,
+    "currentStopLoss": 426.18,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "未達第一目標前，守風險區續抱觀察。",
+    "emptyAction": "空手不追高，等突破確認或回踩不破。",
+    "updatedAt": "2026-08-12 07:23:37"
   },
   "美股:MRVL": {
     "key": "美股:MRVL",
