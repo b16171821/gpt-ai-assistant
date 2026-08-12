@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-12 07:23:36",
+  "updatedAt": "2026-08-13 07:22:41",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2304,6 +2304,24 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-08-11 16:33:35"
+    },
+    "台股:4147": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare",
+      "companyProfile": "TaiMed Biologics Inc., a biotechnology company, develops, manufactures, and commercializes drugs for the treatment and prevention of infectious diseases. The company develops and m",
+      "theme": "產業：Biotechnology｜板塊：Healthcare｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-13 07:22:41"
+    },
+    "台股:2033": {
+      "industry": "Steel",
+      "sector": "Basic Materials",
+      "companyProfile": "Chia Ta World Co., Ltd. engages in the manufacture, processing, and distribution of steel products in Taiwan and Mainland China. The company's products include high carbon steel wi",
+      "theme": "產業：Steel｜板塊：Basic Materials｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-13 07:22:41"
     }
   }
 }
