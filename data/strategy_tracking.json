@@ -1,884 +1,18 @@
 {
   "meta": {
-    "updatedAt": "2026-08-13 16:55:28",
+    "updatedAt": "2026-08-14 07:25:58",
     "version": "strategy-tracking-v4",
     "activeCount": 44,
-    "endedCount": 315,
+    "endedCount": 316,
     "invalidAtCreationCount": 19,
-    "liveEndedCount": 42,
+    "liveEndedCount": 43,
     "trackingAsOfDate": "2026-08-13",
     "maxWaitingTradingDays": 15,
     "legacyLocksImported": 194,
     "legacySnapshotStocksImported": 258,
-    "lifecycleHistoriesEvaluated": 355
+    "lifecycleHistoriesEvaluated": 360
   },
   "records": [
-    {
-      "trackingId": "美股:ABNB:2026-08-07",
-      "market": "美股",
-      "stockCode": "ABNB",
-      "stockName": "ABNB",
-      "firstSignalDate": "2026-08-07",
-      "strategyDataDate": "2026-08-07",
-      "trackingCreatedDate": "2026-08-07",
-      "trackingOrigin": "LEGACY_IMPORT",
-      "lastUpdateDate": "2026-08-12",
-      "endDate": null,
-      "endedAt": null,
-      "endReason": "",
-      "endPriority": null,
-      "maxHighDuringTracking": 187.12,
-      "targetHitDate": null,
-      "stopLossHitDate": null,
-      "finalTrackingStatus": null,
-      "currentProfitPct": -2.52,
-      "maxProfitPct": 1.28,
-      "result": "",
-      "trackingStatus": "PULLBACK_CONFIRM",
-      "trackingStatusText": "回踩不破，可持續追蹤",
-      "originalStrategy": {
-        "originalStage": "主升候選",
-        "originalSignal": "預備單，等待確認條件",
-        "originalNeckline": 178.45,
-        "originalWatchPrice": 182.02,
-        "originalBuyZoneLow": 182.02,
-        "originalBuyZoneHigh": 187.48,
-        "originalStopLoss": 173.1,
-        "originalTarget": 229.67,
-        "originalRiskReward": 5.34,
-        "originalSafetyScore": 100,
-        "originalMarketRegime": "NO_DATA",
-        "originalMarketRegimeImpact": "資料不足"
-      },
-      "latestStatus": {
-        "latestClose": 180.1,
-        "latestHigh": 184.11,
-        "latestLow": 179.26,
-        "latestVolume": 5986600,
-        "latestMA5": 175.9,
-        "latestMA10": 163.61,
-        "latestMA20": 154.53,
-        "latestSafetyScore": 66,
-        "latestRiskReward": 6.01,
-        "latestMarketRegime": "STOP",
-        "latestSignal": "觀察",
-        "adjustedSignal": "取消新進場，只保留觀察",
-        "holderAction": "只看續抱、停利或停損，不新增部位。",
-        "cashAction": "停止新進場，先保留現金。",
-        "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-        "latestDataDate": "2026-08-12"
-      },
-      "progress": {
-        "brokeNeckline": true,
-        "closeHeldNeckline": true,
-        "inBuyZone": true,
-        "aboveBuyZoneHigh": false,
-        "pullbackHeld": true,
-        "stopBroken": false,
-        "nearTarget": false,
-        "targetHit": false,
-        "patternFailed": false,
-        "expired": false,
-        "everBrokeNeckline": true,
-        "trackingDays": 4
-      },
-      "notes": {
-        "systemNotes": [
-          {
-            "date": "2026-08-07",
-            "text": "由舊版近 5 日策略紀錄建立追蹤，原始欄位以最早一筆保存。"
-          },
-          {
-            "date": "2026-08-07",
-            "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
-          },
-          {
-            "date": "2026-08-08",
-            "text": "已匯入舊版策略鎖定資料，原始策略維持不變。"
-          },
-          {
-            "date": "2026-08-07",
-            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
-          },
-          {
-            "date": "2026-08-10",
-            "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
-          },
-          {
-            "date": "2026-08-10",
-            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
-          },
-          {
-            "date": "2026-08-11",
-            "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
-          },
-          {
-            "date": "2026-08-11",
-            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
-          },
-          {
-            "date": "2026-08-12",
-            "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
-          },
-          {
-            "date": "2026-08-12",
-            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
-          }
-        ],
-        "manualNote": "",
-        "legacySnapshots": [
-          {
-            "date": "2026-08-12",
-            "market": "美股",
-            "code": "ABNB",
-            "name": "ABNB",
-            "grade": "C",
-            "safeScore": 51,
-            "riskRewardRatio": 6.01,
-            "category": "資料不足",
-            "close": 180.1,
-            "neckline": 187.12,
-            "buyLow": 190.86,
-            "buyHigh": 196.59,
-            "stopLoss": 181.51,
-            "target": 247.01,
-            "action": "預備單，等待確認條件"
-          },
-          {
-            "date": "2026-08-11",
-            "market": "美股",
-            "code": "ABNB",
-            "name": "ABNB",
-            "grade": "A",
-            "safeScore": 97,
-            "riskRewardRatio": 6.01,
-            "category": "主升候選",
-            "close": 184.98,
-            "neckline": 187.12,
-            "buyLow": 190.86,
-            "buyHigh": 196.59,
-            "stopLoss": 181.51,
-            "target": 247.01,
-            "action": "預備單，等待確認條件"
-          },
-          {
-            "date": "2026-08-10",
-            "market": "美股",
-            "code": "ABNB",
-            "name": "ABNB",
-            "grade": "A",
-            "safeScore": 97,
-            "riskRewardRatio": 5.92,
-            "category": "主升候選",
-            "close": 184.7,
-            "neckline": 185.99,
-            "buyLow": 189.71,
-            "buyHigh": 195.4,
-            "stopLoss": 180.41,
-            "target": 244.75,
-            "action": "預備單，等待確認條件"
-          },
-          {
-            "date": "2026-08-07",
-            "market": "美股",
-            "code": "ABNB",
-            "name": "ABNB",
-            "grade": "A",
-            "safeScore": 100,
-            "riskRewardRatio": 5.34,
-            "category": "主升候選",
-            "close": 178.07,
-            "neckline": 178.45,
-            "buyLow": 182.02,
-            "buyHigh": 187.48,
-            "stopLoss": 173.1,
-            "target": 229.67,
-            "action": "預備單，等待確認條件"
-          }
-        ],
-        "legacyLock": {
-          "strategyDate": "2026-08-07",
-          "market": "美股",
-          "code": "ABNB",
-          "name": "ABNB",
-          "originalStage": "接近成形＋可觀察",
-          "originalSignal": "策略追蹤中",
-          "originalNeckline": 178.45,
-          "originalBuyLow": 182.02,
-          "originalBuyHigh": 187.48,
-          "originalStopLoss": 173.1,
-          "originalTarget": 229.67,
-          "legacyStatus": "active",
-          "trackingStatus": "策略追蹤中",
-          "updatedAt": "2026-08-08 07:17:51"
-        }
-      },
-      "trackingDates": [
-        "2026-08-07",
-        "2026-08-10",
-        "2026-08-11",
-        "2026-08-12"
-      ],
-      "statusHistory": [
-        {
-          "date": "2026-08-07",
-          "status": "PULLBACK_CONFIRM",
-          "close": 178.07,
-          "latestStatus": {
-            "latestClose": 178.07,
-            "latestHigh": 178.48,
-            "latestLow": 163.45,
-            "latestVolume": 15890600,
-            "latestMA5": 156.55,
-            "latestMA10": 153.93,
-            "latestMA20": 149.11,
-            "latestSafetyScore": 95,
-            "latestRiskReward": 5.35,
-            "latestMarketRegime": "STOP",
-            "latestSignal": "觀察",
-            "adjustedSignal": "取消新進場，只保留觀察",
-            "holderAction": "只看續抱、停利或停損，不新增部位。",
-            "cashAction": "停止新進場，先保留現金。",
-            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-            "latestDataDate": "2026-08-07"
-          }
-        },
-        {
-          "date": "2026-08-10",
-          "status": "PULLBACK_CONFIRM",
-          "close": 184.7,
-          "latestStatus": {
-            "latestClose": 184.7,
-            "latestHigh": 185.99,
-            "latestLow": 177.43,
-            "latestVolume": 9981900,
-            "latestMA5": 163.36,
-            "latestMA10": 157.72,
-            "latestMA20": 151.03,
-            "latestSafetyScore": 95,
-            "latestRiskReward": 5.92,
-            "latestMarketRegime": "STOP",
-            "latestSignal": "觀察",
-            "adjustedSignal": "取消新進場，只保留觀察",
-            "holderAction": "只看續抱、停利或停損，不新增部位。",
-            "cashAction": "停止新進場，先保留現金。",
-            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-            "latestDataDate": "2026-08-10"
-          }
-        },
-        {
-          "date": "2026-08-11",
-          "status": "PULLBACK_CONFIRM",
-          "close": 184.98,
-          "latestStatus": {
-            "latestClose": 184.98,
-            "latestHigh": 187.12,
-            "latestLow": 178.45,
-            "latestVolume": 7925163,
-            "latestMA5": 170.38,
-            "latestMA10": 160.91,
-            "latestMA20": 152.95,
-            "latestSafetyScore": 92,
-            "latestRiskReward": 6.01,
-            "latestMarketRegime": "STOP",
-            "latestSignal": "觀察",
-            "adjustedSignal": "取消新進場，只保留觀察",
-            "holderAction": "只看續抱、停利或停損，不新增部位。",
-            "cashAction": "停止新進場，先保留現金。",
-            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-            "latestDataDate": "2026-08-11"
-          }
-        },
-        {
-          "date": "2026-08-12",
-          "status": "PULLBACK_CONFIRM",
-          "close": 180.1,
-          "latestStatus": {
-            "latestClose": 180.1,
-            "latestHigh": 184.11,
-            "latestLow": 179.26,
-            "latestVolume": 5986600,
-            "latestMA5": 175.9,
-            "latestMA10": 163.61,
-            "latestMA20": 154.53,
-            "latestSafetyScore": 66,
-            "latestRiskReward": 6.01,
-            "latestMarketRegime": "STOP",
-            "latestSignal": "觀察",
-            "adjustedSignal": "取消新進場，只保留觀察",
-            "holderAction": "只看續抱、停利或停損，不新增部位。",
-            "cashAction": "停止新進場，先保留現金。",
-            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-            "latestDataDate": "2026-08-12"
-          }
-        }
-      ],
-      "manualRemoved": false,
-      "manualRemovedAt": null
-    },
-    {
-      "trackingId": "美股:ANET:2026-08-12",
-      "market": "美股",
-      "stockCode": "ANET",
-      "stockName": "ANET",
-      "firstSignalDate": "2026-08-12",
-      "strategyDataDate": "2026-08-12",
-      "trackingCreatedDate": "2026-08-12",
-      "trackingOrigin": "LIVE_SIGNAL",
-      "lastUpdateDate": "2026-08-12",
-      "endDate": null,
-      "endedAt": null,
-      "endReason": "",
-      "endPriority": null,
-      "maxHighDuringTracking": 211.45,
-      "targetHitDate": null,
-      "stopLossHitDate": null,
-      "finalTrackingStatus": null,
-      "currentProfitPct": -5.38,
-      "maxProfitPct": -4.96,
-      "result": "",
-      "trackingStatus": "WATCHING",
-      "trackingStatusText": "追蹤中，等待確認",
-      "originalStrategy": {
-        "originalStage": "接近成形＋可觀察",
-        "originalSignal": "觀察",
-        "originalNeckline": 214.89,
-        "originalWatchPrice": 219.19,
-        "originalBuyZoneLow": 219.19,
-        "originalBuyZoneHigh": 225.76,
-        "originalStopLoss": 208.44,
-        "originalTarget": 292.78,
-        "originalRiskReward": 6.85,
-        "originalSafetyScore": 81,
-        "originalMarketRegime": "STOP",
-        "originalMarketRegimeImpact": "STOP 停止進場"
-      },
-      "latestStatus": {
-        "latestClose": 210.5,
-        "latestHigh": 211.45,
-        "latestLow": 203.76,
-        "latestVolume": 10004600,
-        "latestMA5": 196.17,
-        "latestMA10": 190.49,
-        "latestMA20": 180.5,
-        "latestSafetyScore": 81,
-        "latestRiskReward": 6.85,
-        "latestMarketRegime": "STOP",
-        "latestSignal": "觀察",
-        "adjustedSignal": "取消新進場，只保留觀察",
-        "holderAction": "只看續抱、停利或停損，不新增部位。",
-        "cashAction": "停止新進場，先保留現金。",
-        "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-        "latestDataDate": "2026-08-12"
-      },
-      "progress": {
-        "brokeNeckline": false,
-        "closeHeldNeckline": false,
-        "inBuyZone": false,
-        "aboveBuyZoneHigh": false,
-        "pullbackHeld": false,
-        "stopBroken": false,
-        "nearTarget": false,
-        "targetHit": false,
-        "patternFailed": false,
-        "expired": false,
-        "everBrokeNeckline": false,
-        "trackingDays": 1
-      },
-      "notes": {
-        "systemNotes": [
-          {
-            "date": "2026-08-12",
-            "text": "產生主升段安全觀察策略卡；風報比達 2 以上；停損距離小於 5.5%"
-          },
-          {
-            "date": "2026-08-12",
-            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
-          }
-        ],
-        "manualNote": ""
-      },
-      "trackingDates": [
-        "2026-08-12"
-      ],
-      "statusHistory": [
-        {
-          "date": "2026-08-12",
-          "status": "WATCHING",
-          "close": 210.5,
-          "latestStatus": {
-            "latestClose": 210.5,
-            "latestHigh": 211.45,
-            "latestLow": 203.76,
-            "latestVolume": 10004600,
-            "latestMA5": 196.17,
-            "latestMA10": 190.49,
-            "latestMA20": 180.5,
-            "latestSafetyScore": 81,
-            "latestRiskReward": 6.85,
-            "latestMarketRegime": "STOP",
-            "latestSignal": "觀察",
-            "adjustedSignal": "取消新進場，只保留觀察",
-            "holderAction": "只看續抱、停利或停損，不新增部位。",
-            "cashAction": "停止新進場，先保留現金。",
-            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-            "latestDataDate": "2026-08-12"
-          }
-        }
-      ],
-      "manualRemoved": false,
-      "manualRemovedAt": null
-    },
-    {
-      "trackingId": "美股:MDB:2026-08-11",
-      "market": "美股",
-      "stockCode": "MDB",
-      "stockName": "MDB",
-      "firstSignalDate": "2026-08-11",
-      "strategyDataDate": "2026-08-11",
-      "trackingCreatedDate": "2026-08-11",
-      "trackingOrigin": "LIVE_SIGNAL",
-      "lastUpdateDate": "2026-08-12",
-      "endDate": null,
-      "endedAt": null,
-      "endReason": "",
-      "endPriority": null,
-      "maxHighDuringTracking": 443.31,
-      "targetHitDate": null,
-      "stopLossHitDate": null,
-      "finalTrackingStatus": null,
-      "currentProfitPct": -3.75,
-      "maxProfitPct": -2.54,
-      "result": "",
-      "trackingStatus": "PULLBACK_CONFIRM",
-      "trackingStatusText": "回踩不破，可持續追蹤",
-      "originalStrategy": {
-        "originalStage": "接近成形＋可觀察",
-        "originalSignal": "觀察",
-        "originalNeckline": 439.36,
-        "originalWatchPrice": 448.15,
-        "originalBuyZoneLow": 448.15,
-        "originalBuyZoneHigh": 461.59,
-        "originalStopLoss": 426.18,
-        "originalTarget": 588.15,
-        "originalRiskReward": 6.37,
-        "originalSafetyScore": 87,
-        "originalMarketRegime": "STOP",
-        "originalMarketRegimeImpact": "STOP 停止進場"
-      },
-      "latestStatus": {
-        "latestClose": 437.83,
-        "latestHigh": 443.31,
-        "latestLow": 428.0,
-        "latestVolume": 1455100,
-        "latestMA5": 412.49,
-        "latestMA10": 384.02,
-        "latestMA20": 347.79,
-        "latestSafetyScore": 87,
-        "latestRiskReward": 6.49,
-        "latestMarketRegime": "STOP",
-        "latestSignal": "觀察",
-        "adjustedSignal": "取消新進場，只保留觀察",
-        "holderAction": "只看續抱、停利或停損，不新增部位。",
-        "cashAction": "停止新進場，先保留現金。",
-        "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-        "latestDataDate": "2026-08-12"
-      },
-      "progress": {
-        "brokeNeckline": true,
-        "closeHeldNeckline": false,
-        "inBuyZone": false,
-        "aboveBuyZoneHigh": false,
-        "pullbackHeld": true,
-        "stopBroken": false,
-        "nearTarget": false,
-        "targetHit": false,
-        "patternFailed": false,
-        "expired": false,
-        "everBrokeNeckline": true,
-        "trackingDays": 2
-      },
-      "notes": {
-        "systemNotes": [
-          {
-            "date": "2026-08-11",
-            "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
-          },
-          {
-            "date": "2026-08-12",
-            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
-          }
-        ],
-        "manualNote": ""
-      },
-      "trackingDates": [
-        "2026-08-11",
-        "2026-08-12"
-      ],
-      "statusHistory": [
-        {
-          "date": "2026-08-11",
-          "status": "WAIT_CONFIRM",
-          "close": 439.16,
-          "latestStatus": {
-            "latestClose": 439.16,
-            "latestHigh": 439.36,
-            "latestLow": 418.12,
-            "latestVolume": 1765956,
-            "latestMA5": 400.2,
-            "latestMA10": 372.35,
-            "latestMA20": 342.56,
-            "latestSafetyScore": 87,
-            "latestRiskReward": 6.37,
-            "latestMarketRegime": "STOP",
-            "latestSignal": "觀察",
-            "adjustedSignal": "取消新進場，只保留觀察",
-            "holderAction": "只看續抱、停利或停損，不新增部位。",
-            "cashAction": "停止新進場，先保留現金。",
-            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-            "latestDataDate": "2026-08-11"
-          }
-        },
-        {
-          "date": "2026-08-12",
-          "status": "PULLBACK_CONFIRM",
-          "close": 437.83,
-          "latestStatus": {
-            "latestClose": 437.83,
-            "latestHigh": 443.31,
-            "latestLow": 428.0,
-            "latestVolume": 1455100,
-            "latestMA5": 412.49,
-            "latestMA10": 384.02,
-            "latestMA20": 347.79,
-            "latestSafetyScore": 87,
-            "latestRiskReward": 6.49,
-            "latestMarketRegime": "STOP",
-            "latestSignal": "觀察",
-            "adjustedSignal": "取消新進場，只保留觀察",
-            "holderAction": "只看續抱、停利或停損，不新增部位。",
-            "cashAction": "停止新進場，先保留現金。",
-            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-            "latestDataDate": "2026-08-12"
-          }
-        }
-      ],
-      "manualRemoved": false,
-      "manualRemovedAt": null
-    },
-    {
-      "trackingId": "美股:SNOW:2026-08-03",
-      "market": "美股",
-      "stockCode": "SNOW",
-      "stockName": "SNOW",
-      "firstSignalDate": "2026-08-03",
-      "strategyDataDate": "2026-08-03",
-      "trackingCreatedDate": "2026-08-03",
-      "trackingOrigin": "LIVE_SIGNAL",
-      "lastUpdateDate": "2026-08-12",
-      "endDate": null,
-      "endedAt": null,
-      "endReason": "",
-      "endPriority": null,
-      "maxHighDuringTracking": 341.95,
-      "targetHitDate": null,
-      "stopLossHitDate": null,
-      "finalTrackingStatus": null,
-      "currentProfitPct": 1.75,
-      "maxProfitPct": 4.71,
-      "result": "",
-      "trackingStatus": "BREAKOUT_CONFIRMED",
-      "trackingStatusText": "突破確認，策略成立",
-      "originalStrategy": {
-        "originalStage": "接近成形＋可觀察",
-        "originalSignal": "觀察",
-        "originalNeckline": 315.42,
-        "originalWatchPrice": 321.73,
-        "originalBuyZoneLow": 321.73,
-        "originalBuyZoneHigh": 331.38,
-        "originalStopLoss": 305.96,
-        "originalTarget": 486.36,
-        "originalRiskReward": 10.44,
-        "originalSafetyScore": 81,
-        "originalMarketRegime": "STOP",
-        "originalMarketRegimeImpact": "STOP 停止進場"
-      },
-      "latestStatus": {
-        "latestClose": 332.26,
-        "latestHigh": 341.95,
-        "latestLow": 329.04,
-        "latestVolume": 4284500,
-        "latestMA5": 329.92,
-        "latestMA10": 318.21,
-        "latestMA20": 294.71,
-        "latestSafetyScore": 81,
-        "latestRiskReward": 10.52,
-        "latestMarketRegime": "STOP",
-        "latestSignal": "觀察",
-        "adjustedSignal": "取消新進場，只保留觀察",
-        "holderAction": "只看續抱、停利或停損，不新增部位。",
-        "cashAction": "停止新進場，先保留現金。",
-        "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-        "latestDataDate": "2026-08-12"
-      },
-      "progress": {
-        "brokeNeckline": true,
-        "closeHeldNeckline": true,
-        "inBuyZone": true,
-        "aboveBuyZoneHigh": true,
-        "pullbackHeld": false,
-        "stopBroken": false,
-        "nearTarget": false,
-        "targetHit": false,
-        "patternFailed": false,
-        "expired": false,
-        "everBrokeNeckline": true,
-        "trackingDays": 8
-      },
-      "notes": {
-        "systemNotes": [
-          {
-            "date": "2026-08-03",
-            "text": "產生主升段安全觀察策略卡；風報比達 2 以上；停損距離小於 5.5%"
-          },
-          {
-            "date": "2026-07-31",
-            "text": "略過較舊的 2026-07-31 收盤資料，保留 2026-08-03 追蹤狀態。"
-          },
-          {
-            "date": "2026-07-31",
-            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
-          },
-          {
-            "date": "2026-08-04",
-            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
-          },
-          {
-            "date": "2026-08-05",
-            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
-          },
-          {
-            "date": "2026-08-06",
-            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
-          },
-          {
-            "date": "2026-08-07",
-            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
-          },
-          {
-            "date": "2026-08-10",
-            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
-          },
-          {
-            "date": "2026-08-11",
-            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
-          },
-          {
-            "date": "2026-08-12",
-            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
-          }
-        ],
-        "manualNote": ""
-      },
-      "trackingDates": [
-        "2026-08-03",
-        "2026-08-04",
-        "2026-08-05",
-        "2026-08-06",
-        "2026-08-07",
-        "2026-08-10",
-        "2026-08-11",
-        "2026-08-12"
-      ],
-      "statusHistory": [
-        {
-          "date": "2026-08-03",
-          "status": "WATCHING",
-          "close": 307.53,
-          "latestStatus": {
-            "latestClose": 307.53,
-            "latestHigh": 315.42,
-            "latestLow": 293.88,
-            "latestVolume": 7096709,
-            "latestMA5": 290.43,
-            "latestMA10": 279.78,
-            "latestMA20": 274.03,
-            "latestSafetyScore": 81,
-            "latestRiskReward": 10.44,
-            "latestMarketRegime": "STOP",
-            "latestSignal": "觀察",
-            "adjustedSignal": "取消新進場，只保留觀察",
-            "holderAction": "只看續抱、停利或停損，不新增部位。",
-            "cashAction": "停止新進場，先保留現金。",
-            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-            "latestDataDate": "2026-08-03"
-          }
-        },
-        {
-          "date": "2026-08-04",
-          "status": "PULLBACK_CONFIRM",
-          "close": 316.77,
-          "latestStatus": {
-            "latestClose": 316.77,
-            "latestHigh": 321.31,
-            "latestLow": 301.9,
-            "latestVolume": 5628300,
-            "latestMA5": 299.72,
-            "latestMA10": 284.28,
-            "latestMA20": 276.73,
-            "latestSafetyScore": 87,
-            "latestRiskReward": 10.6,
-            "latestMarketRegime": "STOP",
-            "latestSignal": "觀察",
-            "adjustedSignal": "取消新進場，只保留觀察",
-            "holderAction": "只看續抱、停利或停損，不新增部位。",
-            "cashAction": "停止新進場，先保留現金。",
-            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-            "latestDataDate": "2026-08-04"
-          }
-        },
-        {
-          "date": "2026-08-05",
-          "status": "PULLBACK_CONFIRM",
-          "close": 316.84,
-          "latestStatus": {
-            "latestClose": 316.84,
-            "latestHigh": 323.1,
-            "latestLow": 315.02,
-            "latestVolume": 4578900,
-            "latestMA5": 306.5,
-            "latestMA10": 289.19,
-            "latestMA20": 279.5,
-            "latestSafetyScore": 87,
-            "latestRiskReward": 10.56,
-            "latestMarketRegime": "STOP",
-            "latestSignal": "觀察",
-            "adjustedSignal": "取消新進場，只保留觀察",
-            "holderAction": "只看續抱、停利或停損，不新增部位。",
-            "cashAction": "停止新進場，先保留現金。",
-            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-            "latestDataDate": "2026-08-05"
-          }
-        },
-        {
-          "date": "2026-08-06",
-          "status": "PULLBACK_CONFIRM",
-          "close": 318.0,
-          "latestStatus": {
-            "latestClose": 318.0,
-            "latestHigh": 321.82,
-            "latestLow": 304.39,
-            "latestVolume": 5960000,
-            "latestMA5": 310.48,
-            "latestMA10": 294.48,
-            "latestMA20": 282.03,
-            "latestSafetyScore": 87,
-            "latestRiskReward": 10.56,
-            "latestMarketRegime": "STOP",
-            "latestSignal": "觀察",
-            "adjustedSignal": "取消新進場，只保留觀察",
-            "holderAction": "只看續抱、停利或停損，不新增部位。",
-            "cashAction": "停止新進場，先保留現金。",
-            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-            "latestDataDate": "2026-08-06"
-          }
-        },
-        {
-          "date": "2026-08-07",
-          "status": "BREAKOUT_CONFIRMED",
-          "close": 330.49,
-          "latestStatus": {
-            "latestClose": 330.49,
-            "latestHigh": 331.4,
-            "latestLow": 322.13,
-            "latestVolume": 6212900,
-            "latestMA5": 317.93,
-            "latestMA10": 300.72,
-            "latestMA20": 285.48,
-            "latestSafetyScore": 87,
-            "latestRiskReward": 10.79,
-            "latestMarketRegime": "STOP",
-            "latestSignal": "觀察",
-            "adjustedSignal": "取消新進場，只保留觀察",
-            "holderAction": "只看續抱、停利或停損，不新增部位。",
-            "cashAction": "停止新進場，先保留現金。",
-            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-            "latestDataDate": "2026-08-07"
-          }
-        },
-        {
-          "date": "2026-08-10",
-          "status": "BREAKOUT_CONFIRMED",
-          "close": 334.7,
-          "latestStatus": {
-            "latestClose": 334.7,
-            "latestHigh": 340.5,
-            "latestLow": 328.0,
-            "latestVolume": 4664600,
-            "latestMA5": 323.36,
-            "latestMA10": 306.9,
-            "latestMA20": 288.78,
-            "latestSafetyScore": 87,
-            "latestRiskReward": 10.97,
-            "latestMarketRegime": "STOP",
-            "latestSignal": "觀察",
-            "adjustedSignal": "取消新進場，只保留觀察",
-            "holderAction": "只看續抱、停利或停損，不新增部位。",
-            "cashAction": "停止新進場，先保留現金。",
-            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-            "latestDataDate": "2026-08-10"
-          }
-        },
-        {
-          "date": "2026-08-11",
-          "status": "BREAKOUT_CONFIRMED",
-          "close": 334.14,
-          "latestStatus": {
-            "latestClose": 334.14,
-            "latestHigh": 338.04,
-            "latestLow": 328.0,
-            "latestVolume": 3345326,
-            "latestMA5": 326.83,
-            "latestMA10": 313.27,
-            "latestMA20": 291.69,
-            "latestSafetyScore": 87,
-            "latestRiskReward": 10.84,
-            "latestMarketRegime": "STOP",
-            "latestSignal": "觀察",
-            "adjustedSignal": "取消新進場，只保留觀察",
-            "holderAction": "只看續抱、停利或停損，不新增部位。",
-            "cashAction": "停止新進場，先保留現金。",
-            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-            "latestDataDate": "2026-08-11"
-          }
-        },
-        {
-          "date": "2026-08-12",
-          "status": "BREAKOUT_CONFIRMED",
-          "close": 332.26,
-          "latestStatus": {
-            "latestClose": 332.26,
-            "latestHigh": 341.95,
-            "latestLow": 329.04,
-            "latestVolume": 4284500,
-            "latestMA5": 329.92,
-            "latestMA10": 318.21,
-            "latestMA20": 294.71,
-            "latestSafetyScore": 81,
-            "latestRiskReward": 10.52,
-            "latestMarketRegime": "STOP",
-            "latestSignal": "觀察",
-            "adjustedSignal": "取消新進場，只保留觀察",
-            "holderAction": "只看續抱、停利或停損，不新增部位。",
-            "cashAction": "停止新進場，先保留現金。",
-            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
-            "latestDataDate": "2026-08-12"
-          }
-        }
-      ],
-      "manualRemoved": false,
-      "manualRemovedAt": null
-    },
     {
       "trackingId": "台股:1231:2026-07-30",
       "market": "台股",
@@ -1277,7 +411,7 @@
         "latestClose": 1470.0,
         "latestHigh": 1595.0,
         "latestLow": 1455.0,
-        "latestVolume": 1357524,
+        "latestVolume": 1482524,
         "latestMA5": 1548.0,
         "latestMA10": 1497.5,
         "latestMA20": 1433.25,
@@ -1526,7 +660,7 @@
             "latestClose": 1470.0,
             "latestHigh": 1595.0,
             "latestLow": 1455.0,
-            "latestVolume": 1357524,
+            "latestVolume": 1482524,
             "latestMA5": 1548.0,
             "latestMA10": 1497.5,
             "latestMA20": 1433.25,
@@ -1759,8 +893,8 @@
       "currentProfitPct": 3.51,
       "maxProfitPct": 4.02,
       "result": "",
-      "trackingStatus": "WAIT_CONFIRM",
-      "trackingStatusText": "接近買點，等待收盤確認",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "接近成形＋可觀察",
         "originalSignal": "觀察",
@@ -1798,7 +932,7 @@
         "closeHeldNeckline": true,
         "inBuyZone": true,
         "aboveBuyZoneHigh": true,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -1846,7 +980,7 @@
         },
         {
           "date": "2026-08-13",
-          "status": "WAIT_CONFIRM",
+          "status": "PULLBACK_CONFIRM",
           "close": 30.65,
           "latestStatus": {
             "latestClose": 30.65,
@@ -4274,6 +3408,10 @@
           {
             "date": "2026-08-13",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-08-13",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -4330,8 +3468,8 @@
       "currentProfitPct": -2.85,
       "maxProfitPct": -1.93,
       "result": "",
-      "trackingStatus": "WAIT_CONFIRM",
-      "trackingStatusText": "接近買點，等待收盤確認",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "回踩頸線不破",
         "originalSignal": "回踩買點",
@@ -4369,7 +3507,7 @@
         "closeHeldNeckline": true,
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -4383,6 +3521,10 @@
           {
             "date": "2026-08-13",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；距離頸線在 0%～5%；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-08-13",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -4393,7 +3535,7 @@
       "statusHistory": [
         {
           "date": "2026-08-13",
-          "status": "WAIT_CONFIRM",
+          "status": "PULLBACK_CONFIRM",
           "close": 524.0,
           "latestStatus": {
             "latestClose": 524.0,
@@ -4459,7 +3601,7 @@
         "latestClose": 2435.0,
         "latestHigh": 2445.0,
         "latestLow": 2425.0,
-        "latestVolume": 23066385,
+        "latestVolume": 26233385,
         "latestMA5": 2399.0,
         "latestMA10": 2388.0,
         "latestMA20": 2354.5,
@@ -4536,7 +3678,7 @@
             "latestClose": 2435.0,
             "latestHigh": 2445.0,
             "latestLow": 2425.0,
-            "latestVolume": 23066385,
+            "latestVolume": 26233385,
             "latestMA5": 2399.0,
             "latestMA10": 2388.0,
             "latestMA20": 2354.5,
@@ -4629,6 +3771,10 @@
           {
             "date": "2026-08-13",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-08-13",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -5341,6 +4487,10 @@
           {
             "date": "2026-08-13",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-08-13",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -6228,8 +5378,8 @@
       "currentProfitPct": -3.41,
       "maxProfitPct": 0.48,
       "result": "",
-      "trackingStatus": "WAIT_CONFIRM",
-      "trackingStatusText": "接近買點，等待收盤確認",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "接近成形＋可觀察",
         "originalSignal": "觀察",
@@ -6267,7 +5417,7 @@
         "closeHeldNeckline": true,
         "inBuyZone": true,
         "aboveBuyZoneHigh": false,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -6281,6 +5431,10 @@
           {
             "date": "2026-08-13",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；距離頸線在 0%～5%；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-08-13",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -6291,7 +5445,7 @@
       "statusHistory": [
         {
           "date": "2026-08-13",
-          "status": "WAIT_CONFIRM",
+          "status": "PULLBACK_CONFIRM",
           "close": 261.0,
           "latestStatus": {
             "latestClose": 261.0,
@@ -7141,8 +6295,8 @@
       "currentProfitPct": 0.55,
       "maxProfitPct": 0.55,
       "result": "",
-      "trackingStatus": "WAIT_CONFIRM",
-      "trackingStatusText": "接近買點，等待收盤確認",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "突破第一根",
         "originalSignal": "突破買點",
@@ -7180,7 +6334,7 @@
         "closeHeldNeckline": true,
         "inBuyZone": true,
         "aboveBuyZoneHigh": false,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -7194,6 +6348,10 @@
           {
             "date": "2026-08-13",
             "text": "產生主升段安全觀察策略卡；風報比達 2 以上；距離頸線在 0%～5%"
+          },
+          {
+            "date": "2026-08-13",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -7204,7 +6362,7 @@
       "statusHistory": [
         {
           "date": "2026-08-13",
-          "status": "WAIT_CONFIRM",
+          "status": "PULLBACK_CONFIRM",
           "close": 1270.0,
           "latestStatus": {
             "latestClose": 1270.0,
@@ -7600,8 +6758,8 @@
       "currentProfitPct": -3.58,
       "maxProfitPct": -1.94,
       "result": "",
-      "trackingStatus": "WAIT_CONFIRM",
-      "trackingStatusText": "接近買點，等待收盤確認",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "接近成形＋可觀察",
         "originalSignal": "觀察",
@@ -7639,7 +6797,7 @@
         "closeHeldNeckline": false,
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -7653,6 +6811,10 @@
           {
             "date": "2026-08-13",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-08-13",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -7663,7 +6825,7 @@
       "statusHistory": [
         {
           "date": "2026-08-13",
-          "status": "WAIT_CONFIRM",
+          "status": "PULLBACK_CONFIRM",
           "close": 58.9,
           "latestStatus": {
             "latestClose": 58.9,
@@ -8095,8 +7257,8 @@
       "currentProfitPct": 5.18,
       "maxProfitPct": 5.18,
       "result": "",
-      "trackingStatus": "WAIT_CONFIRM",
-      "trackingStatusText": "接近買點，等待收盤確認",
+      "trackingStatus": "IN_TREND",
+      "trackingStatusText": "主升段進行中",
       "originalStrategy": {
         "originalStage": "接近成形＋可觀察",
         "originalSignal": "觀察",
@@ -8182,7 +7344,7 @@
         },
         {
           "date": "2026-08-13",
-          "status": "WAIT_CONFIRM",
+          "status": "IN_TREND",
           "close": 177.5,
           "latestStatus": {
             "latestClose": 177.5,
@@ -8663,6 +7825,10 @@
           {
             "date": "2026-08-13",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-08-13",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -8758,7 +7924,7 @@
         "closeHeldNeckline": true,
         "inBuyZone": true,
         "aboveBuyZoneHigh": false,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": true,
         "targetHit": false,
@@ -8772,6 +7938,10 @@
           {
             "date": "2026-08-13",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；距離頸線在 0%～5%；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-08-13",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -8799,6 +7969,973 @@
             "adjustedSignal": "取消新進場，只保留觀察",
             "holderAction": "接近原始第一目標，準備分批停利。",
             "cashAction": "接近目標，空手者不追高。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-08-13"
+          }
+        }
+      ],
+      "manualRemoved": false,
+      "manualRemovedAt": null
+    },
+    {
+      "trackingId": "美股:ABNB:2026-08-07",
+      "market": "美股",
+      "stockCode": "ABNB",
+      "stockName": "ABNB",
+      "firstSignalDate": "2026-08-07",
+      "strategyDataDate": "2026-08-07",
+      "trackingCreatedDate": "2026-08-07",
+      "trackingOrigin": "LEGACY_IMPORT",
+      "lastUpdateDate": "2026-08-13",
+      "endDate": null,
+      "endedAt": null,
+      "endReason": "",
+      "endPriority": null,
+      "maxHighDuringTracking": 187.12,
+      "targetHitDate": null,
+      "stopLossHitDate": null,
+      "finalTrackingStatus": null,
+      "currentProfitPct": 0.21,
+      "maxProfitPct": 1.28,
+      "result": "",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
+      "originalStrategy": {
+        "originalStage": "主升候選",
+        "originalSignal": "預備單，等待確認條件",
+        "originalNeckline": 178.45,
+        "originalWatchPrice": 182.02,
+        "originalBuyZoneLow": 182.02,
+        "originalBuyZoneHigh": 187.48,
+        "originalStopLoss": 173.1,
+        "originalTarget": 229.67,
+        "originalRiskReward": 5.34,
+        "originalSafetyScore": 100,
+        "originalMarketRegime": "NO_DATA",
+        "originalMarketRegimeImpact": "資料不足"
+      },
+      "latestStatus": {
+        "latestClose": 185.13,
+        "latestHigh": 185.33,
+        "latestLow": 179.6,
+        "latestVolume": 4854978,
+        "latestMA5": 182.6,
+        "latestMA10": 166.92,
+        "latestMA20": 156.4,
+        "latestSafetyScore": 87,
+        "latestRiskReward": 6.01,
+        "latestMarketRegime": "STOP",
+        "latestSignal": "觀察",
+        "adjustedSignal": "取消新進場，只保留觀察",
+        "holderAction": "只看續抱、停利或停損，不新增部位。",
+        "cashAction": "停止新進場，先保留現金。",
+        "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+        "latestDataDate": "2026-08-13"
+      },
+      "progress": {
+        "brokeNeckline": true,
+        "closeHeldNeckline": true,
+        "inBuyZone": true,
+        "aboveBuyZoneHigh": false,
+        "pullbackHeld": true,
+        "stopBroken": false,
+        "nearTarget": false,
+        "targetHit": false,
+        "patternFailed": false,
+        "expired": false,
+        "everBrokeNeckline": true,
+        "trackingDays": 5
+      },
+      "notes": {
+        "systemNotes": [
+          {
+            "date": "2026-08-07",
+            "text": "由舊版近 5 日策略紀錄建立追蹤，原始欄位以最早一筆保存。"
+          },
+          {
+            "date": "2026-08-07",
+            "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
+          },
+          {
+            "date": "2026-08-08",
+            "text": "已匯入舊版策略鎖定資料，原始策略維持不變。"
+          },
+          {
+            "date": "2026-08-07",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
+          },
+          {
+            "date": "2026-08-10",
+            "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
+          },
+          {
+            "date": "2026-08-10",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
+          },
+          {
+            "date": "2026-08-11",
+            "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
+          },
+          {
+            "date": "2026-08-11",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
+          },
+          {
+            "date": "2026-08-12",
+            "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
+          },
+          {
+            "date": "2026-08-12",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
+          },
+          {
+            "date": "2026-08-13",
+            "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
+          },
+          {
+            "date": "2026-08-13",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
+          }
+        ],
+        "manualNote": "",
+        "legacySnapshots": [
+          {
+            "date": "2026-08-13",
+            "market": "美股",
+            "code": "ABNB",
+            "name": "ABNB",
+            "grade": "A",
+            "safeScore": 92,
+            "riskRewardRatio": 6.01,
+            "category": "主升候選",
+            "close": 185.13,
+            "neckline": 187.12,
+            "buyLow": 190.86,
+            "buyHigh": 196.59,
+            "stopLoss": 181.51,
+            "target": 247.01,
+            "action": "預備單，等待確認條件"
+          },
+          {
+            "date": "2026-08-12",
+            "market": "美股",
+            "code": "ABNB",
+            "name": "ABNB",
+            "grade": "C",
+            "safeScore": 51,
+            "riskRewardRatio": 6.01,
+            "category": "資料不足",
+            "close": 180.1,
+            "neckline": 187.12,
+            "buyLow": 190.86,
+            "buyHigh": 196.59,
+            "stopLoss": 181.51,
+            "target": 247.01,
+            "action": "預備單，等待確認條件"
+          },
+          {
+            "date": "2026-08-11",
+            "market": "美股",
+            "code": "ABNB",
+            "name": "ABNB",
+            "grade": "A",
+            "safeScore": 97,
+            "riskRewardRatio": 6.01,
+            "category": "主升候選",
+            "close": 184.98,
+            "neckline": 187.12,
+            "buyLow": 190.86,
+            "buyHigh": 196.59,
+            "stopLoss": 181.51,
+            "target": 247.01,
+            "action": "預備單，等待確認條件"
+          },
+          {
+            "date": "2026-08-10",
+            "market": "美股",
+            "code": "ABNB",
+            "name": "ABNB",
+            "grade": "A",
+            "safeScore": 97,
+            "riskRewardRatio": 5.92,
+            "category": "主升候選",
+            "close": 184.7,
+            "neckline": 185.99,
+            "buyLow": 189.71,
+            "buyHigh": 195.4,
+            "stopLoss": 180.41,
+            "target": 244.75,
+            "action": "預備單，等待確認條件"
+          },
+          {
+            "date": "2026-08-07",
+            "market": "美股",
+            "code": "ABNB",
+            "name": "ABNB",
+            "grade": "A",
+            "safeScore": 100,
+            "riskRewardRatio": 5.34,
+            "category": "主升候選",
+            "close": 178.07,
+            "neckline": 178.45,
+            "buyLow": 182.02,
+            "buyHigh": 187.48,
+            "stopLoss": 173.1,
+            "target": 229.67,
+            "action": "預備單，等待確認條件"
+          }
+        ],
+        "legacyLock": {
+          "strategyDate": "2026-08-07",
+          "market": "美股",
+          "code": "ABNB",
+          "name": "ABNB",
+          "originalStage": "接近成形＋可觀察",
+          "originalSignal": "策略追蹤中",
+          "originalNeckline": 178.45,
+          "originalBuyLow": 182.02,
+          "originalBuyHigh": 187.48,
+          "originalStopLoss": 173.1,
+          "originalTarget": 229.67,
+          "legacyStatus": "active",
+          "trackingStatus": "策略追蹤中",
+          "updatedAt": "2026-08-08 07:17:51"
+        }
+      },
+      "trackingDates": [
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13"
+      ],
+      "statusHistory": [
+        {
+          "date": "2026-08-07",
+          "status": "PULLBACK_CONFIRM",
+          "close": 178.07,
+          "latestStatus": {
+            "latestClose": 178.07,
+            "latestHigh": 178.48,
+            "latestLow": 163.45,
+            "latestVolume": 15890600,
+            "latestMA5": 156.55,
+            "latestMA10": 153.93,
+            "latestMA20": 149.11,
+            "latestSafetyScore": 95,
+            "latestRiskReward": 5.35,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-08-07"
+          }
+        },
+        {
+          "date": "2026-08-10",
+          "status": "PULLBACK_CONFIRM",
+          "close": 184.7,
+          "latestStatus": {
+            "latestClose": 184.7,
+            "latestHigh": 185.99,
+            "latestLow": 177.43,
+            "latestVolume": 9981900,
+            "latestMA5": 163.36,
+            "latestMA10": 157.72,
+            "latestMA20": 151.03,
+            "latestSafetyScore": 95,
+            "latestRiskReward": 5.92,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-08-10"
+          }
+        },
+        {
+          "date": "2026-08-11",
+          "status": "PULLBACK_CONFIRM",
+          "close": 184.98,
+          "latestStatus": {
+            "latestClose": 184.98,
+            "latestHigh": 187.12,
+            "latestLow": 178.45,
+            "latestVolume": 7925163,
+            "latestMA5": 170.38,
+            "latestMA10": 160.91,
+            "latestMA20": 152.95,
+            "latestSafetyScore": 92,
+            "latestRiskReward": 6.01,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-08-11"
+          }
+        },
+        {
+          "date": "2026-08-12",
+          "status": "PULLBACK_CONFIRM",
+          "close": 180.1,
+          "latestStatus": {
+            "latestClose": 180.1,
+            "latestHigh": 184.11,
+            "latestLow": 179.26,
+            "latestVolume": 5986600,
+            "latestMA5": 175.9,
+            "latestMA10": 163.61,
+            "latestMA20": 154.53,
+            "latestSafetyScore": 66,
+            "latestRiskReward": 6.01,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-08-12"
+          }
+        },
+        {
+          "date": "2026-08-13",
+          "status": "PULLBACK_CONFIRM",
+          "close": 185.13,
+          "latestStatus": {
+            "latestClose": 185.13,
+            "latestHigh": 185.33,
+            "latestLow": 179.6,
+            "latestVolume": 4854978,
+            "latestMA5": 182.6,
+            "latestMA10": 166.92,
+            "latestMA20": 156.4,
+            "latestSafetyScore": 87,
+            "latestRiskReward": 6.01,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-08-13"
+          }
+        }
+      ],
+      "manualRemoved": false,
+      "manualRemovedAt": null
+    },
+    {
+      "trackingId": "美股:MDB:2026-08-11",
+      "market": "美股",
+      "stockCode": "MDB",
+      "stockName": "MDB",
+      "firstSignalDate": "2026-08-11",
+      "strategyDataDate": "2026-08-11",
+      "trackingCreatedDate": "2026-08-11",
+      "trackingOrigin": "LIVE_SIGNAL",
+      "lastUpdateDate": "2026-08-13",
+      "endDate": null,
+      "endedAt": null,
+      "endReason": "",
+      "endPriority": null,
+      "maxHighDuringTracking": 472.32,
+      "targetHitDate": null,
+      "stopLossHitDate": null,
+      "finalTrackingStatus": null,
+      "currentProfitPct": 3.83,
+      "maxProfitPct": 3.84,
+      "result": "",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
+      "originalStrategy": {
+        "originalStage": "接近成形＋可觀察",
+        "originalSignal": "觀察",
+        "originalNeckline": 439.36,
+        "originalWatchPrice": 448.15,
+        "originalBuyZoneLow": 448.15,
+        "originalBuyZoneHigh": 461.59,
+        "originalStopLoss": 426.18,
+        "originalTarget": 588.15,
+        "originalRiskReward": 6.37,
+        "originalSafetyScore": 87,
+        "originalMarketRegime": "STOP",
+        "originalMarketRegimeImpact": "STOP 停止進場"
+      },
+      "latestStatus": {
+        "latestClose": 472.29,
+        "latestHigh": 472.32,
+        "latestLow": 442.75,
+        "latestVolume": 2144986,
+        "latestMA5": 432.95,
+        "latestMA10": 398.66,
+        "latestMA20": 354.98,
+        "latestSafetyScore": 87,
+        "latestRiskReward": 7.29,
+        "latestMarketRegime": "STOP",
+        "latestSignal": "觀察",
+        "adjustedSignal": "取消新進場，只保留觀察",
+        "holderAction": "只看續抱、停利或停損，不新增部位。",
+        "cashAction": "停止新進場，先保留現金。",
+        "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+        "latestDataDate": "2026-08-13"
+      },
+      "progress": {
+        "brokeNeckline": true,
+        "closeHeldNeckline": true,
+        "inBuyZone": true,
+        "aboveBuyZoneHigh": true,
+        "pullbackHeld": true,
+        "stopBroken": false,
+        "nearTarget": false,
+        "targetHit": false,
+        "patternFailed": false,
+        "expired": false,
+        "everBrokeNeckline": true,
+        "trackingDays": 3
+      },
+      "notes": {
+        "systemNotes": [
+          {
+            "date": "2026-08-11",
+            "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-08-12",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
+          },
+          {
+            "date": "2026-08-13",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
+          }
+        ],
+        "manualNote": ""
+      },
+      "trackingDates": [
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13"
+      ],
+      "statusHistory": [
+        {
+          "date": "2026-08-11",
+          "status": "WAIT_CONFIRM",
+          "close": 439.16,
+          "latestStatus": {
+            "latestClose": 439.16,
+            "latestHigh": 439.36,
+            "latestLow": 418.12,
+            "latestVolume": 1765956,
+            "latestMA5": 400.2,
+            "latestMA10": 372.35,
+            "latestMA20": 342.56,
+            "latestSafetyScore": 87,
+            "latestRiskReward": 6.37,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-08-11"
+          }
+        },
+        {
+          "date": "2026-08-12",
+          "status": "PULLBACK_CONFIRM",
+          "close": 437.83,
+          "latestStatus": {
+            "latestClose": 437.83,
+            "latestHigh": 443.31,
+            "latestLow": 428.0,
+            "latestVolume": 1455100,
+            "latestMA5": 412.49,
+            "latestMA10": 384.02,
+            "latestMA20": 347.79,
+            "latestSafetyScore": 87,
+            "latestRiskReward": 6.49,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-08-12"
+          }
+        },
+        {
+          "date": "2026-08-13",
+          "status": "PULLBACK_CONFIRM",
+          "close": 472.29,
+          "latestStatus": {
+            "latestClose": 472.29,
+            "latestHigh": 472.32,
+            "latestLow": 442.75,
+            "latestVolume": 2144986,
+            "latestMA5": 432.95,
+            "latestMA10": 398.66,
+            "latestMA20": 354.98,
+            "latestSafetyScore": 87,
+            "latestRiskReward": 7.29,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-08-13"
+          }
+        }
+      ],
+      "manualRemoved": false,
+      "manualRemovedAt": null
+    },
+    {
+      "trackingId": "美股:NET:2026-08-13",
+      "market": "美股",
+      "stockCode": "NET",
+      "stockName": "NET",
+      "firstSignalDate": "2026-08-13",
+      "strategyDataDate": "2026-08-13",
+      "trackingCreatedDate": "2026-08-13",
+      "trackingOrigin": "LIVE_SIGNAL",
+      "lastUpdateDate": "2026-08-13",
+      "endDate": null,
+      "endedAt": null,
+      "endReason": "",
+      "endPriority": null,
+      "maxHighDuringTracking": 332.22,
+      "targetHitDate": null,
+      "stopLossHitDate": null,
+      "finalTrackingStatus": null,
+      "currentProfitPct": -3.81,
+      "maxProfitPct": -3.41,
+      "result": "",
+      "trackingStatus": "WAIT_CONFIRM",
+      "trackingStatusText": "接近買點，等待收盤確認",
+      "originalStrategy": {
+        "originalStage": "接近成形＋可觀察",
+        "originalSignal": "觀察",
+        "originalNeckline": 332.22,
+        "originalWatchPrice": 338.86,
+        "originalBuyZoneLow": 338.86,
+        "originalBuyZoneHigh": 349.03,
+        "originalStopLoss": 322.25,
+        "originalTarget": 471.64,
+        "originalRiskReward": 7.99,
+        "originalSafetyScore": 87,
+        "originalMarketRegime": "STOP",
+        "originalMarketRegimeImpact": "STOP 停止進場"
+      },
+      "latestStatus": {
+        "latestClose": 330.83,
+        "latestHigh": 332.22,
+        "latestLow": 313.02,
+        "latestVolume": 4490572,
+        "latestMA5": 312.02,
+        "latestMA10": 300.05,
+        "latestMA20": 285.0,
+        "latestSafetyScore": 87,
+        "latestRiskReward": 7.99,
+        "latestMarketRegime": "STOP",
+        "latestSignal": "觀察",
+        "adjustedSignal": "取消新進場，只保留觀察",
+        "holderAction": "只看續抱、停利或停損，不新增部位。",
+        "cashAction": "停止新進場，先保留現金。",
+        "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+        "latestDataDate": "2026-08-13"
+      },
+      "progress": {
+        "brokeNeckline": true,
+        "closeHeldNeckline": false,
+        "inBuyZone": false,
+        "aboveBuyZoneHigh": false,
+        "pullbackHeld": false,
+        "stopBroken": false,
+        "nearTarget": false,
+        "targetHit": false,
+        "patternFailed": false,
+        "expired": false,
+        "everBrokeNeckline": true,
+        "trackingDays": 1
+      },
+      "notes": {
+        "systemNotes": [
+          {
+            "date": "2026-08-13",
+            "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          }
+        ],
+        "manualNote": ""
+      },
+      "trackingDates": [
+        "2026-08-13"
+      ],
+      "statusHistory": [
+        {
+          "date": "2026-08-13",
+          "status": "WAIT_CONFIRM",
+          "close": 330.83,
+          "latestStatus": {
+            "latestClose": 330.83,
+            "latestHigh": 332.22,
+            "latestLow": 313.02,
+            "latestVolume": 4490572,
+            "latestMA5": 312.02,
+            "latestMA10": 300.05,
+            "latestMA20": 285.0,
+            "latestSafetyScore": 87,
+            "latestRiskReward": 7.99,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-08-13"
+          }
+        }
+      ],
+      "manualRemoved": false,
+      "manualRemovedAt": null
+    },
+    {
+      "trackingId": "美股:SNOW:2026-08-03",
+      "market": "美股",
+      "stockCode": "SNOW",
+      "stockName": "SNOW",
+      "firstSignalDate": "2026-08-03",
+      "strategyDataDate": "2026-08-03",
+      "trackingCreatedDate": "2026-08-03",
+      "trackingOrigin": "LIVE_SIGNAL",
+      "lastUpdateDate": "2026-08-13",
+      "endDate": null,
+      "endedAt": null,
+      "endReason": "",
+      "endPriority": null,
+      "maxHighDuringTracking": 341.95,
+      "targetHitDate": null,
+      "stopLossHitDate": null,
+      "finalTrackingStatus": null,
+      "currentProfitPct": 3.31,
+      "maxProfitPct": 4.71,
+      "result": "",
+      "trackingStatus": "BREAKOUT_CONFIRMED",
+      "trackingStatusText": "突破確認，策略成立",
+      "originalStrategy": {
+        "originalStage": "接近成形＋可觀察",
+        "originalSignal": "觀察",
+        "originalNeckline": 315.42,
+        "originalWatchPrice": 321.73,
+        "originalBuyZoneLow": 321.73,
+        "originalBuyZoneHigh": 331.38,
+        "originalStopLoss": 305.96,
+        "originalTarget": 486.36,
+        "originalRiskReward": 10.44,
+        "originalSafetyScore": 81,
+        "originalMarketRegime": "STOP",
+        "originalMarketRegimeImpact": "STOP 停止進場"
+      },
+      "latestStatus": {
+        "latestClose": 337.38,
+        "latestHigh": 339.75,
+        "latestLow": 330.8,
+        "latestVolume": 2675294,
+        "latestMA5": 333.79,
+        "latestMA10": 322.14,
+        "latestMA20": 298.08,
+        "latestSafetyScore": 87,
+        "latestRiskReward": 10.16,
+        "latestMarketRegime": "STOP",
+        "latestSignal": "觀察",
+        "adjustedSignal": "取消新進場，只保留觀察",
+        "holderAction": "只看續抱、停利或停損，不新增部位。",
+        "cashAction": "停止新進場，先保留現金。",
+        "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+        "latestDataDate": "2026-08-13"
+      },
+      "progress": {
+        "brokeNeckline": true,
+        "closeHeldNeckline": true,
+        "inBuyZone": true,
+        "aboveBuyZoneHigh": true,
+        "pullbackHeld": false,
+        "stopBroken": false,
+        "nearTarget": false,
+        "targetHit": false,
+        "patternFailed": false,
+        "expired": false,
+        "everBrokeNeckline": true,
+        "trackingDays": 9
+      },
+      "notes": {
+        "systemNotes": [
+          {
+            "date": "2026-08-03",
+            "text": "產生主升段安全觀察策略卡；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-07-31",
+            "text": "略過較舊的 2026-07-31 收盤資料，保留 2026-08-03 追蹤狀態。"
+          },
+          {
+            "date": "2026-07-31",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
+          },
+          {
+            "date": "2026-08-04",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
+          },
+          {
+            "date": "2026-08-05",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
+          },
+          {
+            "date": "2026-08-06",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
+          },
+          {
+            "date": "2026-08-07",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
+          },
+          {
+            "date": "2026-08-10",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
+          },
+          {
+            "date": "2026-08-11",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
+          },
+          {
+            "date": "2026-08-12",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
+          },
+          {
+            "date": "2026-08-13",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
+          }
+        ],
+        "manualNote": ""
+      },
+      "trackingDates": [
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13"
+      ],
+      "statusHistory": [
+        {
+          "date": "2026-08-03",
+          "status": "WATCHING",
+          "close": 307.53,
+          "latestStatus": {
+            "latestClose": 307.53,
+            "latestHigh": 315.42,
+            "latestLow": 293.88,
+            "latestVolume": 7096709,
+            "latestMA5": 290.43,
+            "latestMA10": 279.78,
+            "latestMA20": 274.03,
+            "latestSafetyScore": 81,
+            "latestRiskReward": 10.44,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-08-03"
+          }
+        },
+        {
+          "date": "2026-08-04",
+          "status": "PULLBACK_CONFIRM",
+          "close": 316.77,
+          "latestStatus": {
+            "latestClose": 316.77,
+            "latestHigh": 321.31,
+            "latestLow": 301.9,
+            "latestVolume": 5628300,
+            "latestMA5": 299.72,
+            "latestMA10": 284.28,
+            "latestMA20": 276.73,
+            "latestSafetyScore": 87,
+            "latestRiskReward": 10.6,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-08-04"
+          }
+        },
+        {
+          "date": "2026-08-05",
+          "status": "PULLBACK_CONFIRM",
+          "close": 316.84,
+          "latestStatus": {
+            "latestClose": 316.84,
+            "latestHigh": 323.1,
+            "latestLow": 315.02,
+            "latestVolume": 4578900,
+            "latestMA5": 306.5,
+            "latestMA10": 289.19,
+            "latestMA20": 279.5,
+            "latestSafetyScore": 87,
+            "latestRiskReward": 10.56,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-08-05"
+          }
+        },
+        {
+          "date": "2026-08-06",
+          "status": "PULLBACK_CONFIRM",
+          "close": 318.0,
+          "latestStatus": {
+            "latestClose": 318.0,
+            "latestHigh": 321.82,
+            "latestLow": 304.39,
+            "latestVolume": 5960000,
+            "latestMA5": 310.48,
+            "latestMA10": 294.48,
+            "latestMA20": 282.03,
+            "latestSafetyScore": 87,
+            "latestRiskReward": 10.56,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-08-06"
+          }
+        },
+        {
+          "date": "2026-08-07",
+          "status": "BREAKOUT_CONFIRMED",
+          "close": 330.49,
+          "latestStatus": {
+            "latestClose": 330.49,
+            "latestHigh": 331.4,
+            "latestLow": 322.13,
+            "latestVolume": 6212900,
+            "latestMA5": 317.93,
+            "latestMA10": 300.72,
+            "latestMA20": 285.48,
+            "latestSafetyScore": 87,
+            "latestRiskReward": 10.79,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-08-07"
+          }
+        },
+        {
+          "date": "2026-08-10",
+          "status": "BREAKOUT_CONFIRMED",
+          "close": 334.7,
+          "latestStatus": {
+            "latestClose": 334.7,
+            "latestHigh": 340.5,
+            "latestLow": 328.0,
+            "latestVolume": 4664600,
+            "latestMA5": 323.36,
+            "latestMA10": 306.9,
+            "latestMA20": 288.78,
+            "latestSafetyScore": 87,
+            "latestRiskReward": 10.97,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-08-10"
+          }
+        },
+        {
+          "date": "2026-08-11",
+          "status": "BREAKOUT_CONFIRMED",
+          "close": 334.14,
+          "latestStatus": {
+            "latestClose": 334.14,
+            "latestHigh": 338.04,
+            "latestLow": 328.0,
+            "latestVolume": 3345326,
+            "latestMA5": 326.83,
+            "latestMA10": 313.27,
+            "latestMA20": 291.69,
+            "latestSafetyScore": 87,
+            "latestRiskReward": 10.84,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-08-11"
+          }
+        },
+        {
+          "date": "2026-08-12",
+          "status": "BREAKOUT_CONFIRMED",
+          "close": 332.26,
+          "latestStatus": {
+            "latestClose": 332.26,
+            "latestHigh": 341.95,
+            "latestLow": 329.04,
+            "latestVolume": 4284500,
+            "latestMA5": 329.92,
+            "latestMA10": 318.21,
+            "latestMA20": 294.71,
+            "latestSafetyScore": 81,
+            "latestRiskReward": 10.52,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-08-12"
+          }
+        },
+        {
+          "date": "2026-08-13",
+          "status": "BREAKOUT_CONFIRMED",
+          "close": 337.38,
+          "latestStatus": {
+            "latestClose": 337.38,
+            "latestHigh": 339.75,
+            "latestLow": 330.8,
+            "latestVolume": 2675294,
+            "latestMA5": 333.79,
+            "latestMA10": 322.14,
+            "latestMA20": 298.08,
+            "latestSafetyScore": 87,
+            "latestRiskReward": 10.16,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
             "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
             "latestDataDate": "2026-08-13"
           }
@@ -21088,10 +21225,31 @@
           {
             "date": "2026-08-12",
             "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
+          },
+          {
+            "date": "2026-08-13",
+            "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
           }
         ],
         "manualNote": "",
         "legacySnapshots": [
+          {
+            "date": "2026-08-13",
+            "market": "美股",
+            "code": "MDB",
+            "name": "MDB",
+            "grade": "A",
+            "safeScore": 92,
+            "riskRewardRatio": 7.29,
+            "category": "主升候選",
+            "close": 472.29,
+            "neckline": 472.32,
+            "buyLow": 481.77,
+            "buyHigh": 496.22,
+            "stopLoss": 458.15,
+            "target": 654.07,
+            "action": "預備單，等待確認條件"
+          },
           {
             "date": "2026-08-12",
             "market": "美股",
@@ -21711,10 +21869,31 @@
           {
             "date": "2026-08-12",
             "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
+          },
+          {
+            "date": "2026-08-13",
+            "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
           }
         ],
         "manualNote": "",
         "legacySnapshots": [
+          {
+            "date": "2026-08-13",
+            "market": "美股",
+            "code": "NET",
+            "name": "NET",
+            "grade": "A",
+            "safeScore": 92,
+            "riskRewardRatio": 7.99,
+            "category": "主升候選",
+            "close": 330.83,
+            "neckline": 332.22,
+            "buyLow": 338.86,
+            "buyHigh": 349.03,
+            "stopLoss": 322.25,
+            "target": 471.64,
+            "action": "預備單，等待確認條件"
+          },
           {
             "date": "2026-08-12",
             "market": "美股",
@@ -52450,10 +52629,31 @@
           {
             "date": "2026-08-12",
             "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
+          },
+          {
+            "date": "2026-08-13",
+            "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
           }
         ],
         "manualNote": "",
         "legacySnapshots": [
+          {
+            "date": "2026-08-13",
+            "market": "美股",
+            "code": "SNOW",
+            "name": "SNOW",
+            "grade": "A",
+            "safeScore": 92,
+            "riskRewardRatio": 10.16,
+            "category": "主升候選",
+            "close": 337.38,
+            "neckline": 341.95,
+            "buyLow": 348.79,
+            "buyHigh": 359.25,
+            "stopLoss": 331.69,
+            "target": 522.51,
+            "action": "預備單，等待確認條件"
+          },
           {
             "date": "2026-08-12",
             "market": "美股",
@@ -54172,10 +54372,31 @@
           {
             "date": "2026-08-12",
             "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
+          },
+          {
+            "date": "2026-08-13",
+            "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
           }
         ],
         "manualNote": "",
         "legacySnapshots": [
+          {
+            "date": "2026-08-13",
+            "market": "美股",
+            "code": "ANET",
+            "name": "ANET",
+            "grade": "C",
+            "safeScore": 37,
+            "riskRewardRatio": 6.85,
+            "category": "資料不足",
+            "close": 203.62,
+            "neckline": 214.89,
+            "buyLow": 219.19,
+            "buyHigh": 225.76,
+            "stopLoss": 208.44,
+            "target": 292.78,
+            "action": "預備單，等待確認條件"
+          },
           {
             "date": "2026-08-12",
             "market": "美股",
@@ -58766,6 +58987,119 @@
             "latestMA20": 59.29,
             "latestSafetyScore": 100,
             "latestRiskReward": 5.69,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-08-12"
+          }
+        }
+      ],
+      "manualRemoved": false,
+      "manualRemovedAt": null
+    },
+    {
+      "trackingId": "美股:ANET:2026-08-12",
+      "market": "美股",
+      "stockCode": "ANET",
+      "stockName": "ANET",
+      "firstSignalDate": "2026-08-12",
+      "strategyDataDate": "2026-08-12",
+      "trackingCreatedDate": "2026-08-12",
+      "trackingOrigin": "LIVE_SIGNAL",
+      "lastUpdateDate": "2026-08-12",
+      "endDate": "2026-08-13",
+      "endedAt": "2026-08-13",
+      "endReason": "跌破原始停損，型態失敗",
+      "endPriority": "STOP_FIRST",
+      "maxHighDuringTracking": 211.45,
+      "targetHitDate": null,
+      "stopLossHitDate": "2026-08-13",
+      "finalTrackingStatus": "FAILED",
+      "currentProfitPct": -5.38,
+      "maxProfitPct": -4.96,
+      "result": "型態失敗",
+      "trackingStatus": "FAILED",
+      "trackingStatusText": "型態失敗，移出追蹤",
+      "originalStrategy": {
+        "originalStage": "接近成形＋可觀察",
+        "originalSignal": "觀察",
+        "originalNeckline": 214.89,
+        "originalWatchPrice": 219.19,
+        "originalBuyZoneLow": 219.19,
+        "originalBuyZoneHigh": 225.76,
+        "originalStopLoss": 208.44,
+        "originalTarget": 292.78,
+        "originalRiskReward": 6.85,
+        "originalSafetyScore": 81,
+        "originalMarketRegime": "STOP",
+        "originalMarketRegimeImpact": "STOP 停止進場"
+      },
+      "latestStatus": {
+        "latestClose": 210.5,
+        "latestHigh": 211.45,
+        "latestLow": 203.76,
+        "latestVolume": 10004600,
+        "latestMA5": 196.17,
+        "latestMA10": 190.49,
+        "latestMA20": 180.5,
+        "latestSafetyScore": 81,
+        "latestRiskReward": 6.85,
+        "latestMarketRegime": "STOP",
+        "latestSignal": "觀察",
+        "adjustedSignal": "取消新進場，只保留觀察",
+        "holderAction": "只看續抱、停利或停損，不新增部位。",
+        "cashAction": "停止新進場，先保留現金。",
+        "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+        "latestDataDate": "2026-08-12"
+      },
+      "progress": {
+        "brokeNeckline": false,
+        "closeHeldNeckline": false,
+        "inBuyZone": false,
+        "aboveBuyZoneHigh": false,
+        "pullbackHeld": false,
+        "stopBroken": true,
+        "nearTarget": false,
+        "targetHit": false,
+        "patternFailed": true,
+        "expired": false,
+        "everBrokeNeckline": false,
+        "trackingDays": 1
+      },
+      "notes": {
+        "systemNotes": [
+          {
+            "date": "2026-08-12",
+            "text": "產生主升段安全觀察策略卡；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-08-12",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
+          }
+        ],
+        "manualNote": ""
+      },
+      "trackingDates": [
+        "2026-08-12"
+      ],
+      "statusHistory": [
+        {
+          "date": "2026-08-12",
+          "status": "WATCHING",
+          "close": 210.5,
+          "latestStatus": {
+            "latestClose": 210.5,
+            "latestHigh": 211.45,
+            "latestLow": 203.76,
+            "latestVolume": 10004600,
+            "latestMA5": 196.17,
+            "latestMA10": 190.49,
+            "latestMA20": 180.5,
+            "latestSafetyScore": 81,
+            "latestRiskReward": 6.85,
             "latestMarketRegime": "STOP",
             "latestSignal": "觀察",
             "adjustedSignal": "取消新進場，只保留觀察",
