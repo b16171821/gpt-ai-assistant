@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAtET": "2026/08/14 17:53:24 EDT",
-    "updatedAtTW": "2026/08/15 05:53:24 CST",
+    "updatedAtET": "2026/08/14 18:58:37 EDT",
+    "updatedAtTW": "2026/08/15 06:58:37 CST",
     "strategyAsOfDate": "2026-08-14",
     "completedDataDate": "2026-08-14",
     "freshnessStatus": "COMPLETE",
@@ -96,7 +96,9 @@
       "currentACount": 0,
       "aDisappearRate": 100.0
     },
-    "errors": []
+    "errors": [],
+    "profileEnriched": true,
+    "profileUpdatedAt": "2026-08-15 06:58:47"
   },
   "market": {
     "indexes": {
@@ -276,7 +278,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Software - Application",
+      "sector": "Technology",
+      "companyProfile": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI)",
+      "theme": "產業：Software - Application｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-01 07:41:03"
     },
     {
       "date": "2026-08-14",
@@ -339,7 +348,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Communication Equipment",
+      "sector": "Technology",
+      "companyProfile": "Hewlett Packard Enterprise Company, together with its subsidiaries, develops intelligent solutions in the United States, the Americas, Europe, the Middle East, Africa, the Asia Pac",
+      "theme": "產業：Communication Equipment｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、量能放大、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:56"
     },
     {
       "date": "2026-08-14",
@@ -402,7 +418,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Arista Networks, Inc. engages in the development, marketing, and sale of data-driven, client to cloud networking solutions for AI, data center, campus, and routing environments in ",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、量能放大、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-06 07:37:40"
     },
     {
       "date": "2026-08-14",
@@ -465,7 +488,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service so",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：旗型整理突破｜原因：量能放大、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:57"
     },
     {
       "date": "2026-08-14",
@@ -528,7 +558,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Travel Services",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Airbnb, Inc., together with its subsidiaries, operates a platform for stays, experiences, and services worldwide. The company's marketplace connects hosts and guests online or thro",
+      "theme": "產業：Travel Services｜板塊：Consumer Cyclical｜型態：旗型整理突破｜原因：均線多頭排列、量能放大、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-08 07:17:50"
     },
     {
       "date": "2026-08-14",
@@ -591,7 +628,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Dell Technologies Inc. designs, develops, manufactures, markets, sells, and supports various comprehensive and integrated solutions, products, and services in the Americas, Europe,",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:56"
     },
     {
       "date": "2026-08-14",
@@ -654,7 +698,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "Palo Alto Networks, Inc. provides cybersecurity solutions in the Americas, Europe, the Middle East, Africa, the Asia Pacific, and Japan. It offers Prisma Access, a secure access se",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 08:17:27"
     },
     {
       "date": "2026-08-14",
@@ -717,7 +768,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "Cloudflare, Inc. operates as a cloud services provider that delivers a range of services to businesses worldwide. The company provides a cloud-based security solution to secure a r",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 08:17:27"
     },
     {
       "date": "2026-08-14",
@@ -780,7 +838,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "SHOP目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -843,7 +908,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "SE目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -866,7 +938,7 @@
       "changePct": -3.8,
       "nearLimitUp": false,
       "volume": 6688148,
-      "avgVolume20": 7524167,
+      "avgVolume20": 7524657,
       "volumeRatio": 0.89,
       "adx": 26.38,
       "kline": "長黑",
@@ -906,7 +978,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "CrowdStrike Holdings, Inc. provides cybersecurity solutions in the United States and internationally. Its unified platform provides cloud-delivered protection of endpoints, cloud w",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:57"
     },
     {
       "date": "2026-08-14",
@@ -969,7 +1048,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Entertainment",
+      "sector": "Communication Services",
+      "companyProfile": "Roku, Inc., together with its subsidiaries, operates a TV streaming platform in the United States and internationally. The company operates in two segments, Platform and Devices. I",
+      "theme": "產業：Entertainment｜板塊：Communication Services｜型態：旗型整理突破｜原因：均線多頭排列、量能放大、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 08:17:57"
     },
     {
       "date": "2026-08-14",
@@ -977,7 +1063,7 @@
       "ticker": "URI",
       "name": "URI",
       "close": 1153.83,
-      "high": 1160.11,
+      "high": 1160.81,
       "low": 1119.79,
       "currency": "USD",
       "priceType": "收盤確認價",
@@ -985,16 +1071,16 @@
       "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K",
       "ma5": 1136.96,
       "ma10": 1143.84,
-      "ma20": 1111.37,
-      "ma60": 1071.28,
-      "ma200": 910.54,
-      "rise60": 22.15,
+      "ma20": 1110.16,
+      "ma60": 1074.96,
+      "ma200": 911.93,
+      "rise60": 23.24,
       "changePct": 2.97,
       "nearLimitUp": false,
       "volume": 491409,
-      "avgVolume20": 511720,
-      "volumeRatio": 0.96,
-      "adx": 20.15,
+      "avgVolume20": 522385,
+      "volumeRatio": 0.94,
+      "adx": 20.71,
       "kline": "紅K突破",
       "trend": true,
       "volumeOk": false,
@@ -1006,8 +1092,8 @@
       "reason": "均線多頭排列、大盤不弱",
       "pattern": "旗型整理突破",
       "neckline": 1179.18,
-      "support": 1055.8,
-      "target": 1447.21,
+      "support": 1054.65,
+      "target": 1441.44,
       "stage": "接近成形＋可觀察",
       "entryBreakout": 1202.76,
       "entryPullback": 1179.18,
@@ -1032,7 +1118,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Rental & Leasing Services",
+      "sector": "Industrials",
+      "companyProfile": "United Rentals, Inc., through its subsidiaries, operates as an equipment rental company in the United States, Canada, Europe, Australia, and New Zealand. It operates through two se",
+      "theme": "產業：Rental & Leasing Services｜板塊：Industrials｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 08:17:57"
     },
     {
       "date": "2026-08-14",
@@ -1048,16 +1141,16 @@
       "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K",
       "ma5": 453.81,
       "ma10": 449.62,
-      "ma20": 423.1,
-      "ma60": 410.19,
-      "ma200": 377.78,
-      "rise60": 18.24,
+      "ma20": 423.78,
+      "ma60": 411.13,
+      "ma200": 378.04,
+      "rise60": 18.92,
       "changePct": -0.4,
       "nearLimitUp": false,
       "volume": 1396726,
-      "avgVolume20": 2458646,
-      "volumeRatio": 0.57,
-      "adx": 24.52,
+      "avgVolume20": 2346946,
+      "volumeRatio": 0.6,
+      "adx": 27.5,
       "kline": "一般K",
       "trend": true,
       "volumeOk": false,
@@ -1069,7 +1162,7 @@
       "reason": "均線多頭排列、大盤不弱",
       "pattern": "接近成形",
       "neckline": 478.0,
-      "support": 401.94,
+      "support": 402.59,
       "target": 597.87,
       "stage": "接近成形＋可觀察",
       "entryBreakout": 487.56,
@@ -1095,7 +1188,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "ETN目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：均線多頭排列、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -1158,7 +1258,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "VRTX目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：均線多頭排列、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -1221,7 +1328,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "NVDA目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：均線多頭排列、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -1284,7 +1398,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "AMZN目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：均線多頭排列、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -1347,7 +1468,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Micron Technology, Inc. designs, develops, manufactures, and sells memory and storage products in the United States, Taiwan, Japan, Mainland China, Hong Kong, Europe, and internati",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:56"
     },
     {
       "date": "2026-08-14",
@@ -1410,7 +1538,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Seagate Technology Holdings plc engages in the provision of data storage technology and infrastructure solutions in Singapore, the United States, the Netherlands, and international",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:56"
     },
     {
       "date": "2026-08-14",
@@ -1473,7 +1608,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "PLTR目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -1536,7 +1678,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "HOOD目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -1599,7 +1748,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "REGN目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -1607,7 +1763,7 @@
       "ticker": "TER",
       "name": "TER",
       "close": 418.79,
-      "high": 418.99,
+      "high": 419.0,
       "low": 398.42,
       "currency": "USD",
       "priceType": "收盤確認價",
@@ -1622,7 +1778,7 @@
       "changePct": 2.01,
       "nearLimitUp": false,
       "volume": 1834366,
-      "avgVolume20": 3580713,
+      "avgVolume20": 3580783,
       "volumeRatio": 0.51,
       "adx": 17.17,
       "kline": "紅K突破",
@@ -1662,7 +1818,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "Teradyne, Inc. engages in the design, development, manufacture, and sale of automated test systems and robotics products in the United States, Asia Pacific, Europe, the Middle East",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、量能放大、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-19 08:15:31"
     },
     {
       "date": "2026-08-14",
@@ -1725,7 +1888,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Software - Application",
+      "sector": "Technology",
+      "companyProfile": "Datadog, Inc. operates an observability and security platform for cloud applications in the United States and internationally. The company's products comprise infrastructure and ap",
+      "theme": "產業：Software - Application｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:57"
     },
     {
       "date": "2026-08-14",
@@ -1788,7 +1958,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "NOW目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -1851,7 +2028,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "SMCI目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -1874,7 +2058,7 @@
       "changePct": -0.21,
       "nearLimitUp": false,
       "volume": 864471,
-      "avgVolume20": 1589683,
+      "avgVolume20": 1589793,
       "volumeRatio": 0.54,
       "adx": 29.15,
       "kline": "紅K突破",
@@ -1914,7 +2098,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "ASML Holding N.V. provides lithography solutions for the development, production, marketing, sales, upgrading, and servicing of advanced semiconductor equipment systems. The compan",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 08:17:57"
     },
     {
       "date": "2026-08-14",
@@ -1977,7 +2168,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United State",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:57"
     },
     {
       "date": "2026-08-14",
@@ -2040,7 +2238,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "Applied Materials, Inc. provides materials engineering solutions, equipment, services, and software to the semiconductor and related industries in the United States, China, Korea, ",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 08:17:57"
     },
     {
       "date": "2026-08-14",
@@ -2103,7 +2308,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "MSFT目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -2166,7 +2378,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "SOFI目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -2229,7 +2448,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "LLY目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -2292,7 +2518,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers ar",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:56"
     },
     {
       "date": "2026-08-14",
@@ -2355,7 +2588,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "Lam Research Corporation designs, manufactures, markets, refurbishes, and services semiconductor processing equipment used in the fabrication of integrated circuits in the United S",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-04 08:19:57"
     },
     {
       "date": "2026-08-14",
@@ -2418,7 +2658,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "MELI目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -2481,7 +2728,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "KLA Corporation, together with its subsidiaries, designs, manufactures, and markets process control, process-enabling, and yield management solutions for the semiconductor and rela",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 08:17:57"
     },
     {
       "date": "2026-08-14",
@@ -2544,7 +2798,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Western Digital Corporation develops, manufactures, and sells data storage devices and solutions based on hard disk drive (HDD) technology in the United States, Asia, Europe, the M",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-05 07:50:49"
     },
     {
       "date": "2026-08-14",
@@ -2607,7 +2868,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "CRM目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -2670,7 +2938,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Arm Holdings plc researches, develops, licenses, and markets central processing unit (CPU) intellectual property (IP), graphics processing unit IP, systems IP, compute subsystems (",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:56"
     },
     {
       "date": "2026-08-14",
@@ -2733,7 +3008,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "AI目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -2796,7 +3078,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in ",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 08:17:57"
     },
     {
       "date": "2026-08-14",
@@ -2859,7 +3148,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "ZS目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -2922,7 +3218,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Healthcare Plans",
+      "sector": "Healthcare",
+      "companyProfile": "UnitedHealth Group Incorporated operates as a health care company in the United States and internationally. It operates through four segments: Optum Health, Optum Insight, Optum Rx",
+      "theme": "產業：Healthcare Plans｜板塊：Healthcare｜型態：箱型突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-16 08:17:57"
     },
     {
       "date": "2026-08-14",
@@ -2945,7 +3248,7 @@
       "changePct": 1.32,
       "nearLimitUp": false,
       "volume": 1472679,
-      "avgVolume20": 2587048,
+      "avgVolume20": 2587118,
       "volumeRatio": 0.57,
       "adx": 25.03,
       "kline": "紅K突破",
@@ -2985,7 +3288,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "GEV目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -3048,7 +3358,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "NVO目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -3111,7 +3428,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "UBER目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -3174,7 +3498,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "AAPL目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -3237,7 +3568,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "CEG目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：旗型整理突破｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -3300,7 +3638,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Farm & Heavy Construction Machinery",
+      "sector": "Industrials",
+      "companyProfile": "Caterpillar Inc. provides construction and mining equipment, off-highway diesel and natural gas engines, industrial gas turbines, and diesel-electric locomotives in the United Stat",
+      "theme": "產業：Farm & Heavy Construction Machinery｜板塊：Industrials｜型態：三角收斂突破｜原因：均線多頭排列、量能放大、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-20 07:47:54"
     },
     {
       "date": "2026-08-14",
@@ -3363,7 +3708,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "EME目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -3426,7 +3778,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "META目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -3489,7 +3848,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Engineering & Construction",
+      "sector": "Industrials",
+      "companyProfile": "Comfort Systems USA, Inc., together with its subsidiaries, provides mechanical and electrical installation, renovation, maintenance, repair, and replacement services for the mechan",
+      "theme": "產業：Engineering & Construction｜板塊：Industrials｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-05 07:50:50"
     },
     {
       "date": "2026-08-14",
@@ -3552,7 +3918,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Broadcom Inc. designs, develops, and supplies various semiconductor devices and infrastructure software solutions internationally. The company operates in two segments: Semiconduct",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、量能放大、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-04 18:51:26"
     },
     {
       "date": "2026-08-14",
@@ -3615,7 +3988,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "VRT目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -3678,7 +4058,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Texas Instruments Incorporated designs, manufactures, and sells semiconductors to electronics designers and manufacturers in the United States, China, the rest of Asia, Europe, the",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 08:17:27"
     },
     {
       "date": "2026-08-14",
@@ -3741,7 +4128,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "MPWR目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -3804,7 +4198,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "GOOGL目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -3867,7 +4268,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "NFLX目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -3930,7 +4338,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "IONQ目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -3993,7 +4408,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "SOUN目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -4056,7 +4478,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "ISRG目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -4119,7 +4548,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "INTC目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -4142,7 +4578,7 @@
       "changePct": 0.74,
       "nearLimitUp": false,
       "volume": 8455614,
-      "avgVolume20": 15325475,
+      "avgVolume20": 15326005,
       "volumeRatio": 0.55,
       "adx": 51.86,
       "kline": "一般K",
@@ -4182,7 +4618,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "RBLX目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -4205,7 +4648,7 @@
       "changePct": 0.68,
       "nearLimitUp": false,
       "volume": 44776096,
-      "avgVolume20": 39791569,
+      "avgVolume20": 39798199,
       "volumeRatio": 1.13,
       "adx": 57.07,
       "kline": "下影線",
@@ -4245,7 +4688,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "TSLA目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -4308,7 +4758,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "QUALCOMM Incorporated engages in the development and commercialization of foundational technologies for the wireless industry worldwide. It operates through three segments: Qualcom",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-03 08:17:27"
     },
     {
       "date": "2026-08-14",
@@ -4371,7 +4828,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "BBAI目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -4434,7 +4898,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "Oracle Corporation offers products and services that address enterprise information technology environments worldwide. Its Oracle cloud software as a service offering include vario",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：旗型整理突破｜原因：量能放大、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-06-02 19:52:57"
     },
     {
       "date": "2026-08-14",
@@ -4497,7 +4968,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "COIN目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -4560,7 +5038,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "APP目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     },
     {
       "date": "2026-08-14",
@@ -4582,8 +5067,8 @@
       "rise60": -43.89,
       "changePct": -4.18,
       "nearLimitUp": false,
-      "volume": 19286561,
-      "avgVolume20": 15790763,
+      "volume": 19311725,
+      "avgVolume20": 15794726,
       "volumeRatio": 1.22,
       "adx": 10.79,
       "kline": "一般K",
@@ -4623,7 +5108,14 @@
       "cashAction": "停止新進場，先保留現金，等待大盤止跌。",
       "riskWarning": "停止新進場，禁止顯示今日可進場。",
       "marketFilterAllowsEntry": false,
-      "profitTakingAlert": false
+      "profitTakingAlert": false,
+      "industry": "美股",
+      "sector": "美股",
+      "companyProfile": "MSTR目前以技術型態、量能與位置作為觀察重點。",
+      "theme": "型態：接近成形｜原因：大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "scanner fallback",
+      "profileUpdatedAt": "2026-08-15 06:58:47"
     }
   ]
 }

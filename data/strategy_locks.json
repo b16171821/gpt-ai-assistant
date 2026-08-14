@@ -640,14 +640,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "接近第一目標",
-    "currentPrice": 22.0,
-    "currentTarget": 22.95,
-    "currentStopLoss": 18.14,
-    "extensionTarget": null,
+    "currentPrice": 22.6,
+    "currentTarget": 26.65,
+    "currentStopLoss": 19.93,
+    "extensionTarget": 26.65,
     "recentCloses": [],
     "holderAction": "接近原始第一目標，準備分批停利。",
     "emptyAction": "不追高，等回踩。",
-    "updatedAt": "2026-08-13 07:22:42"
+    "updatedAt": "2026-08-15 06:58:48"
   },
   "台股:2059": {
     "key": "台股:2059",
@@ -998,6 +998,31 @@
     "holderAction": "跌破原始停損，依紀律處理。",
     "emptyAction": "取消觀察，等待新結構。",
     "updatedAt": "2026-06-02 19:52:59"
+  },
+  "台股:2357": {
+    "key": "台股:2357",
+    "market": "台股",
+    "code": "2357",
+    "name": "華碩",
+    "createdAt": "2026-08-14",
+    "originalBuyLow": 795.6,
+    "originalBuyHigh": 819.47,
+    "originalStopLoss": 756.6,
+    "originalTarget": 925.0,
+    "originalNeckline": 780.0,
+    "originalStage": "突破第一根",
+    "originalWinRate": "低",
+    "status": "active",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "已達第一目標",
+    "currentPrice": 996.0,
+    "currentTarget": 925.0,
+    "currentStopLoss": 756.6,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
+    "emptyAction": "不追高，等新的整理區或回踩不破。",
+    "updatedAt": "2026-08-15 06:58:48"
   },
   "台股:2362": {
     "key": "台股:2362",
@@ -2540,14 +2565,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "接近第一目標",
-    "currentPrice": 90.5,
-    "currentTarget": 139.5,
-    "currentStopLoss": 99.91,
-    "extensionTarget": 139.5,
+    "currentPrice": 90.1,
+    "currentTarget": 117.5,
+    "currentStopLoss": 89.24,
+    "extensionTarget": 117.5,
     "recentCloses": [],
     "holderAction": "接近原始第一目標，準備分批停利。",
     "emptyAction": "不追高，等回踩。",
-    "updatedAt": "2026-08-06 07:37:41"
+    "updatedAt": "2026-08-15 06:58:48"
   },
   "台股:5410": {
     "key": "台股:5410",
@@ -4190,14 +4215,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 185.13,
+    "currentPrice": 184.06,
     "currentTarget": 247.01,
     "currentStopLoss": 181.51,
     "extensionTarget": 247.01,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-14 07:25:15"
+    "updatedAt": "2026-08-15 06:58:49"
   },
   "美股:AMAT": {
     "key": "美股:AMAT",
@@ -4440,14 +4465,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 49.56,
-    "currentTarget": 76.27,
-    "currentStopLoss": 49.55,
-    "extensionTarget": 76.27,
+    "currentPrice": 58.71,
+    "currentTarget": 94.19,
+    "currentStopLoss": 61.54,
+    "extensionTarget": 94.19,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-15 17:33:46"
+    "updatedAt": "2026-08-15 06:58:48"
   },
   "美股:KLAC": {
     "key": "美股:KLAC",
@@ -4515,14 +4540,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 472.29,
-    "currentTarget": 654.07,
-    "currentStopLoss": 458.15,
-    "extensionTarget": 654.07,
+    "currentPrice": 460.33,
+    "currentTarget": 655.63,
+    "currentStopLoss": 458.91,
+    "extensionTarget": 655.63,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-14 07:25:16"
+    "updatedAt": "2026-08-15 06:58:48"
   },
   "美股:MRVL": {
     "key": "美股:MRVL",
