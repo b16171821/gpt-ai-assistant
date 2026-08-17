@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-15 06:58:47",
+  "updatedAt": "2026-08-18 06:59:46",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2331,6 +2331,33 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-08-15 06:58:47"
+    },
+    "台股:6603": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "companyProfile": "Fu Chun Shin Machinery Manufacture Co., Ltd. engages in the manufacturing, processing, trading, and repair of plastic injection machine and molds, electric wires and cables, and pl",
+      "theme": "產業：Specialty Industrial Machinery｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-18 06:59:45"
+    },
+    "台股:4163": {
+      "industry": "Tools & Accessories",
+      "sector": "Industrials",
+      "companyProfile": "INTAI Technology Corporation produces and sells medical devices and precision fasteners. The company offers medical products for minimally invasive surgery, cardiovascular, diagnos",
+      "theme": "產業：Tools & Accessories｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-18 06:59:45"
+    },
+    "台股:6840": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "BTL Inc. provides electro-magnetic compatibility certification and safety testing services in East and South Asia, Southeast Asia, the Middle East, Africa, Europe, South America, a",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-18 06:59:46"
     }
   }
 }
