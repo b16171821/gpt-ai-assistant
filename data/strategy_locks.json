@@ -672,7 +672,7 @@
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-08-18 16:06:21"
+    "updatedAt": "2026-08-19 06:59:49"
   },
   "台股:2061": {
     "key": "台股:2061",
@@ -3697,7 +3697,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-18 16:06:21"
+    "updatedAt": "2026-08-19 06:59:49"
   },
   "台股:6907": {
     "key": "台股:6907",
@@ -4290,14 +4290,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 184.06,
+    "currentPrice": 183.25,
     "currentTarget": 247.01,
     "currentStopLoss": 181.51,
     "extensionTarget": 247.01,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-18 16:06:22"
+    "updatedAt": "2026-08-19 06:59:49"
   },
   "美股:AMAT": {
     "key": "美股:AMAT",
@@ -4540,14 +4540,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 58.71,
-    "currentTarget": 94.19,
+    "currentPrice": 55.69,
+    "currentTarget": 92.38,
     "currentStopLoss": 61.54,
-    "extensionTarget": 94.19,
+    "extensionTarget": 92.38,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-18 16:06:22"
+    "updatedAt": "2026-08-19 06:59:50"
   },
   "美股:KLAC": {
     "key": "美股:KLAC",
@@ -4615,14 +4615,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 460.33,
+    "currentPrice": 434.62,
     "currentTarget": 655.63,
     "currentStopLoss": 458.91,
     "extensionTarget": 655.63,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-18 16:06:22"
+    "updatedAt": "2026-08-19 06:59:49"
   },
   "美股:MRVL": {
     "key": "美股:MRVL",
@@ -4690,14 +4690,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 307.01,
-    "currentTarget": 457.84,
+    "currentPrice": 301.36,
+    "currentTarget": 456.44,
     "currentStopLoss": 322.25,
-    "extensionTarget": 457.84,
+    "extensionTarget": 456.44,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-18 06:59:48"
+    "updatedAt": "2026-08-19 06:59:49"
   },
   "美股:ORCL": {
     "key": "美股:ORCL",
