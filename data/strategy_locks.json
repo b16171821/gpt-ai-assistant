@@ -3712,17 +3712,17 @@
     "originalNeckline": 201.5,
     "originalStage": "突破第一根",
     "originalWinRate": "低",
-    "status": "active",
+    "status": "ended",
     "createdBy": "strategy-lock-v1",
-    "trackingStatus": "策略追蹤中",
-    "currentPrice": 239.0,
-    "currentTarget": 294.0,
-    "currentStopLoss": 195.45,
-    "extensionTarget": null,
+    "trackingStatus": "策略結束",
+    "currentPrice": 192.5,
+    "currentTarget": 330.5,
+    "currentStopLoss": 216.31,
+    "extensionTarget": 330.5,
     "recentCloses": [],
-    "holderAction": "未達第一目標前，守風險區續抱觀察。",
-    "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-07-17 07:37:39"
+    "holderAction": "跌破原始停損，依紀律處理。",
+    "emptyAction": "取消觀察，等待新結構。",
+    "updatedAt": "2026-08-19 16:07:41"
   },
   "台股:6922": {
     "key": "台股:6922",
@@ -4297,7 +4297,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-19 06:59:49"
+    "updatedAt": "2026-08-19 16:07:41"
   },
   "美股:AMAT": {
     "key": "美股:AMAT",
@@ -4547,7 +4547,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-19 06:59:50"
+    "updatedAt": "2026-08-19 16:07:41"
   },
   "美股:KLAC": {
     "key": "美股:KLAC",
@@ -4622,7 +4622,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-19 06:59:49"
+    "updatedAt": "2026-08-19 16:07:41"
   },
   "美股:MRVL": {
     "key": "美股:MRVL",
@@ -4697,7 +4697,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-19 06:59:49"
+    "updatedAt": "2026-08-19 16:07:41"
   },
   "美股:ORCL": {
     "key": "美股:ORCL",
