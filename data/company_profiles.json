@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22 06:59:55",
+  "updatedAt": "2026-08-24 16:24:28",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2367,6 +2367,15 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-08-21 16:10:23"
+    },
+    "台股:3234": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "TrueLight Corporation designs, develops, and supplies optical communication components in China, Taiwan, Asia, the United States, and Europe. The company offers optical fiber commu",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-24 16:24:28"
     }
   }
 }
