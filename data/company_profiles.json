@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25 07:01:41",
+  "updatedAt": "2026-08-25 16:22:06",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2376,6 +2376,24 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-08-24 16:24:28"
+    },
+    "台股:7751": {
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "Horng Terng Automation Co., Ltd. engages in the research and development, manufacturing, and sales of semiconductor automation equipment. The company offers advanced indium process",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、題材命中",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-25 16:22:05"
+    },
+    "台股:6240": {
+      "industry": "Publishing",
+      "sector": "Communication Services",
+      "companyProfile": "Sung Gang Corp.Limited provides information services in Taiwan. The company offers computer hardware and application information system maintenance services. It also provides digit",
+      "theme": "產業：Publishing｜板塊：Communication Services｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-25 16:22:06"
     }
   }
 }
