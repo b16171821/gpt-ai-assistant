@@ -1422,7 +1422,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-25 16:22:07"
+    "updatedAt": "2026-08-26 07:02:58"
   },
   "台股:3236": {
     "key": "台股:3236",
@@ -3172,7 +3172,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-25 16:22:07"
+    "updatedAt": "2026-08-26 07:02:58"
   },
   "台股:6241": {
     "key": "台股:6241",
@@ -3497,7 +3497,7 @@
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-08-25 16:22:06"
+    "updatedAt": "2026-08-26 07:02:57"
   },
   "台股:6620": {
     "key": "台股:6620",
@@ -3847,7 +3847,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-25 16:22:07"
+    "updatedAt": "2026-08-26 07:02:58"
   },
   "台股:7777": {
     "key": "台股:7777",
@@ -4122,7 +4122,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-25 16:22:06"
+    "updatedAt": "2026-08-26 07:02:58"
   },
   "台股:8096": {
     "key": "台股:8096",
@@ -4390,14 +4390,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 187.3,
-    "currentTarget": 251.17,
-    "currentStopLoss": 183.52,
-    "extensionTarget": 251.17,
+    "currentPrice": 190.5,
+    "currentTarget": 259.68,
+    "currentStopLoss": 187.65,
+    "extensionTarget": 259.68,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-24 16:24:29"
+    "updatedAt": "2026-08-26 07:02:58"
   },
   "美股:AMAT": {
     "key": "美股:AMAT",
