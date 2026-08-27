@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-26 16:22:25",
+  "updatedAt": "2026-08-27 11:35:29",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2412,6 +2412,15 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-08-26 16:22:24"
+    },
+    "台股:4303": {
+      "industry": "Footwear & Accessories",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "HsinLi Chemical Industrial Corp. engages in the manufacture and sale of synthetic and plastic leather products in Taiwan and internationally. The company provides TPU products, moi",
+      "theme": "產業：Footwear & Accessories｜板塊：Consumer Cyclical｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-27 11:35:29"
     }
   }
 }

@@ -16496,5 +16496,30 @@
       "reason": "趨勢多頭、量能放大、價量條件足",
       "action": "已漲遠或接近目標，空手不追；持有者依策略分批處理。"
     }
+  ],
+  "台股:4303": [
+    {
+      "date": "2026-08-26",
+      "market": "台股",
+      "code": "4303",
+      "name": "信立",
+      "grade": "C",
+      "safeScore": 0,
+      "riskRewardRatio": 0.0,
+      "category": "接近停利",
+      "close": 54.6,
+      "neckline": 36.71,
+      "entry": 54.6,
+      "buyLow": 37.45,
+      "buyHigh": 38.57,
+      "stopLoss": 35.61,
+      "target": 45.32,
+      "riskPct": 34.77,
+      "rewardPct": 0.0,
+      "distanceFromNecklinePct": 48.72,
+      "pattern": "接近成形",
+      "reason": "趨勢多頭、量能放大、價量條件足",
+      "action": "已漲遠或接近目標，空手不追；持有者依策略分批處理。"
+    }
   ]
 }

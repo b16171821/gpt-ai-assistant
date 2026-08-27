@@ -397,7 +397,7 @@
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-08-26 16:22:26"
+    "updatedAt": "2026-08-27 11:35:30"
   },
   "台股:1710": {
     "key": "台股:1710",
@@ -1697,7 +1697,7 @@
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-08-26 16:22:25"
+    "updatedAt": "2026-08-27 11:35:29"
   },
   "台股:3374": {
     "key": "台股:3374",
@@ -2047,7 +2047,7 @@
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-08-26 16:22:26"
+    "updatedAt": "2026-08-27 11:35:30"
   },
   "台股:4147": {
     "key": "台股:4147",
@@ -2122,7 +2122,32 @@
     "recentCloses": [],
     "holderAction": "接近原始第一目標，準備分批停利。",
     "emptyAction": "不追高，等回踩。",
-    "updatedAt": "2026-08-26 16:22:26"
+    "updatedAt": "2026-08-27 11:35:30"
+  },
+  "台股:4303": {
+    "key": "台股:4303",
+    "market": "台股",
+    "code": "4303",
+    "name": "信立",
+    "createdAt": "2026-08-26",
+    "originalBuyLow": 37.45,
+    "originalBuyHigh": 38.57,
+    "originalStopLoss": 35.61,
+    "originalTarget": 45.32,
+    "originalNeckline": 36.71,
+    "originalStage": "突破第一根",
+    "originalWinRate": "低",
+    "status": "active",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "已達第一目標",
+    "currentPrice": 54.6,
+    "currentTarget": 45.32,
+    "currentStopLoss": 35.61,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
+    "emptyAction": "不追高，等新的整理區或回踩不破。",
+    "updatedAt": "2026-08-27 11:35:30"
   },
   "台股:4442": {
     "key": "台股:4442",
@@ -3422,7 +3447,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-26 16:22:26"
+    "updatedAt": "2026-08-27 11:35:30"
   },
   "台股:6548": {
     "key": "台股:6548",
