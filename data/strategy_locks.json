@@ -390,14 +390,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "已達第一目標",
-    "currentPrice": 37.1,
-    "currentTarget": 48.4,
-    "currentStopLoss": 32.83,
-    "extensionTarget": 48.4,
+    "currentPrice": 36.15,
+    "currentTarget": 53.3,
+    "currentStopLoss": 35.21,
+    "extensionTarget": 53.3,
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-08-27 11:35:30"
+    "updatedAt": "2026-08-29 03:35:50"
   },
   "台股:1710": {
     "key": "台股:1710",
@@ -639,15 +639,15 @@
     "originalWinRate": "低",
     "status": "active",
     "createdBy": "strategy-lock-v1",
-    "trackingStatus": "接近第一目標",
-    "currentPrice": 22.6,
-    "currentTarget": 26.65,
-    "currentStopLoss": 19.93,
-    "extensionTarget": 26.65,
+    "trackingStatus": "已達第一目標",
+    "currentPrice": 25.65,
+    "currentTarget": 29.55,
+    "currentStopLoss": 21.34,
+    "extensionTarget": 29.55,
     "recentCloses": [],
-    "holderAction": "接近原始第一目標，準備分批停利。",
-    "emptyAction": "不追高，等回踩。",
-    "updatedAt": "2026-08-15 06:58:48"
+    "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
+    "emptyAction": "不追高，等新的整理區或回踩不破。",
+    "updatedAt": "2026-08-29 03:35:50"
   },
   "台股:2059": {
     "key": "台股:2059",
@@ -1440,14 +1440,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 47.35,
-    "currentTarget": 66.6,
-    "currentStopLoss": 45.83,
-    "extensionTarget": null,
+    "currentPrice": 46.35,
+    "currentTarget": 66.8,
+    "currentStopLoss": 45.93,
+    "extensionTarget": 66.8,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-28 14:21:52"
+    "updatedAt": "2026-08-29 03:35:51"
   },
   "台股:3234": {
     "key": "台股:3234",
@@ -1662,17 +1662,17 @@
     "originalNeckline": 1280.0,
     "originalStage": "回踩頸線不破",
     "originalWinRate": "中",
-    "status": "active",
+    "status": "ended",
     "createdBy": "strategy-lock-v1",
-    "trackingStatus": "策略追蹤中",
-    "currentPrice": 1280.0,
-    "currentTarget": 1685.0,
-    "currentStopLoss": 1241.6,
+    "trackingStatus": "策略結束",
+    "currentPrice": 1140.0,
+    "currentTarget": 1430.0,
+    "currentStopLoss": 1086.4,
     "extensionTarget": null,
     "recentCloses": [],
-    "holderAction": "未達第一目標前，守風險區續抱觀察。",
-    "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-06-04 08:19:58"
+    "holderAction": "跌破原始停損，依紀律處理。",
+    "emptyAction": "取消觀察，等待新結構。",
+    "updatedAt": "2026-08-29 03:35:50"
   },
   "台股:3357": {
     "key": "台股:3357",
@@ -2464,15 +2464,15 @@
     "originalWinRate": "低",
     "status": "active",
     "createdBy": "strategy-lock-v1",
-    "trackingStatus": "接近第一目標",
-    "currentPrice": 65.6,
-    "currentTarget": 68.65,
-    "currentStopLoss": 46.51,
-    "extensionTarget": null,
+    "trackingStatus": "已達第一目標",
+    "currentPrice": 92.8,
+    "currentTarget": 93.5,
+    "currentStopLoss": 67.61,
+    "extensionTarget": 93.5,
     "recentCloses": [],
-    "holderAction": "接近原始第一目標，準備分批停利。",
-    "emptyAction": "不追高，等回踩。",
-    "updatedAt": "2026-06-09 07:52:14"
+    "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
+    "emptyAction": "不追高，等新的整理區或回踩不破。",
+    "updatedAt": "2026-08-29 03:35:51"
   },
   "台股:5011": {
     "key": "台股:5011",
@@ -3490,14 +3490,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 61.9,
+    "currentPrice": 65.0,
     "currentTarget": 71.1,
     "currentStopLoss": 55.87,
     "extensionTarget": null,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-27 11:35:30"
+    "updatedAt": "2026-08-29 03:35:51"
   },
   "台股:6548": {
     "key": "台股:6548",
@@ -4522,7 +4522,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-28 14:21:52"
+    "updatedAt": "2026-08-29 03:35:51"
   },
   "美股:AMAT": {
     "key": "美股:AMAT",
@@ -4697,7 +4697,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-28 14:21:53"
+    "updatedAt": "2026-08-29 03:35:51"
   },
   "美股:CRWD": {
     "key": "美股:CRWD",
@@ -4972,7 +4972,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-08-28 14:21:53"
+    "updatedAt": "2026-08-29 03:35:51"
   },
   "美股:ORCL": {
     "key": "美股:ORCL",

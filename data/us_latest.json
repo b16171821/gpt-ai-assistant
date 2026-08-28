@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAtET": "2026/08/28 02:21:38 EDT",
-    "updatedAtTW": "2026/08/28 14:21:38 CST",
+    "updatedAtET": "2026/08/28 15:35:44 EDT",
+    "updatedAtTW": "2026/08/29 03:35:44 CST",
     "strategyAsOfDate": "2026-08-27",
     "completedDataDate": "2026-08-27",
     "freshnessStatus": "COMPLETE",
@@ -9,7 +9,7 @@
     "staleCount": 0,
     "priceType": "收盤確認價",
     "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K",
-    "sessionStatus": "盤後",
+    "sessionStatus": "盤中",
     "mode": "us-pattern-close-only-scan",
     "source": "Yahoo Finance via yfinance",
     "totalWatchlist": 74,
@@ -26,32 +26,33 @@
       "strategy": "停止新進場，先保留現金，等待大盤止跌。",
       "reasons": [
         "加權接近近期高點 3% 內",
-        "收盤站上 5MA / 10MA / 20MA",
+        "收盤跌破短均線或 20MA",
         "5MA、20MA 向上",
         "櫃買未明顯轉弱",
         "系統內強勢股大量跌破停損",
         "A級名單大量消失"
       ],
       "warnings": [
+        "大盤轉弱，主升段股容易補跌。",
         "A/B 強勢股停損破線比例過高，停止新進場。",
         "系統內 A 級名單大量消失，停止新進場。"
       ],
       "noNewHighWarning": false,
       "weighted": {
         "name": "加權指數",
-        "date": "2026-08-27",
+        "date": "2026-08-28",
         "status": "接近高點",
-        "close": 7730.99,
-        "ma5": 7682.24,
-        "ma10": 7698.29,
-        "ma20": 7701.48,
+        "close": 7710.4,
+        "ma5": 7689.45,
+        "ma10": 7690.76,
+        "ma20": 7712.51,
         "recentHigh": 7816.7,
-        "closeToHighPct": 1.1,
+        "closeToHighPct": 1.36,
         "newHigh": false,
         "nearRecentHigh": true,
         "closeAboveMA5": true,
         "closeAboveMA10": true,
-        "closeAboveMA20": true,
+        "closeAboveMA20": false,
         "ma5Up": true,
         "ma20Up": true,
         "ma20FlatOrDown": false,
@@ -60,19 +61,19 @@
         "lowerLows": false,
         "longBlack": false,
         "supportBroken": false,
-        "isWeak": false,
+        "isWeak": true,
         "dataOk": true
       },
       "otc": {
         "name": "櫃買指數",
-        "date": "2026-08-27",
+        "date": "2026-08-28",
         "status": "接近高點",
-        "close": 26541.35,
-        "ma5": 26196.7,
-        "ma10": 26304.55,
-        "ma20": 26338.15,
-        "recentHigh": 27171.29,
-        "closeToHighPct": 2.32,
+        "close": 26406.09,
+        "ma5": 26241.83,
+        "ma10": 26272.25,
+        "ma20": 26389.76,
+        "recentHigh": 27130.88,
+        "closeToHighPct": 2.67,
         "newHigh": false,
         "nearRecentHigh": true,
         "closeAboveMA5": true,
@@ -92,13 +93,13 @@
       "strongStopBreakRate": 50.0,
       "strongStopBreakCount": 3,
       "strongWatchCount": 6,
-      "previousACount": 11,
+      "previousACount": 12,
       "currentACount": 0,
       "aDisappearRate": 100.0
     },
     "errors": [],
     "profileEnriched": true,
-    "profileUpdatedAt": "2026-08-28 14:21:51"
+    "profileUpdatedAt": "2026-08-29 03:35:49"
   },
   "market": {
     "indexes": {
@@ -138,32 +139,33 @@
       "strategy": "停止新進場，先保留現金，等待大盤止跌。",
       "reasons": [
         "加權接近近期高點 3% 內",
-        "收盤站上 5MA / 10MA / 20MA",
+        "收盤跌破短均線或 20MA",
         "5MA、20MA 向上",
         "櫃買未明顯轉弱",
         "系統內強勢股大量跌破停損",
         "A級名單大量消失"
       ],
       "warnings": [
+        "大盤轉弱，主升段股容易補跌。",
         "A/B 強勢股停損破線比例過高，停止新進場。",
         "系統內 A 級名單大量消失，停止新進場。"
       ],
       "noNewHighWarning": false,
       "weighted": {
         "name": "加權指數",
-        "date": "2026-08-27",
+        "date": "2026-08-28",
         "status": "接近高點",
-        "close": 7730.99,
-        "ma5": 7682.24,
-        "ma10": 7698.29,
-        "ma20": 7701.48,
+        "close": 7710.4,
+        "ma5": 7689.45,
+        "ma10": 7690.76,
+        "ma20": 7712.51,
         "recentHigh": 7816.7,
-        "closeToHighPct": 1.1,
+        "closeToHighPct": 1.36,
         "newHigh": false,
         "nearRecentHigh": true,
         "closeAboveMA5": true,
         "closeAboveMA10": true,
-        "closeAboveMA20": true,
+        "closeAboveMA20": false,
         "ma5Up": true,
         "ma20Up": true,
         "ma20FlatOrDown": false,
@@ -172,19 +174,19 @@
         "lowerLows": false,
         "longBlack": false,
         "supportBroken": false,
-        "isWeak": false,
+        "isWeak": true,
         "dataOk": true
       },
       "otc": {
         "name": "櫃買指數",
-        "date": "2026-08-27",
+        "date": "2026-08-28",
         "status": "接近高點",
-        "close": 26541.35,
-        "ma5": 26196.7,
-        "ma10": 26304.55,
-        "ma20": 26338.15,
-        "recentHigh": 27171.29,
-        "closeToHighPct": 2.32,
+        "close": 26406.09,
+        "ma5": 26241.83,
+        "ma10": 26272.25,
+        "ma20": 26389.76,
+        "recentHigh": 27130.88,
+        "closeToHighPct": 2.67,
         "newHigh": false,
         "nearRecentHigh": true,
         "closeAboveMA5": true,
@@ -204,7 +206,7 @@
       "strongStopBreakRate": 50.0,
       "strongStopBreakCount": 3,
       "strongWatchCount": 6,
-      "previousACount": 11,
+      "previousACount": 12,
       "currentACount": 0,
       "aDisappearRate": 100.0
     },
@@ -212,6 +214,7 @@
     "regimeLabel": "停止進場",
     "strategy": "停止新進場，先保留現金，等待大盤止跌。",
     "warnings": [
+      "大盤轉弱，主升段股容易補跌。",
       "A/B 強勢股停損破線比例過高，停止新進場。",
       "系統內 A 級名單大量消失，停止新進場。"
     ]
@@ -705,7 +708,7 @@
       "theme": "型態：旗型整理突破｜原因：價量趨勢成立、大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -775,7 +778,7 @@
       "theme": "型態：旗型整理突破｜原因：價量趨勢成立、大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -845,7 +848,7 @@
       "theme": "型態：旗型整理突破｜原因：價量趨勢成立、大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -915,7 +918,7 @@
       "theme": "型態：接近成形｜原因：價量趨勢成立、大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -985,7 +988,7 @@
       "theme": "型態：旗型整理突破｜原因：價量趨勢成立、大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -1055,7 +1058,7 @@
       "theme": "型態：接近成形｜原因：價量趨勢成立、大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -1195,7 +1198,7 @@
       "theme": "型態：旗型整理突破｜原因：均線多頭排列、大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -1615,7 +1618,7 @@
       "theme": "型態：旗型整理突破｜原因：均線多頭排列、大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -1685,7 +1688,7 @@
       "theme": "型態：旗型整理突破｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -1755,7 +1758,7 @@
       "theme": "型態：旗型整理突破｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -1825,7 +1828,7 @@
       "theme": "型態：旗型整理突破｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -1895,7 +1898,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -1965,7 +1968,7 @@
       "theme": "型態：旗型整理突破｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -2035,7 +2038,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -2105,7 +2108,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -2175,7 +2178,7 @@
       "theme": "型態：旗型整理突破｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -2245,7 +2248,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -2315,7 +2318,7 @@
       "theme": "型態：箱型突破｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -2455,7 +2458,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -2525,7 +2528,7 @@
       "theme": "型態：箱型突破｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -2665,7 +2668,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -2735,7 +2738,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -2875,7 +2878,7 @@
       "theme": "型態：旗型整理突破｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -3085,7 +3088,7 @@
       "theme": "型態：旗型整理突破｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -3225,7 +3228,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -3365,7 +3368,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -3435,7 +3438,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -3575,7 +3578,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -3715,7 +3718,7 @@
       "theme": "型態：旗型整理突破｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -3925,7 +3928,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -4275,7 +4278,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -4345,7 +4348,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -4415,7 +4418,7 @@
       "theme": "型態：旗型整理突破｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -4625,7 +4628,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -4765,7 +4768,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -4975,7 +4978,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     },
     {
       "date": "2026-08-27",
@@ -5115,7 +5118,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-08-28 14:21:51"
+      "profileUpdatedAt": "2026-08-29 03:35:49"
     }
   ]
 }
