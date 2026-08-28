@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-27 11:35:29",
+  "updatedAt": "2026-08-28 14:21:51",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2421,6 +2421,42 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-08-27 11:35:29"
+    },
+    "台股:3230": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Jiin Ming Industry Co., Ltd. provides design manufacturing services in Taiwan. The company offers precision milling machine processing solutions. It also offers mold design, hardwa",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-28 14:21:51"
+    },
+    "台股:3081": {
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "LandMark Optoelectronics Corporation engages in the manufacture and sale of optoelectronic semiconductors in Taiwan, China, the United States, and internationally. It also manufact",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-28 14:21:51"
+    },
+    "美股:CRM": {
+      "industry": "Software - Application",
+      "sector": "Technology",
+      "companyProfile": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The",
+      "theme": "產業：Software - Application｜板塊：Technology｜型態：旗型整理突破｜原因：量能放大、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-28 14:21:51"
+    },
+    "美股:NVDA": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Comput",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：三角收斂突破｜原因：均線多頭排列、量能放大、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-28 14:21:51"
     }
   }
 }
