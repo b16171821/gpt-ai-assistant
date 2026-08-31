@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29 11:53:37",
+  "updatedAt": "2026-08-31 23:23:04",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2457,6 +2457,24 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-08-28 14:21:51"
+    },
+    "台股:6532": {
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "Calitech Co., Ltd. develops technology solutions for semiconductor, III/V, MEMS, LED, and display industries in Taiwan, Mainland China, Singapore, the United States, Malaysia, Japa",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、題材命中",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-31 23:23:04"
+    },
+    "台股:6179": {
+      "industry": "Engineering & Construction",
+      "sector": "Industrials",
+      "companyProfile": "ATE Energy International Co., Ltd. provides engineering, construction, and equipment maintenance services. It operates through the Construction, Electricity, and Others segments. T",
+      "theme": "產業：Engineering & Construction｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-08-31 23:23:04"
     }
   }
 }
