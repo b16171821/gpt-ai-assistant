@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-01 09:25:07",
+  "updatedAt": "2026-09-01 20:45:01",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2475,6 +2475,15 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-08-31 23:23:04"
+    },
+    "台股:5274": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "ASPEED Technology Inc. operates as a fabless integrated circuit (IC) design company in Taiwan, China, the United States, and internationally. The company is involved in the design ",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、題材命中",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-01 20:45:01"
     }
   }
 }

@@ -15,14 +15,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 66.2,
+    "currentPrice": 67.8,
     "currentTarget": 86.5,
     "currentStopLoss": 62.86,
     "extensionTarget": null,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-09-01 09:25:07"
+    "updatedAt": "2026-09-01 20:45:02"
   },
   "台股:1303": {
     "key": "台股:1303",
@@ -415,14 +415,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "已達第一目標",
-    "currentPrice": 36.15,
-    "currentTarget": 53.3,
+    "currentPrice": 36.4,
+    "currentTarget": 52.5,
     "currentStopLoss": 35.21,
-    "extensionTarget": 53.3,
+    "extensionTarget": 52.5,
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-08-29 11:53:38"
+    "updatedAt": "2026-09-01 20:45:02"
   },
   "台股:1710": {
     "key": "台股:1710",
@@ -665,14 +665,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "已達第一目標",
-    "currentPrice": 25.65,
-    "currentTarget": 29.55,
-    "currentStopLoss": 21.34,
-    "extensionTarget": 29.55,
+    "currentPrice": 23.9,
+    "currentTarget": 34.05,
+    "currentStopLoss": 23.52,
+    "extensionTarget": 34.05,
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-08-29 11:53:38"
+    "updatedAt": "2026-09-01 20:45:02"
   },
   "台股:2059": {
     "key": "台股:2059",
@@ -2115,14 +2115,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "已達第一目標",
-    "currentPrice": 41.9,
-    "currentTarget": 60.7,
-    "currentStopLoss": 39.96,
-    "extensionTarget": 60.7,
+    "currentPrice": 42.95,
+    "currentTarget": 61.6,
+    "currentStopLoss": 40.64,
+    "extensionTarget": 61.6,
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-09-01 09:25:07"
+    "updatedAt": "2026-09-01 20:45:01"
   },
   "台股:4147": {
     "key": "台股:4147",
@@ -2623,6 +2623,31 @@
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
     "updatedAt": "2026-06-27 07:47:02"
+  },
+  "台股:5274": {
+    "key": "台股:5274",
+    "market": "台股",
+    "code": "5274",
+    "name": "信驊",
+    "createdAt": "2026-09-01",
+    "originalBuyLow": 18972.0,
+    "originalBuyHigh": 19541.16,
+    "originalStopLoss": 18042.0,
+    "originalTarget": 25320.0,
+    "originalNeckline": 18600.0,
+    "originalStage": "接近成形＋可觀察",
+    "originalWinRate": "中",
+    "status": "ended",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略結束",
+    "currentPrice": 17120.0,
+    "currentTarget": 25320.0,
+    "currentStopLoss": 18042.0,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "跌破原始停損，依紀律處理。",
+    "emptyAction": "取消觀察，等待新結構。",
+    "updatedAt": "2026-09-01 20:45:02"
   },
   "台股:5299": {
     "key": "台股:5299",
@@ -3315,14 +3340,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "已達第一目標",
-    "currentPrice": 25.3,
-    "currentTarget": 26.95,
-    "currentStopLoss": 21.39,
-    "extensionTarget": 26.95,
+    "currentPrice": 25.8,
+    "currentTarget": 32.25,
+    "currentStopLoss": 23.96,
+    "extensionTarget": 32.25,
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-09-01 09:25:08"
+    "updatedAt": "2026-09-01 20:45:02"
   },
   "台股:6241": {
     "key": "台股:6241",
@@ -3515,14 +3540,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 95.3,
+    "currentPrice": 98.6,
     "currentTarget": 126.1,
     "currentStopLoss": 89.63,
     "extensionTarget": null,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-09-01 09:25:07"
+    "updatedAt": "2026-09-01 20:45:02"
   },
   "台股:6538": {
     "key": "台股:6538",
