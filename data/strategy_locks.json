@@ -4565,14 +4565,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 68.8,
-    "currentTarget": 76.1,
-    "currentStopLoss": 58.01,
-    "extensionTarget": null,
+    "currentPrice": 67.3,
+    "currentTarget": 87.9,
+    "currentStopLoss": 63.73,
+    "extensionTarget": 87.9,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-09-04 20:16:23"
+    "updatedAt": "2026-09-07 21:41:14"
   },
   "台股:8932": {
     "key": "台股:8932",
@@ -4940,14 +4940,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 124.72,
+    "currentPrice": 122.11,
     "currentTarget": 166.08,
     "currentStopLoss": 121.13,
     "extensionTarget": null,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-09-04 20:16:23"
+    "updatedAt": "2026-09-07 21:41:14"
   },
   "美股:HPE": {
     "key": "美股:HPE",
