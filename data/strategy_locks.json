@@ -2715,14 +2715,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 46.8,
+    "currentPrice": 42.15,
     "currentTarget": 73.75,
     "currentStopLoss": 41.27,
     "extensionTarget": 73.75,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-09-10 20:22:33"
+    "updatedAt": "2026-09-11 20:21:35"
   },
   "台股:5321": {
     "key": "台股:5321",
@@ -4064,15 +4064,15 @@
     "originalWinRate": "低",
     "status": "active",
     "createdBy": "strategy-lock-v1",
-    "trackingStatus": "接近第一目標",
-    "currentPrice": 26.75,
-    "currentTarget": 31.0,
-    "currentStopLoss": 21.73,
-    "extensionTarget": 31.0,
+    "trackingStatus": "策略追蹤中",
+    "currentPrice": 24.85,
+    "currentTarget": 35.4,
+    "currentStopLoss": 23.86,
+    "extensionTarget": 35.4,
     "recentCloses": [],
-    "holderAction": "接近原始第一目標，準備分批停利。",
-    "emptyAction": "不追高，等回踩。",
-    "updatedAt": "2026-09-10 20:22:34"
+    "holderAction": "未達第一目標前，守風險區續抱觀察。",
+    "emptyAction": "空手不追高，等突破確認或回踩不破。",
+    "updatedAt": "2026-09-11 20:21:35"
   },
   "台股:6907": {
     "key": "台股:6907",
