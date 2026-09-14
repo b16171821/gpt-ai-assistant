@@ -2140,14 +2140,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "已達第一目標",
-    "currentPrice": 41.0,
+    "currentPrice": 40.0,
     "currentTarget": 60.2,
     "currentStopLoss": 40.64,
     "extensionTarget": 60.2,
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-09-10 20:22:33"
+    "updatedAt": "2026-09-14 22:24:27"
   },
   "台股:4147": {
     "key": "台股:4147",
