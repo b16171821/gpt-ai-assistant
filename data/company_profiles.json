@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-17 20:46:57",
+  "updatedAt": "2026-09-18 20:22:45",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2556,6 +2556,51 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-09-17 20:46:57"
+    },
+    "台股:2030": {
+      "industry": "Steel",
+      "sector": "Basic Materials",
+      "companyProfile": "Froch Enterprise Co., Ltd. manufactures, sells, and exports stainless steel tubes and pipes in Asia, Europe, the Middle East, the Americas, and internationally. The company offers ",
+      "theme": "產業：Steel｜板塊：Basic Materials｜型態：箱型突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-18 20:22:44"
+    },
+    "台股:7792": {
+      "industry": "Consulting Services",
+      "sector": "Industrials",
+      "companyProfile": "Am-Power Machine International Enterprise Co., Ltd. trades in mechanical and electrical equipment in Taiwan and internationally. It offers consultancy service, such as demand analy",
+      "theme": "產業：Consulting Services｜板塊：Industrials｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-18 20:22:45"
+    },
+    "台股:6221": {
+      "industry": "Information Technology Services",
+      "sector": "Technology",
+      "companyProfile": "Genesis Technology, Inc., together with its subsidiaries, engages in sales, installation, and maintenance of information software, computer equipment, and telecommunications equipm",
+      "theme": "產業：Information Technology Services｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-18 20:22:45"
+    },
+    "台股:6148": {
+      "industry": "Communication Equipment",
+      "sector": "Technology",
+      "companyProfile": "Azion Corporation provides information, communication, network, telecommunications, broadband, traffic control engineering, and cloud applications services in Taiwan. The company's",
+      "theme": "產業：Communication Equipment｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-18 20:22:45"
+    },
+    "台股:6683": {
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "Keystone Microtech Corporation operates in the semiconductor industry in Taiwan and internationally. The company offers load board and burn-in boards. It also offers probe cards. I",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、題材命中",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-18 20:22:45"
     }
   }
 }
