@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-18 20:22:45",
+  "updatedAt": "2026-09-21 22:32:04",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2601,6 +2601,33 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-09-18 20:22:45"
+    },
+    "台股:8111": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Ligitek Electronics Co.,Ltd, together with its subsidiaries, researches, develops, manufactures, processes, and trades in various electronic components in Taiwan, the Americas, Eur",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-21 22:32:03"
+    },
+    "台股:3219": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "companyProfile": "Aethertek technology co., Ltd., together with its subsidiaries, manufactures and sells precision testing equipment for the consumer and automotive electronics, and AI server testin",
+      "theme": "產業：Specialty Industrial Machinery｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-21 22:32:04"
+    },
+    "台股:1569": {
+      "industry": "Metal Fabrication",
+      "sector": "Industrials",
+      "companyProfile": "Bin Chuan Enterprise Co., Ltd. manufactures and sells metal stamping products for computer and consumer electronics in Taiwan, Asia, and internationally. The company offers laptop ",
+      "theme": "產業：Metal Fabrication｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-21 22:32:04"
     }
   }
 }
