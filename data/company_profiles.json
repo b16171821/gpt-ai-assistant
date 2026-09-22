@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-21 22:32:04",
+  "updatedAt": "2026-09-22 20:49:26",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2628,6 +2628,69 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-09-21 22:32:04"
+    },
+    "台股:4413": {
+      "industry": "Apparel Manufacturing",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Est Global Apparel Co.,Ltd engages in the clothing business in Europe, the United State, South Africa, and Eswatini. The company offers fashion, functional, seamless, and loungewea",
+      "theme": "產業：Apparel Manufacturing｜板塊：Consumer Cyclical｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-22 20:49:26"
+    },
+    "台股:2069": {
+      "industry": "Steel",
+      "sector": "Basic Materials",
+      "companyProfile": "Yuen Chang Stainless Steel Co., Ltd. engages in the processing, manufacturing, and selling of stainless steel products in Taiwan and internationally. The company offers stainless s",
+      "theme": "產業：Steel｜板塊：Basic Materials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-22 20:49:26"
+    },
+    "台股:3467": {
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "Forcera Materials Co., Ltd. manufactures and sells consumable spare parts for semiconductor and ceramic material industries in Taiwan and internationally. The company's products in",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-22 20:49:26"
+    },
+    "台股:8147": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Nextronics Engineering Corp. provides connectors, thermal, backplane, and subracks for medical, aerospace, transportation, industry, and communication applications in Taiwan. The c",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、題材命中",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-22 20:49:26"
+    },
+    "美股:NOW": {
+      "industry": "Software - Application",
+      "sector": "Technology",
+      "companyProfile": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the North America, Brazil, Europe, the Middle East and Africa, Asia Pacific, and internationally. The compan",
+      "theme": "產業：Software - Application｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-22 20:49:26"
+    },
+    "美股:META": {
+      "industry": "Internet Content & Information",
+      "sector": "Communication Services",
+      "companyProfile": "Meta Platforms, Inc. engages in the development of products that enable people to connect and share with friends and family through mobile devices, personal computers, virtual real",
+      "theme": "產業：Internet Content & Information｜板塊：Communication Services｜型態：接近成形｜原因：量能放大、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-22 20:49:26"
+    },
+    "美股:MSFT": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating syst",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-22 20:49:26"
     }
   }
 }
