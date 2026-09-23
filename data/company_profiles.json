@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-22 20:49:26",
+  "updatedAt": "2026-09-23 19:39:59",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2691,6 +2691,15 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-09-22 20:49:26"
+    },
+    "台股:3529": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "eMemory Technology Inc. engages in the research, development, manufacturing, and sales of embedded flash memory in Taiwan and internationally. The company offers security products,",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、題材命中",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-23 19:39:59"
     }
   }
 }
