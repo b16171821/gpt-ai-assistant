@@ -1,6 +1,7 @@
 import {
-  afterEach, beforeEach, expect, test,
+  afterEach, beforeEach, expect, jest, test,
 } from '@jest/globals';
+import axios from 'axios';
 import { getPrompt, handleEvents, removePrompt } from '../app/index.js';
 import { COMMAND_SYS_VERSION } from '../app/commands/index.js';
 import { t } from '../locales/index.js';
@@ -8,10 +9,11 @@ import { fetchVersion, getVersion } from '../utils/index.js';
 import { createEvents, MOCK_USER_01, TIMEOUT } from './utils.js';
 
 beforeEach(() => {
-  //
+  jest.spyOn(axios, 'get').mockResolvedValue({ data: { version: getVersion() } });
 });
 
 afterEach(() => {
+  jest.restoreAllMocks();
   removePrompt(MOCK_USER_01);
 });
 

@@ -1,0 +1,2042 @@
+{
+  "meta": {
+    "updatedAt": "2026-09-23T02:17:48.232653+00:00",
+    "asOfDate": "2026-09-22"
+  },
+  "records": {
+    "台股:3441": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 6.7847,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 394911954,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:3374": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 19.2166,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 8413106651,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1528": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 6.0852,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 939045270,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:8299": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 13.8021,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 11774842640,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:3265": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 18.0685,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 1020509233,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2376": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 6.8513,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 2491135317,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2034": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 7.335,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 159232741,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2330": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 3.1447,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 54144420420,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6148": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 3.3333,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 104061226,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:3105": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 10.3524,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 17011246584,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:3580": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 15.3409,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 124744413,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2303": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 15.5235,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 45855689120,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:3680": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 10.1331,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 939131724,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2360": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 17.3077,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 7190238360,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6227": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 1.8868,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 287039565,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6667": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 11.6525,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 225309100,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6811": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 0.1992,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 112360643,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6603": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 11.5769,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 109392946,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2317": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 2.6369,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 9774810342,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2371": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 4.8043,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 321389410,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6840": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 16.1111,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 61965678,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:3264": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 25.1131,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 10552486462,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:7717": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 24.0876,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 721840315,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2006": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 6.4277,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 130062315,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2347": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 1.5819,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 173701543,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1102": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 0.7102,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 227077243,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:3324": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 26.9841,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 8892449600,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6538": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 22.0548,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 1898107992,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6147": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 9.5,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 11809981683,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:3693": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 5.1051,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 1477037800,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6532": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 7.4155,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 51469303,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1727": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 17.6471,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 726286878,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6530": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 12.2905,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 204096606,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2354": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 1.548,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 584270795,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1904": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 2.459,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 55310575,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6245": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 2.3895,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 97719767,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6015": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 5.638,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 66347666,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1513": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 2.4691,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 351188106,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2353": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 1.6181,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 571724951,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2207": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": -1.6981,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 69863495,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:4198": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": -1.002,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 1333800,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2031": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 5.4273,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 65148712,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6026": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 6.3333,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 38066222,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1442": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 4.1806,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 45587090,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2032": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 3.5608,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 19891499,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2640": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 2.2436,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 17825401,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6122": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 4.3393,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 48854208,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:3297": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 10.2107,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 48614390,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6140": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 10.2244,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 37274898,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6590": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": -0.5822,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 2045038,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:7743": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 9.6491,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 1063100,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:5474": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 10.299,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 58745906,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:3226": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 4.5045,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 2500496,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1459": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 2.9316,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 754513,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:5529": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 4.4534,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 2583663,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:4174": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 14.0385,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 61163265,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1558": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 2.765,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 15452339,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:8905": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 1.312,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 216110,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:5481": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 4.0094,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 2667454,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1470": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 2.5157,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 268974,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6171": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 2.1277,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 1577268,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:5455": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 3.2258,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 30612,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:5310": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 2.0,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 991287,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:8284": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 0.0,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 386331,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2937": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 0.5624,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 91456,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1734": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 2.2364,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 5298656,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1805": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 1.4851,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 3454557,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:5202": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 2.4735,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 18077106,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:8906": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 3.4722,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 211580,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2924": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 4.3956,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 153330,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1612": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 1.5942,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 10071056,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:7770": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 7.8378,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 759376,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6767": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 3.0426,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 127000,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6596": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 2.9787,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 7877003,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6708": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 4.1499,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 431439,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2235": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 1.2478,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 198800,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1231": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 0.6305,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 15879003,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1301": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 4.1935,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 1188937418,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1312": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 2.439,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 171783920,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1402": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 0.1799,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 131263455,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1595": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 20.9076,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 210837727,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1608": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 0.565,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 40075881,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1709": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 29.4366,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 3806893583,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:1907": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 0.5199,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 8983997,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2030": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 22.7477,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 300913629,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2069": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 12.2807,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 121528729,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2201": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": -1.3491,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 60663096,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2221": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 60.2497,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 268744014,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2351": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": -5.169,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 903705358,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2357": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 2.694,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 1276241399,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2362": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 3.5676,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 19498317,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:2392": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 5.7178,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 208932453,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:3066": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 16.1491,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 42702618,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:3141": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": -2.6201,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 357324496,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:3219": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 29.9401,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 306219767,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:3467": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 19.774,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 110875067,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:3529": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 18.4762,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 5088494920,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:4139": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 1.3597,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 879696,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:4908": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": -0.6696,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 696472837,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:5274": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 19.3208,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 7588744955,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:5321": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 3.6145,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 25952942,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:5351": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 3.4146,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 759229876,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6179": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 2.8694,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 451050897,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6187": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 0.0,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 1681969455,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6218": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 23.8579,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 778566607,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6221": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 8.5258,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 29802197,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6425": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 21.9799,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 263340119,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6617": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 12.3506,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 93963810,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6620": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 3.6885,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 667311029,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:6683": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 9.6552,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 3069068880,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:7792": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 21.3483,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 825790518,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:8093": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": -1.4315,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 708106,
+      "minimumTurnover": 50000000,
+      "liquidityOk": false,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    },
+    "台股:8111": {
+      "status": "COMPLETE",
+      "asOfDate": "2026-09-22",
+      "windowDates": [
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22"
+      ],
+      "stockReturn5Pct": 13.8032,
+      "marketReturn5Pct": 5.0288,
+      "turnover": 1781700587,
+      "minimumTurnover": 50000000,
+      "liquidityOk": true,
+      "source": "Yahoo Finance 完整日K／臺灣證券交易所加權指數"
+    }
+  }
+}

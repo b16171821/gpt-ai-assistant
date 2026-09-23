@@ -1,0 +1,35 @@
+.srOnly{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.qualityToolbar{position:sticky;top:0;z-index:8;background:#0f172a;padding:9px 0;border-bottom:1px solid #475569}
+.qualitySearchRow{display:grid;grid-template-columns:minmax(0,1fr) minmax(130px,.6fr);gap:8px}
+.qualitySearchRow input,.qualitySearchRow select{box-sizing:border-box;width:100%;min-width:0;border:1px solid #64748b;border-radius:6px;background:#020617;color:#f8fafc;padding:10px;font:inherit;font-size:14px}
+.qualitySearchRow label{display:block;font-size:12px;color:#cbd5e1;margin-bottom:3px}
+.qualityFilters{display:flex;gap:6px;overflow-x:auto;padding:8px 2px;scrollbar-width:thin}
+.qualityFilters button{flex:0 0 auto;width:auto;background:#1e293b;font-size:12px;padding:8px 10px;border-radius:6px}
+.qualityFilters button[aria-pressed=true]{background:#166534;outline:1px solid #86efac}
+.qualityOptions{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;color:#cbd5e1}
+.qualityOptions label,.qualityAdvanced label{display:inline-flex;gap:6px;align-items:center}
+.qualityAdvanced{margin-top:8px;font-size:12px;color:#cbd5e1}.qualityAdvanced>div{display:flex;flex-wrap:wrap;gap:10px;padding:8px 0}
+.qualityStats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:10px 0}
+.qualityStats>div{border-left:2px solid #475569;padding-left:8px}.qualityStats span{display:block;color:#cbd5e1;font-size:11px}.qualityStats b{font-size:18px}
+.qualityGroup{margin-top:16px;border-top:1px solid #475569;padding-top:10px}.qualityGroup>summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px}.qualityGroup h2{font-size:16px;margin:0}
+.qualityGroup .trackingList{margin-top:10px}.qualityCard{padding:12px;border-radius:8px}.qualityPriority{border-left:3px solid #22c55e}
+.qualityMetrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:10px 0}.qualityMetrics>div{min-width:0}.qualityMetrics span{display:block;font-size:11px;color:#94a3b8}.qualityMetrics b{display:block;font-size:14px;overflow-wrap:anywhere}
+.qualityBuyZone{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;margin-top:8px;font-size:13px}.qualityBuyZone span{color:#cbd5e1}.qualityBuyZone b{color:#f8fafc;overflow-wrap:anywhere;min-width:0}
+.qualityReason{font-size:13px;color:#fde68a;margin-top:4px;overflow-wrap:anywhere}.qualityMarket{font-size:12px;color:#cbd5e1;margin:3px 0}
+.qualityCardActions{display:flex;gap:8px;margin-top:8px}.qualityCardActions>*{flex:1;text-align:center;font-size:12px;border-radius:6px;min-width:0;padding:8px 4px;box-sizing:border-box}
+.quoteButton{display:inline-block;color:#bfdbfe;background:#1e293b;text-decoration:none;border:1px solid #475569}
+.qualityDetails{margin-top:8px;border-top:1px solid #334155;padding-top:8px}.qualityDetails>summary{cursor:pointer;font-size:12px;color:#bfdbfe}.qualityDetails .trackingDetail{border-top:0;padding-top:0}.qualityDetails .trackingSubsection{background:transparent;border-radius:0;padding:8px 0}
+.qualityNotes{border-top:1px solid #334155;margin-top:10px;padding-top:8px}
+.qualityStageRow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:8px 0;font-size:13px}.qualityStageRow>div{min-width:0}.qualityStageRow span{color:#94a3b8;font-size:11px;display:block}.qualityStageRow b{color:#a5f3fc;overflow-wrap:anywhere}
+.qualityCompactFields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:0}.qualityCompactFields>div{min-width:0}.qualityCompactFields dt{color:#94a3b8;font-size:11px}.qualityCompactFields dd{margin:2px 0 0;color:#f8fafc;font-size:13px;line-height:1.5;overflow-wrap:anywhere}.qualityDates{margin-top:8px}.qualitySignalHelp{margin-top:8px;font-size:12px}.qualitySignalHelp>summary{color:#bfdbfe;cursor:pointer}.qualityDistance{display:flex;flex-wrap:wrap;gap:2px 14px;font-size:12px;color:#cbd5e1;margin-top:4px}.qualityCurrent>.trackingLine{font-size:13px;line-height:1.6;margin-top:6px}
+.trackingSignalSection{padding-top:10px;overflow-wrap:anywhere}.trackingSignalSection h3{font-size:15px;margin:0 0 6px;color:#f8fafc}.trackingSignalSection dl{margin:0}.trackingSignalSection dl>div{padding:10px 0;border-bottom:1px solid #334155}.trackingSignalSection dt{font-size:12px;color:#94a3b8}.trackingSignalSection dd{margin:3px 0 0;font-size:14px}.trackingSignalSection dd b{color:#f8fafc}.trackingSignalSection p{font-size:13px;line-height:1.7;margin:5px 0 0;color:#cbd5e1}.trackingSignalSection .trackingSignalRule{color:#fde68a;margin:10px 0}
+.trackingSignalSection>.qualityCompactFields>div{padding:0;border:0}.trackingSignalSection>.qualityCompactFields dt{font-size:11px}.trackingSignalSection>.qualityCompactFields dd{font-size:13px;margin-top:2px}
+.qualityMore{display:block;margin:12px auto;background:#334155}.qualityToolbarEnd{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}.qualityTopButton{flex:0 0 36px;width:36px;height:32px;padding:0;margin-top:4px;border-radius:6px;background:#334155;font-size:18px}.qualityRiskBadge{background:#713f12;color:#fef08a}
+.qualityStatDetails{font-size:12px;color:#94a3b8;margin-top:8px}.qualityStatDetails>summary{cursor:pointer;color:#bfdbfe}
+.trackingHeader .trackingResultSummary{background:transparent;border:0;padding:0;font-size:12px}
+.qualityUtilities{border-top:1px solid #475569;margin:10px 0;padding-top:9px}.qualityUtilities>summary{cursor:pointer;color:#bfdbfe;font-size:13px}
+.qualityCard .trackingName{font-size:16px}.qualityCard .trackingBadges{max-width:52%}.qualityCard .pill{white-space:normal;font-size:11px}
+[hidden]{display:none!important}
+.qualityToolbar :focus-visible,.qualityCard :focus-visible{outline:2px solid #60a5fa;outline-offset:2px}
+@media(max-width:720px){.qualitySearchRow{grid-template-columns:minmax(0,1fr) 140px}.qualityStats{gap:4px}.qualityStats>div{padding-left:5px}.qualityStats b{font-size:16px}.qualityCard{padding:10px}.qualityMetrics{gap:7px}.qualityMetrics b{font-size:13px}.qualityToolbar{padding-top:7px}.qualitySearchRow input{font-size:16px}.qualityTopButton{width:40px}.trackingHeader{padding:10px}.qualitySearchRow select{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.pageTrack,.tabIndicator{transition:none}}
