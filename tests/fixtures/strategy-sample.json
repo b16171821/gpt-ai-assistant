@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "description": "Frozen deterministic OHLCV inputs for the current Taiwan stock strategy. Do not update expected values automatically.",
+  "strategyModule": "scripts/update_tw_stock_scanner.py",
+  "themeConfig": {
+    "keywords": ["AI"],
+    "manual_themes": {
+      "9002": "AI"
+    }
+  },
+  "cases": [
+    {
+      "meta": {"code": "9001", "name": "基準突破", "market": "上市", "ticker": "9001.TW"},
+      "series": {
+        "startDate": "2025-08-18",
+        "periods": 120,
+        "closeStart": 40.0,
+        "closeStep": 0.4,
+        "openOffset": -0.15,
+        "highOffset": 0.5,
+        "lowOffset": -0.5,
+        "volume": 1000000,
+        "overrides": {
+          "119": {"Open": 88.0, "High": 89.7, "Low": 87.8, "Close": 89.5, "Volume": 3000000}
+        }
+      }
+    },
+    {
+      "meta": {"code": "9002", "name": "基準等待", "market": "上市", "ticker": "9002.TW"},
+      "series": {
+        "startDate": "2025-08-18",
+        "periods": 120,
+        "closeStart": 40.0,
+        "closeStep": 0.4,
+        "openOffset": -0.15,
+        "highOffset": 0.5,
+        "lowOffset": -0.5,
+        "volume": 1000000,
+        "overrides": {
+          "119": {"Open": 87.2, "High": 88.0, "Low": 86.8, "Close": 87.5, "Volume": 1800000}
+        }
+      }
+    },
+    {
+      "meta": {"code": "9003", "name": "基準排除", "market": "上櫃", "ticker": "9003.TWO"},
+      "series": {
+        "startDate": "2025-08-18",
+        "periods": 120,
+        "closeStart": 100.0,
+        "closeStep": -0.1,
+        "openOffset": 0.1,
+        "highOffset": 0.4,
+        "lowOffset": -0.4,
+        "volume": 500000,
+        "overrides": {}
+      }
+    }
+  ],
+  "expected": [
+    {
+      "code": "9001",
+      "name": "基準突破",
+      "grade": "A",
+      "safeScore": 100,
+      "score": 3,
+      "strictOk": true,
+      "stage": "突破第一根",
+      "category": "剛突破",
+      "status": "A級安全候選：主升段成立且風險較可控",
+      "neckline": 87.7,
+      "observationEntry": 89.5,
+      "stopLoss": 85.07,
+      "target": 111.9,
+      "riskPct": 4.95,
+      "rewardPct": 25.03,
+      "riskRewardRatio": 5.06,
+      "distanceFromNecklinePct": 2.05,
+      "action": "主升段條件完整且風險較小，可列最高觀察。",
+      "reason": "趨勢多頭、量能放大、價量條件足"
+    },
+    {
+      "code": "9002",
+      "name": "基準等待",
+      "grade": "B",
+      "safeScore": 100,
+      "score": 3,
+      "strictOk": false,
+      "stage": "接近成形＋可觀察",
+      "category": "即將突破觀察",
+      "status": "B級觀察：接近成形，等待確認",
+      "neckline": 87.7,
+      "observationEntry": 89.45,
+      "stopLoss": 85.07,
+      "target": 111.9,
+      "riskPct": 4.9,
+      "rewardPct": 25.09,
+      "riskRewardRatio": 5.12,
+      "distanceFromNecklinePct": -0.23,
+      "action": "條件接近完整，等收盤確認或回踩不破。",
+      "reason": "趨勢多頭、題材命中、價量條件足"
+    },
+    {
+      "code": "9003",
+      "name": "基準排除",
+      "grade": "C",
+      "safeScore": 60,
+      "score": 0,
+      "strictOk": false,
+      "stage": "接近成形＋可觀察",
+      "category": "等更安全位置",
+      "status": "只觀察",
+      "neckline": 90.5,
+      "observationEntry": 92.31,
+      "stopLoss": 87.78,
+      "target": 93.2,
+      "riskPct": 4.9,
+      "rewardPct": 0.96,
+      "riskRewardRatio": 0.2,
+      "distanceFromNecklinePct": -2.65,
+      "action": "條件或風險不夠好，先不列入高關注。",
+      "reason": "條件不足"
+    }
+  ]
+}

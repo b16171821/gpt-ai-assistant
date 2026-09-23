@@ -1,0 +1,60 @@
+{
+  "meta": {
+    "updatedAt": "2026-09-23T18:12:48+08:00",
+    "status": "WARNING",
+    "errorCount": 0,
+    "warningCount": 1,
+    "policy": "只驗證來源資料，不猜測、不補值、不修改策略結果。"
+  },
+  "datasets": {
+    "twStocks": {
+      "market": "台股",
+      "status": "WARNING",
+      "updatedAt": "2026-09-23T18:08:23.776653+08:00",
+      "lastTradingDate": "2026-09-23",
+      "completenessPct": 100.0,
+      "rowCount": 1166,
+      "source": "臺灣證券交易所與證券櫃檯買賣中心正式收盤資料",
+      "apiStatus": "DEGRADED",
+      "tradingDayCoverage": "CURRENT_SNAPSHOT_ONLY",
+      "issues": [
+        {
+          "level": "WARNING",
+          "code": "UPSTREAM_ERRORS",
+          "message": "上游掃描器回報部分錯誤",
+          "context": {
+            "count": 32
+          }
+        }
+      ]
+    },
+    "usStocks": {
+      "market": "美股",
+      "status": "HEALTHY",
+      "updatedAt": "2026/09/23 07:46:41 CST",
+      "lastTradingDate": "2026-09-22",
+      "completenessPct": 100.0,
+      "rowCount": 70,
+      "source": "Yahoo Finance via yfinance",
+      "apiStatus": "OK",
+      "tradingDayCoverage": "CURRENT_SNAPSHOT_ONLY",
+      "issues": []
+    },
+    "disposition": {
+      "status": "HEALTHY",
+      "updatedAt": "2026-09-23T18:12:34+08:00",
+      "recordCount": 1166,
+      "sourceHealth": {
+        "TWSE": true,
+        "TPEX": true
+      },
+      "issues": []
+    },
+    "strategySnapshots": {
+      "status": "HEALTHY",
+      "recordCount": 299,
+      "issues": []
+    }
+  },
+  "issues": []
+}
