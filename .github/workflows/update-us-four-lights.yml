@@ -8,28 +8,48 @@ on:
     - cron: "40 21 * * 1-5"
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: stock-data-main
+  cancel-in-progress: false
 
 jobs:
   update:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: "3.11"
 
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Sync latest main before scanning
+        run: git pull --ff-only origin main
+
       - name: Run US scanner
         run: python scripts/update_us_stock_scanner.py
 
       - name: Commit updated US data
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Update US four lights scan data"
-          file_pattern: data/us_latest.json data/us_latest.csv data/us_latest_report.md
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/us_latest.json data/us_latest.csv data/us_latest_report.md
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+            exit 0
+          fi
+          git commit -m "Update US four lights scan data"
+          git push
