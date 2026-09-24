@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-23 21:00:58",
+  "updatedAt": "2026-09-24 20:11:22",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2700,6 +2700,24 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-09-23 19:39:59"
+    },
+    "台股:5465": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Loyalty Founder Enterprise Co.,Ltd. engages in the manufacture, processing, and sale of precision steel molds and stamping die products for computers and server chassis in Taiwan, ",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-24 20:11:22"
+    },
+    "美股:SHOP": {
+      "industry": "Software - Application",
+      "sector": "Technology",
+      "companyProfile": "Shopify Inc., a commerce technology company, provides tools to start, scale, market, and run a business of various sizes in Canada, the United States, Europe, the Middle East, Afri",
+      "theme": "產業：Software - Application｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、量能放大、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-24 20:11:22"
     }
   }
 }
