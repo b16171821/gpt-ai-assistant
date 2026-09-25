@@ -2,7 +2,7 @@
   "meta": {
     "version": "quality-v1",
     "initializedAt": "2026-09-23T02:12:44.245Z",
-    "updatedAt": "2026-09-25T12:12:01.174Z",
+    "updatedAt": "2026-09-25T12:58:23.115Z",
     "policy": "建立時固定資格；歷史回算另列，不以今日條件篩選過去輸贏。"
   },
   "records": {
@@ -17394,6 +17394,58 @@
         "建立時尚未確認有效策略",
         "建立時不開放進場",
         "歷史回補"
+      ]
+    },
+    "美股:CRWD:2026-09-24": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-09-24",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 31.376555823890044,
+        "stopLossDistancePercent": 4.904328441389556,
+        "distanceToNecklinePercent": -1.5916928790692342,
+        "safetyScore": 87,
+        "riskReward": 6.4,
+        "targetProgressPercent": 74.62386877828054,
+        "highQualityTracking": true,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 269.15
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "美股:ZS:2026-09-24": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-09-24",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 33.708372870633966,
+        "stopLossDistancePercent": 4.902625276761102,
+        "distanceToNecklinePercent": -1.073881181730199,
+        "safetyScore": 87,
+        "riskReward": 6.88,
+        "targetProgressPercent": 73.3229698219053,
+        "highQualityTracking": true,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 221.31
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
       ]
     }
   }

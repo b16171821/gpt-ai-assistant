@@ -1,8 +1,8 @@
 {
   "meta": {
-    "updatedAt": "2026-09-25 20:11:53",
+    "updatedAt": "2026-09-25 20:58:15",
     "version": "strategy-tracking-v4",
-    "activeCount": 74,
+    "activeCount": 76,
     "endedCount": 509,
     "invalidAtCreationCount": 19,
     "liveEndedCount": 199,
@@ -10,7 +10,7 @@
     "maxWaitingTradingDays": 15,
     "legacyLocksImported": 236,
     "legacySnapshotStocksImported": 302,
-    "lifecycleHistoriesEvaluated": 583
+    "lifecycleHistoriesEvaluated": 585
   },
   "records": [
     {
@@ -26534,6 +26534,115 @@
       "manualRemovedAt": null
     },
     {
+      "trackingId": "美股:CRWD:2026-09-24",
+      "market": "美股",
+      "stockCode": "CRWD",
+      "stockName": "CRWD",
+      "firstSignalDate": "2026-09-24",
+      "strategyDataDate": "2026-09-24",
+      "trackingCreatedDate": "2026-09-24",
+      "trackingOrigin": "LIVE_SIGNAL",
+      "lastUpdateDate": "2026-09-24",
+      "endDate": null,
+      "endedAt": null,
+      "endReason": "",
+      "endPriority": null,
+      "maxHighDuringTracking": 263.87,
+      "targetHitDate": null,
+      "stopLossHitDate": null,
+      "finalTrackingStatus": null,
+      "currentProfitPct": -4.95,
+      "maxProfitPct": -3.41,
+      "result": "",
+      "trackingStatus": "WAIT_CONFIRM",
+      "trackingStatusText": "接近買點，等待收盤確認",
+      "originalStrategy": {
+        "originalStage": "接近成形＋可觀察",
+        "originalSignal": "觀察",
+        "originalNeckline": 263.87,
+        "originalWatchPrice": 269.15,
+        "originalBuyZoneLow": 269.15,
+        "originalBuyZoneHigh": 277.22,
+        "originalStopLoss": 255.95,
+        "originalTarget": 353.6,
+        "originalRiskReward": 6.4,
+        "originalSafetyScore": 87,
+        "originalMarketRegime": "STOP",
+        "originalMarketRegimeImpact": "STOP 停止進場"
+      },
+      "latestStatus": {
+        "latestClose": 259.67,
+        "latestHigh": 263.87,
+        "latestLow": 258.53,
+        "latestVolume": 8385900,
+        "latestMA5": 251.84,
+        "latestMA10": 243.09,
+        "latestMA20": 229.07,
+        "latestSafetyScore": 87,
+        "latestRiskReward": 6.4,
+        "latestMarketRegime": "STOP",
+        "latestSignal": "觀察",
+        "adjustedSignal": "取消新進場，只保留觀察",
+        "holderAction": "只看續抱、停利或停損，不新增部位。",
+        "cashAction": "停止新進場，先保留現金。",
+        "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+        "latestDataDate": "2026-09-24"
+      },
+      "progress": {
+        "brokeNeckline": true,
+        "closeHeldNeckline": false,
+        "inBuyZone": false,
+        "aboveBuyZoneHigh": false,
+        "pullbackHeld": false,
+        "stopBroken": false,
+        "nearTarget": false,
+        "targetHit": false,
+        "patternFailed": false,
+        "expired": false,
+        "everBrokeNeckline": true,
+        "trackingDays": 1
+      },
+      "notes": {
+        "systemNotes": [
+          {
+            "date": "2026-09-24",
+            "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          }
+        ],
+        "manualNote": ""
+      },
+      "trackingDates": [
+        "2026-09-24"
+      ],
+      "statusHistory": [
+        {
+          "date": "2026-09-24",
+          "status": "WAIT_CONFIRM",
+          "close": 259.67,
+          "latestStatus": {
+            "latestClose": 259.67,
+            "latestHigh": 263.87,
+            "latestLow": 258.53,
+            "latestVolume": 8385900,
+            "latestMA5": 251.84,
+            "latestMA10": 243.09,
+            "latestMA20": 229.07,
+            "latestSafetyScore": 87,
+            "latestRiskReward": 6.4,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-09-24"
+          }
+        }
+      ],
+      "manualRemoved": false,
+      "manualRemovedAt": null
+    },
+    {
       "trackingId": "美股:HPE:2026-09-23",
       "market": "美股",
       "stockCode": "HPE",
@@ -26920,9 +27029,9 @@
         "latestHigh": 367.43,
         "latestLow": 347.88,
         "latestVolume": 3159100,
-        "latestMA5": 344.07,
-        "latestMA10": 332.03,
-        "latestMA20": 311.93,
+        "latestMA5": 347.88,
+        "latestMA10": 336.21,
+        "latestMA20": 315.33,
         "latestSafetyScore": 81,
         "latestRiskReward": 6.6,
         "latestMarketRegime": "STOP",
@@ -27029,11 +27138,120 @@
             "latestHigh": 367.43,
             "latestLow": 347.88,
             "latestVolume": 3159100,
-            "latestMA5": 344.07,
-            "latestMA10": 332.03,
-            "latestMA20": 311.93,
+            "latestMA5": 347.88,
+            "latestMA10": 336.21,
+            "latestMA20": 315.33,
             "latestSafetyScore": 81,
             "latestRiskReward": 6.6,
+            "latestMarketRegime": "STOP",
+            "latestSignal": "觀察",
+            "adjustedSignal": "取消新進場，只保留觀察",
+            "holderAction": "只看續抱、停利或停損，不新增部位。",
+            "cashAction": "停止新進場，先保留現金。",
+            "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+            "latestDataDate": "2026-09-24"
+          }
+        }
+      ],
+      "manualRemoved": false,
+      "manualRemovedAt": null
+    },
+    {
+      "trackingId": "美股:ZS:2026-09-24",
+      "market": "美股",
+      "stockCode": "ZS",
+      "stockName": "ZS",
+      "firstSignalDate": "2026-09-24",
+      "strategyDataDate": "2026-09-24",
+      "trackingCreatedDate": "2026-09-24",
+      "trackingOrigin": "LIVE_SIGNAL",
+      "lastUpdateDate": "2026-09-24",
+      "endDate": null,
+      "endedAt": null,
+      "endReason": "",
+      "endPriority": null,
+      "maxHighDuringTracking": 216.97,
+      "targetHitDate": null,
+      "stopLossHitDate": null,
+      "finalTrackingStatus": null,
+      "currentProfitPct": -4.45,
+      "maxProfitPct": -3.41,
+      "result": "",
+      "trackingStatus": "WAIT_CONFIRM",
+      "trackingStatusText": "接近買點，等待收盤確認",
+      "originalStrategy": {
+        "originalStage": "接近成形＋可觀察",
+        "originalSignal": "觀察",
+        "originalNeckline": 216.97,
+        "originalWatchPrice": 221.31,
+        "originalBuyZoneLow": 221.31,
+        "originalBuyZoneHigh": 227.95,
+        "originalStopLoss": 210.46,
+        "originalTarget": 295.91,
+        "originalRiskReward": 6.88,
+        "originalSafetyScore": 87,
+        "originalMarketRegime": "STOP",
+        "originalMarketRegimeImpact": "STOP 停止進場"
+      },
+      "latestStatus": {
+        "latestClose": 214.64,
+        "latestHigh": 216.97,
+        "latestLow": 210.59,
+        "latestVolume": 2399200,
+        "latestMA5": 208.74,
+        "latestMA10": 198.29,
+        "latestMA20": 186.65,
+        "latestSafetyScore": 87,
+        "latestRiskReward": 6.88,
+        "latestMarketRegime": "STOP",
+        "latestSignal": "觀察",
+        "adjustedSignal": "取消新進場，只保留觀察",
+        "holderAction": "只看續抱、停利或停損，不新增部位。",
+        "cashAction": "停止新進場，先保留現金。",
+        "riskWarning": "停止新進場，禁止把追蹤紀錄視為進場訊號。",
+        "latestDataDate": "2026-09-24"
+      },
+      "progress": {
+        "brokeNeckline": true,
+        "closeHeldNeckline": false,
+        "inBuyZone": false,
+        "aboveBuyZoneHigh": false,
+        "pullbackHeld": false,
+        "stopBroken": false,
+        "nearTarget": false,
+        "targetHit": false,
+        "patternFailed": false,
+        "expired": false,
+        "everBrokeNeckline": true,
+        "trackingDays": 1
+      },
+      "notes": {
+        "systemNotes": [
+          {
+            "date": "2026-09-24",
+            "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          }
+        ],
+        "manualNote": ""
+      },
+      "trackingDates": [
+        "2026-09-24"
+      ],
+      "statusHistory": [
+        {
+          "date": "2026-09-24",
+          "status": "WAIT_CONFIRM",
+          "close": 214.64,
+          "latestStatus": {
+            "latestClose": 214.64,
+            "latestHigh": 216.97,
+            "latestLow": 210.59,
+            "latestVolume": 2399200,
+            "latestMA5": 208.74,
+            "latestMA10": 198.29,
+            "latestMA20": 186.65,
+            "latestSafetyScore": 87,
+            "latestRiskReward": 6.88,
             "latestMarketRegime": "STOP",
             "latestSignal": "觀察",
             "adjustedSignal": "取消新進場，只保留觀察",
@@ -38990,10 +39208,31 @@
           {
             "date": "2026-08-27",
             "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
+          },
+          {
+            "date": "2026-09-24",
+            "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
           }
         ],
         "manualNote": "",
         "legacySnapshots": [
+          {
+            "date": "2026-09-24",
+            "market": "美股",
+            "code": "CRWD",
+            "name": "CRWD",
+            "grade": "A",
+            "safeScore": 92,
+            "riskRewardRatio": 6.4,
+            "category": "主升候選",
+            "close": 259.67,
+            "neckline": 263.87,
+            "buyLow": 269.15,
+            "buyHigh": 277.22,
+            "stopLoss": 255.95,
+            "target": 353.6,
+            "action": "預備單，等待確認條件"
+          },
           {
             "date": "2026-08-27",
             "market": "美股",
@@ -99947,10 +100186,31 @@
           {
             "date": "2026-09-04",
             "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
+          },
+          {
+            "date": "2026-09-24",
+            "text": "已匯入舊版近 5 日策略紀錄 1 筆，原始策略維持不變。"
           }
         ],
         "manualNote": "",
         "legacySnapshots": [
+          {
+            "date": "2026-09-24",
+            "market": "美股",
+            "code": "ZS",
+            "name": "ZS",
+            "grade": "A",
+            "safeScore": 92,
+            "riskRewardRatio": 6.88,
+            "category": "主升候選",
+            "close": 214.64,
+            "neckline": 216.97,
+            "buyLow": 221.31,
+            "buyHigh": 227.95,
+            "stopLoss": 210.46,
+            "target": 295.91,
+            "action": "預備單，等待確認條件"
+          },
           {
             "date": "2026-09-04",
             "market": "美股",
