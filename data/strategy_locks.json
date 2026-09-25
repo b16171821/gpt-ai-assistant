@@ -372,7 +372,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-09-24 20:53:56"
+    "updatedAt": "2026-09-25 20:10:50"
   },
   "台股:1595": {
     "key": "台股:1595",
@@ -697,7 +697,7 @@
     "recentCloses": [],
     "holderAction": "接近原始第一目標，準備分批停利。",
     "emptyAction": "不追高，等回踩。",
-    "updatedAt": "2026-09-24 20:53:56"
+    "updatedAt": "2026-09-25 20:10:50"
   },
   "台股:2033": {
     "key": "台股:2033",
@@ -3097,7 +3097,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-09-24 20:53:56"
+    "updatedAt": "2026-09-25 20:10:50"
   },
   "台股:5468": {
     "key": "台股:5468",
@@ -4472,7 +4472,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-09-24 20:53:56"
+    "updatedAt": "2026-09-25 20:10:50"
   },
   "台股:8027": {
     "key": "台股:8027",
@@ -5340,14 +5340,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 62.33,
-    "currentTarget": 87.01,
-    "currentStopLoss": 61.94,
-    "extensionTarget": 87.01,
+    "currentPrice": 63.52,
+    "currentTarget": 90.25,
+    "currentStopLoss": 63.52,
+    "extensionTarget": 90.25,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-09-24 20:53:56"
+    "updatedAt": "2026-09-25 20:10:50"
   },
   "美股:KLAC": {
     "key": "美股:KLAC",
@@ -5540,14 +5540,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 352.33,
-    "currentTarget": 493.46,
-    "currentStopLoss": 353.3,
-    "extensionTarget": 493.46,
+    "currentPrice": 358.82,
+    "currentTarget": 495.96,
+    "currentStopLoss": 356.41,
+    "extensionTarget": 495.96,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-09-24 20:53:56"
+    "updatedAt": "2026-09-25 20:10:50"
   },
   "美股:NOW": {
     "key": "美股:NOW",
