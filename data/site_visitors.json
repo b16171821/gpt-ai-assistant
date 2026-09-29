@@ -1,0 +1,9 @@
+{
+  "status": "PENDING_CONFIGURATION",
+  "source": "Google Analytics 4",
+  "metric": "totalUsers",
+  "totalUsers": null,
+  "startDate": "2026-09-29",
+  "throughDate": null,
+  "updatedAt": null
+}

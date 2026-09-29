@@ -1,28 +1,45 @@
 # 網站瀏覽統計
 
-- GA4 評估 ID：`G-NHLL9S7CLR`。這是公開識別碼，不是密碼或 API Key。
-- 僅正式網站 HTTPS 路徑啟用；localhost、file、其他網域不載入 Google 程式。
-- 訪客選擇「允許統計」後才載入 Google Analytics。拒絕不影響選股、追蹤與試算。
-- 頂端「瀏覽統計設定」可改變選擇；拒絕會停止本頁後續統計，不會刪除先前已送出的資料。瀏覽器的 GPC／DNT 優先於已儲存同意。
-- 本功能統計訪客／工作階段、裝置與三個頁面的瀏覽，不是精確真人數。拒絕、阻擋器、Cookie 清除或不同裝置都會影響數據。
-- 不新增股票、搜尋、試算、複製等事件，不讀取表單。頁面網址採固定白名單，referrer 只保留來源 origin，不傳查詢參數或任意 hash。
-- 廣告儲存、廣告使用者資料及個人化同意均拒絕，停用 Google signals。
+## 自動統計
 
-## Google Analytics 必要設定
+- GA4 評估 ID：`G-NHLL9S7CLR`，是公開識別碼，不是 API 金鑰。
+- 正式網站進站後自動統計，不跳確認框。頂部「統計設定」可拒絕；先前已拒絕或瀏覽器要求 GPC／DNT 的訪客，不會被重新啟用。
+- 不新增股票、搜尋、試算、複製等事件，不讀取表單。頁面路徑僅三頁白名單，來源僅 origin，不傳網址查詢參數。
+- 關閉廣告同意與 Google signals；本機、其他網域不載入 GA。
+- 管理者應確認服務地區及受眾所需的隱私告知與同意要求；此技術設定不是合規認證。
+- **GA 後台的「加強型評估」必須關閉**，避免歷史網址切換重複計數或自動收集互動。不再安裝第二份相同 ID 的 tag。
 
-1. 管理 → 資料串流 → 此網站串流，確認評估 ID 為 `G-NHLL9S7CLR`。
-2. **關閉「加強型評估」**。本網站自行記錄三頁切換，避免歷史網址變更重複計數，以及自動收集表單／搜尋等互動。
-3. 不要另外加裝同一 ID 的 Google tag 或 GTM 追蹤碼。
-4. 報表時區設定為台北。
-5. 正式網站開啟後選擇「允許統計」，切換三個頁籤；到 GA「報表 → 即時」檢查。正式報表並非立即完成。
-6. 「網頁和畫面」可依頁面標題分辨主升段觀察、資金計算機、策略追蹤。虛擬統計路徑為 `/gpt-ai-assistant/analysis`、`calculator`、`tracking`，不是新增實體網頁。
+## 累積訪客
 
-只能從啟用後累積資料，不能補算之前的訪客。Google 端收件／報表需由管理者登入確認；程式測試使用攔截請求，不灌入正式流量。
+- 前端讀取公開的 `data/site_visitors.json`，只顯示 GA 報表總數，沒有本機自加計數器。
+- 採 `totalUsers`，一次查詢 2026-09-29 至當日整個期間，限定本站 hostname 和 path，不把每天或每頁人數相加。
+- GA 去重識別不等於精確真人數，跨裝置、Cookie 清除、拒絕／阻擋與處理延遲均會影響數字；UI 顯示「約」。
+- 每小時第 47 分排程嘗試更新，GitHub 排程及 GA 資料處理可能延遲；不是即時在線人數。
+- 尚未設定顯示「待設定」，取得失敗顯示「暫無資料」，上次成功資料超過24小時標示「待更新」。不得假造或用0代表讀取失敗。
+- 前端從公開 GitHub raw 的固定 JSON 位置讀取，避免 GITHUB_TOKEN 的資料提交不觸發 Pages build 而顯示舊計數。只有彙總數與更新日期公開，無個別訪客資料。
+- API失敗保留上次成功JSON；有門檻限制／抽樣的報表不更新數字，不公開錯誤回應或憑證。
 
-## 維護與測試
+## 管理者一次性設定（目前尚未完成）
 
-程式為獨立的 `site-analytics.js`、`site-analytics.css`，index 只加入引用。路由透過現有頁籤 `data-page` 觀察，不修改選股或頁籤程式。
+1. 在 Google Analytics「管理 → 資源詳細資料」取得**純數字資源 ID**，不是 `G-` 評估 ID；資源報表時區設台北。
+2. 在自己的 Google Cloud 專案啟用 **Google Analytics Data API**，建立專用服務帳戶；不需給它 Cloud 專案管理者權限。
+3. GA 資源存取權管理中，加入該服務帳戶電子郵件，僅給「檢視者」。
+4. 服務帳戶 JSON 金鑰只由管理者放進 GitHub repository → Settings → Secrets and variables → Actions → Secrets，名稱 `GA4_SERVICE_ACCOUNT_JSON`。**不可貼到聊天、commit、網頁、公開資料檔或 workflow log**。妥善管理並輪換金鑰；未來可改用 WIF/OIDC 取代長效金鑰。
+5. 同頁 Variables 新增 `GA4_PROPERTY_ID`，值填純數字資源 ID。
+6. Actions 手動執行 **Update Visitor Statistics**。未設定 ID 或金鑰時會跳過，不產生假數字。
+7. 確認成功後，檢查 `data/site_visitors.json` 為 `status: OK`，與 GA 同期間／同網站的「使用者總數」核對，再重整網站。
 
-`npx playwright test tests/e2e/analytics.spec.js`：測試正式來源、同意前阻擋、三頁去重、敏感值不傳送、拒絕、儲存失敗與手機版。
+此處不會自動建立 Cloud 專案、不購買服務、不取得管理員權限；Google 權限與私密金鑰必須由管理者設定。
 
-官方參考：https://developers.google.com/analytics/devguides/collection/ga4/views
+## 驗證
+
+`python -m unittest tests.test_site_visitors -v`
+
+`npx playwright test tests/e2e/analytics.spec.js`
+
+瀏覽器測試攔截 Google 請求，不送假流量。正式 GA 收件由管理者在「報表 → 即時」確認；歷史訪客無法回補。
+
+官方文件：
+- https://developers.google.com/analytics/devguides/collection/ga4/views
+- https://developers.google.com/analytics/devguides/reporting/data/v1/quickstart
+- https://developers.google.com/analytics/devguides/reporting/data/v1/rest/v1beta/properties/runReport

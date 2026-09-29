@@ -25,6 +25,9 @@ async function setup(page, url = production, options = {}) {
         <header class="appHeader"><div id="workspaceTabs" data-page="0"></div></header>
         <input aria-label="投資資金"><input aria-label="股票搜尋">
         <script>${script}</script></body></html>` });
+    } else if (new URL(request.url()).pathname.endsWith('/data/site_visitors.json')) {
+      if (options.statsFailure) await route.abort();
+      else await route.fulfill({ json: options.stats || { status: 'PENDING_CONFIGURATION' } });
     } else {
       requests.push(request.url());
       if (options.networkFailure) await route.abort();
@@ -41,17 +44,18 @@ async function changePage(page, index) {
   }, index);
 }
 
-test('no Google traffic before consent; compact notice fits viewport', async ({ page }) => {
+test('automatic tracking without a prompt; compact counter fits viewport', async ({ page }) => {
   const requests = await setup(page);
-  await expect(page.getByRole('button', { name: '允許統計' })).toBeVisible();
-  expect(requests).toEqual([]);
-  expect(await events(page)).toEqual([]);
+  await expect(page.getByRole('button', { name: '允許統計' })).toBeHidden();
+  await expect(page.locator('#analyticsPreferences')).not.toHaveAttribute('open', '');
+  await expect.poll(() => requests.length).toBe(1);
+  await expect.poll(async () => (await views(page)).length).toBe(1);
+  await expect(page.locator('#siteVisitorCount')).toHaveText('累積訪客：待設定');
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
 
 test('only allowlisted page views are sent once; inputs and URL secrets excluded', async ({ page }) => {
   const requests = await setup(page, production + '?private=123#stock-secret');
-  await page.getByRole('button', { name: '允許統計' }).click();
   await expect.poll(() => requests.length).toBe(1);
   expect(requests[0]).toBe('https://www.googletagmanager.com/gtag/js?id=G-NHLL9S7CLR');
   await expect.poll(async () => (await views(page)).length).toBe(1);
@@ -74,8 +78,7 @@ test('only allowlisted page views are sent once; inputs and URL secrets excluded
 });
 
 test('refusal persists and revocation blocks further page views', async ({ page }) => {
-  const requests = await setup(page);
-  await page.getByRole('button', { name: '拒絕統計' }).click();
+  const requests = await setup(page, production, { consent: 'denied' });
   await page.reload();
   expect(requests).toEqual([]);
   await page.locator('#analyticsPreferences summary').click();
@@ -106,7 +109,6 @@ test('storage denial and Google failure do not break the page', async ({ page })
   const errors = [];
   page.on('pageerror', error => errors.push(error.message));
   await setup(page, production, { brokenStorage: true, networkFailure: true });
-  await page.getByRole('button', { name: '允許統計' }).click();
   await changePage(page, 1);
   await page.getByRole('textbox', { name: '投資資金' }).fill('500000');
   await expect(page.getByRole('textbox', { name: '投資資金' })).toHaveValue('500000');
@@ -132,9 +134,8 @@ test('actual application tabs and form remain usable with production analytics',
     } else await route.fulfill({ contentType: 'text/javascript', body: '' });
   });
   await page.goto(production + '#tracking');
-  await expect(page.getByRole('button', { name: '允許統計' })).toBeVisible();
-  await page.screenshot({ path: test.info().outputPath('analytics-consent.png') });
-  await page.getByRole('button', { name: '允許統計' }).click();
+  await expect(page.getByRole('button', { name: '允許統計' })).toBeHidden();
+  await page.screenshot({ path: test.info().outputPath('analytics-counter.png') });
   await expect.poll(async () => (await views(page)).length).toBe(1);
   expect((await views(page))[0][2].page_title).toBe('策略追蹤');
   await page.getByRole('tab', { name: '資金計算機' }).click();
@@ -146,4 +147,29 @@ test('actual application tabs and form remain usable with production analytics',
   expect(JSON.stringify(await events(page))).not.toContain('654321');
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.screenshot({ path: test.info().outputPath('analytics-integrated.png') });
+});
+
+test('counter uses a shared aggregate and never increases on reload', async ({ page }) => {
+  await setup(page, production, { stats: {
+    status: 'OK', metric: 'totalUsers', totalUsers: 1234, startDate: '2026-09-29',
+    throughDate: '2026-09-29', updatedAt: new Date().toISOString(),
+  } });
+  await expect(page.locator('#siteVisitorCount')).toHaveText('累積訪客：約 1,234 人');
+  await page.reload();
+  await expect(page.locator('#siteVisitorCount')).toHaveText('累積訪客：約 1,234 人');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});
+
+test('old counts are labelled and invalid or failed data is not invented', async ({ page }) => {
+  await setup(page, production, { stats: {
+    status: 'OK', metric: 'totalUsers', totalUsers: 12, startDate: '2026-09-29',
+    throughDate: '2026-09-29', updatedAt: new Date(Date.now() - 172800000).toISOString(),
+  } });
+  await expect(page.locator('#siteVisitorCount')).toHaveText('累積訪客：約 12 人（待更新）');
+  await page.route('**/data/site_visitors.json', route => route.fulfill({ json: { status: 'OK', totalUsers: -1 } }));
+  await page.reload();
+  await expect(page.locator('#siteVisitorCount')).toHaveText('累積訪客：暫無資料');
+  await page.route('**/data/site_visitors.json', route => route.abort());
+  await page.reload();
+  await expect(page.locator('#siteVisitorCount')).toHaveText('累積訪客：暫無資料');
 });

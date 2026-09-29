@@ -1,4 +1,7 @@
-.analyticsPreferences{font-size:12px;color:#cbd5e1;border-top:1px solid #334155;padding:6px 0;max-width:100%;overflow-wrap:anywhere}
+.analyticsBar{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:2px 8px;border-top:1px solid #334155;font-size:12px;color:#cbd5e1;padding:2px 0;min-width:0}
+#siteVisitorCount{overflow-wrap:anywhere;min-width:0}
+.analyticsPreferences{font-size:12px;color:#cbd5e1;padding:0;max-width:100%;overflow-wrap:anywhere;margin-left:auto}
+.analyticsPreferences[open]{flex-basis:100%}
 .analyticsPreferences summary{cursor:pointer;width:fit-content;padding:4px 0}
 .analyticsPreferences[open]{max-height:35dvh;overflow-y:auto}
 .analyticsPreferences p{margin:6px 0;line-height:1.5}
