@@ -1,0 +1,52 @@
+name: Stock Update Watchdog
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Taiwan 15:17-22:17, weekdays; only dispatch if behind official data.
+    - cron: '17 7-14 * * 1-5'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: stock-update-watchdog
+  cancel-in-progress: false
+
+jobs:
+  check:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      actions: write
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.11'
+      - name: Compare published data with official completed session
+        id: freshness
+        run: python scripts/check_update_freshness.py --check-only
+      - name: Request catch-up only when no scanner is already running
+        if: steps.freshness.outputs.needs_update == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          active=$(gh api "repos/$GH_REPO/actions/workflows/update-data.yml/runs?branch=main&per_page=30" \
+            --jq '[.workflow_runs[] | select(.status != "completed")] | length')
+          if [ "$active" -gt 0 ]; then
+            echo '已有股票更新執行中或排隊，這次不重複觸發。' >> "$GITHUB_STEP_SUMMARY"
+          else
+            gh workflow run update-data.yml --ref main
+            echo '資料落後官方最新收盤日，已要求補跑 Update Stock Data。' >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Report current data
+        if: steps.freshness.outputs.needs_update == 'false'
+        run: echo '已是官方最新收盤日，無須補跑。' >> "$GITHUB_STEP_SUMMARY"
