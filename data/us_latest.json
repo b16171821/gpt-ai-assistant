@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAtET": "2026/09/28 22:18:52 EDT",
-    "updatedAtTW": "2026/09/29 10:18:52 CST",
+    "updatedAtET": "2026/09/29 08:14:57 EDT",
+    "updatedAtTW": "2026/09/29 20:14:57 CST",
     "strategyAsOfDate": "2026-09-28",
     "completedDataDate": "2026-09-28",
     "freshnessStatus": "COMPLETE",
@@ -9,7 +9,7 @@
     "staleCount": 0,
     "priceType": "收盤確認價",
     "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K",
-    "sessionStatus": "收盤後",
+    "sessionStatus": "盤前",
     "mode": "us-pattern-close-only-scan",
     "source": "Yahoo Finance via yfinance",
     "totalWatchlist": 74,
@@ -90,13 +90,13 @@
       "strongStopBreakRate": 80.0,
       "strongStopBreakCount": 4,
       "strongWatchCount": 5,
-      "previousACount": 16,
+      "previousACount": 15,
       "currentACount": 0,
       "aDisappearRate": 100.0
     },
     "errors": [],
     "profileEnriched": true,
-    "profileUpdatedAt": "2026-09-29 10:18:59"
+    "profileUpdatedAt": "2026-09-29 20:15:10"
   },
   "market": {
     "indexes": {
@@ -200,7 +200,7 @@
       "strongStopBreakRate": 80.0,
       "strongStopBreakCount": 4,
       "strongWatchCount": 5,
-      "previousACount": 16,
+      "previousACount": 15,
       "currentACount": 0,
       "aDisappearRate": 100.0
     },
@@ -631,7 +631,7 @@
       "theme": "型態：旗型整理突破｜原因：價量趨勢成立、大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -701,7 +701,7 @@
       "theme": "型態：旗型整理突破｜原因：均線多頭排列、大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -771,7 +771,7 @@
       "theme": "型態：旗型整理突破｜原因：均線多頭排列、大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -1331,7 +1331,7 @@
       "theme": "型態：接近成形｜原因：均線多頭排列、大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -1751,7 +1751,7 @@
       "theme": "型態：旗型整理突破｜原因：均線多頭排列、大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -1891,7 +1891,7 @@
       "theme": "型態：接近成形｜原因：均線多頭排列、大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -2311,7 +2311,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -2381,7 +2381,7 @@
       "theme": "型態：旗型整理突破｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -2451,7 +2451,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -2591,7 +2591,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -2871,7 +2871,7 @@
       "theme": "型態：旗型整理突破｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -2941,7 +2941,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -3011,7 +3011,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -3081,7 +3081,7 @@
       "theme": "型態：箱型突破｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -3151,7 +3151,7 @@
       "theme": "型態：旗型整理突破｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -3291,7 +3291,7 @@
       "theme": "型態：旗型整理突破｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -3431,7 +3431,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -3501,7 +3501,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -3571,7 +3571,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -3641,7 +3641,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -3991,7 +3991,7 @@
       "theme": "型態：旗型整理突破｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -4061,7 +4061,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -4271,7 +4271,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -4341,7 +4341,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -4481,7 +4481,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -4551,7 +4551,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -4761,7 +4761,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -4901,7 +4901,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -4971,7 +4971,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -5041,7 +5041,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     },
     {
       "date": "2026-09-28",
@@ -5111,7 +5111,7 @@
       "theme": "型態：接近成形｜原因：大盤不弱",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-09-29 10:18:59"
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     }
   ]
 }

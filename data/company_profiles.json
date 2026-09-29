@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29 10:18:59",
+  "updatedAt": "2026-09-29 20:15:10",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2718,6 +2718,15 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-09-24 20:11:22"
+    },
+    "台股:3162": {
+      "industry": "Metal Fabrication",
+      "sector": "Industrials",
+      "companyProfile": "United Alloy-Tech Company Ltd engages in forging, die casting, processing, production, trading, and sale of aluminum alloys in Taiwan and internationally. It offers aluminum alloy ",
+      "theme": "產業：Metal Fabrication｜板塊：Industrials｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、題材命中",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-29 20:15:10"
     }
   }
 }
