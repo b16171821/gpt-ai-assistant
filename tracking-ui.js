@@ -255,8 +255,39 @@ function renderQualityTracking() {
 function qualityFilterChanged() {
   trackingListState.limits = {};
   renderQualityTracking();
+  updateTrackingFilterButton();
+}
+function updateTrackingFilterButton() {
+  const button = document.getElementById('trackingFilterToggle');
+  const state = trackingListState;
+  const changes = [state.filter !== 'ALL', state.sort !== 'default', state.showAll,
+    !state.hideLowProfit, state.profit, state.safety, state.rr].filter(Boolean).length;
+  button.textContent = `${button.getAttribute('aria-expanded') === 'true' ? '收合' : '篩選'}${changes ? ` (${changes})` : ''}`;
+}
+function initTrackingFilterPanel() {
+  const button = document.getElementById('trackingFilterToggle');
+  const panel = document.getElementById('trackingFilterPanel');
+  const mobile = matchMedia('(max-width:720px)');
+  function setOpen(open) {
+    panel.hidden = !open;
+    button.setAttribute('aria-expanded', String(open));
+    updateTrackingFilterButton();
+  }
+  setOpen(!mobile.matches);
+  button.addEventListener('click', () => setOpen(panel.hidden));
+  panel.addEventListener('keydown', (event) => {
+    if (event.key !== 'Escape') return;
+    setOpen(false);
+    button.focus();
+  });
+  mobile.addEventListener('change', () => {
+    const focusInside = panel.contains(document.activeElement);
+    setOpen(!mobile.matches);
+    if (mobile.matches && focusInside) button.focus();
+  });
 }
 function initQualityTracking() {
+  initTrackingFilterPanel();
   const search = document.getElementById('trackingSearch');
   search.addEventListener('input', () => { trackingListState.query = search.value.trim(); qualityFilterChanged(); });
   document.getElementById('trackingSort').addEventListener('change', (event) => { trackingListState.sort = event.target.value; qualityFilterChanged(); });

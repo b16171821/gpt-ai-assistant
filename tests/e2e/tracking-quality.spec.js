@@ -74,6 +74,7 @@ test('追蹤每次15檔、搜尋排序、隱藏與備查分層，詳細預設收
   }
   await page.locator('#quality-main-more').click();
   await expect(cards).toHaveCount(20);
+  if (await page.locator('#trackingFilterPanel').isHidden()) await page.locator('#trackingFilterToggle').click();
   await page.locator('#trackingSort').selectOption('code');
   await expect(cards.first()).toContainText('9000');
   await page.locator('#trackingSearch').fill('9012');
@@ -99,6 +100,49 @@ test('追蹤每次15檔、搜尋排序、隱藏與備查分層，詳細預設收
   expect(widths.scroll).toBeLessThanOrEqual(widths.width + 1);
   expect(widths.content).toBeLessThanOrEqual(widths.panel + 1);
   expect(errors).toEqual([]);
+});
+
+test('搜尋篩選可收合，手機只固定一行且切頁保留條件', async ({ page }, testInfo) => {
+  await setup(page);
+  const mobile = page.viewportSize().width <= 720;
+  const panel = page.locator('#trackingFilterPanel');
+  const toggle = page.locator('#trackingFilterToggle');
+  await expect(toggle).toHaveAttribute('aria-expanded', String(!mobile));
+  if (!mobile) await toggle.click();
+  await expect(panel).toBeHidden();
+  expect((await page.locator('.qualityToolbar').boundingBox()).height).toBeLessThanOrEqual(65);
+  await page.locator('#trackingSearch').fill('901');
+  await expect(page.locator('#quality-main-list .qualityCard')).toHaveCount(10);
+  await toggle.click();
+  await page.locator('#trackingSort').selectOption('code');
+  await page.locator('[data-quality-filter="TRIAL"]').click();
+  await expect(toggle).toHaveText('收合 (2)');
+  await page.locator('#trackingSort').press('Escape');
+  await expect(toggle).toBeFocused();
+  await expect(panel).toBeHidden();
+  await expect(toggle).toHaveText('篩選 (2)');
+  const before = await page.locator('#quality-main-list .trackingName').allTextContents();
+  await page.getByRole('tab', { name: '資金計算機' }).click();
+  await page.getByRole('tab', { name: '策略追蹤' }).click();
+  await expect(page.locator('#trackingSearch')).toHaveValue('901');
+  await expect(panel).toBeHidden();
+  await toggle.click();
+  await expect(page.locator('#trackingSort')).toHaveValue('code');
+  await expect(page.locator('[data-quality-filter="TRIAL"]')).toHaveAttribute('aria-pressed', 'true');
+  expect(await page.locator('#quality-main-list .trackingName').allTextContents()).toEqual(before);
+  await toggle.click();
+  await page.locator('#trackingSearch').fill('');
+  await page.locator('#trackingPage').evaluate(el => { el.scrollTop = 400; });
+  await expect(page.locator('#pageTrack')).toHaveCSS('transform', `matrix(1, 0, 0, 1, ${-2 * (await page.locator('#pageViewport').boundingBox()).width}, 0)`);
+  const sizes = await page.evaluate(() => ({
+    panel: document.getElementById('trackingPage').getBoundingClientRect(),
+    toolbar: document.querySelector('.qualityToolbar').getBoundingClientRect(),
+    width: document.documentElement.clientWidth, scroll: document.documentElement.scrollWidth,
+  }));
+  expect(sizes.scroll).toBeLessThanOrEqual(sizes.width + 1);
+  expect(Math.abs(sizes.toolbar.top - sizes.panel.top)).toBeLessThanOrEqual(2);
+  expect(sizes.panel.height - sizes.toolbar.height).toBeGreaterThan(300);
+  await page.screenshot({ path: testInfo.outputPath('tracking-compact.png') });
 });
 
 test('STOP帶入與重新帶入不覆蓋20%上限和3%成本', async ({ page }) => {
@@ -216,6 +260,7 @@ test('新資料檔缺漏不使網站壞掉，不捏造強勢證據或達成率',
   await page.evaluate(() => loadAll());
   await expect(page.locator('#qualityStats')).toContainText('樣本不足');
   await expect(page.locator('#quality-main-list .qualityCard')).toHaveCount(15);
+  if (await page.locator('#trackingFilterPanel').isHidden()) await page.locator('#trackingFilterToggle').click();
   await page.locator('[data-quality-filter="STRONG"]').click();
   await expect(page.locator('#quality-main-list')).toContainText('沒有符合');
 });
