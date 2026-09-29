@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-09-29 21:20:12",
+    "updatedAt": "2026-09-29 22:20:38",
     "version": "strategy-tracking-v4",
     "activeCount": 78,
     "endedCount": 521,
@@ -27,12 +27,12 @@
       "endedAt": null,
       "endReason": "",
       "endPriority": null,
-      "maxHighDuringTracking": 260.68,
+      "maxHighDuringTracking": 262.12,
       "targetHitDate": null,
       "stopLossHitDate": null,
       "finalTrackingStatus": null,
       "currentProfitPct": -5.1,
-      "maxProfitPct": -4.58,
+      "maxProfitPct": -4.05,
       "result": "",
       "trackingStatus": "WAIT_CONFIRM",
       "trackingStatusText": "接近買點，等待收盤確認",
