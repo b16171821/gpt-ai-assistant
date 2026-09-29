@@ -2,7 +2,7 @@
   "meta": {
     "version": "quality-v1",
     "initializedAt": "2026-09-23T02:12:44.245Z",
-    "updatedAt": "2026-09-28T15:53:47.377Z",
+    "updatedAt": "2026-09-29T02:19:47.417Z",
     "policy": "建立時固定資格；歷史回算另列，不以今日條件篩選過去輸贏。"
   },
   "records": {
@@ -17441,6 +17441,32 @@
         "lowQuality": false,
         "reasons": [],
         "entry": 221.31
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "美股:CRWD:2026-09-28": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-09-28",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 31.376555823890044,
+        "stopLossDistancePercent": 4.904328441389556,
+        "distanceToNecklinePercent": -1.7508621669761641,
+        "safetyScore": 87,
+        "riskReward": 6.4,
+        "targetProgressPercent": 73.72171945701356,
+        "highQualityTracking": true,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 269.15
       },
       "exclusionReasons": [
         "建立時僅供觀察",
