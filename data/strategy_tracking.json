@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-09-30 22:13:36",
+    "updatedAt": "2026-10-01 00:50:58",
     "version": "strategy-tracking-v4",
     "activeCount": 88,
     "endedCount": 529,
@@ -27,12 +27,12 @@
       "endedAt": null,
       "endReason": "",
       "endPriority": null,
-      "maxHighDuringTracking": 267.78,
+      "maxHighDuringTracking": 268.95,
       "targetHitDate": null,
       "stopLossHitDate": null,
       "finalTrackingStatus": null,
       "currentProfitPct": -3.82,
-      "maxProfitPct": -1.98,
+      "maxProfitPct": -1.55,
       "result": "",
       "trackingStatus": "PULLBACK_CONFIRM",
       "trackingStatusText": "回踩不破，可持續追蹤",
