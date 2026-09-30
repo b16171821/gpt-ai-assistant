@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29 22:19:43",
+  "updatedAt": "2026-09-30 09:35:26",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2727,6 +2727,15 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-09-29 20:15:10"
+    },
+    "美股:PLTR": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "Palantir Technologies Inc. builds and deploys software platforms for the intelligence community to assist in counterterrorism investigations and operations in the United States, th",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-09-30 09:35:26"
     }
   }
 }

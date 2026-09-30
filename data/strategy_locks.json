@@ -722,7 +722,7 @@
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-09-29 22:19:44"
+    "updatedAt": "2026-09-30 09:35:28"
   },
   "台股:2059": {
     "key": "台股:2059",
@@ -1522,7 +1522,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-09-29 22:19:44"
+    "updatedAt": "2026-09-30 09:35:28"
   },
   "台股:3213": {
     "key": "台股:3213",
@@ -3147,7 +3147,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-09-29 22:19:44"
+    "updatedAt": "2026-09-30 09:35:28"
   },
   "台股:5468": {
     "key": "台股:5468",
@@ -3897,7 +3897,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-09-29 22:19:44"
+    "updatedAt": "2026-09-30 09:35:27"
   },
   "台股:6538": {
     "key": "台股:6538",
@@ -4922,7 +4922,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-09-29 22:19:44"
+    "updatedAt": "2026-09-30 09:35:28"
   },
   "台股:8182": {
     "key": "台股:8182",
@@ -5415,14 +5415,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 62.63,
-    "currentTarget": 89.8,
+    "currentPrice": 61.49,
+    "currentTarget": 88.8,
     "currentStopLoss": 63.68,
-    "extensionTarget": 89.8,
+    "extensionTarget": 88.8,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-09-29 22:19:44"
+    "updatedAt": "2026-09-30 09:35:28"
   },
   "美股:KLAC": {
     "key": "美股:KLAC",
@@ -5615,14 +5615,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 353.99,
-    "currentTarget": 495.22,
+    "currentPrice": 352.26,
+    "currentTarget": 484.17,
     "currentStopLoss": 356.41,
-    "extensionTarget": 495.22,
+    "extensionTarget": 484.17,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-09-29 22:19:44"
+    "updatedAt": "2026-09-30 09:35:29"
   },
   "美股:NOW": {
     "key": "美股:NOW",
@@ -5723,6 +5723,31 @@
     "holderAction": "跌破原始停損，依紀律處理。",
     "emptyAction": "取消觀察，等待新結構。",
     "updatedAt": "2026-06-04 08:20:00"
+  },
+  "美股:PLTR": {
+    "key": "美股:PLTR",
+    "market": "美股",
+    "code": "PLTR",
+    "name": "PLTR",
+    "createdAt": "2026-09-29",
+    "originalBuyLow": 198.57,
+    "originalBuyHigh": 204.53,
+    "originalStopLoss": 188.84,
+    "originalTarget": 271.47,
+    "originalNeckline": 194.68,
+    "originalStage": "接近成形＋可觀察",
+    "originalWinRate": "中",
+    "status": "ended",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略結束",
+    "currentPrice": 186.97,
+    "currentTarget": 271.47,
+    "currentStopLoss": 188.84,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "跌破原始停損，依紀律處理。",
+    "emptyAction": "取消觀察，等待新結構。",
+    "updatedAt": "2026-09-30 09:35:28"
   },
   "美股:QCOM": {
     "key": "美股:QCOM",
