@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01 09:35:18",
+  "updatedAt": "2026-10-01 21:52:14",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2763,6 +2763,24 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-09-30 21:00:44"
+    },
+    "台股:3490": {
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "Single Well Industrial Corporation, together with its subsidiaries, designs, manufactures, processes, and sells packaging molds, automation equipment, and solar energy products in ",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-01 21:52:14"
+    },
+    "台股:3226": {
+      "industry": "Auto Parts",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "LFA Co., Ltd. engages in the manufacture and sale of automotive and electronic components in Taiwan. The company offers LED headlight, truck headlight, fog light, car LED tail lamp",
+      "theme": "產業：Auto Parts｜板塊：Consumer Cyclical｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-01 21:52:14"
     }
   }
 }
