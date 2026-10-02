@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-02 09:50:59",
+  "updatedAt": "2026-10-02 21:08:56",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2781,6 +2781,24 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-10-01 21:52:14"
+    },
+    "台股:4905": {
+      "industry": "Communication Equipment",
+      "sector": "Technology",
+      "companyProfile": "Tainet Communication System Corp. provides carrier class access equipment to telecommunication companies, service operators, and business users worldwide. The company offers Ethern",
+      "theme": "產業：Communication Equipment｜板塊：Technology｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-02 21:08:55"
+    },
+    "台股:3163": {
+      "industry": "Communication Equipment",
+      "sector": "Technology",
+      "companyProfile": "Browave Corporation engages in the design, manufacture, and sale of optical fiber communication components in Taiwan and internationally. The company's products include wavelength ",
+      "theme": "產業：Communication Equipment｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、題材命中",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-02 21:08:56"
     }
   }
 }
