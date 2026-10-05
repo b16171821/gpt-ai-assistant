@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-03 00:39:13",
+  "updatedAt": "2026-10-05 23:16:13",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2799,6 +2799,51 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-10-02 21:08:56"
+    },
+    "台股:6187": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "companyProfile": "All Ring Tech Co., Ltd. engages in the design, manufacture, and assembly of automation machines in Taiwan and China. The company offers semiconductor dispensing equipment series, i",
+      "theme": "產業：Specialty Industrial Machinery｜板塊：Industrials｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-05 23:16:12"
+    },
+    "台股:2340": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Taiwan-Asia Semiconductor Corporation engages in the manufacture and sale of semiconductor components in Taiwan and internationally. The company offers sensing devices, such as pho",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-05 23:16:12"
+    },
+    "台股:1459": {
+      "industry": "Textile Manufacturing",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Lan Fa Textile Co., Ltd., together with its subsidiaries, manufactures and sells polyester processed yarns in Taiwan, Mainland China, Thailand, Vietnam, South Korea, and internatio",
+      "theme": "產業：Textile Manufacturing｜板塊：Consumer Cyclical｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-05 23:16:12"
+    },
+    "台股:6877": {
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "Hye Technology Co.,Ltd. engages in the research, design, production, and sale of automation equipment in Taiwan, Japan, Singapore, and China. It offers automated packaging and test",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、題材命中",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-05 23:16:13"
+    },
+    "美股:SMCI": {
+      "industry": "Computer Hardware",
+      "sector": "Technology",
+      "companyProfile": "Super Micro Computer, Inc., together with its subsidiaries, develops and sells server and storage solutions based on modular and open-standard architecture in the United States, As",
+      "theme": "產業：Computer Hardware｜板塊：Technology｜型態：旗型整理突破｜原因：均線多頭排列、價量趨勢成立、大盤不弱",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-05 23:16:13"
     }
   }
 }
