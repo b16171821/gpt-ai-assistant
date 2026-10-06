@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-10-06 22:29:38",
+    "updatedAt": "2026-10-07 01:13:29",
     "version": "strategy-tracking-v4",
     "activeCount": 118,
     "endedCount": 574,
@@ -457,12 +457,12 @@
       "endedAt": null,
       "endReason": "",
       "endPriority": null,
-      "maxHighDuringTracking": 70.69,
+      "maxHighDuringTracking": 71.08,
       "targetHitDate": null,
       "stopLossHitDate": null,
       "finalTrackingStatus": null,
       "currentProfitPct": -6.07,
-      "maxProfitPct": -2.86,
+      "maxProfitPct": -2.33,
       "result": "",
       "trackingStatus": "WATCHING",
       "trackingStatusText": "追蹤中，等待確認",
