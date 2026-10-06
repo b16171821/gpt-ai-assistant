@@ -1047,7 +1047,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-10-06 03:48:24"
+    "updatedAt": "2026-10-06 10:32:50"
   },
   "台股:2342": {
     "key": "台股:2342",
@@ -1422,7 +1422,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-10-06 03:48:24"
+    "updatedAt": "2026-10-06 10:32:50"
   },
   "台股:3093": {
     "key": "台股:3093",
@@ -2822,7 +2822,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-10-06 03:48:24"
+    "updatedAt": "2026-10-06 10:32:50"
   },
   "台股:4908": {
     "key": "台股:4908",
@@ -3747,7 +3747,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-10-06 03:48:24"
+    "updatedAt": "2026-10-06 10:32:50"
   },
   "台股:6204": {
     "key": "台股:6204",
@@ -4447,7 +4447,7 @@
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-10-06 03:48:24"
+    "updatedAt": "2026-10-06 10:32:50"
   },
   "台股:6712": {
     "key": "台股:6712",
@@ -5097,7 +5097,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-10-06 03:48:24"
+    "updatedAt": "2026-10-06 10:32:50"
   },
   "台股:8121": {
     "key": "台股:8121",
@@ -5640,14 +5640,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 69.33,
+    "currentPrice": 68.36,
     "currentTarget": 97.28,
     "currentStopLoss": 68.18,
     "extensionTarget": 97.28,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-10-06 03:48:24"
+    "updatedAt": "2026-10-06 10:32:50"
   },
   "美股:KLAC": {
     "key": "美股:KLAC",
@@ -5840,14 +5840,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 349.07,
+    "currentPrice": 359.49,
     "currentTarget": 484.17,
     "currentStopLoss": 356.41,
     "extensionTarget": 484.17,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-10-06 03:48:24"
+    "updatedAt": "2026-10-06 10:32:50"
   },
   "美股:NOW": {
     "key": "美股:NOW",
@@ -6062,17 +6062,17 @@
     "originalNeckline": 44.59,
     "originalStage": "接近成形＋可觀察",
     "originalWinRate": "中",
-    "status": "active",
+    "status": "ended",
     "createdBy": "strategy-lock-v1",
-    "trackingStatus": "策略追蹤中",
-    "currentPrice": 43.69,
+    "trackingStatus": "策略結束",
+    "currentPrice": 43.19,
     "currentTarget": 65.8,
     "currentStopLoss": 43.25,
     "extensionTarget": null,
     "recentCloses": [],
-    "holderAction": "未達第一目標前，守風險區續抱觀察。",
-    "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-10-06 03:48:24"
+    "holderAction": "跌破原始停損，依紀律處理。",
+    "emptyAction": "取消觀察，等待新結構。",
+    "updatedAt": "2026-10-06 10:32:50"
   },
   "美股:SNOW": {
     "key": "美股:SNOW",
@@ -6123,6 +6123,31 @@
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
     "updatedAt": "2026-06-22 21:15:17"
+  },
+  "美股:TER": {
+    "key": "美股:TER",
+    "market": "美股",
+    "code": "TER",
+    "name": "TER",
+    "createdAt": "2026-10-05",
+    "originalBuyLow": 460.9,
+    "originalBuyHigh": 474.72,
+    "originalStopLoss": 438.3,
+    "originalTarget": 606.9,
+    "originalNeckline": 451.86,
+    "originalStage": "接近成形＋可觀察",
+    "originalWinRate": "中",
+    "status": "active",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略追蹤中",
+    "currentPrice": 444.53,
+    "currentTarget": 606.9,
+    "currentStopLoss": 438.3,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "未達第一目標前，守風險區續抱觀察。",
+    "emptyAction": "空手不追高，等突破確認或回踩不破。",
+    "updatedAt": "2026-10-06 10:32:50"
   },
   "美股:TXN": {
     "key": "美股:TXN",

@@ -2,7 +2,7 @@
   "meta": {
     "version": "quality-v1",
     "initializedAt": "2026-09-23T02:12:44.245Z",
-    "updatedAt": "2026-10-05T19:49:25.169Z",
+    "updatedAt": "2026-10-06T02:34:07.168Z",
     "policy": "建立時固定資格；歷史回算另列，不以今日條件篩選過去輸贏。"
   },
   "records": {
@@ -19983,6 +19983,61 @@
         "lowQuality": false,
         "reasons": [],
         "entry": 257.55
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "美股:PLTR:2026-10-05": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-05",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 36.737467284074896,
+        "stopLossDistancePercent": 4.902355546607614,
+        "distanceToNecklinePercent": -2.7620905637129045,
+        "safetyScore": 81,
+        "riskReward": 7.49,
+        "targetProgressPercent": 70.92796407406044,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [
+          "安全分未達 85"
+        ],
+        "entry": 198.68
+      },
+      "exclusionReasons": [
+        "安全分未達 85",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "美股:TER:2026-10-05": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-05",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 31.677153395530482,
+        "stopLossDistancePercent": 4.903449772184849,
+        "distanceToNecklinePercent": -1.6221838622582307,
+        "safetyScore": 87,
+        "riskReward": 6.46,
+        "targetProgressPercent": 73.76997857966717,
+        "highQualityTracking": true,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 460.9
       },
       "exclusionReasons": [
         "建立時僅供觀察",
