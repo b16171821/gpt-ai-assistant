@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-06 10:32:49",
+  "updatedAt": "2026-10-06 21:36:49",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2844,6 +2844,15 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-10-05 23:16:13"
+    },
+    "台股:4174": {
+      "industry": "Biotechnology",
+      "sector": "Healthcare",
+      "companyProfile": "OBI Pharma, Inc., a clinical stage oncology company, researches and develops novel therapeutic agents for unmet medical needs against cancer in Taiwan and internationally. The comp",
+      "theme": "產業：Biotechnology｜板塊：Healthcare｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-06 21:36:49"
     }
   }
 }
