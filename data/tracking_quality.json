@@ -2,7 +2,7 @@
   "meta": {
     "version": "quality-v1",
     "initializedAt": "2026-09-23T02:12:44.245Z",
-    "updatedAt": "2026-10-06T17:13:33.275Z",
+    "updatedAt": "2026-10-07T01:50:52.082Z",
     "policy": "建立時固定資格；歷史回算另列，不以今日條件篩選過去輸贏。"
   },
   "records": {
@@ -20401,6 +20401,90 @@
         "建立時尚未確認有效策略",
         "建立時不開放進場",
         "歷史回補"
+      ]
+    },
+    "美股:SHOP:2026-10-06": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-06",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 30.593714993219727,
+        "stopLossDistancePercent": 4.9053711455692595,
+        "distanceToNecklinePercent": -1.106567235987493,
+        "safetyScore": 87,
+        "riskReward": 6.24,
+        "targetProgressPercent": 75.06997742663657,
+        "highQualityTracking": true,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 169.61
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "美股:SMCI:2026-10-06": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-06",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 44.86083716852946,
+        "stopLossDistancePercent": 4.887135656366434,
+        "distanceToNecklinePercent": -2.860974519445689,
+        "safetyScore": 81,
+        "riskReward": 9.18,
+        "targetProgressPercent": 67.68532526475039,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [
+          "安全分未達 85"
+        ],
+        "entry": 45.63
+      },
+      "exclusionReasons": [
+        "安全分未達 85",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "美股:ZS:2026-10-06": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-06",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 33.16162848493063,
+        "stopLossDistancePercent": 4.902625276761102,
+        "distanceToNecklinePercent": -2.175415956122966,
+        "safetyScore": 81,
+        "riskReward": 6.76,
+        "targetProgressPercent": 73.12860536138446,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [
+          "安全分未達 85"
+        ],
+        "entry": 221.31
+      },
+      "exclusionReasons": [
+        "安全分未達 85",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
       ]
     }
   }
