@@ -1040,14 +1040,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 50.3,
-    "currentTarget": 64.6,
-    "currentStopLoss": 43.36,
-    "extensionTarget": null,
+    "currentPrice": 48.15,
+    "currentTarget": 69.6,
+    "currentStopLoss": 45.78,
+    "extensionTarget": 69.6,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-10-06 10:32:50"
+    "updatedAt": "2026-10-07 21:52:18"
   },
   "台股:2342": {
     "key": "台股:2342",
@@ -1148,6 +1148,31 @@
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
     "updatedAt": "2026-08-15 06:58:48"
+  },
+  "台股:2360": {
+    "key": "台股:2360",
+    "market": "台股",
+    "code": "2360",
+    "name": "致茂",
+    "createdAt": "2026-10-07",
+    "originalBuyLow": 2590.8,
+    "originalBuyHigh": 2668.52,
+    "originalStopLoss": 2463.8,
+    "originalTarget": 3350.0,
+    "originalNeckline": 2540.0,
+    "originalStage": "接近成形＋可觀察",
+    "originalWinRate": "中",
+    "status": "ended",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略結束",
+    "currentPrice": 2400.0,
+    "currentTarget": 3350.0,
+    "currentStopLoss": 2463.8,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "跌破原始停損，依紀律處理。",
+    "emptyAction": "取消觀察，等待新結構。",
+    "updatedAt": "2026-10-07 21:52:18"
   },
   "台股:2362": {
     "key": "台股:2362",
@@ -2990,14 +3015,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "已達第一目標",
-    "currentPrice": 46.85,
-    "currentTarget": 53.2,
-    "currentStopLoss": 37.59,
-    "extensionTarget": 53.2,
+    "currentPrice": 52.7,
+    "currentTarget": 60.9,
+    "currentStopLoss": 41.32,
+    "extensionTarget": 60.9,
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-10-03 00:39:14"
+    "updatedAt": "2026-10-07 21:52:18"
   },
   "台股:5210": {
     "key": "台股:5210",
@@ -3323,6 +3348,31 @@
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
     "updatedAt": "2026-06-09 07:52:15"
+  },
+  "台股:5432": {
+    "key": "台股:5432",
+    "market": "台股",
+    "code": "5432",
+    "name": "新門",
+    "createdAt": "2026-10-07",
+    "originalBuyLow": 182.58,
+    "originalBuyHigh": 188.06,
+    "originalStopLoss": 173.63,
+    "originalTarget": 259.7,
+    "originalNeckline": 179.0,
+    "originalStage": "接近成形＋可觀察",
+    "originalWinRate": "低",
+    "status": "active",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略追蹤中",
+    "currentPrice": 195.0,
+    "currentTarget": 259.7,
+    "currentStopLoss": 173.63,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "未達第一目標前，守風險區續抱觀察。",
+    "emptyAction": "空手不追高，等突破確認或回踩不破。",
+    "updatedAt": "2026-10-07 21:52:18"
   },
   "台股:5450": {
     "key": "台股:5450",
@@ -4140,14 +4190,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 111.0,
+    "currentPrice": 116.5,
     "currentTarget": 178.3,
     "currentStopLoss": 114.94,
     "extensionTarget": 178.3,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-10-07 09:49:41"
+    "updatedAt": "2026-10-07 21:52:18"
   },
   "台股:6538": {
     "key": "台股:6538",
@@ -4723,6 +4773,31 @@
     "holderAction": "跌破原始停損，依紀律處理。",
     "emptyAction": "取消觀察，等待新結構。",
     "updatedAt": "2026-08-18 16:06:21"
+  },
+  "台股:7743": {
+    "key": "台股:7743",
+    "market": "台股",
+    "code": "7743",
+    "name": "金利食安",
+    "createdAt": "2026-10-07",
+    "originalBuyLow": 26.57,
+    "originalBuyHigh": 27.37,
+    "originalStopLoss": 25.27,
+    "originalTarget": 32.8,
+    "originalNeckline": 26.05,
+    "originalStage": "突破第一根",
+    "originalWinRate": "高",
+    "status": "active",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略追蹤中",
+    "currentPrice": 27.0,
+    "currentTarget": 32.8,
+    "currentStopLoss": 25.27,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "未達第一目標前，守風險區續抱觀察。",
+    "emptyAction": "空手不追高，等突破確認或回踩不破。",
+    "updatedAt": "2026-10-07 21:52:18"
   },
   "台股:7751": {
     "key": "台股:7751",
@@ -5697,7 +5772,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-10-07 09:49:41"
+    "updatedAt": "2026-10-07 21:52:19"
   },
   "美股:KLAC": {
     "key": "美股:KLAC",
@@ -5822,7 +5897,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-10-07 09:49:42"
+    "updatedAt": "2026-10-07 21:52:19"
   },
   "美股:MSFT": {
     "key": "美股:MSFT",

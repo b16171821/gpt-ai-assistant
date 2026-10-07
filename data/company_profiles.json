@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-07 09:49:40",
+  "updatedAt": "2026-10-07 21:52:17",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2853,6 +2853,42 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-10-06 21:36:49"
+    },
+    "台股:7743": {
+      "industry": "Specialty Business Services",
+      "sector": "Industrials",
+      "companyProfile": "Kee Fresh & Safe Foodtech Co., Ltd. operates in the food processing industry. It also provides HPP low-temperature sterilization OEM services for various food industries. The compa",
+      "theme": "產業：Specialty Business Services｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-07 21:52:16"
+    },
+    "台股:2360": {
+      "industry": "Scientific & Technical Instruments",
+      "sector": "Technology",
+      "companyProfile": "Chroma ATE Inc. designs, assembles, manufactures, sells, repairs, and maintains software/hardware for computers and peripherals, computerized automatic test systems, electronic tes",
+      "theme": "產業：Scientific & Technical Instruments｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-07 21:52:17"
+    },
+    "台股:5432": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Solomon Data International Corporation manufactures, processes, and sells solar system components and liquid crystal display modules in Taiwan, the United States, the Asia Pacific,",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-07 21:52:17"
+    },
+    "台股:3597": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Avertronics Inc. engages in the manufacturing and sales of waterproof connectors and wire harnesses in Taiwan, Mainland China, and internationally. The company offers temperature c",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-07 21:52:17"
     }
   }
 }
