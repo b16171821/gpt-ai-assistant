@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-10-08 22:03:11",
+    "updatedAt": "2026-10-08 22:56:37",
     "version": "strategy-tracking-v4",
     "activeCount": 135,
     "endedCount": 598,
@@ -10,7 +10,7 @@
     "maxWaitingTradingDays": 15,
     "legacyLocksImported": 260,
     "legacySnapshotStocksImported": 325,
-    "lifecycleHistoriesEvaluated": 728
+    "lifecycleHistoriesEvaluated": 733
   },
   "records": [
     {
@@ -557,12 +557,12 @@
       "endedAt": null,
       "endReason": "",
       "endPriority": null,
-      "maxHighDuringTracking": 585.0,
+      "maxHighDuringTracking": 585.74,
       "targetHitDate": null,
       "stopLossHitDate": null,
       "finalTrackingStatus": null,
       "currentProfitPct": -6.09,
-      "maxProfitPct": -5.11,
+      "maxProfitPct": -4.99,
       "result": "",
       "trackingStatus": "WATCHING",
       "trackingStatusText": "追蹤中，等待確認",
@@ -1920,12 +1920,12 @@
       "endedAt": null,
       "endReason": "",
       "endPriority": null,
-      "maxHighDuringTracking": 217.76,
+      "maxHighDuringTracking": 218.48,
       "targetHitDate": null,
       "stopLossHitDate": null,
       "finalTrackingStatus": null,
       "currentProfitPct": -4.93,
-      "maxProfitPct": -3.06,
+      "maxProfitPct": -2.74,
       "result": "",
       "trackingStatus": "WAIT_CONFIRM",
       "trackingStatusText": "接近買點，等待收盤確認",
@@ -4367,6 +4367,10 @@
           {
             "date": "2026-10-08",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-10-08",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -6286,6 +6290,10 @@
           {
             "date": "2026-10-08",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-10-08",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -10507,8 +10515,8 @@
       "currentProfitPct": 0.04,
       "maxProfitPct": 4.58,
       "result": "",
-      "trackingStatus": "WAIT_CONFIRM",
-      "trackingStatusText": "接近買點，等待收盤確認",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "突破第一根",
         "originalSignal": "突破買點",
@@ -10546,7 +10554,7 @@
         "closeHeldNeckline": true,
         "inBuyZone": true,
         "aboveBuyZoneHigh": false,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -10560,6 +10568,10 @@
           {
             "date": "2026-10-08",
             "text": "產生主升段安全觀察策略卡；風報比達 2 以上；距離頸線在 0%～5%"
+          },
+          {
+            "date": "2026-10-08",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -10570,7 +10582,7 @@
       "statusHistory": [
         {
           "date": "2026-10-08",
-          "status": "WAIT_CONFIRM",
+          "status": "PULLBACK_CONFIRM",
           "close": 63.9,
           "latestStatus": {
             "latestClose": 63.9,
@@ -13703,8 +13715,8 @@
       "currentProfitPct": 0.01,
       "maxProfitPct": 2.24,
       "result": "",
-      "trackingStatus": "WAIT_CONFIRM",
-      "trackingStatusText": "接近買點，等待收盤確認",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "接近成形＋可觀察",
         "originalSignal": "觀察",
@@ -13742,7 +13754,7 @@
         "closeHeldNeckline": true,
         "inBuyZone": true,
         "aboveBuyZoneHigh": false,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -13756,6 +13768,10 @@
           {
             "date": "2026-10-08",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；距離頸線在 0%～5%；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-10-08",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -13766,7 +13782,7 @@
       "statusHistory": [
         {
           "date": "2026-10-08",
-          "status": "WAIT_CONFIRM",
+          "status": "PULLBACK_CONFIRM",
           "close": 67.3,
           "latestStatus": {
             "latestClose": 67.3,
@@ -15581,6 +15597,10 @@
           {
             "date": "2026-10-08",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-10-08",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -17285,8 +17305,8 @@
       "currentProfitPct": 8.26,
       "maxProfitPct": 8.26,
       "result": "",
-      "trackingStatus": "BREAKOUT_CONFIRMED",
-      "trackingStatusText": "突破確認，策略成立",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "突破第一根",
         "originalSignal": "突破買點",
@@ -17324,7 +17344,7 @@
         "closeHeldNeckline": true,
         "inBuyZone": true,
         "aboveBuyZoneHigh": true,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -17338,6 +17358,10 @@
           {
             "date": "2026-10-08",
             "text": "風報比達 2 以上"
+          },
+          {
+            "date": "2026-10-08",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -17348,7 +17372,7 @@
       "statusHistory": [
         {
           "date": "2026-10-08",
-          "status": "BREAKOUT_CONFIRMED",
+          "status": "PULLBACK_CONFIRM",
           "close": 52.9,
           "latestStatus": {
             "latestClose": 52.9,
@@ -17895,8 +17919,8 @@
       "currentProfitPct": -3.41,
       "maxProfitPct": -2.98,
       "result": "",
-      "trackingStatus": "WAIT_CONFIRM",
-      "trackingStatusText": "接近買點，等待收盤確認",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "接近成形＋可觀察",
         "originalSignal": "觀察",
@@ -17934,7 +17958,7 @@
         "closeHeldNeckline": true,
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -17990,7 +18014,7 @@
         },
         {
           "date": "2026-10-08",
-          "status": "WAIT_CONFIRM",
+          "status": "PULLBACK_CONFIRM",
           "close": 45.2,
           "latestStatus": {
             "latestClose": 45.2,
@@ -23051,6 +23075,10 @@
           {
             "date": "2026-10-08",
             "text": "風報比達 2 以上；距離頸線在 0%～5%；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-10-08",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -27163,6 +27191,10 @@
           {
             "date": "2026-10-08",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-10-08",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -28531,6 +28563,10 @@
           {
             "date": "2026-10-08",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；距離頸線在 0%～5%；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-10-08",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -32597,6 +32633,10 @@
           {
             "date": "2026-10-08",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-10-08",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -34314,6 +34354,10 @@
           {
             "date": "2026-10-08",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-10-08",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -43978,6 +44022,10 @@
           {
             "date": "2026-10-08",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-10-08",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -44536,8 +44584,8 @@
       "currentProfitPct": -1.91,
       "maxProfitPct": -0.09,
       "result": "",
-      "trackingStatus": "WAIT_CONFIRM",
-      "trackingStatusText": "接近買點，等待收盤確認",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "接近成形＋可觀察",
         "originalSignal": "觀察",
@@ -44575,7 +44623,7 @@
         "closeHeldNeckline": true,
         "inBuyZone": true,
         "aboveBuyZoneHigh": false,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -44589,6 +44637,10 @@
           {
             "date": "2026-10-08",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；距離頸線在 0%～5%；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-10-08",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -44599,7 +44651,7 @@
       "statusHistory": [
         {
           "date": "2026-10-08",
-          "status": "WAIT_CONFIRM",
+          "status": "PULLBACK_CONFIRM",
           "close": 45.7,
           "latestStatus": {
             "latestClose": 45.7,
@@ -165498,12 +165550,12 @@
       "endedAt": "2026-10-08",
       "endReason": "跌破原始停損，型態失敗",
       "endPriority": "STOP_FIRST",
-      "maxHighDuringTracking": 15.1,
+      "maxHighDuringTracking": 15.5,
       "targetHitDate": null,
       "stopLossHitDate": "2026-10-08",
       "finalTrackingStatus": "FAILED",
       "currentProfitPct": -6.5,
-      "maxProfitPct": -6.5,
+      "maxProfitPct": -4.02,
       "result": "型態失敗",
       "trackingStatus": "FAILED",
       "trackingStatusText": "型態失敗，移出追蹤",
