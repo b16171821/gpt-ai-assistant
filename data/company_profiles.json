@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-08 10:17:51",
+  "updatedAt": "2026-10-08 22:01:04",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2889,6 +2889,42 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-10-07 21:52:17"
+    },
+    "台股:8085": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Forward Electronics Co., Ltd. engages in the research, development, manufacture, and sale of TV tuners and precision electronic components in Taiwan. The company offers precision c",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-08 22:01:03"
+    },
+    "台股:3631": {
+      "industry": "Metal Fabrication",
+      "sector": "Industrials",
+      "companyProfile": "Chernan Metal Industrial Corp. engages in the manufacture and sale of tin and tin wires in Taiwan and internationally. It also offers copper, nickel, and germanium products. The co",
+      "theme": "產業：Metal Fabrication｜板塊：Industrials｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-08 22:01:03"
+    },
+    "台股:3265": {
+      "industry": "Semiconductors",
+      "sector": "Technology",
+      "companyProfile": "Winstek Semiconductor Co., Ltd., together with its subsidiaries, engages in the testing of integrated circuits, chip bumping, and wafer packaging services in Taiwan, United State, ",
+      "theme": "產業：Semiconductors｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-08 22:01:04"
+    },
+    "台股:4760": {
+      "industry": "Semiconductor Equipment & Materials",
+      "sector": "Technology",
+      "companyProfile": "Ample Electronic Technology Co.,Ltd. engages in the research, development, design, manufacture, and sale of conductive materials in Taiwan. It offers high-temp. termination silver ",
+      "theme": "產業：Semiconductor Equipment & Materials｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-08 22:01:04"
     }
   }
 }
