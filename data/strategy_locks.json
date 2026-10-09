@@ -1047,7 +1047,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-10-09 01:53:20"
+    "updatedAt": "2026-10-09 10:35:42"
   },
   "台股:2342": {
     "key": "台股:2342",
@@ -1672,7 +1672,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-10-09 01:53:20"
+    "updatedAt": "2026-10-09 10:35:41"
   },
   "台股:3221": {
     "key": "台股:3221",
@@ -1847,7 +1847,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-10-09 01:53:21"
+    "updatedAt": "2026-10-09 10:35:42"
   },
   "台股:3268": {
     "key": "台股:3268",
@@ -2497,7 +2497,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-10-09 01:53:20"
+    "updatedAt": "2026-10-09 10:35:41"
   },
   "台股:3624": {
     "key": "台股:3624",
@@ -2547,7 +2547,7 @@
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-10-09 01:53:20"
+    "updatedAt": "2026-10-09 10:35:42"
   },
   "台股:4127": {
     "key": "台股:4127",
@@ -5864,15 +5864,15 @@
     "originalWinRate": "中",
     "status": "active",
     "createdBy": "strategy-lock-v1",
-    "trackingStatus": "接近第一目標",
-    "currentPrice": 72.09,
+    "trackingStatus": "策略追蹤中",
+    "currentPrice": 71.0,
     "currentTarget": 103.26,
     "currentStopLoss": 71.08,
     "extensionTarget": 103.26,
     "recentCloses": [],
-    "holderAction": "接近原始第一目標，準備分批停利。",
-    "emptyAction": "不追高，等回踩。",
-    "updatedAt": "2026-10-09 01:53:21"
+    "holderAction": "未達第一目標前，守風險區續抱觀察。",
+    "emptyAction": "空手不追高，等突破確認或回踩不破。",
+    "updatedAt": "2026-10-09 10:35:42"
   },
   "美股:KLAC": {
     "key": "美股:KLAC",
@@ -5990,14 +5990,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 284.68,
+    "currentPrice": 274.66,
     "currentTarget": 439.64,
     "currentStopLoss": 292.23,
     "extensionTarget": 439.64,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-10-09 01:53:21"
+    "updatedAt": "2026-10-09 10:35:42"
   },
   "美股:MSFT": {
     "key": "美股:MSFT",
