@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-10-09 10:36:47",
+    "updatedAt": "2026-10-09 21:45:04",
     "version": "strategy-tracking-v4",
     "activeCount": 132,
     "endedCount": 601,
@@ -43912,8 +43912,8 @@
       "currentProfitPct": -1.43,
       "maxProfitPct": 1.38,
       "result": "",
-      "trackingStatus": "BREAKOUT_CONFIRMED",
-      "trackingStatusText": "突破確認，策略成立",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "接近成形＋可觀察",
         "originalSignal": "觀察",
@@ -43951,7 +43951,7 @@
         "closeHeldNeckline": true,
         "inBuyZone": true,
         "aboveBuyZoneHigh": false,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -44063,7 +44063,7 @@
         },
         {
           "date": "2026-10-08",
-          "status": "BREAKOUT_CONFIRMED",
+          "status": "PULLBACK_CONFIRM",
           "close": 198.78,
           "latestStatus": {
             "latestClose": 198.78,
@@ -44271,15 +44271,15 @@
       "endedAt": null,
       "endReason": "",
       "endPriority": null,
-      "maxHighDuringTracking": 218.82,
+      "maxHighDuringTracking": 224.24,
       "targetHitDate": null,
       "stopLossHitDate": null,
       "finalTrackingStatus": null,
       "currentProfitPct": -3.48,
-      "maxProfitPct": -2.59,
+      "maxProfitPct": -0.17,
       "result": "",
-      "trackingStatus": "WAIT_CONFIRM",
-      "trackingStatusText": "接近買點，等待收盤確認",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "接近成形＋可觀察",
         "originalSignal": "觀察",
@@ -44317,7 +44317,7 @@
         "closeHeldNeckline": false,
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -44401,7 +44401,7 @@
         },
         {
           "date": "2026-10-08",
-          "status": "WAIT_CONFIRM",
+          "status": "PULLBACK_CONFIRM",
           "close": 216.81,
           "latestStatus": {
             "latestClose": 216.81,
