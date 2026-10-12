@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-10 09:55:51",
+  "updatedAt": "2026-10-13 00:50:00",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2925,6 +2925,33 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-10-08 22:01:04"
+    },
+    "台股:5205": {
+      "industry": "Software - Application",
+      "sector": "Technology",
+      "companyProfile": "Taiwan Green Environment Technology Inc. engages in water resources operation and waste treatment business in Taiwan. The company offers planning, design, construction, installatio",
+      "theme": "產業：Software - Application｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-13 00:50:00"
+    },
+    "台股:6925": {
+      "industry": "Software - Infrastructure",
+      "sector": "Technology",
+      "companyProfile": "eLand Information Co., Ltd operates as an AI data intelligence company that engages in the research and development of software technologies in China. It develops software in the a",
+      "theme": "產業：Software - Infrastructure｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-13 00:50:00"
+    },
+    "台股:4903": {
+      "industry": "Communication Equipment",
+      "sector": "Technology",
+      "companyProfile": "United Fiber Optic Communication Inc., together with its subsidiaries, engages in the manufacture and sale of fiber and optic cables and transmission equipment in Taiwan and intern",
+      "theme": "產業：Communication Equipment｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-13 00:50:00"
     }
   }
 }

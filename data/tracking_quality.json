@@ -2,7 +2,7 @@
   "meta": {
     "version": "quality-v1",
     "initializedAt": "2026-09-23T02:12:44.245Z",
-    "updatedAt": "2026-10-10T01:56:51.002Z",
+    "updatedAt": "2026-10-12T16:51:31.416Z",
     "policy": "建立時固定資格；歷史回算另列，不以今日條件篩選過去輸贏。"
   },
   "records": {
@@ -21559,6 +21559,780 @@
       "exclusionReasons": [
         "建立時僅供觀察",
         "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:1101:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": true,
+      "metrics": {
+        "expectedProfitPercent": 9.988982739625408,
+        "stopLossDistancePercent": 4.884318766066845,
+        "distanceToNecklinePercent": 1.1235955056179803,
+        "safetyScore": 100,
+        "riskReward": 2.03,
+        "targetProgressPercent": 90.81803005008348,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": true,
+        "reasons": [
+          "獲利空間低於 15%，移入備查，不列主追蹤。"
+        ],
+        "entry": 27.23
+      },
+      "exclusionReasons": [
+        "獲利空間低於 15%，移入備查，不列主追蹤。",
+        "建立時僅供觀察",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:1503:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 11.173656065296928,
+        "stopLossDistancePercent": 4.901960784313733,
+        "distanceToNecklinePercent": -2.3923444976076556,
+        "safetyScore": 100,
+        "riskReward": 2.28,
+        "targetProgressPercent": 87.34177215189874,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": true,
+        "reasons": [
+          "獲利空間低於 15%，移入備查，不列主追蹤。"
+        ],
+        "entry": 213.18
+      },
+      "exclusionReasons": [
+        "獲利空間低於 15%，移入備查，不列主追蹤。",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:1519:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 19.99210422424004,
+        "stopLossDistancePercent": 4.901960784313726,
+        "distanceToNecklinePercent": -2.8187919463087248,
+        "safetyScore": 100,
+        "riskReward": 4.08,
+        "targetProgressPercent": 81.70472242328529,
+        "highQualityTracking": true,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 759.9
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:2027:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 16.920339988139936,
+        "stopLossDistancePercent": 4.90215457600317,
+        "distanceToNecklinePercent": -2.7217741935483897,
+        "safetyScore": 100,
+        "riskReward": 3.45,
+        "targetProgressPercent": 82.41758241758242,
+        "highQualityTracking": true,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 50.59
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:2305:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 61.32521974306964,
+        "stopLossDistancePercent": 4.8951994590939885,
+        "distanceToNecklinePercent": -1.9310344827586285,
+        "safetyScore": 100,
+        "riskReward": 12.51,
+        "targetProgressPercent": 59.59765297569153,
+        "highQualityTracking": true,
+        "highPriority": true,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 73.95
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:2312:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 12.438725490196086,
+        "stopLossDistancePercent": 4.901960784313729,
+        "distanceToNecklinePercent": -1.7187500000000022,
+        "safetyScore": 100,
+        "riskReward": 2.54,
+        "targetProgressPercent": 88.41961852861036,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": true,
+        "reasons": [
+          "獲利空間低於 15%，移入備查，不列主追蹤。"
+        ],
+        "entry": 32.64
+      },
+      "exclusionReasons": [
+        "獲利空間低於 15%，移入備查，不列主追蹤。",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:2367:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 24.621703415477736,
+        "stopLossDistancePercent": 4.907047124945949,
+        "distanceToNecklinePercent": 4.7409040793825765,
+        "safetyScore": 85,
+        "riskReward": 5.02,
+        "targetProgressPercent": 84.04163052905464,
+        "highQualityTracking": true,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 46.26
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:3147:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 32.189542483660134,
+        "stopLossDistancePercent": 4.901960784313726,
+        "distanceToNecklinePercent": -0.33333333333333337,
+        "safetyScore": 100,
+        "riskReward": 13.19,
+        "targetProgressPercent": 78.86279357231149,
+        "highQualityTracking": true,
+        "highPriority": true,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 306
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:3362:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 25.946418171228892,
+        "stopLossDistancePercent": 4.901960784313722,
+        "distanceToNecklinePercent": -2.4752475247524752,
+        "safetyScore": 100,
+        "riskReward": 5.29,
+        "targetProgressPercent": 78.22736030828517,
+        "highQualityTracking": true,
+        "highPriority": true,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 206.04
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:3455:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 47.97120201718588,
+        "stopLossDistancePercent": 4.903619654291505,
+        "distanceToNecklinePercent": -1.353637901861252,
+        "safetyScore": 100,
+        "riskReward": 9.79,
+        "targetProgressPercent": 66.14349775784754,
+        "highQualityTracking": true,
+        "highPriority": true,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 301.41
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:3564:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": true,
+      "metrics": {
+        "expectedProfitPercent": 34.40524508273492,
+        "stopLossDistancePercent": 4.901654698719951,
+        "distanceToNecklinePercent": 9.076433121019113,
+        "safetyScore": 15,
+        "riskReward": 2.32,
+        "targetProgressPercent": 79.79094076655053,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [
+          "安全分未達 85",
+          "距頸線超過 5% 或資料不足"
+        ],
+        "entry": 64.06
+      },
+      "exclusionReasons": [
+        "安全分未達 85",
+        "距頸線超過 5% 或資料不足",
+        "建立時僅供觀察",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:3685:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 13.607352565739081,
+        "stopLossDistancePercent": 4.901710492724027,
+        "distanceToNecklinePercent": 1.041666666666663,
+        "safetyScore": 100,
+        "riskReward": 2.78,
+        "targetProgressPercent": 88.08988764044945,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": true,
+        "reasons": [
+          "獲利空間低於 15%，移入備查，不列主追蹤。"
+        ],
+        "entry": 39.17
+      },
+      "exclusionReasons": [
+        "獲利空間低於 15%，移入備查，不列主追蹤。",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:4167:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 18.47672778561354,
+        "stopLossDistancePercent": 4.936530324400568,
+        "distanceToNecklinePercent": 3.8369304556354775,
+        "safetyScore": 85,
+        "riskReward": 3.77,
+        "targetProgressPercent": 95.03968253968253,
+        "highQualityTracking": true,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 21.27
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:4542:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 37.38920225624496,
+        "stopLossDistancePercent": 4.901960784313726,
+        "distanceToNecklinePercent": -0.9589041095890412,
+        "safetyScore": 100,
+        "riskReward": 7.63,
+        "targetProgressPercent": 70.67448680351906,
+        "highQualityTracking": true,
+        "highPriority": true,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 372.3
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:4743:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 15.437833563945432,
+        "stopLossDistancePercent": 4.90215457600317,
+        "distanceToNecklinePercent": -0.7056451612903254,
+        "safetyScore": 100,
+        "riskReward": 3.15,
+        "targetProgressPercent": 85.78767123287672,
+        "highQualityTracking": true,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 50.59
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:4973:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 20.438904038436558,
+        "stopLossDistancePercent": 4.901960784313732,
+        "distanceToNecklinePercent": 4.635761589403973,
+        "safetyScore": 75,
+        "riskReward": 2.39,
+        "targetProgressPercent": 85.71428571428571,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [
+          "安全分未達 85"
+        ],
+        "entry": 154.02
+      },
+      "exclusionReasons": [
+        "安全分未達 85",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:5205:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "NO_DATA",
+      "effectiveAtCreation": true,
+      "metrics": {
+        "expectedProfitPercent": 42.672274344872214,
+        "stopLossDistancePercent": 4.917502426399222,
+        "distanceToNecklinePercent": 20.792079207920793,
+        "safetyScore": 0,
+        "riskReward": 1.04,
+        "targetProgressPercent": 82.99319727891157,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": true,
+        "reasons": [
+          "安全分未達 85",
+          "風報比未達 2",
+          "距頸線超過 5% 或資料不足"
+        ],
+        "entry": 30.91
+      },
+      "exclusionReasons": [
+        "安全分未達 85",
+        "風報比未達 2",
+        "距頸線超過 5% 或資料不足",
+        "建立時僅供觀察",
+        "建立時不開放進場",
+        "歷史回補"
+      ]
+    },
+    "台股:5230:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 29.983726606997564,
+        "stopLossDistancePercent": 4.882017900732301,
+        "distanceToNecklinePercent": 3.941908713692943,
+        "safetyScore": 75,
+        "riskReward": 4.12,
+        "targetProgressPercent": 84.35054773082942,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [
+          "安全分未達 85"
+        ],
+        "entry": 24.58
+      },
+      "exclusionReasons": [
+        "安全分未達 85",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:6150:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 22.10338680926918,
+        "stopLossDistancePercent": 4.901960784313722,
+        "distanceToNecklinePercent": 4.545454545454546,
+        "safetyScore": 85,
+        "riskReward": 4.51,
+        "targetProgressPercent": 84.67153284671531,
+        "highQualityTracking": true,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 67.32
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:6174:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 36.12056392805056,
+        "stopLossDistancePercent": 4.910063198833254,
+        "distanceToNecklinePercent": 0.991735537190085,
+        "safetyScore": 100,
+        "riskReward": 9.48,
+        "targetProgressPercent": 77.38095238095238,
+        "highQualityTracking": true,
+        "highPriority": true,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 61.71
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:6231:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 20.81600316894435,
+        "stopLossDistancePercent": 4.903941374529609,
+        "distanceToNecklinePercent": 0.20202020202020202,
+        "safetyScore": 100,
+        "riskReward": 4.25,
+        "targetProgressPercent": 83.44262295081967,
+        "highQualityTracking": true,
+        "highPriority": true,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 252.45
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:6234:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 30.016051364365982,
+        "stopLossDistancePercent": 4.907131391882597,
+        "distanceToNecklinePercent": 1.6374269005848021,
+        "safetyScore": 100,
+        "riskReward": 6.13,
+        "targetProgressPercent": 76.63139329805998,
+        "highQualityTracking": true,
+        "highPriority": true,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 43.61
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:6261:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": true,
+      "metrics": {
+        "expectedProfitPercent": 11.964478579143165,
+        "stopLossDistancePercent": 4.896195847833911,
+        "distanceToNecklinePercent": 2.8151774785801678,
+        "safetyScore": 77,
+        "riskReward": 1.96,
+        "targetProgressPercent": 90.03215434083602,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": true,
+        "reasons": [
+          "獲利空間低於 15%，移入備查，不列主追蹤。",
+          "安全分未達 85",
+          "風報比未達 2"
+        ],
+        "entry": 83.33
+      },
+      "exclusionReasons": [
+        "獲利空間低於 15%，移入備查，不列主追蹤。",
+        "安全分未達 85",
+        "風報比未達 2",
+        "建立時僅供觀察",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:6811:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 20.66365007541479,
+        "stopLossDistancePercent": 4.901960784313718,
+        "distanceToNecklinePercent": 0.9157509157509158,
+        "safetyScore": 100,
+        "riskReward": 5.66,
+        "targetProgressPercent": 84.97023809523809,
+        "highQualityTracking": true,
+        "highPriority": true,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 278.46
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:6894:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 20.466487248494175,
+        "stopLossDistancePercent": 4.903242342688709,
+        "distanceToNecklinePercent": -1.6993464052287581,
+        "safetyScore": 100,
+        "riskReward": 4.18,
+        "targetProgressPercent": 84.68085106382979,
+        "highQualityTracking": true,
+        "highPriority": true,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 390.15
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:6925:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "NO_DATA",
+      "effectiveAtCreation": true,
+      "metrics": {
+        "expectedProfitPercent": 26.07820586543991,
+        "stopLossDistancePercent": 4.902242668200111,
+        "distanceToNecklinePercent": 14.956011730205281,
+        "safetyScore": 0,
+        "riskReward": 0.76,
+        "targetProgressPercent": 89.39566704675029,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": true,
+        "reasons": [
+          "安全分未達 85",
+          "風報比未達 2",
+          "距頸線超過 5% 或資料不足"
+        ],
+        "entry": 69.56
+      },
+      "exclusionReasons": [
+        "安全分未達 85",
+        "風報比未達 2",
+        "距頸線超過 5% 或資料不足",
+        "建立時僅供觀察",
+        "建立時不開放進場",
+        "歷史回補"
+      ]
+    },
+    "台股:7751:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 37.54755633596722,
+        "stopLossDistancePercent": 4.901960784313726,
+        "distanceToNecklinePercent": -2.0895522388059704,
+        "safetyScore": 65,
+        "riskReward": 7.66,
+        "targetProgressPercent": 71.48936170212767,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [
+          "安全分未達 85"
+        ],
+        "entry": 1708.5
+      },
+      "exclusionReasons": [
+        "安全分未達 85",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:8093:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": true,
+      "metrics": {
+        "expectedProfitPercent": 29.609346476816356,
+        "stopLossDistancePercent": 4.928806133625415,
+        "distanceToNecklinePercent": 3.5381750465549318,
+        "safetyScore": 60,
+        "riskReward": 4.39,
+        "targetProgressPercent": 79.1549295774648,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [
+          "安全分未達 85"
+        ],
+        "entry": 27.39
+      },
+      "exclusionReasons": [
+        "安全分未達 85",
+        "建立時僅供觀察",
         "建立時不開放進場"
       ]
     }
