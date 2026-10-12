@@ -2,7 +2,7 @@
   "meta": {
     "version": "quality-v1",
     "initializedAt": "2026-09-23T02:12:44.245Z",
-    "updatedAt": "2026-10-12T16:51:31.416Z",
+    "updatedAt": "2026-10-12T20:18:29.766Z",
     "policy": "建立時固定資格；歷史回算另列，不以今日條件篩選過去輸贏。"
   },
   "records": {
@@ -22334,6 +22334,71 @@
         "安全分未達 85",
         "建立時僅供觀察",
         "建立時不開放進場"
+      ]
+    },
+    "美股:SNOW:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 28.984548629484607,
+        "stopLossDistancePercent": 4.902635199492003,
+        "distanceToNecklinePercent": -2.7472675752260174,
+        "safetyScore": 81,
+        "riskReward": 5.91,
+        "targetProgressPercent": 76.00869725749216,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [
+          "安全分未達 85"
+        ],
+        "entry": 377.96
+      },
+      "exclusionReasons": [
+        "安全分未達 85",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "美股:AI:2026-10-12": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-10-12",
+      "eligible": false,
+      "originalMarketRegime": "NO_DATA",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 35.844748858447495,
+        "stopLossDistancePercent": 4.946727549467278,
+        "distanceToNecklinePercent": -9.86024844720498,
+        "safetyScore": 42,
+        "riskReward": 7.25,
+        "targetProgressPercent": 65.04201680672269,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [
+          "安全分未達 85",
+          "距頸線超過 5% 或資料不足",
+          "訊號無效或資料不足",
+          "收盤已觸及原始停損"
+        ],
+        "entry": 13.14
+      },
+      "exclusionReasons": [
+        "安全分未達 85",
+        "距頸線超過 5% 或資料不足",
+        "訊號無效或資料不足",
+        "收盤已觸及原始停損",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場",
+        "歷史回補"
       ]
     }
   }
