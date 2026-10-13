@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13 04:17:19",
+  "updatedAt": "2026-10-13 22:35:44",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2961,6 +2961,24 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-10-13 04:17:19"
+    },
+    "台股:3287": {
+      "industry": "Electronics & Computer Distribution",
+      "sector": "Technology",
+      "companyProfile": "Kworld Computer Co.,Ltd engages in the research and development, manufacture, and sale of computer peripheral products in Taiwan and internationally. It offers gaming earphones; wa",
+      "theme": "產業：Electronics & Computer Distribution｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-13 22:35:44"
+    },
+    "台股:1312": {
+      "industry": "Chemicals",
+      "sector": "Basic Materials",
+      "companyProfile": "Grand Pacific Petrochemical Corporation engages in the manufacture and sale of petrochemical and other chemical products in Taiwan. The company offers styrene monomer, an intermedi",
+      "theme": "產業：Chemicals｜板塊：Basic Materials｜型態：箱型突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-13 22:35:44"
     }
   }
 }
