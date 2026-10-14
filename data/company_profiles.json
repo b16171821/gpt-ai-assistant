@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-13 23:17:21",
+  "updatedAt": "2026-10-14 20:21:19",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -2979,6 +2979,42 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-10-13 22:35:44"
+    },
+    "台股:3354": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Microcosm Technology Co., Ltd., together with its subsidiaries, engages in the development, production, and innovation of FCCL and functional polyimide materials in Taiwan, Malaysi",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-14 20:21:18"
+    },
+    "台股:5340": {
+      "industry": "Textile Manufacturing",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Baotek Industrial Materials Ltd. manufactures and sells fiberglass fabrics for copper clad laminates of various electronic applications. It provides industrial glass fiber products",
+      "theme": "產業：Textile Manufacturing｜板塊：Consumer Cyclical｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-14 20:21:18"
+    },
+    "台股:4577": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "companyProfile": "Ofuna Technology Co., Ltd. designs, manufactures, and sells drilling machines and related services in Taiwan, China, and Japan. The company provides laser drilling machines; precis",
+      "theme": "產業：Specialty Industrial Machinery｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、題材命中、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-14 20:21:18"
+    },
+    "台股:3580": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "companyProfile": "UVAT Technology Co., Ltd. engages in the design and development of physical vapor deposition equipment and coating machines in Taiwan and internationally. The company offers sputte",
+      "theme": "產業：Specialty Industrial Machinery｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-14 20:21:19"
     }
   }
 }
