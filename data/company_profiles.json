@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-15 08:52:48",
+  "updatedAt": "2026-10-15 20:04:42",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -3015,6 +3015,15 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-10-14 20:21:19"
+    },
+    "台股:8437": {
+      "industry": "Education & Training Services",
+      "sector": "Consumer Defensive",
+      "companyProfile": "Dadi Early-Childhood Education Group Limited, together with its subsidiaries, provides early childhood education management consulting services in Mainland China, Hong Kong, and Ta",
+      "theme": "產業：Education & Training Services｜板塊：Consumer Defensive｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-15 20:04:42"
     }
   }
 }
