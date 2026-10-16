@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16 08:46:04",
+  "updatedAt": "2026-10-16 19:52:54",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -3024,6 +3024,33 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-10-15 20:04:42"
+    },
+    "台股:1815": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Fulltech Fiber Glass Corp., together with its subsidiaries, produces and sells fiberglass yarns and fabrics in Taiwan and China. The company operates through Fiberglass Yarn and Fi",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-16 19:52:53"
+    },
+    "台股:6751": {
+      "industry": "Information Technology Services",
+      "sector": "Technology",
+      "companyProfile": "Acer Synergy Tech Corp. provides IT solutions and services. It provides enterprise architecture solutions, including Data center planning and design, network planning and design, i",
+      "theme": "產業：Information Technology Services｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-16 19:52:54"
+    },
+    "台股:6234": {
+      "industry": "Tools & Accessories",
+      "sector": "Industrials",
+      "companyProfile": "Tera Autotech Corporation engages in the research and development, design, manufacture, sale, and import and export of industrial automation equipment in Taiwan and China. The comp",
+      "theme": "產業：Tools & Accessories｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-16 19:52:54"
     }
   }
 }
