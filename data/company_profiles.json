@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-16 23:23:37",
+  "updatedAt": "2026-10-19 21:56:47",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -3051,6 +3051,33 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-10-16 19:52:54"
+    },
+    "台股:4706": {
+      "industry": "Specialty Chemicals",
+      "sector": "Basic Materials",
+      "companyProfile": "Tah Kong Chemical Industrial Corporation manufactures, processes, and sells paints, pigments, and intermediates in Taiwan, Asia, and internationally. The company offers PVC, PU, an",
+      "theme": "產業：Specialty Chemicals｜板塊：Basic Materials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-19 21:56:47"
+    },
+    "台股:5498": {
+      "industry": "Tools & Accessories",
+      "sector": "Industrials",
+      "companyProfile": "Key Ware Electronics Co., Ltd. engages in the design, manufacture, processing, and distribution of printed circuit board materials in Taiwan, Mainland China, and Thailand. It provi",
+      "theme": "產業：Tools & Accessories｜板塊：Industrials｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-19 21:56:47"
+    },
+    "台股:6418": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Y-S Electronic Co., Ltd. manufactures and sells cable assemblies, connectors, and PCB assemblies in Taiwan, rest of Asia, and internationally. The company offers cable assemblies a",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：箱型突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-19 21:56:47"
     }
   }
 }
