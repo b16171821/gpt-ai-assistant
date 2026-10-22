@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-10-21T16:00:01+00:00",
+    "updatedAt": "2026-10-22T12:23:33+00:00",
     "status": "WARNING",
     "errorCount": 0,
     "warningCount": 1,
@@ -10,10 +10,10 @@
     "twStocks": {
       "market": "台股",
       "status": "WARNING",
-      "updatedAt": "2026-10-21T23:58:06.344296+08:00",
-      "lastTradingDate": "2026-10-21",
+      "updatedAt": "2026-10-22T20:21:35.042922+08:00",
+      "lastTradingDate": "2026-10-22",
       "completenessPct": 100.0,
-      "rowCount": 1168,
+      "rowCount": 1160,
       "source": "臺灣證券交易所與證券櫃檯買賣中心正式收盤資料",
       "apiStatus": "DEGRADED",
       "tradingDayCoverage": "CURRENT_SNAPSHOT_ONLY",
@@ -23,7 +23,7 @@
           "code": "UPSTREAM_ERRORS",
           "message": "上游掃描器回報部分錯誤",
           "context": {
-            "count": 31
+            "count": 38
           }
         }
       ]
@@ -31,8 +31,8 @@
     "usStocks": {
       "market": "美股",
       "status": "HEALTHY",
-      "updatedAt": "2026/10/21 23:58:15 CST",
-      "lastTradingDate": "2026-10-20",
+      "updatedAt": "2026/10/22 20:21:44 CST",
+      "lastTradingDate": "2026-10-21",
       "completenessPct": 100.0,
       "rowCount": 70,
       "source": "Yahoo Finance via yfinance",
@@ -42,8 +42,8 @@
     },
     "disposition": {
       "status": "HEALTHY",
-      "updatedAt": "2026-10-21T23:58:36+08:00",
-      "recordCount": 1168,
+      "updatedAt": "2026-10-22T20:21:53+08:00",
+      "recordCount": 1160,
       "sourceHealth": {
         "TWSE": true,
         "TPEX": true
@@ -52,7 +52,7 @@
     },
     "strategySnapshots": {
       "status": "HEALTHY",
-      "recordCount": 345,
+      "recordCount": 350,
       "issues": []
     }
   },
