@@ -8,6 +8,7 @@ on:
       - 'scripts/update_tw_stock_scanner.py'
       - 'scripts/tw_official_data.py'
       - 'scripts/update_us_stock_scanner.py'
+      - 'scripts/run_us_update.py'
       - 'scripts/market_filter.py'
       - 'scripts/update_strategy_tracking.py'
       - 'scripts/update_strategy_snapshots.py'
@@ -70,7 +71,7 @@ jobs:
           pip install yfinance pandas numpy twstock
       - name: Sync latest main before scanning
         run: git pull --ff-only origin main
-      - name: Run scanners and follow-up updates
+      - name: Update and verify Taiwan closing data
         run: |
           set -o pipefail
           python scripts/update_tw_stock_scanner.py 2>&1 | tee tw-scanner.log || {
@@ -79,11 +80,12 @@ jobs:
             exit 1
           }
           python scripts/check_update_freshness.py
-          python scripts/update_us_stock_scanner.py 2>&1 | tee us-scanner.log || {
-            message="$(tail -n 12 us-scanner.log | tr '\n' ' ' | sed 's/%/%25/g; s/\r/%0D/g')"
-            echo "::error title=美股完整收盤更新失敗::$message"
-            exit 1
-          }
+      - name: Update US closing data with last-good recovery
+        id: us_update
+        continue-on-error: true
+        run: python scripts/run_us_update.py
+      - name: Update follow-up data and validate
+        run: |
           python scripts/update_disposition_risk.py
           python scripts/update_company_profiles.py
           python scripts/update_strategy_locks.py
@@ -106,3 +108,8 @@ jobs:
             git commit -m update-data
             git push
           fi
+      - name: Report incomplete US update after publishing valid Taiwan data
+        if: ${{ success() && steps.us_update.outcome == 'failure' }}
+        run: |
+          echo "::error title=美股資料未完成更新::台股已通過驗證並發布；美股保留上次收盤資料，請檢查 US update 步驟。"
+          exit 1
