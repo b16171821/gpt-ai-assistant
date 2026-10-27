@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-23 23:45:49",
+  "updatedAt": "2026-10-27 22:46:24",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -3150,6 +3150,51 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-10-22 20:21:54"
+    },
+    "台股:6140": {
+      "industry": "Electronics & Computer Distribution",
+      "sector": "Technology",
+      "companyProfile": "Dimension Computer Technology Co., Ltd. provides software and hardware systems for corporate customers in Taiwan and the Mainland China. It provides consultancy, education training",
+      "theme": "產業：Electronics & Computer Distribution｜板塊：Technology｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-27 22:46:23"
+    },
+    "台股:2328": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Pan-International Industrial Corp., together with its subsidiaries, provides electronic manufacturing services to technology companies in China, Hong Kong, Malaysia, the United Sta",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-27 22:46:23"
+    },
+    "台股:4533": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "companyProfile": "Shieh Yih Machinery Industry Co., Ltd., together with its subsidiaries, designs, develops, manufactures, and sells machinery in China, Taiwan, America, Europe, and internationally.",
+      "theme": "產業：Specialty Industrial Machinery｜板塊：Industrials｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-27 22:46:24"
+    },
+    "台股:4563": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "companyProfile": "Quaser Machine Tools, Inc. engages in the manufacture and sale of computer numerical control (CNC) machine centers, metal-working machines, and related machines in Europe, Asia, th",
+      "theme": "產業：Specialty Industrial Machinery｜板塊：Industrials｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-27 22:46:24"
+    },
+    "台股:6245": {
+      "industry": "Communication Equipment",
+      "sector": "Technology",
+      "companyProfile": "Lanner Electronics Inc., together with its subsidiaries, engages in the provision of design, engineering, and manufacturing services for network appliances and rugged industrial co",
+      "theme": "產業：Communication Equipment｜板塊：Technology｜型態：箱型突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-27 22:46:24"
     }
   }
 }
