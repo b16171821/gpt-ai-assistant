@@ -1,577 +1,612 @@
 {
   "meta": {
-    "updatedAt": "2026-10-27T15:03:56.259340+00:00",
-    "asOfDate": "2026-10-27"
+    "updatedAt": "2026-10-28T13:33:16.530602+00:00",
+    "asOfDate": "2026-10-28"
   },
   "records": {
+    "台股:2328": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
     "台股:3498": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:6148": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:6199": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:6811": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2034": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2031": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2377": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2379": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:6690": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2353": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2352": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2006": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2347": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1102": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2027": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1101": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:3293": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2374": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:4953": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1216": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2201": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2069": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:4533": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2382": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2357": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:6263": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1319": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1477": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:6140": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:6240": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:8093": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:8905": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:6870": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1558": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:7584": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1416": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:3558": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:6506": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1456": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:4584": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:3666": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:9950": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2107": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1236": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2235": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1582": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:5206": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2756": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:5514": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2937": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:6616": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:8942": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
     "台股:1303": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
-    "台股:1304": {
+    "台股:6179": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
-    "台股:1314": {
+    "台股:6199": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1326": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1402": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1440": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1528": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1569": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1608": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1710": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1714": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1802": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1808": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:1904": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2033": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2104": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2207": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2241": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2312": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2323": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2328": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2330": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2355": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2362": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:2371": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:3147": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:3324": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:3354": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:3374": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:3564": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:3580": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:3631": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:4167": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:4563": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:4577": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:4706": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:4908": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:5009": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:5013": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:5209": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
-      "reason": "個股與大盤的 5 日期間不一致"
-    },
-    "台股:5228": {
-      "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
     "台股:5230": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
-    "台股:5426": {
+    "台股:3147": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
-    "台股:5432": {
+    "台股:3691": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
-    "台股:6015": {
+    "台股:2034": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
-    "台股:6021": {
+    "台股:2377": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
-    "台股:6122": {
+    "台股:6894": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
-    "台股:6150": {
+    "台股:2357": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
-    "台股:6218": {
+    "台股:2006": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
-    "台股:6221": {
+    "台股:2379": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
-    "台股:6233": {
+    "台股:1102": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
-    "台股:6234": {
+    "台股:2347": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
-    "台股:6245": {
+    "台股:1101": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
-    "台股:6418": {
+    "台股:2027": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6690": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:3293": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:4953": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2069": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2352": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2312": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
     "台股:6425": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1809": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2355": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1528": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6811": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:4716": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6146": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2382": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:8383": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1319": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1477": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6240": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:4706": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6506": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6026": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1323": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:4510": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6150": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:4714": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2031": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1416": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:3558": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:8905": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2023": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2065": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1456": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:3666": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2756": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2107": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:8455": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6560": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1789": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2235": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6865": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2362": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:5206": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:8034": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:4131": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6616": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6470": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1216": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1304": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1314": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1326": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1402": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1440": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1569": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1710": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1714": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1802": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1808": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:1904": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2033": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2104": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2201": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2207": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2241": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2323": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2330": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2353": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:2371": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:3324": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:3354": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:3374": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:3564": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:3580": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:3631": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:4139": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:4167": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:4533": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:4563": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:4577": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:4908": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:5009": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:5013": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:5209": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:5228": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:5426": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:5432": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6015": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6021": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6122": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6218": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6221": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6233": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6234": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6245": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6418": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
     "台股:6517": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
     "台股:6620": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
     "台股:6751": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:6870": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
     "台股:6877": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
+      "reason": "個股與大盤的 5 日期間不一致"
+    },
+    "台股:7704": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
     "台股:8050": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
     "台股:8089": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     },
-    "台股:8099": {
+    "台股:8093": {
       "status": "UNAVAILABLE",
-      "asOfDate": "2026-10-27",
+      "asOfDate": "2026-10-28",
       "reason": "個股與大盤的 5 日期間不一致"
     }
   }
