@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-10-28 21:33:15",
+    "updatedAt": "2026-10-28 22:36:43",
     "version": "strategy-tracking-v4",
     "activeCount": 94,
     "endedCount": 781,
@@ -10,7 +10,7 @@
     "maxWaitingTradingDays": 15,
     "legacyLocksImported": 285,
     "legacySnapshotStocksImported": 357,
-    "lifecycleHistoriesEvaluated": 871
+    "lifecycleHistoriesEvaluated": 873
   },
   "records": [
     {
@@ -19846,8 +19846,8 @@
       "currentProfitPct": -3.74,
       "maxProfitPct": -2.77,
       "result": "",
-      "trackingStatus": "WAIT_CONFIRM",
-      "trackingStatusText": "接近買點，等待收盤確認",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "接近成形＋可觀察",
         "originalSignal": "觀察",
@@ -19885,7 +19885,7 @@
         "closeHeldNeckline": false,
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -20025,7 +20025,7 @@
         },
         {
           "date": "2026-10-28",
-          "status": "WAIT_CONFIRM",
+          "status": "PULLBACK_CONFIRM",
           "close": 29.85,
           "latestStatus": {
             "latestClose": 29.85,
@@ -29265,8 +29265,8 @@
       "currentProfitPct": -3.04,
       "maxProfitPct": -3.04,
       "result": "",
-      "trackingStatus": "WAIT_CONFIRM",
-      "trackingStatusText": "接近買點，等待收盤確認",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "接近成形＋可觀察",
         "originalSignal": "觀察",
@@ -29304,7 +29304,7 @@
         "closeHeldNeckline": true,
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -29318,6 +29318,10 @@
           {
             "date": "2026-10-28",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；距離頸線在 0%～5%；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-10-28",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -29328,7 +29332,7 @@
       "statusHistory": [
         {
           "date": "2026-10-28",
-          "status": "WAIT_CONFIRM",
+          "status": "PULLBACK_CONFIRM",
           "close": 131.0,
           "latestStatus": {
             "latestClose": 131.0,
@@ -36259,6 +36263,10 @@
           {
             "date": "2026-10-28",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-10-28",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -42088,8 +42096,8 @@
       "currentProfitPct": -3.53,
       "maxProfitPct": -3.29,
       "result": "",
-      "trackingStatus": "WAIT_CONFIRM",
-      "trackingStatusText": "接近買點，等待收盤確認",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "接近成形＋可觀察",
         "originalSignal": "觀察",
@@ -42127,7 +42135,7 @@
         "closeHeldNeckline": false,
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -42141,6 +42149,10 @@
           {
             "date": "2026-10-28",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-10-28",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -42151,7 +42163,7 @@
       "statusHistory": [
         {
           "date": "2026-10-28",
-          "status": "WAIT_CONFIRM",
+          "status": "PULLBACK_CONFIRM",
           "close": 407.0,
           "latestStatus": {
             "latestClose": 407.0,
