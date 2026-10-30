@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-30 10:10:30",
+  "updatedAt": "2026-10-30 21:31:34",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -3213,6 +3213,33 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-10-28 21:31:42"
+    },
+    "台股:6590": {
+      "industry": "Software - Application",
+      "sector": "Technology",
+      "companyProfile": "Provision Information Co.,Ltd. provides payment solutions, financial application, security solutions, and outsourcing services in Taiwan. The company offers payment solutions such ",
+      "theme": "產業：Software - Application｜板塊：Technology｜型態：旗型整理突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-30 21:31:33"
+    },
+    "台股:6697": {
+      "industry": "Information Technology Services",
+      "sector": "Technology",
+      "companyProfile": "Information Technology Total Services Co., Ltd provides applications and services of the information technology outsourcing (ITO), business process outsourcing (BPO), and applicati",
+      "theme": "產業：Information Technology Services｜板塊：Technology｜型態：接近成形｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-30 21:31:34"
+    },
+    "台股:4568": {
+      "industry": "Specialty Industrial Machinery",
+      "sector": "Industrials",
+      "companyProfile": "Koge Micro Tech Co., Ltd. manufactures and sells air pumps, precision instruments, and medical equipment in Mainland China, Taiwan, the United States, and Vietnam. The company offe",
+      "theme": "產業：Specialty Industrial Machinery｜板塊：Industrials｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-10-30 21:31:34"
     }
   }
 }
