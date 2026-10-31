@@ -2,8 +2,8 @@
   "status": "OK",
   "source": "Google Analytics 4",
   "metric": "totalUsers",
-  "totalUsers": 6,
+  "totalUsers": 7,
   "startDate": "2026-09-29",
   "throughDate": "2026-11-01",
-  "updatedAt": "2026-10-31T18:45:50.479782+00:00"
+  "updatedAt": "2026-10-31T21:54:29.580985+00:00"
 }
