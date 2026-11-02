@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-11-03 01:09:18",
+    "updatedAt": "2026-11-03 04:49:48",
     "version": "strategy-tracking-v4",
     "activeCount": 65,
     "endedCount": 824,
@@ -10,7 +10,7 @@
     "maxWaitingTradingDays": 15,
     "legacyLocksImported": 292,
     "legacySnapshotStocksImported": 362,
-    "lifecycleHistoriesEvaluated": 885
+    "lifecycleHistoriesEvaluated": 887
   },
   "records": [
     {
@@ -16039,6 +16039,10 @@
           {
             "date": "2026-11-02",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-11-02",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -24686,6 +24690,10 @@
           {
             "date": "2026-11-02",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-11-02",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -27014,8 +27022,8 @@
       "currentProfitPct": 4.33,
       "maxProfitPct": 4.33,
       "result": "",
-      "trackingStatus": "BREAKOUT_CONFIRMED",
-      "trackingStatusText": "突破確認，策略成立",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "接近成形＋可觀察",
         "originalSignal": "觀察",
@@ -27053,7 +27061,7 @@
         "closeHeldNeckline": true,
         "inBuyZone": true,
         "aboveBuyZoneHigh": true,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -27109,7 +27117,7 @@
         },
         {
           "date": "2026-11-02",
-          "status": "BREAKOUT_CONFIRMED",
+          "status": "PULLBACK_CONFIRM",
           "close": 24.95,
           "latestStatus": {
             "latestClose": 24.95,
@@ -33732,6 +33740,10 @@
           {
             "date": "2026-11-02",
             "text": "風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-11-02",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
