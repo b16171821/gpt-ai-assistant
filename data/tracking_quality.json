@@ -2,7 +2,7 @@
   "meta": {
     "version": "quality-v1",
     "initializedAt": "2026-09-23T02:12:44.245Z",
-    "updatedAt": "2026-10-31T01:51:08.756Z",
+    "updatedAt": "2026-11-02T17:09:20.951Z",
     "policy": "建立時固定資格；歷史回算另列，不以今日條件篩選過去輸贏。"
   },
   "records": {
@@ -25803,6 +25803,166 @@
       },
       "exclusionReasons": [
         "獲利空間低於 15%，移入備查，不列主追蹤。",
+        "安全分未達 85",
+        "風報比未達 2",
+        "距頸線超過 5% 或資料不足",
+        "訊號無效或資料不足",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場",
+        "歷史回補"
+      ]
+    },
+    "台股:2352:2026-11-02": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-11-02",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 13.56843992827256,
+        "stopLossDistancePercent": 4.901374775851765,
+        "distanceToNecklinePercent": -2.59146341463414,
+        "safetyScore": 100,
+        "riskReward": 2.77,
+        "targetProgressPercent": 88.94736842105262,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": true,
+        "reasons": [
+          "獲利空間低於 15%，移入備查，不列主追蹤。"
+        ],
+        "entry": 33.46
+      },
+      "exclusionReasons": [
+        "獲利空間低於 15%，移入備查，不列主追蹤。",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:5426:2026-11-02": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-11-02",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 21.725051516043575,
+        "stopLossDistancePercent": 4.916102443332358,
+        "distanceToNecklinePercent": -1.3513513513513387,
+        "safetyScore": 100,
+        "riskReward": 4.43,
+        "targetProgressPercent": 79.44377267230955,
+        "highQualityTracking": true,
+        "highPriority": true,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 33.97
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:7704:2026-11-02": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-11-02",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 25.060591371788664,
+        "stopLossDistancePercent": 4.907901114881238,
+        "distanceToNecklinePercent": 5.067985166872675,
+        "safetyScore": 35,
+        "riskReward": 5.11,
+        "targetProgressPercent": 93.02325581395348,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [
+          "安全分未達 85",
+          "距頸線超過 5% 或資料不足"
+        ],
+        "entry": 82.52
+      },
+      "exclusionReasons": [
+        "安全分未達 85",
+        "距頸線超過 5% 或資料不足",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:8272:2026-11-02": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-11-02",
+      "eligible": false,
+      "originalMarketRegime": "NO_DATA",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 13.228389947528305,
+        "stopLossDistancePercent": 4.901960784313721,
+        "distanceToNecklinePercent": 20.985915492957755,
+        "safetyScore": 0,
+        "riskReward": 0,
+        "targetProgressPercent": 104.75609756097562,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": true,
+        "reasons": [
+          "獲利空間低於 15%，移入備查，不列主追蹤。",
+          "安全分未達 85",
+          "風報比未達 2",
+          "距頸線超過 5% 或資料不足",
+          "訊號無效或資料不足"
+        ],
+        "entry": 72.42
+      },
+      "exclusionReasons": [
+        "獲利空間低於 15%，移入備查，不列主追蹤。",
+        "安全分未達 85",
+        "風報比未達 2",
+        "距頸線超過 5% 或資料不足",
+        "訊號無效或資料不足",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場",
+        "歷史回補"
+      ]
+    },
+    "台股:8455:2026-11-02": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-11-02",
+      "eligible": false,
+      "originalMarketRegime": "NO_DATA",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 15.215801024140454,
+        "stopLossDistancePercent": 4.901243599122164,
+        "distanceToNecklinePercent": 19.216417910447756,
+        "safetyScore": 0,
+        "riskReward": 0,
+        "targetProgressPercent": 101.42857142857142,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": true,
+        "reasons": [
+          "安全分未達 85",
+          "風報比未達 2",
+          "距頸線超過 5% 或資料不足",
+          "訊號無效或資料不足"
+        ],
+        "entry": 27.34
+      },
+      "exclusionReasons": [
         "安全分未達 85",
         "風報比未達 2",
         "距頸線超過 5% 或資料不足",
