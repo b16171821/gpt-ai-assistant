@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-03 11:44:59",
+  "updatedAt": "2026-11-03 22:40:04",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -3258,6 +3258,15 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-11-03 01:07:17"
+    },
+    "台股:5202": {
+      "industry": "Software - Application",
+      "sector": "Technology",
+      "companyProfile": "NewSoft Technology Corporation, a technology company, provides digital transformation services for enterprises in Taiwan, China, Japan, and internationally. The company offers AI-O",
+      "theme": "產業：Software - Application｜板塊：Technology｜型態：三角收斂突破｜原因：趨勢多頭、量能放大、價量條件足",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-11-03 22:40:03"
     }
   }
 }
