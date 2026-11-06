@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAtET": "2026/11/05 21:50:14 EST",
-    "updatedAtTW": "2026/11/06 10:50:14 CST",
+    "updatedAtET": "2026/11/06 09:36:57 EST",
+    "updatedAtTW": "2026/11/06 22:36:57 CST",
     "strategyAsOfDate": "2026-11-05",
     "completedDataDate": "2026-11-05",
     "freshnessStatus": "COMPLETE",
@@ -9,7 +9,7 @@
     "staleCount": 0,
     "priceType": "收盤確認價",
     "dataPolicy": "只使用完整收盤日K，不使用盤中未完成K",
-    "sessionStatus": "收盤後",
+    "sessionStatus": "盤中",
     "mode": "us-pattern-close-only-scan",
     "source": "Yahoo Finance via yfinance",
     "totalWatchlist": 74,
@@ -37,14 +37,14 @@
       "noNewHighWarning": true,
       "weighted": {
         "name": "加權指數",
-        "date": "2026-11-05",
+        "date": "2026-11-06",
         "status": "跌破月線",
-        "close": 7353.73,
-        "ma5": 7546.55,
-        "ma10": 7622.02,
-        "ma20": 7679.54,
+        "close": 7384.15,
+        "ma5": 7507.36,
+        "ma10": 7598.06,
+        "ma20": 7658.17,
         "recentHigh": 7844.52,
-        "closeToHighPct": 6.26,
+        "closeToHighPct": 5.87,
         "newHigh": false,
         "nearRecentHigh": false,
         "closeAboveMA5": false,
@@ -54,7 +54,7 @@
         "ma20Up": false,
         "ma20FlatOrDown": true,
         "failedNewHigh": true,
-        "lowerLow": true,
+        "lowerLow": false,
         "lowerLows": false,
         "longBlack": false,
         "supportBroken": false,
@@ -63,14 +63,14 @@
       },
       "otc": {
         "name": "櫃買指數",
-        "date": "2026-11-05",
+        "date": "2026-11-06",
         "status": "跌破月線",
-        "close": 24315.0,
-        "ma5": 25204.97,
-        "ma10": 25736.19,
-        "ma20": 26214.59,
+        "close": 24611.12,
+        "ma5": 25039.79,
+        "ma10": 25601.77,
+        "ma20": 26076.83,
         "recentHigh": 27722.75,
-        "closeToHighPct": 12.29,
+        "closeToHighPct": 11.22,
         "newHigh": false,
         "nearRecentHigh": false,
         "closeAboveMA5": false,
@@ -80,9 +80,9 @@
         "ma20Up": false,
         "ma20FlatOrDown": true,
         "failedNewHigh": true,
-        "lowerLow": true,
+        "lowerLow": false,
         "lowerLows": false,
-        "longBlack": true,
+        "longBlack": false,
         "supportBroken": false,
         "isWeak": true,
         "dataOk": true
@@ -96,7 +96,7 @@
     },
     "errors": [],
     "profileEnriched": true,
-    "profileUpdatedAt": "2026-11-06 10:50:28"
+    "profileUpdatedAt": "2026-11-06 22:37:04"
   },
   "market": {
     "indexes": {
@@ -147,14 +147,14 @@
       "noNewHighWarning": true,
       "weighted": {
         "name": "加權指數",
-        "date": "2026-11-05",
+        "date": "2026-11-06",
         "status": "跌破月線",
-        "close": 7353.73,
-        "ma5": 7546.55,
-        "ma10": 7622.02,
-        "ma20": 7679.54,
+        "close": 7384.15,
+        "ma5": 7507.36,
+        "ma10": 7598.06,
+        "ma20": 7658.17,
         "recentHigh": 7844.52,
-        "closeToHighPct": 6.26,
+        "closeToHighPct": 5.87,
         "newHigh": false,
         "nearRecentHigh": false,
         "closeAboveMA5": false,
@@ -164,7 +164,7 @@
         "ma20Up": false,
         "ma20FlatOrDown": true,
         "failedNewHigh": true,
-        "lowerLow": true,
+        "lowerLow": false,
         "lowerLows": false,
         "longBlack": false,
         "supportBroken": false,
@@ -173,14 +173,14 @@
       },
       "otc": {
         "name": "櫃買指數",
-        "date": "2026-11-05",
+        "date": "2026-11-06",
         "status": "跌破月線",
-        "close": 24315.0,
-        "ma5": 25204.97,
-        "ma10": 25736.19,
-        "ma20": 26214.59,
+        "close": 24611.12,
+        "ma5": 25039.79,
+        "ma10": 25601.77,
+        "ma20": 26076.83,
         "recentHigh": 27722.75,
-        "closeToHighPct": 12.29,
+        "closeToHighPct": 11.22,
         "newHigh": false,
         "nearRecentHigh": false,
         "closeAboveMA5": false,
@@ -190,9 +190,9 @@
         "ma20Up": false,
         "ma20FlatOrDown": true,
         "failedNewHigh": true,
-        "lowerLow": true,
+        "lowerLow": false,
         "lowerLows": false,
-        "longBlack": true,
+        "longBlack": false,
         "supportBroken": false,
         "isWeak": true,
         "dataOk": true
@@ -281,7 +281,7 @@
       "theme": "型態：接近成形｜原因：量能放大",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -351,7 +351,7 @@
       "theme": "型態：接近成形｜原因：均線多頭排列",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -421,7 +421,7 @@
       "theme": "型態：三角收斂突破｜原因：均線多頭排列",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -491,7 +491,7 @@
       "theme": "型態：接近成形｜原因：均線多頭排列",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -911,7 +911,7 @@
       "theme": "型態：接近成形｜原因：量能放大",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -1051,7 +1051,7 @@
       "theme": "型態：接近成形｜原因：量能放大",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -1121,7 +1121,7 @@
       "theme": "型態：接近成形｜原因：量能放大",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -1471,7 +1471,7 @@
       "theme": "型態：接近成形｜原因：量能放大",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -1611,7 +1611,7 @@
       "theme": "型態：接近成形｜原因：量能放大",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -1681,7 +1681,7 @@
       "theme": "型態：接近成形｜原因：量能放大",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -2031,7 +2031,7 @@
       "theme": "型態：接近成形｜原因：量能放大",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -2521,7 +2521,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -2591,7 +2591,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -2661,7 +2661,7 @@
       "theme": "型態：旗型整理突破｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -2941,7 +2941,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -3081,7 +3081,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -3221,7 +3221,7 @@
       "theme": "型態：三角收斂突破｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -3501,7 +3501,7 @@
       "theme": "型態：三角收斂突破｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -3571,7 +3571,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -3641,7 +3641,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -3781,7 +3781,7 @@
       "theme": "型態：三角收斂突破｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -3851,7 +3851,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -3921,7 +3921,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -4481,7 +4481,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -4761,7 +4761,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -4831,7 +4831,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -4901,7 +4901,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     },
     {
       "date": "2026-11-05",
@@ -5111,7 +5111,7 @@
       "theme": "型態：接近成形｜原因：條件不足",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-06 10:50:28"
+      "profileUpdatedAt": "2026-11-06 22:37:04"
     }
   ]
 }
