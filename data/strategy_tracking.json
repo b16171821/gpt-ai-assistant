@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-11-06 22:38:42",
+    "updatedAt": "2026-11-07 01:59:54",
     "version": "strategy-tracking-v4",
     "activeCount": 25,
     "endedCount": 874,
@@ -13994,8 +13994,8 @@
       "currentProfitPct": -2.35,
       "maxProfitPct": 10.1,
       "result": "",
-      "trackingStatus": "WAIT_CONFIRM",
-      "trackingStatusText": "接近買點，等待收盤確認",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "接近成形＋可觀察",
         "originalSignal": "觀察",
@@ -14033,7 +14033,7 @@
         "closeHeldNeckline": true,
         "inBuyZone": true,
         "aboveBuyZoneHigh": false,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -14047,6 +14047,10 @@
           {
             "date": "2026-11-06",
             "text": "風報比達 2 以上；距離頸線在 0%～5%；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-11-06",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -14057,7 +14061,7 @@
       "statusHistory": [
         {
           "date": "2026-11-06",
-          "status": "WAIT_CONFIRM",
+          "status": "PULLBACK_CONFIRM",
           "close": 54.9,
           "latestStatus": {
             "latestClose": 54.9,
