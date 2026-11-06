@@ -1,0 +1,345 @@
+{
+  "schemaVersion": 1,
+  "direction": "SHORT",
+  "version": "short-v1.0-approved-2026-11-06",
+  "summary": "三頁獨立放空系統；原207個追蹤檔案內容未變。技術訊號與交易資格分開，尚未核實券商庫存的標的一律僅供觀察。",
+  "legacyProtection": {
+    "baseCommit": "0d9b972dd5d1e38903bd07a772645053819f4097",
+    "originalTrackedFiles": 207,
+    "changedOriginalFiles": [],
+    "sourceRegression": "原台股固定輸出與美股上升／下降／盤整固定輸出通過"
+  },
+  "newFiles": [
+    ".github/workflows/short-quality.yml",
+    ".github/workflows/update-short-data.yml",
+    "data/short/.gitignore",
+    "data/short/delivery.json",
+    "data/short/locks.json",
+    "data/short/research_summary.json",
+    "data/short/snapshots.json",
+    "data/short/tracking.json",
+    "data/short/universe.json",
+    "requirements-short.txt",
+    "scripts/short/__init__.py",
+    "scripts/short/backtest.py",
+    "scripts/short/check_legacy.py",
+    "scripts/short/config.py",
+    "scripts/short/eligibility.py",
+    "scripts/short/engine.py",
+    "scripts/short/index_history.py",
+    "scripts/short/public_data.py",
+    "scripts/short/run_update.py",
+    "scripts/short/sources.py",
+    "scripts/short/tracking.py",
+    "scripts/short/validation.py",
+    "short/FULL_PACKAGE.txt",
+    "short/README.md",
+    "short/STRATEGY_SPEC.md",
+    "short/favicon.svg",
+    "short/index.html",
+    "short/package-lock.json",
+    "short/package.json",
+    "short/short-app.js",
+    "short/short-position-calculator.mjs",
+    "short/short-ui.css",
+    "tests/short/__init__.py",
+    "tests/short/legacy_source_hashes.json",
+    "tests/short/legacy_us_fixture.json",
+    "tests/short/short-calculator.node.mjs",
+    "tests/short/short-ui.node.mjs",
+    "tests/short/test_backtest.py",
+    "tests/short/test_legacy_isolation.py",
+    "tests/short/test_public_data.py",
+    "tests/short/test_short_core.py"
+  ],
+  "modifiedExistingFiles": [],
+  "modules": {
+    "sharedReadOnly": [
+      "TWSE／TPEx官方來源解析工具",
+      "現行美股觀察清單與名稱",
+      "原深色介面設計語彙（複製樣式，不修改原檔）"
+    ],
+    "isolated": [
+      "scripts/short策略與資料流程",
+      "data/short資料、原始計畫鎖定、快照與追蹤",
+      "short三頁前端與部位計算",
+      "tests/short回歸及因果性測試",
+      "兩個獨立GitHub Actions工作流程",
+      "shortObservation.v1.*瀏覽器儲存"
+    ]
+  },
+  "parameters": {
+    "version": "short-v1.0-approved-2026-11-06",
+    "min_history": 120,
+    "ma_fast": 20,
+    "ma_slow": 60,
+    "slope_days": 5,
+    "trend_confirm_days": 2,
+    "atr_period": 14,
+    "pivot_side": 2,
+    "platform_days": 20,
+    "platform_max_width": 0.12,
+    "platform_touches": 2,
+    "touch_spacing": 3,
+    "touch_atr": 0.5,
+    "break_atr": 0.25,
+    "break_volume": 1.5,
+    "close_location_max": 0.4,
+    "retest_days": 10,
+    "rejection_days": 3,
+    "rejection_atr": 0.1,
+    "reclaim_atr": 0.25,
+    "false_break_days": 3,
+    "deep_break_atr": 2.0,
+    "deep_ma_atr": 2.5,
+    "deep_return_days": 5,
+    "deep_return": -0.12,
+    "zone_atr": 0.25,
+    "break_stop_atr": 0.5,
+    "rejection_stop_atr": 0.25,
+    "minimum_rr": 2.0,
+    "maximum_stop_pct": 6.0,
+    "priority_score": 80,
+    "reserve_score": 60,
+    "observation_days": 10,
+    "max_holding_days": 20,
+    "action_cooldown_days": 5,
+    "min_turnover_tw": 30000000,
+    "min_turnover_us": 5000000,
+    "maximum_adv_participation": 0.01,
+    "earnings_before": 1,
+    "earnings_after": 1
+  },
+  "parameterValidation": "未進行最佳化；全部策略門檻與成本仍待更多樣本／歷史資格資料驗證；完整型態條件見short/STRATEGY_SPEC.md",
+  "tests": {
+    "isolatedPython": {
+      "total": 49,
+      "passed": 49
+    },
+    "shortFrontendNode": {
+      "total": 9,
+      "passed": 9,
+      "includes": "200個成本、幣別、風險與部位情境，以及三頁DOM流程"
+    },
+    "originalJest": {
+      "total": 10,
+      "passed": 10
+    },
+    "originalTrackingNode": {
+      "total": 12,
+      "passed": 12
+    },
+    "completePythonSuite": {
+      "total": 128,
+      "passed": 127,
+      "failed": 1,
+      "existingFailure": "原處置資料缺少2035、2755；未修改原資料、測試或expected"
+    },
+    "browserVisualQA": "本環境沒有可用瀏覽器工具，尚未執行真實手機／桌面瀏覽器視覺驗證；DOM測試不等同視覺驗證"
+  },
+  "dataSources": {
+    "closing": "TWSE／TPEx官方台股最新OHLCV；Yahoo Finance／yfinance原始歷史及美股日K；exchange_calendars XTAI／XNYS",
+    "official": [
+      {
+        "id": "twseCap",
+        "name": "TWSE 當日可借券賣出股數",
+        "url": "https://openapi.twse.com.tw/v1/SBL/TWT96U"
+      },
+      {
+        "id": "tpexSuspend",
+        "name": "TPEx 暫停融券賣出預告",
+        "url": "https://www.tpex.org.tw/openapi/v1/tpex_margin_trading_term"
+      },
+      {
+        "id": "tpexRules",
+        "name": "TPEx 融／借券賣出價格限制",
+        "url": "https://www.tpex.org.tw/openapi/v1/tpex_margin_trading_margin_mark"
+      },
+      {
+        "id": "twseHalt",
+        "name": "TWSE 暫停交易證券",
+        "url": "https://openapi.twse.com.tw/v1/exchangeReport/TWTAWU"
+      },
+      {
+        "id": "twseNotice",
+        "name": "TWSE 注意股票",
+        "url": "https://openapi.twse.com.tw/v1/announcement/notice"
+      },
+      {
+        "id": "twseDisposition",
+        "name": "TWSE 處置股票",
+        "url": "https://openapi.twse.com.tw/v1/announcement/punish"
+      },
+      {
+        "id": "tpexNotice",
+        "name": "TPEx 注意股票",
+        "url": "https://www.tpex.org.tw/openapi/v1/tpex_trading_warning_information"
+      },
+      {
+        "id": "tpexDisposition",
+        "name": "TPEx 處置股票",
+        "url": "https://www.tpex.org.tw/openapi/v1/tpex_disposal_information"
+      }
+    ],
+    "rules": [
+      {
+        "name": "SEC Regulation SHO Rule 201",
+        "url": "https://www.ecfr.gov/current/title-17/section-242.201"
+      },
+      {
+        "name": "SEC Regulation SHO Rule 203",
+        "url": "https://www.ecfr.gov/current/title-17/section-242.203"
+      },
+      {
+        "name": "FINRA 4210 Margin Requirements",
+        "url": "https://www.finra.org/rules-guidance/rulebooks/finra-rules/4210"
+      },
+      {
+        "name": "TWSE 法規共享知識庫",
+        "url": "https://twse-regulation.twse.com.tw/TW/Index.aspx"
+      }
+    ],
+    "datePolicy": "只以完整收盤產生正式訊號；失敗不修改最後成功資料日；擷取日不冒充來源資料日"
+  },
+  "research": {
+    "label": "技術訊號回測，非可執行放空績效",
+    "train": "2015–2021",
+    "validation": "2022–2023",
+    "historicalHeldOut": "2024起（現行存續名單，有存活者偏誤）",
+    "TW": {
+      "totalObservations": 37,
+      "triggered": 17,
+      "untriggered": 20,
+      "completed": 17,
+      "targetHits": 4,
+      "stops": 12,
+      "needsReview": 0,
+      "targetRate": 23.52941176470588,
+      "targetRateLower": 23.52941176470588,
+      "targetRateUpper": 23.52941176470588,
+      "actualExecutedTrades": 0,
+      "performanceScope": "TECHNICAL_ONLY",
+      "sampleCount": 37,
+      "resolvedTradeCount": 17,
+      "averageWinLossRatio": 1.6088633897249032,
+      "expectancyR": -0.39905010486722814,
+      "maximumConsecutiveLosses": 9,
+      "uncertaintyPolicy": "同日待確認樣本保留，達標率顯示上下界；已判定交易期望值另列，不混成可執行績效"
+    },
+    "US": {
+      "totalObservations": 0,
+      "triggered": 0,
+      "untriggered": 0,
+      "completed": 0,
+      "targetHits": 0,
+      "stops": 0,
+      "needsReview": 0,
+      "targetRate": null,
+      "targetRateLower": null,
+      "targetRateUpper": null,
+      "actualExecutedTrades": 0,
+      "performanceScope": "TECHNICAL_ONLY",
+      "sampleCount": 0,
+      "resolvedTradeCount": 0,
+      "averageWinLossRatio": null,
+      "expectancyR": null,
+      "maximumConsecutiveLosses": 0,
+      "uncertaintyPolicy": "同日待確認樣本保留，達標率顯示上下界；已判定交易期望值另列，不混成可執行績效"
+    },
+    "limitations": [
+      "無歷史全市場／下市名單，存活者偏誤未排除",
+      "歷史券源、召回、融券與借券限制未取得，不能模擬真實可執行績效",
+      "財報公告時點歷史不完整，事件排除未驗證",
+      "Yahoo歷史異常區段已隔離，未以猜測補價",
+      "日K同日觸價順序未知；保留人工確認，達標率給上下界",
+      "研究組合非券商保證金帳戶，不模擬追繳與券商強制回補",
+      "成本為情境假設；股息與拆股僅使用生效日已知事件，不倒用未來調整因子"
+    ],
+    "finding": "小樣本台股研究期望值為負，美股沒有符合樣本；尚未證明此規格具有正期望值或可執行獲利能力。失敗與未成交觀察均保留。"
+  },
+  "unknownTradingQualifications": [
+    "券商融券與借券賣出庫存／可用數量",
+    "美股locate與即時借券費／召回",
+    "券商保證金、維持率、強制回補與實際最小下單單位",
+    "完整且有公告時點的財報／公司事件",
+    "歷史完整交易限制、歷史券源與下市名單"
+  ],
+  "deployment": {
+    "website": "https://short-pattern-lab-zh-1106.warm-sole-2783.chatgpt.site",
+    "sourceBranch": "https://github.com/b16171821/gpt-ai-assistant/tree/feature/short-observation-v1",
+    "mode": "獨立公開靜態站，與原GitHub Pages做多入口分開；部署收盤快照，前端優先讀main獨立放空資料，失敗使用部署快照或本機最後成功資料",
+    "automation": "新增工作流程合併main後才能啟用每日收盤與每週研究更新；目前未合併，重新整理網站不等於新掃描",
+    "repositoryData": "原始快取不提交。此功能分支包含原始追蹤鎖定等bootstrap；完整市場快照與研究報告隨獨立站發布，由獨立工作流程重建"
+  },
+  "warnings": [
+    "無自動下單功能，不保證獲利",
+    "放空損失可能超過初始投入；停損不保證成交價",
+    "技術分數不因券源未知而改寫；資格未知不列實際可執行候選"
+  ],
+  "snapshot": {
+    "TW": {
+      "direction": "SHORT",
+      "strategyVersion": "short-v1.0-approved-2026-11-06",
+      "market": "TW",
+      "currency": "TWD",
+      "dataDate": "2026-11-06",
+      "expectedDataDate": "2026-11-06",
+      "updatedAt": "2026-11-06T18:47:22.468082+00:00",
+      "freshnessStatus": "COMPLETE",
+      "universeCount": 1200,
+      "analyzedCount": 1193,
+      "freshCount": 1169,
+      "staleCount": 31,
+      "coveragePct": 97.41666666666666,
+      "priorityCount": 5,
+      "executableCount": 0,
+      "scope": "現行名單，非全市場歷史名單",
+      "pointInTimeUniverse": false,
+      "pricePolicy": "完整收盤，觀察區中間值；次一交易日才可模擬進場",
+      "errors": [],
+      "rulesLastCheckedAt": null,
+      "rulesStatus": "券商庫存、完整限制及未來事件未核實，不允許標為實際可下單"
+    },
+    "US": {
+      "direction": "SHORT",
+      "strategyVersion": "short-v1.0-approved-2026-11-06",
+      "market": "US",
+      "currency": "USD",
+      "dataDate": "2026-11-05",
+      "expectedDataDate": "2026-11-05",
+      "updatedAt": "2026-11-06T18:47:34.780576+00:00",
+      "freshnessStatus": "COMPLETE",
+      "universeCount": 70,
+      "analyzedCount": 70,
+      "freshCount": 70,
+      "staleCount": 0,
+      "coveragePct": 100.0,
+      "priorityCount": 0,
+      "executableCount": 0,
+      "scope": "現行名單，非全市場歷史名單",
+      "pointInTimeUniverse": false,
+      "pricePolicy": "完整收盤，觀察區中間值；次一交易日才可模擬進場",
+      "errors": [],
+      "rulesLastCheckedAt": null,
+      "rulesStatus": "券商庫存、完整限制及未來事件未核實，不允許標為實際可下單"
+    },
+    "trackingRecords": 8
+  },
+  "fullPackage": {
+    "filename": "short-observation-full.zip",
+    "url": "https://short-pattern-lab-zh-1106.warm-sole-2783.chatgpt.site/short-observation-full.zip",
+    "contents": [
+      "完整專案與原有唯讀依賴",
+      "當前data/short完整JSON及索引引用的詳細頁",
+      "完整研究報告及逐筆事件",
+      "啟動與部署說明",
+      "逐檔SHA256清單"
+    ],
+    "exclusions": [
+      "原始行情快取（可重新下載）",
+      "node_modules與Python環境",
+      "Git歷史與憑證"
+    ],
+    "guide": "short/FULL_PACKAGE.txt"
+  }
+}
