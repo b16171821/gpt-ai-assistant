@@ -32,6 +32,7 @@
     "scripts/short/sources.py",
     "scripts/short/tracking.py",
     "scripts/short/validation.py",
+    "short/FULL_PACKAGE.txt",
     "short/README.md",
     "short/STRATEGY_SPEC.md",
     "short/favicon.svg",
@@ -323,5 +324,22 @@
       "rulesStatus": "券商庫存、完整限制及未來事件未核實，不允許標為實際可下單"
     },
     "trackingRecords": 8
+  },
+  "fullPackage": {
+    "filename": "short-observation-full.zip",
+    "url": "https://short-pattern-lab-zh-1106.warm-sole-2783.chatgpt.site/short-observation-full.zip",
+    "contents": [
+      "完整專案與原有唯讀依賴",
+      "當前data/short完整JSON及索引引用的詳細頁",
+      "完整研究報告及逐筆事件",
+      "啟動與部署說明",
+      "逐檔SHA256清單"
+    ],
+    "exclusions": [
+      "原始行情快取（可重新下載）",
+      "node_modules與Python環境",
+      "Git歷史與憑證"
+    ],
+    "guide": "short/FULL_PACKAGE.txt"
   }
 }

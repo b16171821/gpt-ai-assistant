@@ -78,3 +78,7 @@ python -m scripts.short.check_legacy
 GitHub Pages可直接提供 `/short/`。獨立公開Sites版本使用相同前端與收盤快照；前端優先讀main上的放空資料，無法取得時讀部署快照／本機快取並顯示原日期。主分支尚未有放空資料時，使用部署快照。
 
 新增的 `update-short-data.yml` 合併至main後才會啟用排程，與原資料寫入佇列共用concurrency，但只提交 `data/short/`。日常更新收盤，週日或手動選擇時刷新歷史研究。GitHub排程可能延遲，重新讀取網頁不等於觸發新掃描。
+
+## 完整版下載
+
+公開站頁尾提供 `short-observation-full.zip`：包含完整專案、原有唯讀依賴、目前放空資料、研究報告與逐檔詳細頁。解壓縮後的啟動及部署步驟見 [FULL_PACKAGE.txt](FULL_PACKAGE.txt)。原始行情快取與已安裝套件不納入，重新研究時由獨立流程下載。套件附逐檔SHA256，不改寫快照資料日。
