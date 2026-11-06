@@ -1,0 +1,217 @@
+import {calculateShortPosition,defaults} from './short-position-calculator.mjs';
+
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const escapeHtml=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const finite=v=>typeof v==='number'&&Number.isFinite(v);
+const format=(v,d=2)=>finite(v)?v.toLocaleString('zh-TW',{minimumFractionDigits:0,maximumFractionDigits:d}):'—';
+const percent=v=>finite(v)?format(v)+'%':'—';
+const money=(v,currency)=>finite(v)?`${currency==='USD'?'US$':'NT$'}${format(v)}`:'—';
+const price=v=>format(v,4);
+const labels={BEAR_TREND:'空頭趨勢形成',PLATFORM_BREAK:'整理平台跌破',FAILED_RETEST:'反彈不過原支撐',MA_REJECTION:'均線反彈轉弱',TOO_EXTENDED:'已跌深，禁止追空',FALSE_BREAK:'疑似假跌破',NO_SETUP:'尚無完整型態'};
+const statusLabels={WAIT_ENTRY:'尚未觸發',ACTIVE:'已觸發（技術模擬）',TARGET_HIT:'第一目標達成',STOP_HIT:'停損結束',TIME_EXIT:'持有到期',EXPIRED:'未觸發到期',CANCELLED:'未進場取消',NEEDS_REVIEW:'同日觸價，人工確認',INVALID_AT_CREATION:'原始價位不足'};
+const terminal=new Set(['TARGET_HIT','STOP_HIT','TIME_EXIT','EXPIRED','CANCELLED','NEEDS_REVIEW','INVALID_AT_CREATION']);
+const iconPaths={scan:'<path d="M8 3H3v5m13-5h5v5M3 16v5h5m8 0h5v-5M4 12h16m-13 4 4-6 3 3 4-6"/>',calculator:'<rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8m-8 5h1m6 0h1m-8 4h1m6 0h1m-8 4h1m6 0h1"/>',journal:'<rect x="5" y="3" width="15" height="18" rx="2"/><path d="M8 3v18m3-13h6m-6 4h6m-6 4h4M3 7h4m-4 5h4m-4 5h4"/>',book:'<path d="M12 5v16M3 3c3-1 6 0 9 2 3-2 6-3 9-2v15c-3-1-6 0-9 3-3-3-6-4-9-3V3Z"/>',shield:'<path d="m12 2 8 4v6c0 5-8 10-8 10S4 17 4 12V6l8-4Z"/><path d="m8 12 3 3 5-6"/>',target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><path d="m12 12 9-9m-5 0h5v5"/>',info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10h.01"/>',search:'<circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/>',menu:'<path d="M3 6h18M3 12h18M3 18h18"/>',refresh:'<path d="M20 7v5h-5M4 17v-5h5m-4-4a7 7 0 0 1 12-3l3 3M4 16l3 3a7 7 0 0 0 12-3"/>',arrow:'<path d="M4 12h16m-6-6 6 6-6 6"/>',close:'<path d="m6 6 12 12M6 18 18 6"/>',chevron:'<path d="m6 9 6 6 6-6"/>',lock:'<rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V6a4 4 0 0 1 8 0v4m-4 5v2"/>',star:'<path d="m12 2 3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6Z"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',check:'<path d="m5 12 4 4L19 6"/>',download:'<path d="M12 3v12m-5-5 5 5 5-5M4 17v4h16v-4"/>',copy:'<rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/>'};
+const icon=n=>`<svg viewBox="0 0 24 24" aria-hidden="true">${iconPaths[n]||iconPaths.info}</svg>`;
+function hydrate(root=document){$$('[data-icon]',root).forEach(e=>e.innerHTML=icon(e.dataset.icon));}
+function readStorage(key,fallback){try{return JSON.parse(localStorage.getItem('shortObservation.v1.'+key))??fallback;}catch{return fallback;}}
+function writeStorage(key,value){try{localStorage.setItem('shortObservation.v1.'+key,JSON.stringify(value));return true;}catch{return false;}}
+const state={market:'TW',page:'observation',datasets:{},tracking:{records:[]},health:{},report:null,benchmarks:{},sources:null,
+  errors:[],favorites:readStorage('favorites',[]),notes:readStorage('notes',{}),limit:15,trackingLimit:15,loading:false,failed:false,details:new Map(),detailPages:new Map(),expanded:new Set()};
+if(!Array.isArray(state.favorites))state.favorites=[];
+if(!state.notes||typeof state.notes!=='object'||Array.isArray(state.notes))state.notes={};
+let toastTimer,selectedStock=null,lastCalculation=null,confirmedCalculation=null;
+function toast(text){$('#toast').textContent=text;$('#toast').classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').classList.remove('visible'),3500);}
+async function copyText(text){try{await navigator.clipboard.writeText(text);toast('已複製。');}catch{const a=document.createElement('textarea');a.value=text;a.style.cssText='position:fixed;opacity:0';document.body.append(a);a.select();const ok=document.execCommand('copy');a.remove();toast(ok?'已複製。':'無法自動複製，請檢查瀏覽器剪貼簿權限。');}}
+const stockKey=r=>r.market+':'+r.code;
+const dataset=()=>state.datasets[state.market];
+function safeMetrics(r){
+  const lo=r.observationLow,hi=r.observationHigh,e=r.entry,s=r.stopLoss,t=r.target;
+  if(![lo,hi,e,s,t].every(finite)||r.entryBasis!=='OBSERVATION_MIDPOINT'||lo>hi||Math.abs(e-(lo+hi)/2)>1e-7*Math.max(1,e)||!(s>hi&&hi>=e&&e>=lo&&lo>t&&t>0))return {rr:null,reward:null,risk:null,valid:false};
+  return {rr:(e-t)/(s-e),reward:(e-t)/e*100,risk:(s-e)/e*100,valid:true};
+}
+function validatePayload(p,market){
+  if(!p||p.meta?.direction!=='SHORT'||p.meta?.market!==market||!Array.isArray(p.stocks)||!/^\d{4}-\d{2}-\d{2}$/.test(p.meta.dataDate||''))throw Error('放空資料契約或日期不正確');
+  if(p.marketEnvironment?.asOfDate!==p.meta.dataDate)throw Error('大盤與個股資料日期不一致');
+  const seen=new Set();
+  for(const r of p.stocks){if(r.direction!=='SHORT'||r.market!==market||typeof r.code!=='string'||seen.has(r.code))throw Error('市場、方向或代號重複');seen.add(r.code);if(r.dataFresh===true&&r.dataDate!==p.meta.dataDate)throw Error('最新標記與原始收盤日期不一致');}
+  return p;
+}
+async function fetchJson(url){const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),15000);try{const r=await fetch(url,{cache:'no-store',signal:controller.signal});if(!r.ok)throw Error(`HTTP ${r.status}`);return await r.json();}finally{clearTimeout(timer);}}
+const localBase=new URL('../data/short/',document.baseURI).href;
+const upstreamBase='https://raw.githubusercontent.com/b16171821/gpt-ai-assistant/main/data/short/';
+async function getFile(file,{market}={}){
+  const bases=[upstreamBase,localBase];let error;
+  for(const base of [...new Set(bases)]){
+    try{const p=await fetchJson(base+file);if(market)validatePayload(p,market);return {payload:p,source:base===upstreamBase?'repository':'deployment'};}catch(e){error=e;}
+  }
+  throw error||Error('資料讀取失敗');
+}
+async function loadAll(){
+  if(state.loading)return;state.loading=true;$('#refresh').disabled=true;$('#load-status').textContent='正在核對完整收盤、資料日期與來源…';
+  const files=[['TW','tw_index.json'],['US','us_index.json'],['tracking','tracking.json'],['health','health.json'],['report','research_summary.json'],['benchmarks','benchmark_preview.json'],['sources','source_manifest.json'],['delivery','delivery.json']];
+  const results=await Promise.allSettled(files.map(([key,file])=>getFile(file,{market:['TW','US'].includes(key)?key:undefined})));
+  state.errors=[];state.failed=false;
+  results.forEach((result,i)=>{const [key]=files[i];if(result.status==='fulfilled'){
+    if(['TW','US'].includes(key)){if(state.datasets[key]?.meta.revision!==result.value.payload.meta.revision){for(const k of state.details.keys())if(k.startsWith(key+':'))state.details.delete(k);for(const k of state.expanded)if(k.startsWith(key+':'))state.expanded.delete(k);}state.datasets[key]=result.value.payload;const p=result.value.payload;writeStorage('lastGood.'+key,{...p,meta:{...p.meta,cacheSubset:p.stocks.length>150},stocks:p.stocks.slice(0,150)});}
+    else if(key==='tracking'){if(result.value.payload.meta?.direction==='SHORT'&&Array.isArray(result.value.payload.records))state.tracking=result.value.payload;}
+    else state[key]=result.value.payload;
+  }else{if(['TW','US'].includes(key)){const old=state.datasets[key]||readStorage('lastGood.'+key,null);if(old){try{state.datasets[key]=validatePayload(old,key);}catch{}}state.failed=true;}state.errors.push(key+': '+result.reason.message);}});
+  state.loading=false;$('#refresh').disabled=false;renderObservation();renderTracking();
+}
+function badge(text,cls='neutral'){return `<span class="tag ${cls}">${escapeHtml(text)}</span>`;}
+function metric(label,value,cls=''){return `<div class="signal-metric ${cls}"><span>${label}</span><b>${value}</b></div>`;}
+function stat(label,value,unit,caption,ico){return `<div class="stat-card"><div class="stat-title">${icon(ico)}${label}</div><div class="stat-value">${value}<small>${unit}</small></div><div class="stat-caption">${caption}</div></div>`;}
+function sparkline(points,pressure=null){
+  const values=(points||[]).filter(p=>finite(p.close)&&p.close>0);if(values.length<2)return '<div class="chart-unavailable">走勢資料不足</div>';
+  const min=Math.min(...values.map(p=>p.close)),max=Math.max(...values.map(p=>p.close)),range=max-min||1;
+  const xy=values.map((p,i)=>[10+i*280/(values.length-1),20+(max-p.close)/range*125]);
+  const path=xy.map((p,i)=>`${i?'L':'M'}${p[0].toFixed(2)} ${p[1].toFixed(2)}`).join(' ');
+  const pressureLine=finite(pressure)&&pressure>=min&&pressure<=max?`<path d="M8 ${20+(max-pressure)/range*125}H292" stroke="#bdad7e" stroke-dasharray="4 5" opacity=".55"/>`:'';
+  return `<svg viewBox="0 0 300 180" role="img" aria-label="${escapeHtml(values[0].date)} 至 ${escapeHtml(values.at(-1).date)} 的實際歷史收盤走勢"><path d="M8 45H292M8 90H292M8 135H292" stroke="#405b472b"/><path d="${path}L290 151H10Z" fill="#a2d5b5" opacity=".04"/>${pressureLine}<path d="${path}" fill="none" stroke="#a2d5b5" stroke-width="1.8"/><circle cx="290" cy="${xy.at(-1)[1]}" r="3" fill="#a2d5b5"/><text x="10" y="173" font-size="8" fill="#738d7e">${escapeHtml(values[0].date)}</text><text x="290" y="173" text-anchor="end" font-size="8" fill="#738d7e">${escapeHtml(values.at(-1).date)}</text></svg>`;
+}
+function compareRows(a,b){const mode=$('#stock-sort').value,mA=safeMetrics(a),mB=safeMetrics(b),desc=(x,y)=>(finite(y)?y:-Infinity)-(finite(x)?x:-Infinity);
+  if(mode==='code')return a.code.localeCompare(b.code,'zh-Hant',{numeric:true});
+  if(mode==='rr')return desc(mA.rr,mB.rr)||a.code.localeCompare(b.code);
+  if(mode==='reward')return desc(mA.reward,mB.reward)||a.code.localeCompare(b.code);
+  if(mode==='risk')return (finite(mA.risk)?mA.risk:Infinity)-(finite(mB.risk)?mB.risk:Infinity)||a.code.localeCompare(b.code);
+  return Number(b.dataFresh===true)-Number(a.dataFresh===true)||Number(b.technicalCandidate)-Number(a.technicalCandidate)||Number(a.tooExtended)-Number(b.tooExtended)||desc(a.qualityScore,b.qualityScore)||desc(mA.rr,mB.rr)||a.code.localeCompare(b.code,'zh-Hant',{numeric:true});
+}
+function filteredRows(){const query=$('#stock-search').value.trim().toLowerCase(),filter=$('#signal-filter').value,fav=$('#only-favorites').checked;
+  return (dataset()?.stocks||[]).filter(r=>(!query||`${r.name} ${r.code} ${r.stage}`.toLowerCase().includes(query))&&(!fav||state.favorites.includes(stockKey(r)))&&(filter==='ALL'||filter==='CONFIRMED'&&r.technicalCandidate||filter==='STALE'&&!r.dataFresh||(r.rawSignals||[]).includes(filter))).sort(compareRows);
+}
+function qualificationSummary(r){const q=r.tradeQualification||{};return q.allowEntry===true&&r.tradeTier==='EXECUTABLE_CANDIDATE'?'資格已核實':'交易資格／券源待確認';}
+function signalCard(r){r=state.details.get(stockKey(r))||r;const m=safeMetrics(r),key=stockKey(r),currency=r.currency||'TWD',favorite=state.favorites.includes(key),q=r.tradeQualification||{},
+  stateText=!r.dataFresh?'資料待更新':r.tooExtended?'禁止追空':r.falseBreak?'疑似假跌破':r.technicalCandidate?'技術條件確認':'等待確認',stateClass=r.tooExtended||r.falseBreak?'red-tag':r.technicalCandidate?'mint-tag':'amber';
+  const witness=r.signalWitnesses?.retest||r.signalWitnesses?.maRejection;
+  return `<article class="panel signal-card" data-stock-key="${escapeHtml(key)}"><details ${state.expanded.has(key)?'open':''}><summary><div class="signal-top"><div><h3>${escapeHtml(r.name||r.code)}<span class="symbol">${escapeHtml(r.code)} · ${currency}</span></h3><p class="signal-stage">${escapeHtml(r.stage||labels[r.originalSignal]||'尚待確認')}</p></div><div class="signal-badges">${badge(stateText,stateClass)}${badge(r.dataFresh?'收盤 '+(r.dataDate||'—'):'原資料日 '+(r.dataDate||'未知'))}</div></div><p class="signal-reason">${escapeHtml(r.statusReason||'必要資料尚待確認')}</p><div class="signal-zone"><span>放空觀察區</span><b>${price(r.observationLow)} ～ ${price(r.observationHigh)} <small>${currency}</small></b><span>計畫進場基準：中間值 ${price(r.entry)}</span></div><div class="signal-metrics">${metric('最新收盤',price(r.close))}${metric('頸線／壓力',price(r.pressure))}${metric('買回停損',price(r.stopLoss),'loss')}${metric('第一目標',price(r.target),'gain')}${metric('預期獲利',percent(m.reward))}${metric('停損距離',percent(m.risk))}${metric('理論風報比',finite(m.rr)?format(m.rr)+' R':'—','gain')}${metric('技術品質',finite(r.qualityScore)?format(r.qualityScore,0)+' / 100':'資料不足')}</div><div class="signal-qualification"><span>${icon('lock')}${qualificationSummary(r)}</span><small>${r.market==='TW'?`融券：${q.marginShort?.status==='BLOCKED'?'官方限制':'待確認'} ／ 借券賣出：${q.borrowShort?.status==='BLOCKED'?'官方限制':'待確認'}`:'locate／借券費／SSR：待核實'}</small></div><div class="signal-expand">展開判讀依據、原始訊號與交易風險<span>⌄</span></div></summary><div class="signal-detail"><div class="detail-two"><section><h4>價格結構與時間順序</h4><p>原始訊號：${escapeHtml(labels[r.originalSignal]||r.originalSignal||'—')}<br>調整後：${escapeHtml(r.adjustedSignal||'—')}<br>參考價可知日：${escapeHtml(r.referenceKnownAt||'未提供')}<br>訊號確認：${escapeHtml(r.dataDate||'—')} 完整收盤</p>${witness?`<p>時間證據：${witness.breakDate?'跌破 '+escapeHtml(witness.breakDate)+' → ':''}反彈 ${escapeHtml(witness.reboundDate)} → 轉弱 ${escapeHtml(witness.confirmedDate)}</p>`:''}<p>資料來源：${escapeHtml(r.source||'資料尚未完成驗證')}<br>數值為觀察區中間值試算，尚未扣成本；帶入計算機可修改。</p></section><div class="stock-chart">${sparkline(r.chart,r.pressure)}</div></div><section><h4>交易面核對</h4><ul>${(q.reasons||['券商資格未接入']).map(s=>`<li>${escapeHtml(s)}</li>`).join('')}</ul>${q.marketCapacity?`<p>市場可借券賣出額度：${format(q.marketCapacity.shares,0)} 股。原介面日期：未提供；此數字不是券商庫存。</p>`:''}${(r.dataIssues||[]).length?`<p class="data-error">資料檢查：${escapeHtml(r.dataIssues.join('；'))}</p>`:''}</section><div class="quality-parts">${Object.entries(r.qualityParts||{}).map(([k,v])=>`<span>${({trend:'趨勢',structure:'結構',volume:'量價',stopDistance:'停損',riskReward:'風報比'})[k]||escapeHtml(k)} ${format(v,0)}</span>`).join('')}</div></div></details><div class="signal-actions"><a class="button secondary" href="${quoteUrl(r)}" target="_blank" rel="noopener noreferrer">查看行情 ↗</a><button class="button secondary" data-calc="${escapeHtml(key)}">帶入試算</button><button class="button secondary" data-copy="${escapeHtml(key)}" data-copy-mode="brief">複製簡短版</button><button class="button secondary" data-copy="${escapeHtml(key)}" data-copy-mode="full">複製完整版</button><button class="favorite-button ${favorite?'is-favorite':''}" data-favorite="${escapeHtml(key)}" aria-label="${favorite?'取消收藏':'收藏'}${escapeHtml(r.name||r.code)}" aria-pressed="${favorite}">${icon('star')}</button></div></article>`;
+}
+function quoteUrl(r){return r.market==='US'?`https://finance.yahoo.com/quote/${encodeURIComponent(r.code)}/`:`https://tw.stock.yahoo.com/quote/${encodeURIComponent(r.code)}`;}
+function empty(title,description){return `<div class="empty-state"><span data-icon="scan"></span><h2>${title}</h2><p>${description}</p></div>`;}
+function renderObservation(){
+  const p=dataset(),rows=p?.stocks||[],env=p?.marketEnvironment||{code:'NO_DATA',label:'資料不足，僅供觀察',indexes:[]};
+  $$('#market-switch button').forEach(b=>{const on=b.dataset.market===state.market;b.classList.toggle('active',on);b.setAttribute('aria-pressed',String(on));});
+  $('#regime-title').textContent=env.label;$('#regime-date').textContent=p?`資料日 ${p.meta.dataDate} · ${state.market==='TW'?'台股':'美股'}`:'尚未取得完整收盤';
+  $('#regime-description').innerHTML=env.code==='FAVORABLE'?'參考指數均呈空頭排列。<br>仍須獨立確認型態、價位與券源。':env.code==='BULL_STRONG'?'參考指數偏強，避免逆勢放空。<br>原始技術訊號仍保留觀察。':env.code==='WAIT'?'參考指數方向尚未一致。<br>先等確認，保留原始訊號。':'完整收盤與指數日期尚未核實。<br>暫不產生可執行候選。';
+  $('#regime-checks').innerHTML=(env.indexes||[]).map(x=>`<span>${x.bear?'↓':x.bull?'↑':'○'} ${escapeHtml(x.name)}</span>`).join('');
+  const benchmark=Object.values(state.benchmarks[state.market]||{})[0];$('#regime-chart').innerHTML=sparkline((benchmark||[]).slice(-40));
+  const checkedAgo=p?.meta.updatedAt?(Date.now()-Date.parse(p.meta.updatedAt))/3600000:Infinity,verificationExpired=checkedAgo>36;
+  const marketHealth=state.health.markets?.[state.market],sourceFailed=marketHealth?.success===false;
+  $('#load-status').classList.toggle('is-warning',state.failed||verificationExpired||sourceFailed||p?.meta.freshnessStatus!=='COMPLETE');
+  $('#load-status').textContent=!p?'資料讀取失敗；未顯示虛構標的。請重新讀取或查看資料來源。':`${state.failed||sourceFailed?'資料取得失敗，保留最後成功資料。 ':''}${verificationExpired?'上次核對已超過36小時，日期與資格需重新確認。 ':''}策略資料日 ${p.meta.dataDate}｜更新 ${new Date(p.meta.updatedAt).toLocaleString('zh-TW',{hour12:false})}｜驗證 ${p.meta.freshCount}/${p.meta.universeCount} 檔${p.meta.cacheSubset?'｜本機快取僅保留前150檔':''}`;
+  const fresh=rows.filter(r=>r.dataFresh).length,confirmed=rows.filter(r=>r.technicalCandidate).length,deep=rows.filter(r=>r.tooExtended).length;
+  $('#observation-stats').innerHTML=stat('收盤驗證覆蓋',p?`${p.meta.freshCount}`:'—','檔',p?`研究名單 ${p.meta.universeCount} 檔`:'等候資料','scan')+stat('技術條件確認',p?String(confirmed).padStart(2,'0'):'—','檔','與券源分開判讀','check')+stat('跌深禁止追空',p?String(deep).padStart(2,'0'):'—','檔','保留原始訊號','clock')+stat('資格已核實',p?String(rows.filter(r=>r.tradeQualification?.allowEntry===true).length).padStart(2,'0'):'—','檔','待券商資料接入','lock');
+  const list=filteredRows(),primary=list.filter(r=>r.priorityObservation).slice(0,5),ids=new Set(primary.map(stockKey)),reserve=list.filter(r=>!ids.has(stockKey(r)));
+  $('#priority-count').textContent=primary.length+' 檔';$('#dataset-count').textContent=`篩選結果 ${list.length} / 已讀取 ${rows.length} 檔`;
+  $('#priority-list').innerHTML=primary.length?primary.map(signalCard).join(''):empty('目前沒有符合優先觀察條件的標的。','不補滿名單。可到備查查看原始型態、跌深風險與待確認資料。');
+  $('#reserve-count').textContent=`${reserve.length} 檔 · 已顯示 ${Math.min(reserve.length,state.limit)}`;
+  $('#reserve-list').innerHTML=$('#reserve-details').open?(reserve.length?reserve.slice(0,state.limit).map(signalCard).join(''):empty('沒有符合篩選的備查標的。','調整搜尋、型態或收藏條件後再查看。')):'';
+  $('#load-more').hidden=!$('#reserve-details').open||reserve.length<=state.limit;
+  $('#filter-summary').textContent=`${$('#signal-filter').selectedOptions[0].textContent} · ${$('#stock-sort').selectedOptions[0].textContent}`;
+  hydrate($('#main'));
+}
+function strategyText(r,full=false){const m=safeMetrics(r);let t=`【主跌段放空觀察｜${r.currency}】\n${r.name}（${r.code}）\n資料日：${r.dataDate||'未知'} 完整收盤\n階段：${r.stage}\n原始訊號：${labels[r.originalSignal]||r.originalSignal}\n調整後：${r.adjustedSignal}\n最新收盤：${price(r.close)}\n放空觀察區：${price(r.observationLow)}～${price(r.observationHigh)}\n計畫進場：中間值 ${price(r.entry)}\n頸線／壓力：${price(r.pressure)}\n買回停損：${price(r.stopLoss)}｜第一目標：${price(r.target)}\n預期獲利：${percent(m.reward)}｜停損距離：${percent(m.risk)}｜理論風報比：${finite(m.rr)?format(m.rr)+' R':'無有效數值'}\n技術品質：${format(r.qualityScore,0)}\n交易資格：${qualificationSummary(r)}\n原因：${r.statusReason}`;
+  if(full)t+=`\n\n參考價可知日：${r.referenceKnownAt||'待核實'}\n型態證據：${JSON.stringify(r.signalWitnesses||{})}\n大盤：${r.marketEnvironment}\n交易風險：${(r.tradeQualification?.reasons||[]).join('；')}\n來源：${r.source||'待確認'}\n策略版本：${r.strategyVersion}`;
+  return t+'\n\n收盤確認後最早次一交易日模擬進場；未扣成本，不代表成交。放空損失可能超過初始投入，停損不保證成交價。';
+}
+
+const calcKeys=Object.keys(defaults);
+function calcValues(){return Object.fromEntries(calcKeys.map(k=>[k,$(`#risk-form [name="${k}"]`).value]));}
+function setCalcValues(values){for(const k of calcKeys){const field=$(`#risk-form [name="${k}"]`);field.value=values[k]??defaults[k];}$('#capital-unit').textContent=$('#calc-currency').value;}
+function saveCalc(){if($('#calc-remember').checked&&!writeStorage('calculator.'+$('#calc-currency').value,{remember:true,values:calcValues()}))toast('瀏覽器無法儲存設定，本次試算仍可使用。');}
+function renderCalculator({confirmed=false}={}){
+  confirmedCalculation=null;$('#calc-confirm-status').textContent='';
+  try{const r=calculateShortPosition(calcValues());lastCalculation=r;$('#calc-error').hidden=true;
+    $('#calc-results').innerHTML=`<div class="result-heading"><h2>風險與名目部位</h2>${badge(r.currency,'neutral')}</div><div class="result-label">名目試算股數</div><div class="result-shares">${format(r.shares,0)}<span>股</span></div><p class="result-sub">${format(r.shares/r.lot,0)} 個研究單位 · 每單位 ${format(r.lot,0)} 股</p>${r.zeroReason?`<div class="result-zero">${escapeHtml(r.zeroReason)}</div>`:''}<div class="actual-order-status">實際可下單股數：<strong>待券商核實</strong></div><div class="result-primary-row"><div><span>停損情境損失估算</span><b>${money(r.estimatedLoss,r.currency)}</b></div><div><span>成本後目標風報比</span><b>${format(r.netRR)} <small>R</small></b></div></div>${[
+      ['風險容許額度',money(r.riskBudget,r.currency)],['每股價格風險 S − E',money(r.priceRisk,r.currency)],['每股成本風險緩衝',money(r.costRiskPerShare,r.currency)],['其中借券費假設',money(r.borrowFeePerShare,r.currency)],['風險股數上限',format(r.riskShares,0)+' 股'],['名目曝險股數上限',format(r.notionalShares,0)+' 股'],['名目部位金額',money(r.notional,r.currency)],['保證金估算（僅假設）',r.estimatedMargin===null?'資料未知':money(r.estimatedMargin,r.currency)],['目標情境淨利估算',money(r.estimatedReward,r.currency)],['未扣成本理論風報比',format(r.theoryRR)+' R']].map(([label,value])=>`<div class="result-detail"><span>${label}</span><b>${value}</b></div>`).join('')}<p class="result-note">受${r.binding==='RISK'?'含成本風險預算':'名目曝險上限'}限制，並向下取整。借券年費率 ${r.borrow}%、${r.days} 日為研究假設。${r.netRR<2?'成本後風報比低於 2 R，請重新評估。':''}修改數值不會改變原始策略，也不會解除交易限制。</p><button id="copy-calculation" class="button secondary full">${icon('copy')}複製試算結果</button>`;
+    if(confirmed){confirmedCalculation={...r};$('#calc-confirm-status').textContent='已確認目前輸入條件。此為名目試算，非下單許可。';}
+    saveCalc();
+  }catch(e){lastCalculation=null;const blank=['entry','stop','target'].some(k=>$(`#calc-${k}`).value==='');$('#calc-error').hidden=blank&&!confirmed;$('#calc-error').textContent=e.message;$('#calc-results').innerHTML=`<div class="result-heading"><h2>${blank?'等待輸入價位':'請修正交易條件'}</h2></div><div class="result-label">${blank?'從觀察卡帶入，或自行輸入放空、停損與目標。':escapeHtml(e.message)}</div><p class="result-note">停損價 > 進場價 > 目標價 > 0。數值缺漏時不顯示有效風報比或股數。</p>`;}
+}
+function changeCurrency(currency){$('#calc-code').value='';$('#calc-name').value='';const previous=readStorage('calculator.'+currency,null),values=previous?.values||{...defaults,currency,route:currency==='USD'?'US_SHORT':'MARGIN_SHORT',capital:currency==='USD'?100000:1000000,lot:currency==='USD'?1:1000};setCalcValues({...values,currency});$('#calc-remember').checked=previous?.remember===true;selectedStock=null;$('#calc-source').textContent='已切換獨立幣別設定，沒有進行匯率換算。';renderCalculator();}
+function bringToCalculator(r){changeCurrency(r.currency);const values=calcValues();setCalcValues({...values,route:r.market==='US'?'US_SHORT':'MARGIN_SHORT',entry:r.entry??'',stop:r.stopLoss??'',target:r.target??''});selectedStock=stockKey(r);$('#calc-code').value=r.code||'';$('#calc-name').value=r.name||'';$('#calc-source').textContent=`${r.name}（${r.code}）｜${r.dataDate} 原始觀察區中間值。${qualificationSummary(r)}；帶入不代表允許進場。`;renderCalculator();location.hash='calculator';toast('已帶入計畫價位，請核對成本與借券假設。');}
+function calcText(){const r=lastCalculation;if(!r)return '';return `【放空名目部位試算｜${r.currency}】\n${$('#calc-name').value||'自訂標的'}（${$('#calc-code').value||'未指定代號'}）\n放空 ${r.entry}｜停損 ${r.stop}｜目標 ${r.target}\n資金 ${money(r.capital,r.currency)}｜風險 ${r.risk}%｜名目曝險上限 ${r.exposure}%\n名目股數 ${format(r.shares,0)} 股；實際可下單股數待券商核實\n每股價格風險 ${r.priceRisk}\n每股含成本風險 ${r.totalRiskPerShare}\n停損情境損失 ${money(r.estimatedLoss,r.currency)}\n成本後風報比 ${format(r.netRR)} R\n借券年費率假設 ${r.borrow}%，${r.days}日\n保證金 ${r.margin===null?'未知':r.margin+'% 研究假設'}\n來回成本 ${r.cost}%｜單邊滑價 ${r.slippage}%\n放空損失可能超過初始投入；停損不保證成交價。`;}
+
+function trackingCard(r){const o=r.originalStrategy||{},l=r.latestStatus||{},p={...o,observationLow:o.observationLow,observationHigh:o.observationHigh},m=safeMetrics(p),ended=terminal.has(r.status),note=state.notes[r.trackingId]||'';
+  return `<article class="panel signal-card tracking-signal" data-tracking-id="${escapeHtml(r.trackingId)}"><details><summary><div class="signal-top"><div><h3>${escapeHtml(r.name)}<span class="symbol">${escapeHtml(r.code)} · ${r.currency}</span></h3><p class="signal-stage">原始型態：${escapeHtml(labels[o.originalSignal]||o.originalSignal)}</p></div>${badge(statusLabels[r.status]||r.status,r.status==='TARGET_HIT'?'mint-tag':r.status==='STOP_HIT'?'red-tag':'amber')}</div><div class="signal-zone"><span>原始觀察區（固定）</span><b>${price(o.observationLow)} ～ ${price(o.observationHigh)} <small>${r.currency}</small></b><span>首次訊號 ${escapeHtml(r.firstSignalDate)} · 中間值 ${price(o.entry)}</span></div><div class="signal-metrics">${metric('最新收盤',price(l.close))}${metric('原始停損',price(o.stopLoss),'loss')}${metric('原始第一目標',price(o.target),'gain')}${metric('原始壓力',price(o.pressure))}${metric('預期獲利',percent(m.reward))}${metric('停損距離',percent(m.risk))}${metric('原始風報比',finite(m.rr)?format(m.rr)+' R':'—')}${metric('原始品質分',format(o.qualityScore,0))}</div><p class="signal-reason">${r.entryStatus==='TRIGGERED'?`技術觸發：${escapeHtml(r.fillDate)} 開盤 ${price(r.fillPrice)}。`:'尚未觸發進場，不列交易績效。'}${ended?' '+escapeHtml(r.result||'策略已結束')+' · '+escapeHtml(r.endDate||''):''}</p><div class="signal-qualification"><span>${icon('lock')}技術價格模擬，非券商成交</span><small>資料日 ${escapeHtml(l.dataDate||r.lastEvaluatedDate||'—')}</small></div><div class="signal-expand">展開原始策略、事件順序與個人筆記<span>⌄</span></div></summary><div class="signal-detail"><div class="detail-two"><section><h4>原始計畫與最新狀態</h4><p>原始訊號：${escapeHtml(labels[o.originalSignal]||o.originalSignal)}<br>建立時大盤：${escapeHtml(o.marketEnvironment||'未知')}<br>最新狀態：${escapeHtml(statusLabels[r.status]||r.status)}<br>有效進場：${escapeHtml(r.fillDate||'尚未觸發')}<br>結束日期：${escapeHtml(r.endDate||'尚未結束')}</p><p>原始策略與首次訊號日期固定。新訊號不覆蓋舊停損；目標先達成後不因反彈改寫。</p></section><section><h4>依日期記錄的事件</h4><ol class="event-list">${(r.events||[]).map(e=>`<li><span>${escapeHtml(e.date)}</span>${escapeHtml(({ENTRY_AT_NEXT_OPEN:'次日開盤技術觸發',ENTRY_NOT_FILLED:'次日未成交',TARGET_HIT:'原始目標達成',STOP_HIT:'原始停損觸發',NEEDS_REVIEW:'同日觸及目標與停損',TIME_EXIT:'持有到期',EXPIRED:'未觸發到期',CANCELLED:'未進場取消',SPLIT:'拆股，僅換算執行價位',SHORT_DIVIDEND_LIABILITY:'計入股息補償'})[e.type]||e.type)}${finite(e.price)?' · '+price(e.price):''}${e.gapStop?' · 跳空依開盤價處理':''}</li>`).join('')||'<li>等待後續完整收盤資料。</li>'}</ol></section></div><label class="field"><span>個人觀察筆記（僅此瀏覽器）</span><textarea rows="3" maxlength="2000" data-note="${escapeHtml(r.trackingId)}">${escapeHtml(note)}</textarea></label><button class="button secondary" data-save-note="${escapeHtml(r.trackingId)}">儲存筆記</button></div></details><div class="signal-actions"><a class="button secondary" href="${quoteUrl(r)}" target="_blank" rel="noopener noreferrer">查看行情 ↗</a><button class="button secondary" data-track-calc="${escapeHtml(r.trackingId)}">原始策略帶入試算</button><button class="button secondary" data-copy-track="${escapeHtml(r.trackingId)}">複製完整紀錄</button></div></article>`;
+}
+function renderTracking(){const all=(state.tracking.records||[]).filter(r=>r.direction==='SHORT'),q=$('#tracking-search').value.trim().toLowerCase(),filter=$('#tracking-filter').value,
+  list=all.filter(r=>(!q||`${r.name} ${r.code}`.toLowerCase().includes(q))&&(filter==='ALL'||filter==='ENDED'&&terminal.has(r.status)||r.status===filter));
+  $('#tracking-count').textContent=all.length;
+  $('#tracking-stats').innerHTML=stat('尚未觸發',String(all.filter(r=>r.entryStatus!=='TRIGGERED'&&!terminal.has(r.status)).length).padStart(2,'0'),'筆','不計交易績效','clock')+stat('已觸發追蹤',String(all.filter(r=>r.entryStatus==='TRIGGERED'&&!terminal.has(r.status)).length).padStart(2,'0'),'筆','技術價格模擬','target')+stat('已結束策略',String(all.filter(r=>terminal.has(r.status)).length).padStart(2,'0'),'筆','原始結果固定','journal')+stat('實際成交績效','—','','未接入券商紀錄','lock');
+  $('#tracking-disclosure').textContent=`全部 ${all.length} 筆；篩選顯示 ${list.length} 筆。畫面篩選不改統計樣本。來源更新：${state.tracking.meta?.updatedAt?new Date(state.tracking.meta.updatedAt).toLocaleString('zh-TW',{hour12:false}):'尚未取得'}。`;
+  $('#tracking-list').innerHTML=list.length?list.slice(0,state.trackingLimit).map(trackingCard).join(''):empty('目前沒有符合的追蹤紀錄。','優先觀察入選後由獨立資料流程建立紀錄；未確認的策略不會被冒充成交易。');
+  $('#tracking-more').hidden=list.length<=state.trackingLimit;hydrate($('#tracking-list'));renderResearch();
+}
+function renderResearch(){const report=state.report;
+  if(!report?.markets){$('#research-content').innerHTML='<p>研究報告尚未取得，不顯示虛構績效。</p>';return;}
+  $('#research-content').innerHTML=`<p class="research-warning">${escapeHtml(report.disclosure)}</p>${['TW','US'].map(m=>{const x=report.markets[m],s=x?.summary||{},p=x?.portfolio||{},rate=s.needsReview?`${percent(s.targetRateLower)} ～ ${percent(s.targetRateUpper)}（順序待確認）`:finite(s.targetRate)?percent(s.targetRate):'樣本不足';return `<section><h3>${m==='TW'?'台股 · TWD':'美股 · USD'}｜歷史技術訊號</h3><div class="signal-metrics">${metric('觀察樣本',format(s.sampleCount,0))}${metric('開盤觸發',format(s.triggered,0))}${metric('已判定交易',format(s.resolvedTradeCount,0))}${metric('人工確認',format(s.needsReview,0))}${metric('目標達成率／界限',rate)}${metric('期望值',finite(s.expectancyR)?format(s.expectancyR)+' R':'—')}${metric('平均盈虧比',format(s.averageWinLossRatio))}${metric('連續虧損',format(s.maximumConsecutiveLosses,0))}</div><p>研究組合：${format(p.admittedTrades,0)} 筆｜最大回撤（保守界限）${p.admittedTrades?percent(p.maximumDrawdownPctConservativeBound):'無可評估組合'}。此為名目曝險研究，非券商保證金帳戶。</p><div class="research-periods">${Object.entries(x?.periods||{}).map(([phase,v])=>`<div><span>${({TRAIN:'訓練期 2015–2021',VALIDATION:'驗證期 2022–2023',OUT_OF_SAMPLE:'歷史保留期 2024 起'})[phase]}</span><b>觀察 ${format(v.sampleCount,0)}｜觸發 ${format(v.triggered,0)}｜已判定 ${format(v.resolvedTradeCount,0)}</b><small>期望值 ${finite(v.expectancyR)?format(v.expectancyR)+' R':'樣本不足'}</small></div>`).join('')}</div></section>`;}).join('')}<p>未成交觀察不計交易績效；同日觸價保留人工確認。缺乏歷史券源、歷史全市場名單與完整事件資料，不能視為已驗證樣本外獲利。請下載報告查看逐檔覆蓋與全部研究紀錄。</p><button class="button secondary" id="download-report">${icon('download')}下載完整研究報告</button>`;
+}
+function openInfo(title,html){$('#info-title').textContent=title;$('#info-content').innerHTML=html;$('#info-dialog').showModal();}
+function sourceInfo(){const sources=state.sources?.sources||[],rules=state.sources?.ruleSources||[];openInfo('資料來源與交易資格',`<p>正式策略使用完整收盤資料。台股最新 OHLCV 以 TWSE／TPEx 官方收盤覆蓋，歷史資料及美股日K使用 Yahoo Finance。</p><h3>日期與券源的區別</h3><p>擷取時間不等於資料日期。市場可借券賣出額度、融券餘額，都不能證明你的券商有券可借。尚未接入券商庫存、locate、維持率與即時借券費，所有資格未知者僅供觀察。</p><h3>官方介面與法規來源</h3><ul>${[...sources,...rules].map(s=>`<li><a href="${escapeHtml(s.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(s.name)} ↗</a></li>`).join('')}</ul><p>官方公告保存原文與適用期間；缺漏或無法核實時保持待確認，不沿用固定處置天數。</p><h3>來源健康</h3><p>${escapeHtml(JSON.stringify(state.health.officialSourceErrors||{}))}</p>`);}
+function guideInfo(){const definitions=[
+  ['空頭趨勢形成','收盤低於 MA20、MA20 低於 MA60；五日斜率向下、已確認波峰波谷下移，連續兩日確認。趨勢本身不是進場訊號。'],
+  ['整理平台跌破','使用訊號日前20根K，平台寬度≤12%、支撐至少測試兩次。收盤跌破0.25 ATR、量比≥1.5；後續站回壓力即須重估。'],
+  ['反彈不過原支撐','先跌破，之後交易日反彈到原支撐附近，再由更後面的交易日收盤跌破反彈低點。十日內觀察、轉弱窗口三日，不同日事件不能合併。'],
+  ['均線附近反彈轉弱','先連續三日位於均線下方，再反彈接近事前MA20，後續收盤轉弱才確認。均線壓力與反彈高點鎖定，不倒改。'],
+  ['已跌深，禁止追空','低於跌破參考價超過2 ATR、低於MA20超過2.5 ATR，或五日跌幅達12%，任一成立即禁止追空。'],
+  ['疑似假跌破','先有跌破，之後一至三日收盤站回原支撐加0.25 ATR。盤中刺穿不直接算站回；未進場計畫取消，已觸發策略沿原始停損管理。']];
+  openInfo('型態規則與使用方式',`<p>依已確認的 v0.1 規格建立，參數仍需樣本外驗證。本站不使用「高勝率」或「最佳參數」宣稱。</p>${definitions.map(([a,b],i)=>`<section class="guide-rule"><span>0${i+1}</span><div><h3>${a}</h3><p>${b}</p></div></section>`).join('')}<h3>一致的價位基準</h3><p>卡片、複製文字與原始策略都以觀察區中間值計算。停損 > 進場 > 目標 > 0。缺值與錯誤價位不產生有效風報比。</p><h3>追蹤與成交</h3><p>收盤確認後最早次一交易日開盤模擬；未落在觀察區則不成交。已觸發後按日期檢查低點達標、高點停損；同日皆觸及且無法判斷順序時，標記人工確認。</p><h3>操作</h3><p>三個頁籤可點選、用方向鍵切換，手機可在內容空白區左右滑動。搜尋、篩選、詳細說明可收合；每次最多增加15筆。個人筆記僅存於此瀏覽器。</p>`);
+}
+function environmentInfo(){const p=dataset(),e=p?.marketEnvironment;openInfo('大盤濾網與資料日期',`<p>狀態：${escapeHtml(e?.label||'資料不足')}。只改交易分級，不停止掃描或刪除原始訊號。</p><div class="info-table">${(e?.indexes||[]).map(x=>`<section><h3>${escapeHtml(x.name)}</h3><p>資料日：${escapeHtml(x.date)}<br>收盤 ${price(x.close)}｜MA20 ${price(x.ma20)}｜MA60 ${price(x.ma60)}<br>${x.bear?'空頭排列且MA20向下':x.bull?'多頭排列且MA20向上':'方向尚未一致'}</p></section>`).join('')}</div><p>只要任一必要指數缺漏、過期或日期不一致，就標示「資料不足，僅供觀察」。</p>`);}
+function deliveryInfo(){const r=state.report,d=state.delivery;const end=r?.requestedPeriod?.end,ending=typeof end==='object'&&end?Object.entries(end).map(([k,v])=>k+' '+v).join('／'):end;openInfo('規格、測試與回測限制',`<p>策略版本：${escapeHtml(dataset()?.meta.strategyVersion||'short-v1.0')}。放空策略、資料與追蹤使用獨立路徑，原做多策略保持不動。</p><h3>回測狀態</h3><p>${escapeHtml(r?.disclosure||'歷史研究報告尚未取得，不顯示虛構績效。')}</p>${r?`<p>要求期間：${escapeHtml(r.requestedPeriod?.start||'2015-01-01')} ～ ${escapeHtml(ending||'最新完整收盤')}<br>歷史全市場名單：${r.pointInTimeUniverse?'已提供':'不足，有存活者偏誤'}<br>歷史券源：未取得<br>實際可執行放空績效：未驗證</p>`:''}<h3>測試與檔案隔離</h3><p>${escapeHtml(d?.summary||'詳細交付報告隨版本提供。')}</p>${d?.tests?`<pre>${escapeHtml(JSON.stringify(d.tests,null,2))}</pre>`:''}<p>完整資料日期、來源、限制與未知資格均保留；不以篩選刪除失敗樣本，也不以最新日期覆蓋舊價格。</p><button class="button secondary" id="download-delivery-report">${icon('download')}下載研究與交付報告 JSON</button>`);}
+
+const pages={observation:'主跌段觀察',calculator:'放空部位計算機',tracking:'放空策略追蹤'};
+function closeMenu(){$('#sidebar').classList.remove('open');$('#scrim').classList.remove('visible');$('#menu-toggle').setAttribute('aria-expanded','false');}
+function route({initial=false,focus=false}={}){let page=location.hash.slice(1)||'observation';if(!pages[page])page='observation';state.page=page;$$('.page').forEach(p=>{p.hidden=p.id!=='page-'+page;});$$('[data-page]').forEach(a=>{const selected=a.dataset.page===page;a.classList.toggle('active',selected);if(selected)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});$$('[data-route]').forEach(b=>{const selected=b.dataset.route===page;b.setAttribute('aria-selected',String(selected));b.tabIndex=selected?0:-1;if(selected&&focus)b.focus();});$('#page-title').textContent=pages[page];document.title=pages[page]+'｜主跌段放空觀察系統';closeMenu();if(!initial)window.scrollTo({top:0,behavior:'instant'});if(page==='tracking')renderTracking();}
+function go(delta,focus=false){const keys=Object.keys(pages),idx=keys.indexOf(state.page),next=keys[Math.max(0,Math.min(2,idx+delta))];location.hash=next;route({focus});}
+function downloadJSON(name,payload){const url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:'application/json'})),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+function findStock(key){return state.details.get(key)||Object.values(state.datasets).flatMap(x=>x.stocks||[]).find(r=>stockKey(r)===key);}
+async function loadDetail(key){
+  if(state.details.has(key))return;
+  const row=findStock(key),page=row?.detailPage;if(!page||!/^pages\/(TW|US)-[a-f0-9]{16}\/page-\d{3}\.json$/.test(page))return;
+  try{
+    if(!state.detailPages.has(page))state.detailPages.set(page,getFile(page));
+    const result=await state.detailPages.get(page),p=result.payload,current=state.datasets[row.market];
+    if(p.meta?.direction!=='SHORT'||p.meta?.revision!==current?.meta.revision||!Array.isArray(p.stocks)||p.stocks.length>15)throw Error('詳細資料批次或版本不一致');
+    for(const r of p.stocks){const indexed=current.stocks.find(x=>x.code===r.code);if(r.market===row.market&&indexed&&r.dataDate===indexed.dataDate)state.details.set(stockKey(r),r);}
+    const article=$$('[data-stock-key]').find(x=>x.dataset.stockKey===key);
+    if(article&&state.details.has(key)){const template=document.createElement('template');template.innerHTML=signalCard(state.details.get(key));article.querySelector('.signal-detail').replaceWith(template.content.querySelector('.signal-detail'));}
+  }catch(e){state.detailPages.delete(page);toast('詳細資料暫時無法取得，保留原始卡片與日期。');}
+}
+async function downloadResearch(){
+  try{const [report,trades]=await Promise.all([getFile('backtest_report.json'),getFile('backtest_trades.json')]);downloadJSON('short-research-delivery.json',{delivery:state.delivery,research:report.payload,technicalTradeAudit:trades.payload,health:state.health});}
+  catch{toast('完整研究檔暫時無法取得，請稍後重試。');}
+}
+document.addEventListener('toggle',event=>{const details=event.target;if(details.tagName!=='DETAILS')return;const card=details.closest('[data-stock-key]');if(!card)return;const key=card.dataset.stockKey;if(details.open){state.expanded.add(key);loadDetail(key);}else state.expanded.delete(key);},true);
+function filtersChanged(){state.limit=15;if($('#stock-search').value.trim()||$('#signal-filter').value!=='ALL'||$('#only-favorites').checked)$('#reserve-details').open=true;renderObservation();}
+document.addEventListener('click',event=>{const b=event.target.closest('button');if(!b)return;
+  if(b.dataset.market){state.market=b.dataset.market;state.limit=15;renderObservation();return;}
+  if(b.dataset.route){location.hash=b.dataset.route;return;}
+  if(b.dataset.calc){const r=findStock(b.dataset.calc);if(r)bringToCalculator(r);return;}
+  if(b.dataset.copy){const r=findStock(b.dataset.copy);if(r)copyText(strategyText(r,b.dataset.copyMode==='full'));return;}
+  if(b.dataset.favorite){const k=b.dataset.favorite;state.favorites=state.favorites.includes(k)?state.favorites.filter(x=>x!==k):[...state.favorites,k];if(!writeStorage('favorites',state.favorites))toast('收藏無法保存至瀏覽器。');renderObservation();return;}
+  if(b.dataset.trackCalc){const r=state.tracking.records.find(r=>r.trackingId===b.dataset.trackCalc);if(r)bringToCalculator({...r,...r.originalStrategy,dataDate:r.firstSignalDate});return;}
+  if(b.dataset.copyTrack){const r=state.tracking.records.find(r=>r.trackingId===b.dataset.copyTrack);if(r)copyText(JSON.stringify(r,null,2));return;}
+  if(b.dataset.saveNote){const textarea=$$('[data-note]').find(x=>x.dataset.note===b.dataset.saveNote);state.notes[b.dataset.saveNote]=textarea.value;if(writeStorage('notes',state.notes))toast('個人筆記已儲存在此瀏覽器。');else toast('無法儲存，請先匯出備份。');return;}
+  if(b.id==='copy-calculation'&&lastCalculation){copyText(calcText());return;}
+  if(b.id==='download-report'||b.id==='download-delivery-report'){downloadResearch();return;}
+});
+$('#stock-search').addEventListener('input',filtersChanged);['signal-filter','stock-sort','only-favorites'].forEach(id=>$('#'+id).addEventListener('change',filtersChanged));
+$('#reset-filters').addEventListener('click',()=>{$('#stock-search').value='';$('#signal-filter').value='ALL';$('#stock-sort').value='quality';$('#only-favorites').checked=false;state.limit=15;renderObservation();});
+$('#reserve-details').addEventListener('toggle',renderObservation);$('#load-more').addEventListener('click',()=>{state.limit+=15;renderObservation();});
+$('#tracking-search').addEventListener('input',()=>{state.trackingLimit=15;renderTracking();});$('#tracking-filter').addEventListener('change',()=>{state.trackingLimit=15;renderTracking();});$('#tracking-more').addEventListener('click',()=>{state.trackingLimit+=15;renderTracking();});
+$('#risk-form').addEventListener('input',e=>{if(e.target.id!=='calc-currency')renderCalculator();});$('#risk-form').addEventListener('change',e=>{if(e.target.id==='calc-currency')changeCurrency(e.target.value);else renderCalculator();});$('#risk-form').addEventListener('submit',e=>{e.preventDefault();renderCalculator({confirmed:true});});
+$('#calc-reset').addEventListener('click',()=>{const c=$('#calc-currency').value;setCalcValues({...defaults,currency:c,route:c==='USD'?'US_SHORT':'MARGIN_SHORT',capital:c==='USD'?100000:1000000,lot:c==='USD'?1:1000});selectedStock=null;$('#calc-code').value='';$('#calc-name').value='';$('#calc-source').textContent='輸入價位，或從觀察卡帶入；全部欄位可修改。';renderCalculator();});
+$('#calc-remember').addEventListener('change',()=>{const currency=$('#calc-currency').value;writeStorage('calculator.'+currency,{remember:$('#calc-remember').checked,values:$('#calc-remember').checked?calcValues():null});});
+$('#export-tracking').addEventListener('click',()=>downloadJSON('short-tracking-'+new Date().toISOString().slice(0,10)+'.json',{...state.tracking,personalNotes:state.notes}));
+$('#open-guide').addEventListener('click',guideInfo);$('#show-patterns').addEventListener('click',guideInfo);$('#open-sources').addEventListener('click',sourceInfo);$('#show-environment').addEventListener('click',environmentInfo);$('#delivery-report').addEventListener('click',deliveryInfo);$('#close-info').addEventListener('click',()=>$('#info-dialog').close());
+$('#refresh').addEventListener('click',loadAll);$('#menu-toggle').addEventListener('click',()=>{const open=$('#sidebar').classList.toggle('open');$('#scrim').classList.toggle('visible',open);$('#menu-toggle').setAttribute('aria-expanded',String(open));});$('#scrim').addEventListener('click',closeMenu);
+$('.workspace-tabs').addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(e.key)){e.preventDefault();if(e.key==='Home')location.hash='observation';else if(e.key==='End')location.hash='tracking';else go(e.key==='ArrowRight'?1:-1,true);route({focus:true});}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();if(!['ArrowLeft','ArrowRight'].includes(e.key)||e.target.closest('input,select,textarea,button,a,summary,[contenteditable="true"]')||$('#info-dialog').open)return;e.preventDefault();go(e.key==='ArrowRight'?1:-1);});
+let gesture=null;$('#main').addEventListener('pointerdown',e=>{if(e.button!==0||e.target.closest('input,select,textarea,button,a,label,summary,details,[contenteditable="true"]'))return;gesture={id:e.pointerId,x:e.clientX,y:e.clientY,time:Date.now(),cancelled:false};});
+$('#main').addEventListener('pointermove',e=>{if(gesture?.id===e.pointerId&&Math.abs(e.clientY-gesture.y)>Math.abs(e.clientX-gesture.x)+10)gesture.cancelled=true;});
+$('#main').addEventListener('pointerup',e=>{if(gesture?.id!==e.pointerId)return;const dx=e.clientX-gesture.x,dy=e.clientY-gesture.y,elapsed=Math.max(1,Date.now()-gesture.time);if(!gesture.cancelled&&Math.abs(dx)>Math.abs(dy)*1.4&&(Math.abs(dx)>innerWidth*.18||Math.abs(dx)>35&&Math.abs(dx)/elapsed>.55))go(dx<0?1:-1);gesture=null;});$('#main').addEventListener('pointercancel',()=>gesture=null);
+window.addEventListener('hashchange',()=>route());
+hydrate();$('#today').textContent=new Date().toLocaleDateString('sv-SE').replaceAll('-',' / ');changeCurrency('TWD');route({initial:true});renderObservation();renderTracking();loadAll();
+
+export {safeMetrics,validatePayload,compareRows,filteredRows,qualificationSummary};
