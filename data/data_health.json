@@ -1,16 +1,16 @@
 {
   "meta": {
-    "updatedAt": "2026-11-06T17:59:58+00:00",
+    "updatedAt": "2026-11-07T02:25:28+00:00",
     "status": "WARNING",
     "errorCount": 0,
-    "warningCount": 1,
+    "warningCount": 2,
     "policy": "只驗證來源資料，不猜測、不補值、不修改策略結果。"
   },
   "datasets": {
     "twStocks": {
       "market": "台股",
       "status": "WARNING",
-      "updatedAt": "2026-11-07T01:58:13.981618+08:00",
+      "updatedAt": "2026-11-07T10:23:34.388375+08:00",
       "lastTradingDate": "2026-11-06",
       "completenessPct": 100.0,
       "rowCount": 1169,
@@ -30,19 +30,28 @@
     },
     "usStocks": {
       "market": "美股",
-      "status": "HEALTHY",
-      "updatedAt": "2026/11/07 01:58:21 CST",
-      "lastTradingDate": "2026-11-05",
+      "status": "WARNING",
+      "updatedAt": "2026/11/07 10:23:42 CST",
+      "lastTradingDate": "2026-11-06",
       "completenessPct": 100.0,
-      "rowCount": 70,
+      "rowCount": 39,
       "source": "Yahoo Finance via yfinance",
-      "apiStatus": "OK",
+      "apiStatus": "DEGRADED",
       "tradingDayCoverage": "CURRENT_SNAPSHOT_ONLY",
-      "issues": []
+      "issues": [
+        {
+          "level": "WARNING",
+          "code": "UPSTREAM_ERRORS",
+          "message": "上游掃描器回報部分錯誤",
+          "context": {
+            "count": 31
+          }
+        }
+      ]
     },
     "disposition": {
       "status": "HEALTHY",
-      "updatedAt": "2026-11-07T01:58:34+08:00",
+      "updatedAt": "2026-11-07T10:23:46+08:00",
       "recordCount": 1169,
       "sourceHealth": {
         "TWSE": true,
