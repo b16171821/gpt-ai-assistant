@@ -22,6 +22,7 @@ def publish_market_index(payload,root=SHORT_DATA):
             row=deepcopy(original)
             row.pop('chart',None)
             row.pop('historyDataIssues',None)
+            row.pop('fixedOutput',None)
             qualification=row.get('tradeQualification',{})
             for key in ('officialRows','ruleSources','sourceErrors','brokerEvidence'):
                 qualification.pop(key,None)
@@ -47,7 +48,12 @@ def publish_auxiliary(root=SHORT_DATA):
         preview[market]={k:[{'date':b['date'],'close':b['close']} for b in rows[-60:]] for k,rows in benchmarks.get(market,{}).items()}
     atomic_json(root/'benchmark_preview.json',preview)
     sources=read_json(root/'eligibility_sources.json',{})
-    atomic_json(root/'source_manifest.json',{k:v for k,v in sources.items() if k!='rows'})
+    manifest={k:v for k,v in sources.items() if k!='rows'}
+    from .tw_v2_sources import SOURCE_LINKS
+    manifest['sources']=SOURCE_LINKS+manifest.get('sources',[])
+    tw=read_json(root/'tw_latest.json',{})
+    manifest['taiwanMandatoryCrossCheck']=tw.get('meta',{}).get('mandatorySourceStatus',{})
+    atomic_json(root/'source_manifest.json',manifest)
     report=read_json(root/'backtest_report.json')
     if report:
         summary=deepcopy(report)

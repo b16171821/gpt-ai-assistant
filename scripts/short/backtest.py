@@ -10,6 +10,8 @@ from pathlib import Path
 from statistics import mean
 
 from .config import CONFIG,ENTRY_SIGNALS
+from .tw_v2 import TW_CONFIG
+import shutil
 from .engine import analyze_history,market_environment
 from .sources import CACHE,SHORT_DATA
 from .tracking import create_record,evaluate_record,tracking_statistics
@@ -165,6 +167,13 @@ def main(argv=None):
     for value in (args.roundtrip_bps,args.slippage_bps,args.borrow_rate):
         if value<0:raise ValueError('Costs cannot be negative')
     master=read_json(SHORT_DATA/'universe.json',{})
+    tw_v2_active=str((read_json(SHORT_DATA/'tw_latest.json',{}) or {}).get('meta',{}).get('strategyVersion','')).startswith('short-tw-v2')
+    previous=read_json(SHORT_DATA/'backtest_report.json',{})
+    if tw_v2_active and previous.get('version')==CONFIG.version:
+        archive=SHORT_DATA/'research_versions'/CONFIG.version;archive.mkdir(parents=True,exist_ok=True)
+        for name in ('backtest_report.json','backtest_trades.json'):
+            target=archive/name
+            if not target.exists() and (SHORT_DATA/name).exists():shutil.copy2(SHORT_DATA/name,target)
     benchmarks=read_json(SHORT_DATA/'historical_benchmarks.json') or read_json(SHORT_DATA/'benchmarks.json',{})
     dates=benchmarks.get('meta',{}).get('dates',{})
     timelines={m:market_timeline(benchmarks.get(m,{})) for m in ('TW','US')}
@@ -172,6 +181,8 @@ def main(argv=None):
     if args.limit:stocks=stocks[:args.limit]
     records=[];coverage=[];counts=Counter()
     for i,stock in enumerate(stocks):
+        if tw_v2_active and stock['market']=='TW':
+            coverage.append({'market':'TW','code':stock['code'],'usable':False,'evaluationStatus':'V2_NOT_RUN','issues':['新台股規格未完成回測，不沿用v1績效']});continue
         cached=read_json(CACHE/(stock['ticker']+'.json'))
         bars=[b for b in (cached or {}).get('bars',[]) if b['date']<=dates.get(stock['market'],'')]
         issues=validate_bars(bars)
@@ -189,8 +200,11 @@ def main(argv=None):
         markets[market]={'summary':summarize(subset),'periods':{p:summarize([r for r in subset if r['researchPeriod']==p]) for p in ('TRAIN','VALIDATION','OUT_OF_SAMPLE')},
                          'regimes':{p:summarize([r for r in subset if r['regimeAtSignal']==p]) for p in ('FAVORABLE','WAIT','BULL_STRONG','NO_DATA')},
                          'portfolio':research_portfolio(subset,market)}
-    report={'version':CONFIG.version,'createdAt':datetime.now(timezone.utc).isoformat(),
-            'status':'TECHNICAL_RESEARCH_WITH_UNRESOLVED_DATA_LIMITS','disclosure':'技術訊號回測，非可執行放空績效。現行存續名單含存活者偏誤，缺乏歷史券源與完整歷史限制；歷史資料不完整者已揭露，不能宣稱全市場或已驗證樣本外獲利。',
+    if tw_v2_active:
+        markets['TW'].update(status='NOT_RUN',version=TW_CONFIG.version,reason='新台股條件尚未完成回測，不能沿用v1績效或宣稱高勝率')
+    markets['US']['version']=CONFIG.version
+    report={'version':'short-mixed-tw-v2-us-v1' if tw_v2_active else CONFIG.version,'createdAt':datetime.now(timezone.utc).isoformat(),
+            'status':'TECHNICAL_RESEARCH_WITH_UNRESOLVED_DATA_LIMITS','disclosure':('台股v2尚未完成回測；舊版研究已封存，不套用新條件。美股仍為v1技術研究。' if tw_v2_active else '')+'技術訊號回測，非可執行放空績效。現行存續名單含存活者偏誤，缺乏歷史券源與完整歷史限制；歷史資料不完整者已揭露，不能宣稱全市場或已驗證樣本外獲利。',
             'requestedPeriod':{'start':'2015-01-01','end':dates},'pointInTimeUniverse':False,'historicalBorrowInventory':'UNAVAILABLE',
             'historicalRestrictions':'UNAVAILABLE','earningsHistory':'UNAVAILABLE','parameters':CONFIG.manifest(),
             'parameterSelection':'使用使用者事前確認規格；未最佳化參數。歷史保留期間不是已驗證盲測績效。',

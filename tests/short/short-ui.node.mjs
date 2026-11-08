@@ -45,3 +45,25 @@ test('three-page DOM flows, immediate calculation, immutable originals, filters,
  assert.equal(w.localStorage.getItem('positionCalculatorPreferences.v1'),'long-side-unchanged');assert.equal(w.localStorage.getItem('short-side-lab-v1'),'old-demo-unchanged');
  assert.deepEqual(errors,[]);w.close();
 });
+
+test('TW v2 refuses missing sources, limits to three, outputs 20 fields and preserves US view',async()=>{
+ const dom=new JSDOM(fs.readFileSync(new URL('index.html',root),'utf8'),{url:'https://qa.invalid/short/',runScripts:'outside-only',pretendToBeVisual:true});
+ const w=dom.window,d=w.document,errors=[];w.scrollTo=()=>{};w.HTMLElement.prototype.scrollIntoView=()=>{};
+ w.HTMLDialogElement.prototype.showModal=function(){this.setAttribute('open','');};w.HTMLDialogElement.prototype.close=function(){this.removeAttribute('open');};
+ let copied='';Object.defineProperty(w.navigator,'clipboard',{value:{writeText:async t=>{copied=t;}}});
+ const tw=payload('TW');tw.meta.strategyVersion='short-tw-v2-user-2026-11-08';tw.meta.confirmedCount=0;tw.meta.observationCount=0;tw.meta.mandatorySourceStatus={status:'UNAVAILABLE'};tw.meta.observationMessage='無法提供可核實的觀察標的';
+ tw.marketEnvironment={code:'WAIT',label:'等待確認',asOfDate:date,trend:'空頭',operation:'等待',reason:'消息與政策尚未核實',indexes:[{name:'加權指數',close:100,ma20:110,ma60:120,belowMA20:true,ma20Falling:true}],context:{}};
+ tw.stocks=tw.stocks.map(r=>({...r,taiwanStrictV2:true,priorityObservation:false,listRole:'DIAGNOSTIC',sourceCrossCheck:{status:'PENDING'},volume:3000000,averageVolume20:1000000,adx14:40,plusDI14:10,minusDI14:35,ma240:130,return60:-.31}));
+ const data={'tw_index.json':tw,'us_index.json':payload('US'),'tracking.json':{meta:{direction:'SHORT'},records:[]},'health.json':{},'research_summary.json':{},'benchmark_preview.json':{},'source_manifest.json':{},'delivery.json':{}};
+ w.fetch=async url=>{const p=data[String(url).split('/').at(-1)];return p?{ok:true,json:async()=>structuredClone(p)}:{ok:false,status:404};};w.addEventListener('error',e=>errors.push(e.message));Object.assign(w,{calculateShortPosition,defaults});
+ w.eval(fs.readFileSync(new URL('short-app.js',root),'utf8').replace(/^import[^\n]+\n/,'').replace(/\nexport \{[^}]+\};?\s*$/,''));
+ const wait=()=>new Promise(r=>w.setTimeout(r,35)),q=s=>d.querySelector(s),qa=s=>[...d.querySelectorAll(s)];await wait();
+ assert.match(q('#strict-verdict-title').textContent,/目前無符合條件放空標的/);assert.equal(qa('#priority-list .signal-card').length,0);
+ q('#copy-fixed-report').click();await wait();assert.ok(copied.startsWith('目前無符合條件放空標的'));assert.match(copied,/無法提供可核實的觀察標的/);
+ q('#reserve-details').open=true;q('#reserve-details').dispatchEvent(new w.Event('toggle'));assert.equal(qa('#reserve-list .diagnostic-card').length,15);assert.equal(qa('#reserve-list [data-calc]').length,0);
+ tw.meta.confirmedCount=5;tw.meta.resultMessage='已核實條件的候選';tw.meta.mandatorySourceStatus.status='AVAILABLE';tw.stocks=tw.stocks.slice(0,5).map(r=>({...r,confirmedTrade:true,listRole:'CONFIRMED',priorityObservation:true,patternType:'DOUBLE_TOP',patternName:'M頭',patternCompletion:'CONFIRMED_B',signalType:'B',sourceCrossCheck:{status:'VERIFIED'},tradeTier:'EXECUTABLE_CANDIDATE',tradeQualification:{allowEntry:true,label:'資格已核實',reasons:[],marginShort:{status:'VERIFIED'},borrowShort:{status:'PENDING'}},signalQualityRating:'高',dataTimeTaipei:'2026/11/06 13:30',adxMethod:{calculationStart:'2025-01-01',cutoff:date},technicalChecks:{},missingConditions:[]}));
+ q('#refresh').click();await wait();assert.equal(qa('#priority-list .signal-card').length,3);assert.equal(qa('#priority-list .fixed-fields li').length,60);assert.match(q('#priority-list').textContent,/非統計驗證勝率/);assert.match(q('#priority-list').textContent,/ADX14/);
+ q('#copy-fixed-report').click();await wait();assert.match(copied,/20. 推薦原因/);assert.match(copied,/17. 勝率評級/);
+ q('[data-market="US"]').click();assert.ok(q('#strict-verdict').hidden);assert.equal(qa('#priority-list .signal-card').length,5);
+ assert.deepEqual(errors,[]);w.close();
+});

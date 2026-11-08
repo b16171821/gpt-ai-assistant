@@ -18,10 +18,13 @@ def create_record(row, *, origin='LIVE_SIGNAL', config=CONFIG, created_at=None):
     original={k:deepcopy(row.get(k)) for k in (
         'dataDate','originalSignal','pressure','referenceKnownAt','observationLow','observationHigh',
         'entry','entryBasis','stopLoss','target','qualityScore','riskRewardRatio','strategyVersion','signalWitnesses','atr14')}
+    if row.get('taiwanStrictV2'):
+        for k in ('target2','patternType','patternName','partialExitPolicy','dataTimeTaipei','entryConfirmation','invalidationConditions','adx14','plusDI14','minusDI14','adxMethod','volume','averageVolume20','ma20','ma60','ma240','return60','sourceCrossCheck','netRiskRewardRatio'):
+            original[k]=deepcopy(row.get(k))
     original['marketEnvironment']=row.get('marketEnvironment','NO_DATA')
     original['technicalCandidate']=bool(row.get('technicalCandidate'))
     original['tradeTier']=row.get('tradeTier','OBSERVATION_ONLY')
-    record={'trackingId':f"SHORT:{row['market']}:{row['code']}:{row['dataDate']}:{row['originalSignal']}:{config.version}",
+    record={'trackingId':f"SHORT:{row['market']}:{row['code']}:{row['dataDate']}:{row['originalSignal']}:{row.get('strategyVersion',config.version)}",
             'direction':'SHORT','market':row['market'],'currency':row['currency'],'exchange':row.get('exchange'),
             'ticker':row.get('ticker'),'code':row['code'],'name':row['name'],
             'firstSignalDate':row['dataDate'],'createdAt':created_at or datetime.now(timezone.utc).isoformat(),
@@ -71,6 +74,10 @@ def finish(record, status, day, exit_price=None, *, slippage_bps=0, roundtrip_co
 
 
 def evaluate_record(record, bars, *, config=CONFIG, slippage_bps=0, roundtrip_cost_bps=0, annual_borrow_rate=None, expected_sessions=None):
+    if str(record.get('originalStrategy',{}).get('strategyVersion','')).startswith('short-tw-v2'):
+        from .tw_v2_tracking import evaluate_v2
+        return evaluate_v2(record,bars,slippage_bps=slippage_bps,roundtrip_cost_bps=roundtrip_cost_bps,
+                           annual_borrow_rate=annual_borrow_rate,expected_sessions=expected_sessions)
     r=deepcopy(record)
     immutable=deepcopy(r['originalStrategy'])
     if r.get('originalHash')!=original_hash(immutable):

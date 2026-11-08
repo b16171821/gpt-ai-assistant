@@ -7,6 +7,7 @@ export function calculateShortPosition(input){
   for(const key of keys){if(p[key]===''||p[key]===null||p[key]===undefined)throw Error('請填妥價位、成本及借券假設；未知資料不會自動補成 0。');p[key]=Number(p[key]);if(!Number.isFinite(p[key])||p[key]<0)throw Error('請填入有效的非負數值。');}
   if(p.capital<=0||p.entry<=0||p.stop<=0||p.target<=0)throw Error('資金與價格必須大於 0。');
   if(!(p.stop>p.entry&&p.entry>p.target))throw Error('放空價位必須符合：停損價 > 進場價 > 目標價 > 0。');
+  if(p.currency==='TWD'&&p.risk>1)throw Error('台股每筆計畫風險不得超過總資金的 1%；此限制不保證跳空後實際損失。');
   if(p.risk<=0||p.risk>100||p.exposure>100)throw Error('風險比例需大於 0、且不超過 100%；名目曝險上限介於 0～100%。');
   if(!Number.isInteger(p.lot)||p.lot<1||!Number.isInteger(p.days)||p.days<1||p.days>3650)throw Error('股數單位與計費天數必須是有效正整數。');
   let margin=null;if(p.margin!==''&&p.margin!==null&&p.margin!==undefined){margin=Number(p.margin);if(!Number.isFinite(margin)||margin<=0)throw Error('保證金比例假設須大於 0，或留白表示未知。');}

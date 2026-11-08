@@ -17,3 +17,6 @@
 
 /* Full release download stays reachable by touch and keyboard. */
 .main-footer .full-download{display:inline-flex;align-items:center;min-height:44px;margin-left:12px;color:var(--mint);white-space:nowrap}
+/* Taiwan strict v2 report and verified-data diagnostics. */
+.strict-verdict{padding:20px 24px;margin:20px 0;border-color:#8e7754}.strict-verdict h2{font-size:22px;color:var(--mint)}.strict-verdict p{margin:8px 0 14px}.strict-verdict .button{min-height:44px}.strict-details{margin-bottom:22px}.fixed-fields{padding-left:25px;margin:12px 0}.fixed-fields li{padding:8px 0;border-bottom:1px solid #273c33}.fixed-fields b{display:block;color:var(--text);font-size:12px}.fixed-fields span{display:block;color:var(--muted);overflow-wrap:anywhere}.diagnostic-time{font-size:11px;margin:10px 0;color:var(--muted)}.diagnostic-card .signal-metrics{margin-top:16px}.fixed-market p{margin-bottom:12px}.strict-indicators .signal-metric b{font-size:14px}
+@media(max-width:700px){.strict-verdict{padding:17px 15px}.strict-verdict h2{font-size:19px}.strict-verdict p{font-size:11px}.fixed-fields{padding-left:20px}.fixed-fields li{font-size:11px}.strict-indicators .signal-metric b{font-size:12px}.regime-checks{flex-wrap:wrap}}

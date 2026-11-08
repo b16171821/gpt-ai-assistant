@@ -34,13 +34,20 @@ def completed_sessions(market, *, start='2014-01-01', now=None):
     return days,calendar
 
 
-def tw_official():
+def tw_official(*,include_indexes=True):
     sys.path.insert(0,str(ROOT/'scripts'))
     from tw_official_data import load_latest_official_quotes, fetch_twse_index_history, fetch_tpex_index_history
     quotes=load_latest_official_quotes()
     day=quotes['officialDate']
-    indexes={'加權指數':frame_rows(fetch_twse_index_history(day,months=5)),
-             '櫃買指數':frame_rows(fetch_tpex_index_history(day,months=5))}
+    if not include_indexes:return quotes,{}
+    from urllib.parse import urlencode
+    def official_index_request(url,params=None,**kwargs):
+        # Same TWSE official report through its current documented RWD route.
+        route=url.replace('https://www.twse.com.tw/indicesReport/','https://www.twse.com.tw/rwd/zh/indicesReport/')
+        return request_json(route+('?' + urlencode(params) if params else ''),timeout=35)
+    indexes={'加權指數':frame_rows(fetch_twse_index_history(day,requester=official_index_request,months=5))}
+    try:indexes['櫃買指數']=frame_rows(fetch_tpex_index_history(day,months=5))
+    except Exception as exc:quotes['indexSourceErrors']={'TPEX_INDEX':str(exc)[:240]}
     return quotes,indexes
 
 
