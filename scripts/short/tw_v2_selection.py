@@ -11,7 +11,7 @@ FIELD_NAMES=['股票名稱＋代號','現價＋資料日期時間','型態名稱
 
 def fixed_output(row):
     r=row
-    return [{'number':i+1,'label':label,'value':value} for i,(label,value) in enumerate(zip(FIELD_NAMES,[
+    out=[{'number':i+1,'label':label,'value':value} for i,(label,value) in enumerate(zip(FIELD_NAMES,[
         {'name':r['name'],'code':r['code']},{'price':r['close'],'dateTimeTaipei':r['dataTimeTaipei'],'type':'完整收盤'},
         {'name':r['patternName'],'completion':r['patternCompletion']},r['pressure'],r['resistance'],r['measuredTarget'],r['measuredTarget2'],
         {'price':r['entry'],'basis':'觀察區中間值','conditional':not r.get('confirmedTrade')},
@@ -22,6 +22,9 @@ def fixed_output(row):
         '反彈不過' if r['signalType']=='B' else '首根跌破' if r['signalType']=='A' else '尚未完成',
         {'rating':r['signalQualityRating'],'disclosure':r['qualityRatingDisclosure']},
         r['entryConfirmation'],r['invalidationConditions'],r['statusReason']]))]
+    if not r.get('criticalDataVerified'):
+        for i in (7,8,9,10,11):out[i]['value']={'status':'UNVERIFIED','note':'關鍵資料未核實，不提供進場建議；內部技術價位不代表可交易'}
+    return out
 
 
 def finalize_row(row,evidence,environment):

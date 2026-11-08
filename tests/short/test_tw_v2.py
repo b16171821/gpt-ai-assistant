@@ -129,6 +129,7 @@ class DataAndSelectionV2Tests(unittest.TestCase):
         r=finalize_row(r,{}, {'operation':'積極放空'})
         self.assertEqual(r['qualityScore'],before);self.assertFalse(r['confirmedTrade']);self.assertEqual(len(r['fixedOutput']),20)
         self.assertEqual([x['label'] for x in r['fixedOutput']],FIELD_NAMES)
+        self.assertEqual(r['fixedOutput'][7]['value']['status'],'UNVERIFIED')
 
     def test_confirmed_candidate_requires_actual_costs_and_net_two_r(self):
         r=analyze_latest(fixture(),{'name':'測試','code':'TEST','market':'TW','currency':'TWD'})
