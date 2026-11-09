@@ -2,7 +2,7 @@
   "meta": {
     "version": "quality-v1",
     "initializedAt": "2026-09-23T02:12:44.245Z",
-    "updatedAt": "2026-11-07T02:25:28.892Z",
+    "updatedAt": "2026-11-09T16:53:41.626Z",
     "policy": "建立時固定資格；歷史回算另列，不以今日條件篩選過去輸贏。"
   },
   "records": {
@@ -26260,6 +26260,83 @@
         "安全分未達 85",
         "建立時僅供觀察",
         "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:3147:2026-11-09": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-11-09",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 32.764556204161046,
+        "stopLossDistancePercent": 4.900464002394853,
+        "distanceToNecklinePercent": -2.4427480916030535,
+        "safetyScore": 100,
+        "riskReward": 6.68,
+        "targetProgressPercent": 72.04058624577226,
+        "highQualityTracking": true,
+        "highPriority": true,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 334.05
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:3287:2026-11-09": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-11-09",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 53.29923911687664,
+        "stopLossDistancePercent": 4.902083073468887,
+        "distanceToNecklinePercent": 2.544529262086514,
+        "safetyScore": 100,
+        "riskReward": 10.87,
+        "targetProgressPercent": 65.58177379983726,
+        "highQualityTracking": true,
+        "highPriority": true,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 80.17
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:4741:2026-11-09": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-11-09",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": true,
+      "metrics": {
+        "expectedProfitPercent": 37.93103448275862,
+        "stopLossDistancePercent": 4.894327030033367,
+        "distanceToNecklinePercent": 2.1069692058346794,
+        "safetyScore": 100,
+        "riskReward": 7.55,
+        "targetProgressPercent": 72.58064516129032,
+        "highQualityTracking": true,
+        "highPriority": true,
+        "lowQuality": false,
+        "reasons": [],
+        "entry": 62.93
+      },
+      "exclusionReasons": [
+        "建立時僅供觀察",
         "建立時不開放進場"
       ]
     }
