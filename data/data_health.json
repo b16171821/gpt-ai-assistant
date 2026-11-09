@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-11-09T17:51:58+00:00",
+    "updatedAt": "2026-11-09T21:28:48+00:00",
     "status": "WARNING",
     "errorCount": 0,
     "warningCount": 1,
@@ -10,7 +10,7 @@
     "twStocks": {
       "market": "台股",
       "status": "WARNING",
-      "updatedAt": "2026-11-10T01:50:48.223651+08:00",
+      "updatedAt": "2026-11-10T05:26:59.412224+08:00",
       "lastTradingDate": "2026-11-09",
       "completenessPct": 100.0,
       "rowCount": 1178,
@@ -31,10 +31,10 @@
     "usStocks": {
       "market": "美股",
       "status": "HEALTHY",
-      "updatedAt": "2026/11/10 01:50:56 CST",
-      "lastTradingDate": "2026-11-06",
+      "updatedAt": "2026/11/10 05:27:06 CST",
+      "lastTradingDate": "2026-11-09",
       "completenessPct": 100.0,
-      "rowCount": 70,
+      "rowCount": 69,
       "source": "Yahoo Finance via yfinance",
       "apiStatus": "OK",
       "tradingDayCoverage": "CURRENT_SNAPSHOT_ONLY",
@@ -42,7 +42,7 @@
     },
     "disposition": {
       "status": "HEALTHY",
-      "updatedAt": "2026-11-10T01:51:00+08:00",
+      "updatedAt": "2026-11-10T05:27:16+08:00",
       "recordCount": 1178,
       "sourceHealth": {
         "TWSE": true,
