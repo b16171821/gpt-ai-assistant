@@ -140,14 +140,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "已達第一目標",
-    "currentPrice": 17.95,
-    "currentTarget": 20.0,
-    "currentStopLoss": 15.08,
-    "extensionTarget": 20.0,
+    "currentPrice": 18.35,
+    "currentTarget": 21.6,
+    "currentStopLoss": 15.86,
+    "extensionTarget": 21.6,
     "recentCloses": [],
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-11-10 12:20:16"
+    "updatedAt": "2026-11-10 23:14:59"
   },
   "台股:1435": {
     "key": "台股:1435",
@@ -1765,14 +1765,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 130.0,
-    "currentTarget": 197.7,
-    "currentStopLoss": 121.73,
-    "extensionTarget": 197.7,
+    "currentPrice": 109.0,
+    "currentTarget": 187.6,
+    "currentStopLoss": 124.16,
+    "extensionTarget": 187.6,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-10-10 09:55:52"
+    "updatedAt": "2026-11-10 23:14:59"
   },
   "台股:3221": {
     "key": "台股:3221",
@@ -3139,15 +3139,15 @@
     "originalWinRate": "中",
     "status": "active",
     "createdBy": "strategy-lock-v1",
-    "trackingStatus": "策略追蹤中",
-    "currentPrice": 114.0,
+    "trackingStatus": "接近第一目標",
+    "currentPrice": 125.0,
     "currentTarget": 183.2,
     "currentStopLoss": 123.19,
     "extensionTarget": 183.2,
     "recentCloses": [],
-    "holderAction": "未達第一目標前，守風險區續抱觀察。",
-    "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-11-10 12:20:16"
+    "holderAction": "接近原始第一目標，準備分批停利。",
+    "emptyAction": "不追高，等回踩。",
+    "updatedAt": "2026-11-10 23:14:58"
   },
   "台股:4706": {
     "key": "台股:4706",
@@ -5515,14 +5515,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 413.0,
-    "currentTarget": 549.0,
+    "currentPrice": 449.0,
+    "currentTarget": 546.5,
     "currentStopLoss": 385.57,
-    "extensionTarget": 549.0,
+    "extensionTarget": 546.5,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-11-04 10:43:06"
+    "updatedAt": "2026-11-10 23:14:58"
   },
   "台股:6872": {
     "key": "台股:6872",
