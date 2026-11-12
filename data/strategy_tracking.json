@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-11-12 23:37:48",
+    "updatedAt": "2026-11-13 00:21:02",
     "version": "strategy-tracking-v4",
     "activeCount": 30,
     "endedCount": 892,
@@ -12710,8 +12710,8 @@
       "currentProfitPct": -2.73,
       "maxProfitPct": -2.73,
       "result": "",
-      "trackingStatus": "WAIT_CONFIRM",
-      "trackingStatusText": "接近買點，等待收盤確認",
+      "trackingStatus": "PULLBACK_CONFIRM",
+      "trackingStatusText": "回踩不破，可持續追蹤",
       "originalStrategy": {
         "originalStage": "接近成形＋可觀察",
         "originalSignal": "觀察",
@@ -12749,7 +12749,7 @@
         "closeHeldNeckline": true,
         "inBuyZone": false,
         "aboveBuyZoneHigh": false,
-        "pullbackHeld": false,
+        "pullbackHeld": true,
         "stopBroken": false,
         "nearTarget": false,
         "targetHit": false,
@@ -12763,6 +12763,10 @@
           {
             "date": "2026-11-12",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；距離頸線在 0%～5%；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-11-12",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -12773,7 +12777,7 @@
       "statusHistory": [
         {
           "date": "2026-11-12",
-          "status": "WAIT_CONFIRM",
+          "status": "PULLBACK_CONFIRM",
           "close": 85.4,
           "latestStatus": {
             "latestClose": 85.4,
@@ -13149,8 +13153,8 @@
       "currentProfitPct": 5.84,
       "maxProfitPct": 14.66,
       "result": "",
-      "trackingStatus": "BREAKOUT_CONFIRMED",
-      "trackingStatusText": "突破確認，策略成立",
+      "trackingStatus": "IN_TREND",
+      "trackingStatusText": "主升段進行中",
       "originalStrategy": {
         "originalStage": "接近成形＋可觀察",
         "originalSignal": "觀察",
@@ -13202,6 +13206,10 @@
           {
             "date": "2026-11-12",
             "text": "風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-11-12",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -13212,7 +13220,7 @@
       "statusHistory": [
         {
           "date": "2026-11-12",
-          "status": "BREAKOUT_CONFIRMED",
+          "status": "IN_TREND",
           "close": 492.0,
           "latestStatus": {
             "latestClose": 492.0,
