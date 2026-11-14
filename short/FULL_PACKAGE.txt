@@ -1,0 +1,61 @@
+主跌段放空觀察系統 — 台股v2／美股v1完整套件
+
+台股新規格：short/TW_STRATEGY_SPEC_V2.md。台股v2尚未完成回測，不沿用舊v1績效；目前奇摩報價交叉核實失敗，不能列正式候選或觀察進場名單。
+
+手機直接使用（免下載／免安裝）
+https://short-pattern-lab-zh-1106.warm-sole-2783.chatgpt.site
+
+套件內容
+- 專案完整原始碼與原有唯讀依賴：可直接執行獨立的放空資料流程，不再需要自行拼接原始專案。
+- short/：主跌段觀察、放空部位計算機、放空策略追蹤；沿用深色手機介面。
+- scripts/short/、tests/short/：獨立策略／資料／回測程式及測試。
+- data/short/：台／美股完整收盤快照、每批最多15檔的詳細資料、固定原始計畫、追蹤、官方來源證據、完整研究報告及逐筆研究紀錄。
+- short/STRATEGY_SPEC.md：六種型態的必要／排除條件、確認／失效時點及參數。
+- data/short/delivery.json：交付清單、資料來源、測試、限制及部署說明。
+- PACKAGE_MANIFEST.json：所有套件檔案的SHA256、來源版本與快照日期。
+
+電腦快速開啟
+1. 安裝Python 3.12或更新版本，解壓縮整個套件。
+2. 在解壓縮後的 short-observation-full 資料夾內開啟終端機。
+3. Windows：py -3 -m http.server 8000 --bind 127.0.0.1
+   macOS／Linux：python3 -m http.server 8000 --bind 127.0.0.1
+4. 用瀏覽器開啟 http://127.0.0.1:8000/short/
+
+前端使用ES模組與JSON讀取，請透過上述HTTP網址開啟；直接雙擊HTML檔案會受到瀏覽器限制。
+目前快照已包含，僅瀏覽不需要先安裝pandas、yfinance或Node。
+
+自行更新與重跑研究（需網路）
+python -m venv .venv
+Windows啟用環境：.venv\Scripts\activate
+macOS／Linux啟用環境：source .venv/bin/activate
+python -m pip install -r requirements-short.txt
+python -m scripts.short.run_update
+python -m scripts.short.index_history
+python -m scripts.short.backtest
+python -m scripts.short.public_data
+
+只使用上列scripts.short命令。這些流程只寫data/short，不修改原做多公式或資料。
+原始行情快取與第三方套件未打包；第一次重新研究時會從資料來源下載歷史。
+目前快照日期請查data/short/delivery.json與各市場meta.dataDate。下載時間不會改寫資料日期。
+讀取順序為GitHub main獨立放空資料、套件快照、本機最後成功資料。網站若顯示「快照」或過期提示，應核對原資料日。
+
+測試（需安裝相關依賴）
+python -m unittest discover -s tests/short -p "test_*.py" -v
+npm --prefix short ci --ignore-scripts
+npm --prefix short test
+原做多回歸的完整命令與既有資料缺漏見short/README.md與delivery.json。
+
+部署
+- 將專案提供為靜態網站；放空入口是 /short/，資料在 /data/short/。
+- GitHub上的獨立草稿PR：https://github.com/b16171821/gpt-ai-assistant/pull/8
+- 原做多入口、公式、排名、資料、策略鎖定與追蹤保持原樣。
+- 每日收盤及每週研究工作流程必須合併main後才會啟用；此套件／下載不會自動合併或啟動排程。
+- 若只部署放空頁到網域根目錄，將short/五個前端資產複製到根目錄，並保留data/short/。不需要換框架。
+
+功能與研究的界線
+- 本套件交付現有完整程式與資料，不代表券商功能已接通。
+- 券商庫存、locate、即時借券成本、保證金、完整事件與歷史資格仍待確認；未知者一律只供觀察。
+- 歷史研究使用現行存續名單，有存活者偏誤；僅為技術訊號回測，非可執行放空績效。
+- 台股v2尚未完成回測；v1的37筆觀察／17筆觸發與約-0.399R只屬封存舊規則，不代表新規則績效。
+- 沒有自動下單。放空損失可能超過初始投入，停損不保證成交價。
+- 尚未執行真實手機／桌面瀏覽器視覺驗證；已執行DOM與資料檢查。
