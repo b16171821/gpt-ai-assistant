@@ -1,8 +1,238 @@
 {
   "meta": {
-    "updatedAt": "2026-11-14T02:43:33.417284+00:00",
-    "asOfDate": "2026-11-13",
-    "error": "加權指數資料未更新至 2026-11-13（最新：2026-11-13，筆數：29）"
+    "updatedAt": "2026-11-16T16:25:09.822322+00:00",
+    "asOfDate": "2026-11-16"
   },
-  "records": {}
+  "records": {
+    "台股:6221": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:2033": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:1416": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:2355": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:6199": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:3379": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:4147": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:4105": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:6751": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:4533": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:4743": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:3293": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:6561": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:4157": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:4198": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:1540": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:6212": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:5223": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:6910": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:5511": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:5348": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:1796": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:6228": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:8489": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:6523": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:3158": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:3611": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:1101": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:1102": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:1477": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:1569": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:1802": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:2006": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:2207": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:4174": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:4577": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:5209": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:6148": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:6150": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:6234": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:6590": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:6617": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:6870": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:7584": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:8089": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    },
+    "台股:8272": {
+      "status": "UNAVAILABLE",
+      "asOfDate": "2026-11-16",
+      "reason": "缺少同日收盤或近 5 日資料"
+    }
+  }
 }
