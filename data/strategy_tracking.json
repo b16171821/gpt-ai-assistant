@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-11-17 00:25:08",
+    "updatedAt": "2026-11-17 01:30:50",
     "version": "strategy-tracking-v4",
     "activeCount": 29,
     "endedCount": 907,
@@ -237486,7 +237486,7 @@
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
         "stopBroken": true,
-        "nearTarget": false,
+        "nearTarget": true,
         "targetHit": false,
         "patternFailed": true,
         "expired": false,
@@ -238780,7 +238780,7 @@
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
         "stopBroken": true,
-        "nearTarget": false,
+        "nearTarget": true,
         "targetHit": false,
         "patternFailed": true,
         "expired": false,
