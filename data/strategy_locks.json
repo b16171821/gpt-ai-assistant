@@ -5589,15 +5589,15 @@
     "originalWinRate": "低",
     "status": "active",
     "createdBy": "strategy-lock-v1",
-    "trackingStatus": "已達第一目標",
-    "currentPrice": 492.0,
-    "currentTarget": 649.5,
+    "trackingStatus": "策略追蹤中",
+    "currentPrice": 441.0,
+    "currentTarget": 649.0,
     "currentStopLoss": 435.53,
-    "extensionTarget": 649.5,
+    "extensionTarget": 649.0,
     "recentCloses": [],
-    "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
-    "emptyAction": "不追高，等新的整理區或回踩不破。",
-    "updatedAt": "2026-11-13 10:55:27"
+    "holderAction": "未達第一目標前，守風險區續抱觀察。",
+    "emptyAction": "空手不追高，等突破確認或回踩不破。",
+    "updatedAt": "2026-11-18 00:28:35"
   },
   "台股:6872": {
     "key": "台股:6872",
