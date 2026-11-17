@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-11-18 00:29:23",
+    "updatedAt": "2026-11-18 01:08:11",
     "version": "strategy-tracking-v4",
     "activeCount": 24,
     "endedCount": 916,
@@ -872,6 +872,10 @@
           {
             "date": "2026-11-17",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-11-17",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -6443,6 +6447,10 @@
           {
             "date": "2026-11-17",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-11-17",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -6765,6 +6773,10 @@
           {
             "date": "2026-11-17",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-11-17",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -9759,6 +9771,10 @@
           {
             "date": "2026-11-17",
             "text": "產生主升段安全觀察策略卡；安全分達 85 以上；風報比達 2 以上；停損距離小於 5.5%"
+          },
+          {
+            "date": "2026-11-17",
+            "text": "今日重新出現新觀察訊號，但既有持股仍以原始策略為準。新策略僅供空手者參考。"
           }
         ],
         "manualNote": ""
@@ -239068,7 +239084,7 @@
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
         "stopBroken": true,
-        "nearTarget": false,
+        "nearTarget": true,
         "targetHit": false,
         "patternFailed": true,
         "expired": false,
@@ -240437,7 +240453,7 @@
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
         "stopBroken": true,
-        "nearTarget": false,
+        "nearTarget": true,
         "targetHit": false,
         "patternFailed": true,
         "expired": false,
