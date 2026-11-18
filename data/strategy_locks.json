@@ -5740,14 +5740,14 @@
     "status": "active",
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
-    "currentPrice": 41.1,
+    "currentPrice": 40.45,
     "currentTarget": 51.0,
     "currentStopLoss": 36.28,
     "extensionTarget": 51.0,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-11-17 12:48:26"
+    "updatedAt": "2026-11-18 23:58:43"
   },
   "台股:7704": {
     "key": "台股:7704",
@@ -6573,6 +6573,31 @@
     "holderAction": "已達原始第一目標，建議先分批停利 30%～50%；剩餘部位才看延伸目標。",
     "emptyAction": "不追高，等新的整理區或回踩不破。",
     "updatedAt": "2026-10-21 23:58:38"
+  },
+  "台股:8455": {
+    "key": "台股:8455",
+    "market": "台股",
+    "code": "8455",
+    "name": "大拓-KY",
+    "createdAt": "2026-11-18",
+    "originalBuyLow": 33.15,
+    "originalBuyHigh": 34.14,
+    "originalStopLoss": 31.52,
+    "originalTarget": 42.9,
+    "originalNeckline": 32.5,
+    "originalStage": "突破第一根",
+    "originalWinRate": "低",
+    "status": "active",
+    "createdBy": "strategy-lock-v1",
+    "trackingStatus": "策略追蹤中",
+    "currentPrice": 35.1,
+    "currentTarget": 42.9,
+    "currentStopLoss": 31.52,
+    "extensionTarget": null,
+    "recentCloses": [],
+    "holderAction": "未達第一目標前，守風險區續抱觀察。",
+    "emptyAction": "空手不追高，等突破確認或回踩不破。",
+    "updatedAt": "2026-11-18 23:58:43"
   },
   "台股:8932": {
     "key": "台股:8932",

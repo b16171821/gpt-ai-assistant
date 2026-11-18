@@ -2,7 +2,7 @@
   "meta": {
     "version": "quality-v1",
     "initializedAt": "2026-09-23T02:12:44.245Z",
-    "updatedAt": "2026-11-18T03:54:21.385Z",
+    "updatedAt": "2026-11-18T15:59:27.437Z",
     "policy": "建立時固定資格；歷史回算另列，不以今日條件篩選過去輸贏。"
   },
   "records": {
@@ -27392,6 +27392,65 @@
       "exclusionReasons": [
         "建立時僅供觀察",
         "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:3227:2026-11-18": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-11-18",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 13.767432106532448,
+        "stopLossDistancePercent": 4.901960784313737,
+        "distanceToNecklinePercent": -0.8021390374331552,
+        "safetyScore": 100,
+        "riskReward": 2.81,
+        "targetProgressPercent": 86.17511520737328,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": true,
+        "reasons": [
+          "獲利空間低於 15%，移入備查，不列主追蹤。"
+        ],
+        "entry": 190.74
+      },
+      "exclusionReasons": [
+        "獲利空間低於 15%，移入備查，不列主追蹤。",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:8455:2026-11-18": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-11-18",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": true,
+      "metrics": {
+        "expectedProfitPercent": 29.411764705882355,
+        "stopLossDistancePercent": 4.917043740573149,
+        "distanceToNecklinePercent": 8.000000000000004,
+        "safetyScore": 0,
+        "riskReward": 2.18,
+        "targetProgressPercent": 81.81818181818183,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [
+          "安全分未達 85",
+          "距頸線超過 5% 或資料不足"
+        ],
+        "entry": 33.15
+      },
+      "exclusionReasons": [
+        "安全分未達 85",
+        "距頸線超過 5% 或資料不足",
+        "建立時僅供觀察",
         "建立時不開放進場"
       ]
     }
