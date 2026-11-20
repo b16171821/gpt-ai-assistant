@@ -1,0 +1,7 @@
+{
+  "name":"short-observation-ui-checks",
+  "private":true,
+  "type":"module",
+  "scripts":{"test":"node --test ../tests/short/*.node.mjs"},
+  "devDependencies":{"jsdom":"^27.0.0"}
+}
