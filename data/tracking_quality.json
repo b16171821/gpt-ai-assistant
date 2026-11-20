@@ -2,7 +2,7 @@
   "meta": {
     "version": "quality-v1",
     "initializedAt": "2026-09-23T02:12:44.245Z",
-    "updatedAt": "2026-11-20T03:46:43.701Z",
+    "updatedAt": "2026-11-20T15:47:21.281Z",
     "policy": "建立時固定資格；歷史回算另列，不以今日條件篩選過去輸贏。"
   },
   "records": {
@@ -27451,6 +27451,64 @@
         "安全分未達 85",
         "距頸線超過 5% 或資料不足",
         "建立時僅供觀察",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:1477:2026-11-20": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-11-20",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 11.499977565396865,
+        "stopLossDistancePercent": 4.904204244626915,
+        "distanceToNecklinePercent": 0.6864988558352403,
+        "safetyScore": 100,
+        "riskReward": 3.54,
+        "targetProgressPercent": 91.14688128772636,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": true,
+        "reasons": [
+          "獲利空間低於 15%，移入備查，不列主追蹤。"
+        ],
+        "entry": 222.87
+      },
+      "exclusionReasons": [
+        "獲利空間低於 15%，移入備查，不列主追蹤。",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場"
+      ]
+    },
+    "台股:8415:2026-11-20": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-11-20",
+      "eligible": false,
+      "originalMarketRegime": "STOP",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 10.501371913195294,
+        "stopLossDistancePercent": 4.913943626839625,
+        "distanceToNecklinePercent": 1.3994910941475935,
+        "safetyScore": 100,
+        "riskReward": 2.57,
+        "targetProgressPercent": 94.46952595936796,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": true,
+        "reasons": [
+          "獲利空間低於 15%，移入備查，不列主追蹤。"
+        ],
+        "entry": 40.09
+      },
+      "exclusionReasons": [
+        "獲利空間低於 15%，移入備查，不列主追蹤。",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
         "建立時不開放進場"
       ]
     }
