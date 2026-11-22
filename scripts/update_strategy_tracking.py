@@ -911,8 +911,12 @@ def evaluateTrackingLifecycle(tracking_record, historical_prices):
 
     target_hit_date = str(record.get("targetHitDate") or "")[:10] or None
     stop_loss_hit_date = str(record.get("stopLossHitDate") or "")[:10] or None
-    max_high = n(record.get("maxHighDuringTracking"))
+    max_high = n(record.get("maxCloseDuringTracking") or record.get("maxHighDuringTracking"))
+    active_stop = stop
     prices = normalize_historical_prices(historical_prices)
+    # 目標與停損都用收盤價。獲利達進場價 +10% 後，下一根之前先把有效停損上移，且只升不降。
+    trail_trigger = 0.10
+    trail_gap = 0.04
 
     for price in prices:
         date = price["date"]
@@ -920,19 +924,24 @@ def evaluateTrackingLifecycle(tracking_record, historical_prices):
             continue
         if terminal_cutoff and date > terminal_cutoff:
             continue
-        max_high = max(max_high, n(price["high"]), n(price["close"]))
+        close_price = n(price["close"])
+        max_high = max(max_high, close_price)
         if (
             target
-            and max(n(price["high"]), n(price["close"])) >= target
+            and close_price >= target
             and (target_hit_date is None or date < target_hit_date)
         ):
             target_hit_date = date
         if (
-            stop
-            and n(price["close"]) <= stop
+            active_stop
+            and close_price <= active_stop
             and (stop_loss_hit_date is None or date < stop_loss_hit_date)
         ):
             stop_loss_hit_date = date
+        if entry and close_price >= entry * (1 + trail_trigger):
+            trailed = close_price * (1 - trail_gap)
+            if trailed < close_price:
+                active_stop = max(active_stop or 0, trailed)
 
     final_status = (
         "INVALID_AT_CREATION"
@@ -956,6 +965,10 @@ def evaluateTrackingLifecycle(tracking_record, historical_prices):
         final_status = current_status
 
     record["maxHighDuringTracking"] = rounded(max_high)
+    record["maxCloseDuringTracking"] = rounded(max_high)
+    record["activeStop"] = rounded(active_stop) if active_stop else None
+    record["exitPriceBasis"] = "close"
+    record["trailingStopRule"] = "收盤相對進場價上漲 10% 後，有效停損上移到收盤價的 96%，只升不降；當日仍用上移前的停損判斷。目標與停損都以收盤價判斷。"
     record["targetHitDate"] = target_hit_date
     record["stopLossHitDate"] = stop_loss_hit_date
     record["finalTrackingStatus"] = final_status

@@ -13,7 +13,7 @@ test('主頁資料、頁籤與計算機在各尺寸可正常操作', async ({ pa
   page.on('pageerror', error => pageErrors.push(error.message));
 
   await page.goto('/index.html');
-  await expect(page.getByRole('heading', { name: '主升段安全觀察系統' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: '阿波五燈交易系統 1.0' })).toBeVisible();
   await expect(page.locator('#twMeta')).not.toContainText('讀取中');
   await expect(page.locator('#dataHealthStatus')).not.toHaveText('讀取中');
   await expect(page.locator('#marketFilterBox')).toContainText('掃描檔數');

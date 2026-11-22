@@ -312,7 +312,7 @@ function initQualityTracking() {
 function homeQualityView(row) {
   const record = trackingQualityApi.fromStock(row);
   const v = trackingQualityApi.view(record, qualityContext(record), marketFilterFor(row.marketName).marketRegime);
-  if (row.dataFresh === false || row.grade === 'C' || row.forbiddenChase) v.highQualityTracking = false;
+  if (row.dataFresh === false || row.rating === '不符' || row.rating === '未核實' || row.unverified || row.extendedAbove) v.highQualityTracking = false;
   return v;
 }
 function homeDisplayRow(row, main = false) {
@@ -350,10 +350,10 @@ function renderQualityHome() {
   show('strongPickList', 'strongPickN', strong, '目前沒有同時符合強勢條件及完整資料的標的。', false);
   document.getElementById('tradablePick').hidden = true;
   const rest = sorted.filter((row) => !selected.has(key(row)));
-  put('gradeAList', 'gradeAN', rest.filter((r) => r.grade === 'A').map((r) => homeDisplayRow(r)), 8);
-  put('pullbackList', 'pullbackN', rest.filter((r) => r.category.includes('回踩') && r.grade !== 'C').map((r) => homeDisplayRow(r)), 6);
-  put('gradeBList', 'gradeBN', rest.filter((r) => r.grade === 'B').map((r) => homeDisplayRow(r)), 8);
-  put('nochaseList', 'nochaseN', rest.filter((r) => r.grade === 'C').map((r) => homeDisplayRow(r)), 10);
+  put('gradeAList', 'gradeAN', rest.filter((r) => r.rating === '待執行名單').map((r) => homeDisplayRow(r)), 8);
+  put('pullbackList', 'pullbackN', rest.filter((r) => String(r.stage || r.category || '').includes('回踩') && r.rating !== '不符' && r.rating !== '未核實').map((r) => homeDisplayRow(r)), 6);
+  put('gradeBList', 'gradeBN', rest.filter((r) => r.rating === '高優先觀察' || r.rating === '觀察').map((r) => homeDisplayRow(r)), 8);
+  put('nochaseList', 'nochaseN', rest.filter((r) => r.rating === '不符' || r.rating === '未核實').map((r) => homeDisplayRow(r)), 10);
   put('profitList', 'profitN', rest.filter((r) => r.nearTarget).map((r) => homeDisplayRow(r)), 6);
   const policyText = {
     ATTACK: '進攻盤：符合品質條件者優先確認原始買點。',

@@ -36,7 +36,9 @@
     if (safetyScore === null || safetyScore < 85) reasons.push('安全分未達 85');
     if (riskReward === null || riskReward < 2) reasons.push('風報比未達 2');
     if (!(stopLossDistancePercent > 0 && stopLossDistancePercent <= 5.5)) reasons.push('停損距離不在 0%～5.5%');
-    if (distanceToNecklinePercent === null || Math.abs(distanceToNecklinePercent) > 5) reasons.push('距頸線超過 5% 或資料不足');
+    if (distanceToNecklinePercent === null) reasons.push('距頸線資料不足');
+    else if (distanceToNecklinePercent > 5) reasons.push('收盤延伸在頸線之上超過 5%');
+    else if (distanceToNecklinePercent < -2) reasons.push('收盤跌破頸線');
     if (!target || !stop || !entry || target <= entry || stop >= entry) reasons.push('原始價位不完整或無效');
     if (record.trackingStatus === 'INVALID_AT_CREATION') reasons.push('建立時已失效');
     if (/完全無效|型態失敗|資料不足/.test(l.adjustedSignal || '')) reasons.push('訊號無效或資料不足');

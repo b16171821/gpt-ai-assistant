@@ -199,12 +199,15 @@ def merge_official_bar(df, quote):
         "Close": quote["close"],
         "Volume": quote["volume"],
     }
-    if "Adj Close" in result.columns:
-        values["Adj Close"] = quote["close"]
     for column, value in values.items():
         if column not in result.columns:
             result[column] = pd.NA
         result.loc[target, column] = value
+    # 官方收盤是原始價。還原係數留給掃描器沿用前一日，避免把最後一根寫成未還原。
+    if "Adj Close" in result.columns:
+        result.loc[target, "Adj Close"] = pd.NA
+    # 官方日期之後的 K 棒可能是未完成日，不能拿去算指標。
+    result = result[result.index <= target]
     return result[~result.index.duplicated(keep="last")].sort_index()
 
 

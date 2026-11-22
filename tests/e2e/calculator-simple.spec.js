@@ -1,6 +1,6 @@
 import { expect, test } from '@playwright/test';
 
-test('舊偏好遷移至上限20與成本3，保留本金且不恢復整張模式', async ({ page }) => {
+test('舊偏好遷移至上限20與牌告成本，保留本金且不恢復整張模式', async ({ page }) => {
   await page.addInitScript(() => {
     if (!localStorage.getItem('positionCalculatorPreferences.v1')) {
       localStorage.setItem('positionCalculatorPreferences.v1', JSON.stringify({
@@ -12,17 +12,20 @@ test('舊偏好遷移至上限20與成本3，保留本金且不恢復整張模�
   await expect(page.locator('#capital')).toHaveValue('300000');
   await expect(page.locator('#riskPercent')).toHaveValue('0.5');
   await expect(page.locator('#maxPositionPercent')).toHaveValue('20');
-  await expect(page.locator('#feeBufferPercent')).toHaveValue('3');
+  await expect(page.locator('#feeRatePercent')).toHaveValue('0.1425');
+  await expect(page.locator('#feeDiscount')).toHaveValue('1');
+  await expect(page.locator('#sellTaxPercent')).toHaveValue('0.3');
   await expect(page.locator('#tradeUnit')).toHaveValue('1');
   await page.locator('#calcAdvanced > summary').click();
   await page.locator('#maxPositionPercent').fill('15');
-  await page.locator('#feeBufferPercent').fill('2');
+  await page.locator('#feeDiscount').fill('0.6');
   await page.reload();
   await expect(page.locator('#maxPositionPercent')).toHaveValue('15');
-  await expect(page.locator('#feeBufferPercent')).toHaveValue('2');
+  await expect(page.locator('#feeDiscount')).toHaveValue('0.6');
   await page.locator('#resetCalculator').click();
   await expect(page.locator('#maxPositionPercent')).toHaveValue('20');
-  await expect(page.locator('#feeBufferPercent')).toHaveValue('3');
+  await expect(page.locator('#feeRatePercent')).toHaveValue('0.1425');
+  await expect(page.locator('#feeDiscount')).toHaveValue('1');
   await expect(page.locator('#tradeUnit')).toHaveValue('1');
 });
 
@@ -39,8 +42,8 @@ test('確認試算重新讀取欄位、定位錯誤且不放寬零部位限制',
     document.getElementById('stopLossPrice').value = '95';
   });
   await page.locator('#confirmPosition').click();
-  await expect(page.locator('#positionConfirmStatus')).toContainText('試算完成：1,000股');
-  await expect(page.locator('#positionResults')).toContainText('NT$100,000');
+  await expect(page.locator('#positionConfirmStatus')).toContainText('試算完成：898股');
+  await expect(page.locator('#positionResults')).toContainText('NT$89,800');
   await page.locator('#calcAdvanced > summary').click();
   await page.locator('#maxPositionPercent').fill('0');
   await page.locator('#confirmPosition').click();
@@ -63,13 +66,13 @@ test('常用金額與精簡結果，固定以一股為單位試算', async ({ pa
   await page.getByText('50 萬', { exact: true }).click();
   await page.locator('#entryPrice').fill('100');
   await page.locator('#stopLossPrice').fill('95');
-  await expect(page.locator('#positionResults')).toContainText('1,000股');
-  await expect(page.locator('#positionResults')).toContainText('NT$100,000');
-  await expect(page.locator('#positionResults')).toContainText('NT$8,000');
+  await expect(page.locator('#positionResults')).toContainText('898股');
+  await expect(page.locator('#positionResults')).toContainText('NT$89,800');
+  await expect(page.locator('#positionResults')).toContainText('NT$4,995');
   await expect(page.locator('#maxPositionPercent')).toHaveValue('20');
-  await expect(page.locator('#feeBufferPercent')).toHaveValue('3');
+  await expect(page.locator('#feeRatePercent')).toHaveValue('0.1425');
   await expect(page.getByRole('combobox', { name: '交易單位' })).toHaveCount(0);
-  await expect(page.locator('#calcCostWarning')).toContainText('高於風險容許金額');
+  await expect(page.locator('#calcCostWarning')).toBeEmpty();
   await expect.poll(() => page.evaluate(() => Math.abs(calculatorPage.getBoundingClientRect().left - pageViewport.getBoundingClientRect().left))).toBeLessThan(1);
   await page.evaluate(() => calculatorPage.scrollTo(0, 0));
   await page.screenshot({ path: `output/playwright/calculator-${test.info().project.name}.png` });
@@ -79,7 +82,7 @@ test('常用金額與精簡結果，固定以一股為單位試算', async ({ pa
   await expect(page.locator('#positionResults')).not.toContainText('1,000股');
   await page.locator('#stopLossPrice').fill('95');
   await page.locator('#capital').fill('10000');
-  await expect(page.locator('#positionResults')).toContainText('20股');
+  await expect(page.locator('#positionResults')).toContainText('17股');
   await expect(page.locator('#tradeUnit')).toHaveValue('1');
   await expect(page.locator('#tryOddLots')).toHaveCount(0);
   const widths = await page.evaluate(() => [calculatorPage.clientWidth, calculatorPage.scrollWidth, document.documentElement.clientWidth, document.documentElement.scrollWidth]);
@@ -94,12 +97,12 @@ test('只記住資金偏好、不保留過時價格；可取消記憶與重設',
   await page.locator('#entryPrice').fill('100');
   await page.locator('#calcAdvanced > summary').click();
   await page.locator('#riskPercent').fill('0.5');
-  await page.locator('#feeBufferPercent').fill('2');
+  await page.locator('#feeDiscount').fill('0.6');
   await page.reload();
   await expect(page.locator('#capital')).toHaveValue('300000');
   await expect(page.locator('#riskPercent')).toHaveValue('0.5');
   await expect(page.locator('#tradeUnit')).toHaveValue('1');
-  await expect(page.locator('#feeBufferPercent')).toHaveValue('2');
+  await expect(page.locator('#feeDiscount')).toHaveValue('0.6');
   await expect(page.locator('#entryPrice')).toHaveValue('');
   await page.locator('#rememberCalculator').uncheck();
   await page.reload();
