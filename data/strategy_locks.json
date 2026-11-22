@@ -5741,13 +5741,13 @@
     "createdBy": "strategy-lock-v1",
     "trackingStatus": "策略追蹤中",
     "currentPrice": 46.7,
-    "currentTarget": 51.0,
-    "currentStopLoss": 36.28,
-    "extensionTarget": 51.0,
+    "currentTarget": 53.7,
+    "currentStopLoss": 44.3,
+    "extensionTarget": 53.7,
     "recentCloses": [],
     "holderAction": "未達第一目標前，守風險區續抱觀察。",
     "emptyAction": "空手不追高，等突破確認或回踩不破。",
-    "updatedAt": "2026-11-21 11:29:57"
+    "updatedAt": "2026-11-22 09:37:02"
   },
   "台股:7704": {
     "key": "台股:7704",
