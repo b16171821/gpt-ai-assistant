@@ -93,16 +93,11 @@ def fetch_profile(market, row):
 
 def rank_score(row):
     try:
-        score = float(row.get("score") or 0)
+        score = float(row.get("lightsPassed") if row.get("lightsPassed") not in (None, "") else row.get("score") or 0)
     except Exception:
         score = 0
     strict = 50 if row.get("strictOk") else 0
-    win = 30 if row.get("winRate") == "高" else 15 if row.get("winRate") == "中" else 0
-    try:
-        rise = float(row.get("rise60") or 0) / 10
-    except Exception:
-        rise = 0
-    return score * 100 + strict + win + rise
+    return score * 100 + strict
 
 
 def process_market(market, payload, profiles):

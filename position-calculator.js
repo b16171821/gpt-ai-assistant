@@ -10,7 +10,9 @@
     stopLossPrice: '',
     maxPositionPercent: 20,
     tradeUnit: 1,
-    feeBufferPercent: 3,
+    feeRatePercent: 0.1425,
+    feeDiscount: 1,
+    sellTaxPercent: 0.3,
     originalEntryRange: '',
     isUserModified: false,
     lastAnalysisDefaults: null,
@@ -22,7 +24,9 @@
     'entryPrice',
     'stopLossPrice',
     'maxPositionPercent',
-    'feeBufferPercent',
+    'feeRatePercent',
+    'feeDiscount',
+    'sellTaxPercent',
   ];
 
   function toFiniteNumber(value) {
@@ -42,7 +46,9 @@
       stopLossPrice: toFiniteNumber(input.stopLossPrice),
       maxPositionPercent: toFiniteNumber(input.maxPositionPercent),
       tradeUnit: Number(input.tradeUnit) === 1 ? 1 : 1000,
-      feeBufferPercent: toFiniteNumber(input.feeBufferPercent),
+      feeRatePercent: toFiniteNumber(input.feeRatePercent),
+      feeDiscount: toFiniteNumber(input.feeDiscount),
+      sellTaxPercent: toFiniteNumber(input.sellTaxPercent),
     };
     const errors = {};
 
@@ -77,19 +83,31 @@
       errors.stopLossPrice = '做多試算的停損價必須低於進場價';
     }
 
-    const riskBudget = Math.max(0, values.capital * (values.riskPercent / 100));
-    const riskPerShare = Math.max(0, values.entryPrice - values.stopLossPrice);
+    const core = root.ApoFiveLights;
+    const sized = core.positionSize({
+      capital: values.capital,
+      entry: values.entryPrice,
+      stop: values.stopLossPrice,
+      lotSize: values.tradeUnit,
+      feeRate: values.feeRatePercent / 100,
+      feeDiscount: values.feeDiscount,
+      sellTaxRate: values.sellTaxPercent / 100,
+      riskFraction: values.riskPercent / 100,
+      maxPositionPct: values.maxPositionPercent / 100,
+    });
+    const riskBudget = sized.riskBudget;
+    const riskPerShare = sized.riskPerShare || 0;
+    const priceRisk = Math.max(0, values.entryPrice - values.stopLossPrice);
     const riskShares = riskPerShare > 0 ? safeFloor(riskBudget / riskPerShare) : 0;
     const positionBudget = Math.max(0, values.capital * (values.maxPositionPercent / 100));
-    const capitalShares = values.entryPrice > 0 ? safeFloor(positionBudget / values.entryPrice) : 0;
-    const rawShares = Math.max(0, Math.min(riskShares, capitalShares));
-    const finalShares = values.tradeUnit === 1000
-      ? safeFloor(rawShares / 1000) * 1000
-      : safeFloor(rawShares);
+    const buyCash = values.entryPrice > 0 ? values.entryPrice * (1 + (values.feeRatePercent / 100) * values.feeDiscount) : 0;
+    const capitalShares = buyCash > 0 ? safeFloor(positionBudget / buyCash) : 0;
+    const rawShares = sized.sharesBeforeLot;
+    const finalShares = sized.shares;
     const estimatedInvestment = Math.max(0, finalShares * values.entryPrice);
-    const baseEstimatedLoss = Math.max(0, finalShares * riskPerShare);
-    const feeBuffer = Math.max(0, estimatedInvestment * (values.feeBufferPercent / 100));
-    const estimatedLoss = Math.max(0, baseEstimatedLoss + feeBuffer);
+    const baseEstimatedLoss = Math.max(0, finalShares * priceRisk);
+    const feeCash = Math.max(0, finalShares * riskPerShare - baseEstimatedLoss);
+    const estimatedLoss = Math.max(0, finalShares * riskPerShare);
     const capitalUsagePercent = values.capital > 0
       ? Math.max(0, (estimatedInvestment / values.capital) * 100)
       : 0;
@@ -127,7 +145,8 @@
       positionBudget,
       estimatedInvestment,
       baseEstimatedLoss,
-      feeBuffer,
+      feeCash,
+      tradingCost: feeCash,
       estimatedLoss,
       capitalUsagePercent,
       riskUsagePercent,

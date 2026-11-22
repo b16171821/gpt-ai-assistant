@@ -335,7 +335,7 @@ def previous_a_count_from_snapshots(path, market):
         if not str(key).startswith(f"{market}:") or not isinstance(items, list) or not items:
             continue
         latest = sorted(items, key=lambda x: str(x.get("date", "")), reverse=True)[0]
-        if latest.get("grade") == "A":
+        if latest.get("rawRating") == "待執行名單" or latest.get("grade") in {"A", "待執行名單"}:
             count += 1
     return count
 
@@ -343,7 +343,10 @@ def previous_a_count_from_snapshots(path, market):
 def apply_breadth_guard(market_filter, rows, previous_a_count=0):
     strong = [
         r for r in rows
-        if r.get("grade") in {"A", "B"} or r.get("strictOk") or sf(r.get("score")) >= 3
+        if r.get("rawRating") in {"待執行名單", "高優先觀察"}
+        or r.get("grade") in {"A", "B", "待執行名單", "高優先觀察"}
+        or r.get("strictOk")
+        or sf(r.get("lightsPassed") or r.get("score")) >= 4
     ]
     broken = [
         r for r in strong
@@ -354,7 +357,10 @@ def apply_breadth_guard(market_filter, rows, previous_a_count=0):
     out["strongStopBreakRate"] = sr(rate * 100)
     out["strongStopBreakCount"] = len(broken)
     out["strongWatchCount"] = len(strong)
-    current_a_count = sum(1 for r in rows if r.get("grade") == "A")
+    current_a_count = sum(
+        1 for r in rows
+        if r.get("rawRating") == "待執行名單" or r.get("grade") in {"A", "待執行名單"}
+    )
     disappear_rate = (previous_a_count - current_a_count) / previous_a_count if previous_a_count >= 3 else 0
     out["previousACount"] = previous_a_count
     out["currentACount"] = current_a_count

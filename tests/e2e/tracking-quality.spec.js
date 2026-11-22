@@ -145,15 +145,17 @@ test('搜尋篩選可收合，手機只固定一行且切頁保留條件', async
   await page.screenshot({ path: testInfo.outputPath('tracking-compact.png') });
 });
 
-test('STOP帶入與重新帶入不覆蓋20%上限和3%成本', async ({ page }) => {
+test('STOP帶入與重新帶入不覆蓋20%上限和牌告成本', async ({ page }) => {
   await setup(page, 'STOP');
   await page.locator('[data-tracking-id="fixture-19"]').getByRole('button', { name: '帶入部位計算' }).click();
   await expect(page.locator('#maxPositionPercent')).toHaveValue('20');
-  await expect(page.locator('#feeBufferPercent')).toHaveValue('3');
+  await expect(page.locator('#feeRatePercent')).toHaveValue('0.1425');
+  await expect(page.locator('#sellTaxPercent')).toHaveValue('0.3');
   await expect(page.locator('#calculatorStatus')).toContainText('策略部位上限 0%');
   await page.locator('#reloadAnalysisValues').click();
   await expect(page.locator('#maxPositionPercent')).toHaveValue('20');
-  await expect(page.locator('#feeBufferPercent')).toHaveValue('3');
+  await expect(page.locator('#feeRatePercent')).toHaveValue('0.1425');
+  await expect(page.locator('#sellTaxPercent')).toHaveValue('0.3');
   await page.locator('#capital').fill('500000');
   await page.locator('#confirmPosition').click();
   await expect(page.locator('#positionConfirmStatus')).toContainText('試算完成');

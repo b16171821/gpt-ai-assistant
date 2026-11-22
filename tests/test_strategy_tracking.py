@@ -324,7 +324,7 @@ class StrategyTrackingTests(unittest.TestCase):
             base_row(
                 strategyAsOfDate="2026-07-14",
                 date="2026-07-14",
-                close=128,
+                close=130,
                 high=131,
                 low=126,
             ),
@@ -433,7 +433,7 @@ class StrategyTrackingTests(unittest.TestCase):
             record,
             [
                 {"date": "2026-07-14", "high": 110, "low": 100, "close": 108},
-                {"date": "2026-07-16", "high": 131, "low": 126, "close": 128},
+                {"date": "2026-07-16", "high": 131, "low": 126, "close": 130},
                 {"date": "2026-07-23", "high": 97, "low": 93, "close": 94},
             ],
         )
@@ -467,7 +467,7 @@ class StrategyTrackingTests(unittest.TestCase):
         self.assertEqual(evaluated["endedAt"], "2026-07-16")
         self.assertEqual(evaluated["endPriority"], "STOP_FIRST")
 
-    def test_same_day_target_and_stop_needs_review(self):
+    def test_same_day_wick_uses_close_for_target_and_stop(self):
         record = create_tracking_record("台股", base_row())
         evaluated = evaluateTrackingLifecycle(
             record,
@@ -476,9 +476,11 @@ class StrategyTrackingTests(unittest.TestCase):
             ],
         )
 
-        self.assertEqual(evaluated["trackingStatus"], "NEED_REVIEW")
-        self.assertEqual(evaluated["endedAt"], "2026-07-16")
-        self.assertEqual(evaluated["endPriority"], "SAME_DAY_REVIEW")
+        self.assertEqual(evaluated["trackingStatus"], "FAILED")
+        self.assertIsNone(evaluated["targetHitDate"])
+        self.assertEqual(evaluated["stopLossHitDate"], "2026-07-16")
+        self.assertEqual(evaluated["exitPriceBasis"], "close")
+        self.assertEqual(evaluated["endPriority"], "STOP_FIRST")
 
     def test_never_hits_target_then_breaks_stop(self):
         record = create_tracking_record("台股", base_row())

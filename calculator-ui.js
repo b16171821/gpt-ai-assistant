@@ -1,7 +1,7 @@
 /* UI only: position-calculator.js remains the source of all numeric results. */
 const calculatorPreferenceKey = 'positionCalculatorPreferences.v1';
-const calculatorDefaultsVersion = 2;
-const calculatorPreferenceFields = ['capital', 'riskPercent', 'maxPositionPercent', 'tradeUnit', 'feeBufferPercent'];
+const calculatorDefaultsVersion = 3;
+const calculatorPreferenceFields = ['capital', 'riskPercent', 'maxPositionPercent', 'tradeUnit', 'feeRatePercent', 'feeDiscount', 'sellTaxPercent'];
 let calculatorPreferences = {};
 
 function validCalculatorPreference(field, value) {
@@ -9,7 +9,7 @@ function validCalculatorPreference(field, value) {
   const number = Number(value);
   if (!Number.isFinite(number)) return false;
   if (field === 'tradeUnit') return number === 1;
-  return field === 'feeBufferPercent' ? number >= 0 : number > 0;
+  return ['feeRatePercent', 'feeDiscount', 'sellTaxPercent'].includes(field) ? number >= 0 : number > 0;
 }
 
 function saveCalculatorPreference(field, value) {
@@ -42,7 +42,7 @@ function confirmPositionCalculation() {
     renderPositionErrors(result);
     const invalidFields = positionFieldNames.filter((field) => result.errors[field]);
     invalidFields.forEach((field) => document.getElementById(field)?.setAttribute('aria-invalid', 'true'));
-    if (invalidFields.some((field) => ['riskPercent', 'maxPositionPercent', 'feeBufferPercent'].includes(field))) {
+    if (invalidFields.some((field) => ['riskPercent', 'maxPositionPercent', 'feeRatePercent', 'feeDiscount', 'sellTaxPercent'].includes(field))) {
       document.getElementById('calcAdvanced').open = true;
     }
     status.textContent = calculatorState.maxPositionPercent !== '' && Number(calculatorState.maxPositionPercent) === 0
@@ -73,7 +73,7 @@ function initSimpleCalculator() {
     if (remember.checked) {
       calculatorPreferenceFields.forEach((field) => {
         // Migrate only the changed defaults; retain the user's capital/risk inputs.
-        if (stored.defaultsVersion !== calculatorDefaultsVersion && ['maxPositionPercent', 'feeBufferPercent', 'tradeUnit'].includes(field)) return;
+        if (stored.defaultsVersion !== calculatorDefaultsVersion && ['maxPositionPercent', 'tradeUnit', 'feeRatePercent', 'feeDiscount', 'sellTaxPercent'].includes(field)) return;
         if (validCalculatorPreference(field, stored?.values?.[field])) {
           calculatorPreferences[field] = Number(stored.values[field]);
         }
@@ -113,7 +113,7 @@ function renderSimplePositionCalculator() {
   document.getElementById('entryRangeHint').textContent = calculatorState.originalEntryRange || '';
   document.getElementById('tradeUnit').value = calculatorState.tradeUnit;
   document.querySelectorAll('[name="capitalPreset"]').forEach((radio) => { radio.checked = Number(radio.value) === Number(calculatorState.capital); });
-  document.getElementById('calcSettingsSummary').textContent = `風險 ${fmt(calculatorState.riskPercent)}% · 上限 ${fmt(calculatorState.maxPositionPercent)}% · 成本 ${fmt(calculatorState.feeBufferPercent)}%`;
+  document.getElementById('calcSettingsSummary').textContent = `風險 ${fmt(calculatorState.riskPercent)}% · 上限 ${fmt(calculatorState.maxPositionPercent)}% · 手續費 ${fmt(calculatorState.feeRatePercent, 4)}%`;
   renderPositionErrors(result);
   positionFieldNames.forEach((field) => {
     const error = document.getElementById(`${field}Error`);
@@ -125,29 +125,29 @@ function renderSimplePositionCalculator() {
       if (error) input.setAttribute('aria-describedby', error.id);
     }
   });
-  if (['riskPercent', 'maxPositionPercent', 'feeBufferPercent'].some((field) => result.errors[field] && calculatorState[field] !== '')) {
+  if (['riskPercent', 'maxPositionPercent', 'feeRatePercent', 'feeDiscount', 'sellTaxPercent'].some((field) => result.errors[field] && calculatorState[field] !== '')) {
     document.getElementById('calcAdvanced').open = true;
   }
   const value = (formatted) => result.valid ? formatted : '—';
   const keyResults = [
     ['試算股數', value(formatShares(result.finalShares)), value(formatLots(result.lotCount))],
     ['預估投入金額', value(formatTwd(result.estimatedInvestment)), ''],
-    ['觸及停損時預估損失', value(formatTwd(result.estimatedLoss)), '含成本緩衝'],
+    ['觸及停損時預估損失', value(formatTwd(result.estimatedLoss)), '含手續費與證交稅'],
   ];
   document.getElementById('positionResults').innerHTML = keyResults.map(([label, amount, detail]) => `<div class="calcKeyResult"><span>${label}</span><b>${amount}</b><small>${detail}</small></div>`).join('');
   const details = [
     ['風險容許金額', formatTwd(result.riskBudget)], ['每股價格風險', formatTwd(result.riskPerShare)],
     ['風險上限股數', formatShares(result.riskShares)], ['資金上限股數', formatShares(result.capitalShares)],
     ['約當張數', formatLots(result.lotCount)], ['占總資金比例', formatPercent2(result.capitalUsagePercent)],
-    ['預估總資金風險比例', formatPercent2(result.riskUsagePercent)], ['成本緩衝金額', formatTwd(result.feeBuffer)],
+    ['預估總資金風險比例', formatPercent2(result.riskUsagePercent)], ['手續費與證交稅', formatTwd(result.tradingCost)],
   ];
   document.getElementById('positionBreakdown').innerHTML = details.map(([label, amount]) => `<div class="resultItem"><span>${label}</span><b>${value(amount)}</b></div>`).join('');
   const incomplete = ['capital', 'entryPrice', 'stopLossPrice'].some((field) => calculatorState[field] === '');
   document.getElementById('zeroReason').textContent = incomplete ? '待填資金與價位。'
     : Number(calculatorState.maxPositionPercent) === 0 ? '帶入部位上限為 0%，目前不開新倉。'
       : !result.valid ? Object.values(result.errors)[0] : result.finalShares === 0 ? result.zeroReason : '';
-  document.getElementById('calcCostWarning').textContent = result.valid && result.estimatedLoss > result.riskBudget
-    ? '含成本緩衝後的預估損失高於風險容許金額。' : '';
+  document.getElementById('calcCostWarning').textContent = result.valid && result.estimatedLoss > result.riskBudget + 1
+    ? '含實際成本後的預估損失高於風險容許金額。' : '';
   document.getElementById('copyPositionResult').disabled = !result.valid;
   document.getElementById('reloadAnalysisValues').disabled = !calculatorState.selectedStock;
   return result;

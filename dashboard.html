@@ -62,8 +62,8 @@
       <h2>怎麼看這一頁</h2>
       <div class="small muted">
         先看「嚴格候選」。沒有嚴格候選，就只看預備單，不要追。<br>
-        strictOk = true 才代表條件比較完整；forbiddenChase = true 就禁止追高，只能等回踩。<br>
-        進場前仍要確認：收盤站上頸線至少 2%、成交量大於 20 日均量 2 倍、不可長上影、隔日不跌破頸線。
+        五燈且價格在進場區才是待執行名單。延伸在壓力之上才是追高；跌破確認價另列。勝率尚未回測。<br>
+        均量用前 20 個完整交易日。MA240 不足時長期趨勢是未核實，不算通過。
       </div>
     </div>
   </div>
@@ -76,7 +76,7 @@ function clsByStatus(row){
 }
 function signalText(row){
   if(row.strictOk) return '<span class="signal green">可研究進場</span>';
-  if(row.forbiddenChase) return '<span class="signal red">禁止追高</span>';
+  if(row.forbiddenChase || row.priceLocation==='延伸在壓力之上') return '<span class="signal red">延伸在壓力之上</span>';
   return '<span class="signal yellow">等確認</span>';
 }
 function table(rows, market){
@@ -85,7 +85,7 @@ function table(rows, market){
     ? '<tr><th>股票</th><th>訊號</th><th>現價</th><th>型態</th><th>進場/停損</th><th>策略</th></tr>'
     : '<tr><th>股票</th><th>訊號</th><th>現價</th><th>型態</th><th>進場/停損</th><th>策略</th></tr>';
   const body = rows.map(r=>`<tr>
-    <td><b>${r.name||''}</b><br><span class="mono">${r.code||r.ticker||''}</span><br><span class="muted small">${r.score||0}/4｜${r.winRate||'-'}勝率</span></td>
+    <td><b>${r.name||''}</b><br><span class="mono">${r.code||r.ticker||''}</span><br><span class="muted small">${r.lightsPassed||r.score||0}/5｜${r.rating||'未核實'}</span></td>
     <td>${signalText(r)}<br><span class="pill ${clsByStatus(r)}">${r.status||''}</span></td>
     <td>${r.close||'-'} ${market==='us'?'USD':''}<br><span class="muted small">${r.date||''}</span></td>
     <td>${r.pattern||'-'}<br><span class="muted small">${r.stage||'-'}</span><br><span class="muted small">頸線 ${r.neckline||'-'}｜目標 ${r.target||'-'}</span></td>

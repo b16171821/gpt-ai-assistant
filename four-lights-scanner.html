@@ -3,54 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>台股四燈掃描器 v2</title>
+  <title>阿波五燈交易系統 1.0</title>
   <style>
-    body{font-family:Arial,'Noto Sans TC',sans-serif;margin:0;background:#0f172a;color:#e5e7eb}.wrap{max-width:1180px;margin:auto;padding:24px}.card{background:#111827;border:1px solid #334155;border-radius:16px;padding:18px;margin:14px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}button,input,textarea{border-radius:10px;border:1px solid #475569;background:#020617;color:#e5e7eb;padding:10px;font-size:14px}button{cursor:pointer;background:#2563eb;border:0;font-weight:700}button.secondary{background:#374151}.muted{color:#94a3b8}.lights{display:flex;gap:6px;flex-wrap:wrap}.light{padding:4px 8px;border-radius:999px;font-size:12px;background:#334155}.on{background:#16a34a}.off{background:#475569}table{width:100%;border-collapse:collapse;margin-top:12px}th,td{border-bottom:1px solid #334155;padding:10px;text-align:left;font-size:14px}th{color:#cbd5e1;background:#1e293b}.pill{border-radius:999px;padding:3px 8px;font-size:12px}.ok{background:#166534}.wait{background:#854d0e}.avoid{background:#7f1d1d}.mono{font-family:ui-monospace,Menlo,Consolas,monospace}.note{line-height:1.7}.topbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.stat{background:#020617;border:1px solid #334155;border-radius:12px;padding:10px 12px}</style>
+    body{font-family:Arial,'Noto Sans TC',sans-serif;margin:0;background:#0f172a;color:#e5e7eb}.wrap{max-width:1180px;margin:auto;padding:24px}.card{background:#111827;border:1px solid #334155;border-radius:16px;padding:18px;margin:14px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}button,input,textarea{border-radius:10px;border:1px solid #475569;background:#020617;color:#e5e7eb;padding:10px;font-size:14px}button{cursor:pointer;background:#2563eb;border:0;font-weight:700}button.secondary{background:#374151}.muted{color:#94a3b8}.lights{display:flex;gap:6px;flex-wrap:wrap}.light{padding:4px 8px;border-radius:999px;font-size:12px;background:#334155}.on{background:#16a34a}.wait{background:#854d0e}.off{background:#475569}.unknown{background:#1e293b;border:1px dashed #64748b}table{width:100%;border-collapse:collapse;margin-top:12px}th,td{border-bottom:1px solid #334155;padding:10px;text-align:left;font-size:14px}th{color:#cbd5e1;background:#1e293b}.pill{border-radius:999px;padding:3px 8px;font-size:12px}.ok{background:#166534}.wait{background:#854d0e}.avoid{background:#7f1d1d}.mono{font-family:ui-monospace,Menlo,Consolas,monospace}.note{line-height:1.7}.topbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.stat{background:#020617;border:1px solid #334155;border-radius:12px;padding:10px 12px}
+  </style>
 </head>
 <body>
 <div class="wrap">
-  <h1>台股四燈掃描器 v2</h1>
-  <p class="muted">每日自動更新全台股掃描結果；輸出觀察名單，不構成買賣建議。</p>
+  <h1>阿波五燈交易系統 1.0</h1>
+  <p class="muted">這一頁只讀取已經算好的 <span class="mono">data/latest.json</span>。勝率：尚未回測。</p>
   <div class="card topbar">
-    <button onclick="loadLatest()">讀取最新自動掃描</button>
-    <button onclick="scanMarket()">依目前設定重掃</button>
-    <button class="secondary" onclick="exportCSV()">匯出目前結果 CSV</button>
+    <button onclick="loadLatest()">讀取最新掃描結果</button>
+    <button onclick="filterStored()">依目前設定篩選已儲存結果</button>
+    <button class="secondary" onclick="exportCSV()">匯出目前畫面 CSV</button>
     <span id="updatedAt" class="muted">尚未讀取</span>
   </div>
   <div class="card">
-    <h2>掃描設定</h2>
+    <h2>篩選已儲存結果</h2>
+    <p class="muted">下面的按鈕不會重新下載股價，也不會重算五燈。它只依你填的門檻，從這次已儲存的燈號裡挑出來。</p>
     <div class="grid">
-      <label>近60日漲幅 ≥ %<input id="minRise" type="number" value="30"></label>
-      <label>量能倍數 ≥ <input id="minVolRatio" type="number" value="2" step="0.1"></label>
-      <label>ADX ≥ <input id="minAdx" type="number" value="25"></label>
-      <label>最多輸出檔數<input id="limit" type="number" value="50"></label>
+      <label>至少通過燈數<input id="minLights" type="number" value="3" min="0" max="5"></label>
+      <label>只看強勢股候選標籤<input id="strongOnly" type="checkbox"></label>
+      <label>最多顯示檔數<input id="limit" type="number" value="50"></label>
     </div>
   </div>
   <div class="card">
-    <h2>CSV 備援匯入</h2>
-    <p class="muted">自動資料失效時可手動貼 CSV。欄位：code,name,close,ma5,ma20,ma60,ma240,rise60,volume,avgVolume20,adx,kline,theme</p>
-    <textarea id="csvInput" rows="6" style="width:100%" placeholder="貼上 CSV 資料..."></textarea><br><br>
-    <button onclick="loadCSV()">讀取 CSV</button>
+    <h2>結果</h2>
+    <div class="topbar"><div id="summary" class="stat">尚未讀取</div><div id="qualified" class="stat">勝率：尚未回測</div></div>
+    <div style="overflow:auto"><table id="resultTable"><thead><tr><th>代號</th><th>名稱</th><th>收盤</th><th>評級</th><th>五燈</th><th>位置</th><th>標籤</th></tr></thead><tbody></tbody></table></div>
   </div>
-  <div class="card">
-    <h2>掃描結果</h2>
-    <div class="topbar"><div id="summary" class="stat">尚未掃描</div><div id="qualified" class="stat">符合：-</div></div>
-    <div style="overflow:auto"><table id="resultTable"><thead><tr><th>代號</th><th>名稱</th><th>收盤</th><th>60日漲幅</th><th>ADX</th><th>分數</th><th>四燈</th><th>判斷</th><th>原因</th></tr></thead><tbody></tbody></table></div>
-  </div>
-  <div class="card note"><h2>使用方式</h2><p>GitHub Actions 會在台灣時間週一到週五 15:40 自動執行。第一次要先到 GitHub 的 Actions 頁面手動 Run workflow 一次，成功後會產生 <span class="mono">data/latest.json</span>、<span class="mono">data/latest.csv</span>、<span class="mono">data/history.csv</span>。</p></div>
+  <div class="card note"><h2>資料從哪裡來</h2><p>台股掃描只由 <span class="mono">Update Stock Data</span> 發布。舊的 15:40 第二條掃描流程不再寫入檔案，避免兩次結果互相覆蓋。</p></div>
 </div>
+<script src="apo-five-lights.js?v=20261122-five-lights"></script>
 <script>
-let stocks=[];let lastResults=[];let autoRows=[];
-function num(v){const n=parseFloat(String(v??'').replace(/,/g,''));return isNaN(n)?0:n}
-function normalizeRow(s){return {code:s.code,name:s.name,close:s.close,ma5:s.ma5,ma20:s.ma20,ma60:s.ma60,ma240:s.ma240,rise60:s.rise60,volume:s.volume,avgVolume20:s.avgVolume20,adx:s.adx,kline:s.kline,theme:s.theme,trend:s.trend,fund:s.fund,themeHit:s.themeHit,priceVol:s.priceVol,score:s.score,status:s.status,reason:s.reason,market:s.market,date:s.date}}
-function evalStock(s){if(s.score!==undefined && s.trend!==undefined)return normalizeRow(s);const minRise=num(document.getElementById('minRise').value),minVolRatio=num(document.getElementById('minVolRatio').value),minAdx=num(document.getElementById('minAdx').value);const close=num(s.close),ma20=num(s.ma20),ma60=num(s.ma60),ma240=num(s.ma240),rise60=num(s.rise60),volume=num(s.volume),avgVolume20=num(s.avgVolume20),adx=num(s.adx);const trend=close>ma20&&close>ma60&&(ma240===0||close>ma240)&&ma20>=ma60;const fund=avgVolume20>0&&volume/avgVolume20>=minVolRatio;const priceVol=rise60>=minRise&&adx>=minAdx&&!String(s.kline||'').includes('長黑');const theme=/(AI|人工智慧|機器人|軍工|電力|散熱|半導體|先進封裝|PCB|CPO|矽光子|伺服器|低軌|重電|能源|航太|車用|ASIC)/i.test(s.theme||'');const score=[trend,fund,priceVol,theme].filter(Boolean).length;let status='只觀察';if(score>=4)status='符合觀察：等回踩或確認，不追高';else if(score===3)status='可列觀察：缺一燈，等補強';else if(score<=1)status='避開：條件不足';const reasons=[];if(trend)reasons.push('趨勢多頭');if(fund)reasons.push('量能放大');if(priceVol)reasons.push('價量條件足');if(theme)reasons.push('題材命中');return {...s,trend,fund,priceVol,themeHit:theme,score,status,reason:reasons.join('、')||'條件不足'};}
-function cls(status,score){if(score>=4)return 'ok';if(score===3)return 'wait';if(score<=1)return 'avoid';return 'wait'}
-function render(results){lastResults=results;const tb=document.querySelector('#resultTable tbody');tb.innerHTML='';results.forEach(r=>{const lights=`<div class="lights"><span class="light ${r.trend?'on':'off'}">趨勢</span><span class="light ${r.fund?'on':'off'}">資金</span><span class="light ${r.themeHit?'on':'off'}">題材</span><span class="light ${r.priceVol?'on':'off'}">價量</span></div>`;tb.insertAdjacentHTML('beforeend',`<tr><td class="mono">${r.code||''}</td><td>${r.name||''}</td><td>${r.close||''}</td><td>${r.rise60??''}%</td><td>${r.adx??''}</td><td>${r.score}/4</td><td>${lights}</td><td><span class="pill ${cls(r.status,r.score)}">${r.status}</span></td><td>${r.reason||''}</td></tr>`)});document.getElementById('summary').textContent=`共掃描 ${stocks.length} 檔，輸出 ${results.length} 檔`;document.getElementById('qualified').textContent=`4燈 ${results.filter(x=>x.score>=4).length} 檔｜3燈 ${results.filter(x=>x.score===3).length} 檔`;}
-function scanMarket(){const limit=num(document.getElementById('limit').value)||50;const minRise=num(document.getElementById('minRise').value),minVolRatio=num(document.getElementById('minVolRatio').value),minAdx=num(document.getElementById('minAdx').value);const results=stocks.map(evalStock).filter(r=>r.score>=3 && num(r.rise60)>=minRise && (num(r.avgVolume20)===0 || num(r.volume)/num(r.avgVolume20)>=minVolRatio || r.fund) && num(r.adx)>=minAdx).sort((a,b)=>b.score-a.score||num(b.rise60)-num(a.rise60)||num(b.volume)-num(a.volume)).slice(0,limit);render(results)}
-async function loadLatest(){try{const res=await fetch('data/latest.json?ts='+Date.now());if(!res.ok)throw new Error('latest.json not found');const payload=await res.json();stocks=(payload.stocks||[]).map(normalizeRow);autoRows=stocks;document.getElementById('updatedAt').textContent='更新時間：'+(payload.meta?.updatedAt||'未知');scanMarket()}catch(e){document.getElementById('updatedAt').textContent='讀取自動資料失敗，使用示範資料';loadDemo()}}
-function loadDemo(){stocks=[{code:'2330',name:'台積電',close:1000,ma20:950,ma60:900,ma240:780,rise60:35,volume:80000,avgVolume20:30000,adx:32,kline:'紅K突破',theme:'AI 半導體 先進封裝'},{code:'4977',name:'眾達-KY',close:98,ma20:91,ma60:83,ma240:70,rise60:42,volume:12000,avgVolume20:5000,adx:28,kline:'紅K突破',theme:'CPO AI 伺服器'}];scanMarket()}
-function loadCSV(){const text=document.getElementById('csvInput').value.trim();if(!text){alert('請先貼上 CSV');return}const lines=text.split(/\r?\n/).filter(Boolean);const headers=lines.shift().split(',').map(h=>h.trim());stocks=lines.map(line=>{const cols=line.split(',');const obj={};headers.forEach((h,i)=>obj[h]=cols[i]);return obj});scanMarket()}
-function exportCSV(){if(!lastResults.length){alert('沒有結果可匯出');return}const headers=['date','code','name','close','rise60','adx','score','status','reason'];const rows=[headers.join(',')].concat(lastResults.map(r=>headers.map(h=>`"${String(r[h]??'').replace(/"/g,'""')}"`).join(',')));const blob=new Blob([rows.join('\n')],{type:'text/csv;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='four_lights_results.csv';a.click()}
+let stocks=[];let lastResults=[];
+function num(v){const n=parseFloat(String(v??'').replace(/,/g,''));return Number.isFinite(n)?n:0}
+function lightClass(light){if(!light)return 'unknown';if(light.state==='通過')return 'on';if(light.state==='等待')return 'wait';if(light.state==='未核實')return 'unknown';return 'off'}
+function lightsHtml(row){const lights=Array.isArray(row.lights)?row.lights:[];if(!lights.length)return '<span class="light unknown">未核實</span>';return `<div class="lights">${lights.map(light=>`<span class="light ${lightClass(light)}">${light.name||''} ${light.state||''}</span>`).join('')}</div>`}
+function cls(rating){if(rating==='待執行名單')return 'ok';if(rating==='高優先觀察'||rating==='觀察')return 'wait';return 'avoid'}
+function render(results){lastResults=results;const tb=document.querySelector('#resultTable tbody');tb.innerHTML='';results.forEach(r=>{tb.insertAdjacentHTML('beforeend',`<tr><td class="mono">${r.code||''}</td><td>${r.name||''}</td><td>${r.close??''}</td><td><span class="pill ${cls(r.rating)}">${r.rating||'未核實'}</span></td><td>${lightsHtml(r)}</td><td>${r.priceLocation||'-'}</td><td>${(r.tags||[]).join('、')||'-'}</td></tr>`)});document.getElementById('summary').textContent=`已儲存 ${stocks.length} 檔，畫面顯示 ${results.length} 檔`;document.getElementById('qualified').textContent='勝率：尚未回測'}
+function filterStored(){const minLights=num(document.getElementById('minLights').value);const limit=num(document.getElementById('limit').value)||50;const strongOnly=document.getElementById('strongOnly').checked;const results=stocks.filter(r=>{if(r.strategySystem!=='apo-five-lights-1.0')return false;if(num(r.lightsPassed)<minLights)return false;if(strongOnly&&!(r.tags||[]).includes('強勢股候選'))return false;return true}).sort((a,b)=>num(b.lightsPassed)-num(a.lightsPassed)||num(b.riskRewardRatio)-num(a.riskRewardRatio)).slice(0,limit);render(results)}
+async function loadLatest(){try{const res=await fetch('data/latest.json?ts='+Date.now());if(!res.ok)throw new Error('latest.json not found');const payload=await res.json();stocks=payload.stocks||[];const fresh=payload.meta?.strategySystem==='apo-five-lights-1.0';document.getElementById('updatedAt').textContent=(fresh?'五燈資料 ':'舊四燈資料，畫面不另評分 ')+(payload.meta?.updatedAt||'');filterStored()}catch(e){document.getElementById('updatedAt').textContent='讀取失敗：'+e.message;stocks=[];render([])}}
+function exportCSV(){if(!lastResults.length){alert('沒有結果可匯出');return}const headers=['date','code','name','close','rating','lightsPassed','priceLocation'];const rows=[headers.join(',')].concat(lastResults.map(r=>headers.map(h=>`"${String(r[h]??'').replace(/"/g,'""')}"`).join(',')));const blob=new Blob([rows.join('\n')],{type:'text/csv;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='five_lights_filtered.csv';a.click()}
 loadLatest();
 </script>
 </body>

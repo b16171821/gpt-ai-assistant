@@ -99,74 +99,10 @@ def risk_fields(row):
 
 
 def derive_summary(row, market, risk):
-    score = sf(row.get("score"))
-    close = risk["close"]
-    target = risk["target"]
-    near_target = bool(target and close and close >= target * 0.95)
-    dist = abs(risk["distanceFromNecklinePct"])
-    forbid = truthy(row.get("forbiddenChase")) or near_target or dist > 6.5 or risk["riskPct"] > 10 or risk["riskRewardRatio"] < 1 or not risk["valid"]
-
-    safe = 0
-    if dist <= 2:
-        safe += 30
-    elif dist <= 3.5:
-        safe += 24
-    elif dist <= 5:
-        safe += 14
-    if risk["riskPct"] <= 3.5:
-        safe += 25
-    elif risk["riskPct"] <= 6.5:
-        safe += 18
-    elif risk["riskPct"] <= 8.5:
-        safe += 8
-    if risk["riskRewardRatio"] >= 2.2:
-        safe += 25
-    elif risk["riskRewardRatio"] >= 1.6:
-        safe += 18
-    elif risk["riskRewardRatio"] >= 1.2:
-        safe += 8
-    if score >= 4:
-        safe += 10
-    elif score >= 3:
-        safe += 7
-    volume = sf(row.get("volume"))
-    avg_volume = sf(row.get("avgVolume20"))
-    volume_ratio = sf(row.get("volumeRatio"), volume / avg_volume if avg_volume else 0)
-    turnover = sf(row.get("turnover"))
-    if volume_ratio >= 1.5:
-        safe += 5
-    if turnover >= 50000000 or market == "美股":
-        safe += 5
-    stage = str(pick(row, "stage", "category", "status", default=""))
-    if "回踩" in stage or "Pullback" in stage:
-        safe += 5
-    if forbid:
-        safe -= 25
-    safe = max(0, min(100, round(safe)))
-
-    grade = "C"
-    if not forbid and safe >= 70 and dist <= 4 and risk["riskPct"] <= 6.5 and risk["riskRewardRatio"] >= 1.5 and score >= 3:
-        grade = "A"
-    elif not forbid and safe >= 50 and dist <= 6.5 and risk["riskPct"] <= 8.5 and risk["riskRewardRatio"] >= 1.1 and score >= 3:
-        grade = "B"
-
-    if near_target:
-        category = "接近停利"
-    elif forbid and risk["valid"]:
-        category = "禁止追高"
-    elif "回踩" in stage:
-        category = "安全回踩"
-    elif grade == "A":
-        category = "主升候選"
-    elif grade == "B":
-        category = "可觀察"
-    else:
-        category = "資料不足"
-
-    action = pick(row, "action", "planStatus", "status", default="")
-    if not action:
-        action = "位置與風報比相對合理，可列入觀察。" if grade != "C" else "資料不足或位置不佳，空手不追。"
-    return grade, safe, category, action
+    if row.get("strategySystem") == "apo-five-lights-1.0" or row.get("rawRating") or row.get("rating"):
+        rating = row.get("rating") or row.get("rawRating") or "未核實"
+        return rating, int(sf(row.get("safeScore"))), row.get("category") or rating, row.get("action") or ""
+    return "未核實", 0, "未核實", "舊資料未以五燈重算，不沿用絕對值距離重新評級"
 
 
 def normalize_row(row, market, meta):

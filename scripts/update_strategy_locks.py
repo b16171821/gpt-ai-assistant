@@ -75,11 +75,9 @@ def recent_closes(market, row):
 
 
 def rank_score(row):
-    score = n(row.get("score"))
+    score = n(row.get("lightsPassed") or row.get("score"))
     strict = 50 if row.get("strictOk") else 0
-    win = 30 if row.get("winRate") == "高" else 15 if row.get("winRate") == "中" else 0
-    rise = n(row.get("rise60")) / 10
-    return score * 100 + strict + win + rise
+    return score * 100 + strict
 
 
 def current_status(row, lock, market):
@@ -145,7 +143,7 @@ def create_lock(market, row):
         "originalTarget": round(target, 2),
         "originalNeckline": round(n(row.get("neckline")), 2),
         "originalStage": row.get("stage") or row.get("status") or "-",
-        "originalWinRate": row.get("winRate") or "-",
+        "originalWinRate": "不適用",
         "status": "active",
         "createdBy": "strategy-lock-v1",
     }

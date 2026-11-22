@@ -1,54 +1,20 @@
 name: Update Four Lights Scanner
 
+# 台股掃描與發布已併入 update-data.yml。
+# 這條流程保留名稱，但不再於台灣時間 15:40 重跑掃描，也不再把資料推回主分支，
+# 避免和 Update Stock Data 互相覆蓋 latest.json / history.csv。
+
 on:
   workflow_dispatch:
-  schedule:
-    # UTC 07:40 = Taiwan 15:40, after TW market close.
-    - cron: "40 7 * * 1-5"
 
 permissions:
   contents: read
 
-concurrency:
-  group: stock-data-main
-  cancel-in-progress: false
-
 jobs:
-  update:
+  retired:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    permissions:
-      contents: write
+    timeout-minutes: 5
     steps:
-      - name: Checkout
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-        with:
-          ref: main
-          fetch-depth: 0
-
-      - name: Setup Python
-        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
-        with:
-          python-version: "3.11"
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Sync latest main before scanning
-        run: git pull --ff-only origin main
-
-      - name: Run scanner
-        run: python scripts/update_tw_stock_scanner.py
-
-      - name: Commit updated data
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/history.csv data/latest.json data/latest.csv data/latest_report.md
-          if git diff --cached --quiet; then
-            echo "No data changes to commit."
-            exit 0
-          fi
-          git commit -m "Update four lights scan data"
-          git push
+      - name: Explain the consolidated publisher
+        run: echo "台股掃描已併入 Update Stock Data（update-data.yml）。此流程不再掃描、不寫入 data。"
