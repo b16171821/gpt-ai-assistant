@@ -2,7 +2,7 @@
   "meta": {
     "version": "quality-v1",
     "initializedAt": "2026-09-23T02:12:44.245Z",
-    "updatedAt": "2026-11-22T01:38:11.702Z",
+    "updatedAt": "2026-11-23T18:47:04.568Z",
     "policy": "建立時固定資格；歷史回算另列，不以今日條件篩選過去輸贏。"
   },
   "records": {
@@ -27510,6 +27510,136 @@
         "建立時僅供觀察",
         "建立時尚未確認有效策略",
         "建立時不開放進場"
+      ]
+    },
+    "台股:5457:2026-11-23": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-11-23",
+      "eligible": false,
+      "originalMarketRegime": "NO_DATA",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 22.530612244897956,
+        "stopLossDistancePercent": -2.2857142857142807,
+        "distanceToNecklinePercent": 6.5306122448979655,
+        "safetyScore": 60,
+        "riskReward": 3.14,
+        "targetProgressPercent": 86.94203864090608,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [
+          "安全分未達 85",
+          "停損距離不在 0%～5.5%",
+          "收盤延伸在頸線之上超過 5%",
+          "原始價位不完整或無效"
+        ],
+        "entry": 24.5
+      },
+      "exclusionReasons": [
+        "安全分未達 85",
+        "停損距離不在 0%～5.5%",
+        "收盤延伸在頸線之上超過 5%",
+        "原始價位不完整或無效",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場",
+        "歷史回補"
+      ]
+    },
+    "台股:5523:2026-11-23": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-11-23",
+      "eligible": false,
+      "originalMarketRegime": "NO_DATA",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 16.959459459459445,
+        "stopLossDistancePercent": 0,
+        "distanceToNecklinePercent": -0.33112582781456246,
+        "safetyScore": 60,
+        "riskReward": 6.37,
+        "targetProgressPercent": 86.94396302715195,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [
+          "安全分未達 85",
+          "停損距離不在 0%～5.5%",
+          "原始價位不完整或無效"
+        ],
+        "entry": 29.6
+      },
+      "exclusionReasons": [
+        "安全分未達 85",
+        "停損距離不在 0%～5.5%",
+        "原始價位不完整或無效",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場",
+        "歷史回補"
+      ]
+    },
+    "台股:6614:2026-11-23": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-11-23",
+      "eligible": false,
+      "originalMarketRegime": "NO_DATA",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 16.954545454545457,
+        "stopLossDistancePercent": 2.0000000000000058,
+        "distanceToNecklinePercent": 1.7045454545454544,
+        "safetyScore": 60,
+        "riskReward": 3.41,
+        "targetProgressPercent": 86.96074621064905,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [
+          "安全分未達 85"
+        ],
+        "entry": 44
+      },
+      "exclusionReasons": [
+        "安全分未達 85",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場",
+        "歷史回補"
+      ]
+    },
+    "台股:7736:2026-11-23": {
+      "version": "quality-v1",
+      "basis": "RECORDED_AT_CREATION",
+      "firstSignalDate": "2026-11-23",
+      "eligible": false,
+      "originalMarketRegime": "NO_DATA",
+      "effectiveAtCreation": false,
+      "metrics": {
+        "expectedProfitPercent": 16.11961057023642,
+        "stopLossDistancePercent": 2.0027816411683057,
+        "distanceToNecklinePercent": 0.9735744089012359,
+        "safetyScore": 60,
+        "riskReward": 4.08,
+        "targetProgressPercent": 86.95652173913044,
+        "highQualityTracking": false,
+        "highPriority": false,
+        "lowQuality": false,
+        "reasons": [
+          "安全分未達 85"
+        ],
+        "entry": 71.9
+      },
+      "exclusionReasons": [
+        "安全分未達 85",
+        "建立時僅供觀察",
+        "建立時尚未確認有效策略",
+        "建立時不開放進場",
+        "歷史回補"
       ]
     }
   }

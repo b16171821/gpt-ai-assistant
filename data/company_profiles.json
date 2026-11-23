@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-22 09:37:01",
+  "updatedAt": "2026-11-24 02:45:22",
   "profiles": {
     "台股:2377": {
       "industry": "Computer Hardware",
@@ -3339,6 +3339,51 @@
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "Yahoo Finance / yfinance",
       "profileUpdatedAt": "2026-11-13 22:54:31"
+    },
+    "台股:5523": {
+      "industry": "Real Estate Services",
+      "sector": "Real Estate",
+      "companyProfile": "Fong-Chien Construction Co.,LTD. engages in construction business in Taiwan. The company engages in the sale and lease of commercial buildings; import, export, and trading of build",
+      "theme": "產業：Real Estate Services｜板塊：Real Estate｜型態：突破後縮量回測支撐｜原因：長期趨勢通過；趨勢強度未通過；成交量通過；價格型態通過；風險報酬未通過",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-11-24 02:45:21"
+    },
+    "台股:7736": {
+      "industry": "Auto Parts",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Hushan Autoparts Inc. manufactures and sells aftermarket door handles for cars in Taiwan and internationally. The company offers exterior and interior door, tailgate, and window re",
+      "theme": "產業：Auto Parts｜板塊：Consumer Cyclical｜型態：收盤突破前20日高點｜原因：長期趨勢未通過；趨勢強度通過；成交量通過；價格型態通過；風險報酬未通過",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-11-24 02:45:21"
+    },
+    "台股:1477": {
+      "industry": "Apparel Manufacturing",
+      "sector": "Consumer Cyclical",
+      "companyProfile": "Makalot Industrial Co., Ltd. operates as an apparel manufacturer in the United States and internationally. It offers ready to wear, active wear, sleepwear and loungewear, gift sets",
+      "theme": "產業：Apparel Manufacturing｜板塊：Consumer Cyclical｜型態：突破後縮量回測支撐｜原因：長期趨勢未通過；趨勢強度通過；成交量通過；價格型態通過；風險報酬等待",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-11-24 02:45:22"
+    },
+    "台股:6614": {
+      "industry": "Information Technology Services",
+      "sector": "Technology",
+      "companyProfile": "International Integrated Systems, Inc. provides information system development and maintenance in Taiwan, Mainland China, other regions in Asia, Europe, the Americas, and Africa. T",
+      "theme": "產業：Information Technology Services｜板塊：Technology｜型態：收盤突破前20日高點｜原因：長期趨勢未通過；趨勢強度通過；成交量通過；價格型態通過；風險報酬未通過",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-11-24 02:45:22"
+    },
+    "台股:5457": {
+      "industry": "Electronic Components",
+      "sector": "Technology",
+      "companyProfile": "Speed Tech Corp. designs, research and develops, manufactures, and sells connectors for use in communication, computers, automotive, and consumer electronic industries in Taiwan, C",
+      "theme": "產業：Electronic Components｜板塊：Technology｜型態：收盤突破前20日高點｜原因：長期趨勢未通過；趨勢強度通過；成交量通過；價格型態通過；風險報酬等待",
+      "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
+      "profileSource": "Yahoo Finance / yfinance",
+      "profileUpdatedAt": "2026-11-24 02:45:22"
     }
   }
 }
