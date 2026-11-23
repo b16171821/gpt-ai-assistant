@@ -1,7 +1,7 @@
 {
   "meta": {
-    "updatedAtET": "2026/11/23 13:45:13 EST",
-    "updatedAtTW": "2026/11/24 02:45:13 CST",
+    "updatedAtET": "2026/11/23 14:31:24 EST",
+    "updatedAtTW": "2026/11/24 03:31:24 CST",
     "strategyAsOfDate": "2026-11-20",
     "completedDataDate": "2026-11-20",
     "strategySystem": "apo-five-lights-1.0",
@@ -47,12 +47,12 @@
         "name": "加權指數",
         "date": "2026-11-23",
         "status": "跌破月線",
-        "close": 7234.22,
-        "ma5": 7196.92,
-        "ma10": 7369.56,
-        "ma20": 7477.1,
+        "close": 7251.94,
+        "ma5": 7200.46,
+        "ma10": 7371.33,
+        "ma20": 7477.99,
         "recentHigh": 7844.52,
-        "closeToHighPct": 7.78,
+        "closeToHighPct": 7.55,
         "newHigh": false,
         "nearRecentHigh": false,
         "closeAboveMA5": true,
@@ -73,12 +73,12 @@
         "name": "櫃買指數",
         "date": "2026-11-23",
         "status": "跌破月線",
-        "close": 24085.62,
-        "ma5": 23868.16,
-        "ma10": 24488.5,
-        "ma20": 24997.74,
+        "close": 24130.1,
+        "ma5": 23877.06,
+        "ma10": 24492.95,
+        "ma20": 24999.96,
         "recentHigh": 27722.75,
-        "closeToHighPct": 13.12,
+        "closeToHighPct": 12.96,
         "newHigh": false,
         "nearRecentHigh": false,
         "closeAboveMA5": true,
@@ -102,9 +102,11 @@
       "currentACount": 0,
       "aDisappearRate": 100.0
     },
-    "errors": [],
+    "errors": [
+      "ROKU skipped: 收盤日 2026-11-06 不等於市場完整收盤日 2026-11-20"
+    ],
     "profileEnriched": true,
-    "profileUpdatedAt": "2026-11-24 02:45:22"
+    "profileUpdatedAt": "2026-11-24 03:31:38"
   },
   "market": {
     "indexes": {
@@ -157,12 +159,12 @@
         "name": "加權指數",
         "date": "2026-11-23",
         "status": "跌破月線",
-        "close": 7234.22,
-        "ma5": 7196.92,
-        "ma10": 7369.56,
-        "ma20": 7477.1,
+        "close": 7251.94,
+        "ma5": 7200.46,
+        "ma10": 7371.33,
+        "ma20": 7477.99,
         "recentHigh": 7844.52,
-        "closeToHighPct": 7.78,
+        "closeToHighPct": 7.55,
         "newHigh": false,
         "nearRecentHigh": false,
         "closeAboveMA5": true,
@@ -183,12 +185,12 @@
         "name": "櫃買指數",
         "date": "2026-11-23",
         "status": "跌破月線",
-        "close": 24085.62,
-        "ma5": 23868.16,
-        "ma10": 24488.5,
-        "ma20": 24997.74,
+        "close": 24130.1,
+        "ma5": 23877.06,
+        "ma10": 24492.95,
+        "ma20": 24999.96,
         "recentHigh": 27722.75,
-        "closeToHighPct": 13.12,
+        "closeToHighPct": 12.96,
         "newHigh": false,
         "nearRecentHigh": false,
         "closeAboveMA5": true,
@@ -385,7 +387,7 @@
       "companyProfile": "REGN目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -552,7 +554,7 @@
       "companyProfile": "APP目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -719,7 +721,7 @@
       "companyProfile": "LLY目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -1055,7 +1057,7 @@
       "companyProfile": "INTC目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -1223,7 +1225,7 @@
       "companyProfile": "AAPL目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -1391,7 +1393,7 @@
       "companyProfile": "SOFI目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -1559,7 +1561,7 @@
       "companyProfile": "AMZN目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -1895,7 +1897,7 @@
       "companyProfile": "NFLX目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -2399,7 +2401,7 @@
       "companyProfile": "GOOGL目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -3071,7 +3073,7 @@
       "companyProfile": "TSLA目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -3743,7 +3745,7 @@
       "companyProfile": "MSTR目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -3911,7 +3913,7 @@
       "companyProfile": "UBER目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -4079,7 +4081,7 @@
       "companyProfile": "IONQ目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -4415,7 +4417,7 @@
       "companyProfile": "SOUN目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -5591,7 +5593,7 @@
       "companyProfile": "BBAI目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -5927,7 +5929,7 @@
       "companyProfile": "RBLX目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -6431,7 +6433,7 @@
       "companyProfile": "COIN目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -6767,7 +6769,7 @@
       "companyProfile": "NVO目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -7607,7 +7609,7 @@
       "companyProfile": "VRT目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -8111,7 +8113,7 @@
       "companyProfile": "SE目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -8447,7 +8449,7 @@
       "companyProfile": "GEV目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -9119,7 +9121,7 @@
       "companyProfile": "CEG目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -9959,7 +9961,7 @@
       "companyProfile": "ETN目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -10631,7 +10633,7 @@
       "companyProfile": "ISRG目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -10799,7 +10801,7 @@
       "companyProfile": "MPWR目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -10967,7 +10969,7 @@
       "companyProfile": "VRTX目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -11303,7 +11305,7 @@
       "companyProfile": "MELI目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     },
     {
       "date": "2026-11-20",
@@ -11807,7 +11809,7 @@
       "companyProfile": "EME目前以技術型態、量能與位置作為觀察重點。",
       "recentInfo": "重大資訊待補，請以公開資訊觀測站、公司公告或券商資訊為準。",
       "profileSource": "scanner fallback",
-      "profileUpdatedAt": "2026-11-24 02:45:22"
+      "profileUpdatedAt": "2026-11-24 03:31:38"
     }
   ]
 }

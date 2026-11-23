@@ -1,6 +1,6 @@
 {
   "meta": {
-    "updatedAt": "2026-11-24 02:47:00",
+    "updatedAt": "2026-11-24 03:33:10",
     "version": "strategy-tracking-v4",
     "activeCount": 9,
     "endedCount": 939,
@@ -10,7 +10,7 @@
     "maxWaitingTradingDays": 15,
     "legacyLocksImported": 311,
     "legacySnapshotStocksImported": 376,
-    "lifecycleHistoriesEvaluated": 942
+    "lifecycleHistoriesEvaluated": 946
   },
   "records": [
     {
@@ -245562,7 +245562,7 @@
         "aboveBuyZoneHigh": false,
         "pullbackHeld": false,
         "stopBroken": true,
-        "nearTarget": false,
+        "nearTarget": true,
         "targetHit": false,
         "patternFailed": true,
         "expired": false,
